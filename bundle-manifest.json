@@ -3676,8 +3676,8 @@
     },
     {
       "path": ".docs/CONTEXT.md",
-      "bytes": 1920,
-      "sha256": "542d655c27252d83e6d3cbba1758ebad4a8801738c74e0753eb787cc5598af62"
+      "bytes": 3087,
+      "sha256": "74b4a39e2e8e8a141c08cec3e5341602774e470e15fab8f515ebddafecb48c6f"
     },
     {
       "path": ".docs/DESIGN_GAPS.md",
@@ -3686,8 +3686,8 @@
     },
     {
       "path": ".docs/FEATURES_DONE.md",
-      "bytes": 3710,
-      "sha256": "f27531995fd91669fda6ca4380d81689843c43188a9e862090473b6dccf1d3d7"
+      "bytes": 3789,
+      "sha256": "c6eb1cb664d9325080e01821ad29b6050b04723e7d0eba675ff9ae47979d4647"
     },
     {
       "path": ".docs/INDEX.md",
@@ -4707,7 +4707,7 @@
     {
       "path": ".docs/ui-mockups/screen-map.json",
       "bytes": 238265,
-      "sha256": "aeab7a9788307c4c1b923fa1bf63add23bd86ec633aae3bae42022476a131ebc"
+      "sha256": "a548ad811430664b498802ff82f7878442621d2b9aeb025abc9c263d68aa3376"
     },
     {
       "path": ".docs/ui-mockups/screen-map.md",
@@ -4916,13 +4916,13 @@
     },
     {
       "path": ".stitch/SITE.md",
-      "bytes": 1517,
-      "sha256": "4161a840a66dc64e8897ba2cd12d960465d3ac94adaea912ff11d2ca3d4faddc"
+      "bytes": 1833,
+      "sha256": "c4febffaec1d24e7651e5b3663fcaab05981e7ca66c1a2ae857a6e4174f9be48"
     },
     {
       "path": ".stitch/backlog.json",
-      "bytes": 144648,
-      "sha256": "6a192e1ae79387fb4f43a7526a9cfaea709cbdbcdecf8a481ddcff162fd9d568"
+      "bytes": 145729,
+      "sha256": "ff39cf20cd622cd44816aacadedb7b13eda2cc01bd53b7aa9ef6e9a4cde0e926"
     },
     {
       "path": ".stitch/designs/404_page_tuy_n_d_ng_vn/code.html",
@@ -4946,8 +4946,8 @@
     },
     {
       "path": ".stitch/designs/billing_subscriptions/code.html",
-      "bytes": 22234,
-      "sha256": "1d4014caacfb9516bf6ea1669f2b93214371c65d2fa743e02eec8414963a7ed5"
+      "bytes": 28338,
+      "sha256": "98ef893cee34094a983b18bc94513bbdb907a686bf09a698e37fca236c117722"
     },
     {
       "path": ".stitch/designs/billing_subscriptions/screen.png",
@@ -5006,8 +5006,8 @@
     },
     {
       "path": ".stitch/designs/h_s_c_a_t_i_tuy_n_d_ng_vn/code.html",
-      "bytes": 24607,
-      "sha256": "47aec7d77ef97adc8b372b91db7fd94e5557a649a6ea2b743003c0e81d214bc4"
+      "bytes": 27405,
+      "sha256": "0c0f21414f3710b3bc267dd7fbdb07ccc49e92104b1aa7a6085f70a28424af8e"
     },
     {
       "path": ".stitch/designs/h_s_c_a_t_i_tuy_n_d_ng_vn/screen.png",
@@ -5016,8 +5016,8 @@
     },
     {
       "path": ".stitch/designs/job_detail_senior_frontend_developer/code.html",
-      "bytes": 23413,
-      "sha256": "8e62cc6f91186cb8de9c9723f1feeb8c62b64942ed90a0279ebc47f71ff8315f"
+      "bytes": 48650,
+      "sha256": "37ab5b8d24a8aa39639e7960c1cf077d37d08bd5e4f66db39ddb11cb19374369"
     },
     {
       "path": ".stitch/designs/job_detail_senior_frontend_developer/screen.png",
@@ -5266,8 +5266,8 @@
     },
     {
       "path": ".stitch/designs/tuy_n_d_ng_vn_homepage/code.html",
-      "bytes": 28376,
-      "sha256": "cf4902828f647c31ad530fe4bb800f2d6c683b0f9dfe269d38686358bdb2c7e7"
+      "bytes": 31514,
+      "sha256": "e72ef7abb1af0441ec1b6925336ceb0f149d44171f23ac43f93d278eb76cbeff"
     },
     {
       "path": ".stitch/designs/tuy_n_d_ng_vn_homepage/screen.png",
@@ -5276,8 +5276,8 @@
     },
     {
       "path": ".stitch/designs/tuy_n_d_ng_vn_search_results/code.html",
-      "bytes": 27646,
-      "sha256": "153421448493202c653f1cee5da45b75781b7149ca22ecf1d234ffcfcd375540"
+      "bytes": 30990,
+      "sha256": "82b356fe09ae1efb8acbde045a3b2e9a865954daa0ddbaafbf37c758afe738d0"
     },
     {
       "path": ".stitch/designs/tuy_n_d_ng_vn_search_results/screen.png",
@@ -5296,8 +5296,8 @@
     },
     {
       "path": ".stitch/metadata.json",
-      "bytes": 22075,
-      "sha256": "543c247caeceec50d1b8d829aa55c5813bcac7c6ba3ae6e47774196c6216f8f9"
+      "bytes": 23208,
+      "sha256": "0e4851c5aa6f58d807de2af857963cf1d228d2030bd76caba1892b98276a3ecb"
     },
     {
       "path": ".stitch/next-prompt.md",
@@ -5351,8 +5351,8 @@
     },
     {
       "path": ".stitch/prompts/JF-010.md",
-      "bytes": 5831,
-      "sha256": "908243d33c099d0d4e18aacff0126cafcbfcb38287ff0e3095eb4e9e14b5b4ce"
+      "bytes": 8327,
+      "sha256": "8340f5ff6d4a05999e6b96b13184cfc6c4ec790baaac4369d3a498832ce256a8"
     },
     {
       "path": ".stitch/prompts/JF-011.md",

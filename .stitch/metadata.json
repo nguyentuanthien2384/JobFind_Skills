@@ -177,7 +177,13 @@
       },
       "feature_id": "job-detail",
       "reference_title": "Job Detail - Senior Frontend Developer",
-      "title_vi": "Chi Tiết Việc Làm - Senior Frontend Developer"
+      "title_vi": "Chi Tiết Việc Làm - Senior Frontend Developer",
+      "integrated_features": [
+        "candidate-insights-points",
+        "competition-ratio",
+        "candidate-points-wallet"
+      ],
+      "integrated_extension_screen": "EXT-JF-010-CANDIDATE-INSIGHTS"
     },
     {
       "local_id": "JF-011",
@@ -637,6 +643,32 @@
       "feature_id": "admin-companies",
       "reference_title": "Xác thực Doanh nghiệp - Admin",
       "title_vi": "Xác Thực Doanh Nghiệp - Bảng Quản Trị"
+    },
+    {
+      "local_id": "EXT-JF-010-CANDIDATE-INSIGHTS",
+      "parent_screen_id": "JF-010",
+      "title": "Báo Cáo Cạnh Tranh & Tích Điểm - Senior Frontend Developer",
+      "canvas": {
+        "width": 1280,
+        "height": 2100,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/job_detail_candidate_insights_points/code.html",
+        "image": ".stitch/designs/job_detail_candidate_insights_points/screen.png"
+      },
+      "feature_id": "job-detail",
+      "reference_title": "Job Detail - Candidate Insights & Points Extension",
+      "title_vi": "Báo Cáo Cạnh Tranh & Tích Điểm - Senior Frontend Developer",
+      "integration_status": "integrated-into-jf010",
+      "connected_screens": [
+        "JF-010",
+        "JF-036",
+        "JF-037",
+        "JF-009",
+        "JF-003"
+      ]
     }
   ],
   "language": "vi",

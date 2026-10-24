@@ -96,28 +96,37 @@
 </head>
 <body class="bg-surface text-on-surface">
 <!-- TopNavBar -->
-<nav class="sticky top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm">
-<div class="max-w-7xl mx-auto flex items-center justify-between px-8 py-4 w-full">
+<nav class="sticky top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl shadow-sm border-b border-outline-variant/20">
+<div class="max-w-7xl mx-auto flex items-center justify-between px-8 py-3 w-full">
 <div class="flex items-center gap-8">
-<a class="text-2xl font-black text-blue-700 dark:text-blue-500 font-['Be_Vietnam_Pro'] tracking-tighter" href="#">TuyenDung.vn</a>
+<a class="text-2xl font-black text-blue-700 dark:text-blue-500 font-['Be_Vietnam_Pro'] tracking-tighter flex items-center gap-2" href="../tuy_n_d_ng_vn_homepage/code.html">
+    <span class="material-symbols-outlined text-3xl text-primary font-bold">work</span>
+    JobFind
+</a>
 <div class="hidden lg:flex items-center gap-6">
-<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 pb-1 font-['Be_Vietnam_Pro'] tracking-tight" href="#">Việc làm</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 font-['Be_Vietnam_Pro'] tracking-tight" href="#">Công ty</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 font-['Be_Vietnam_Pro'] tracking-tight" href="#">Mức lương</a>
-<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-200 font-['Be_Vietnam_Pro'] tracking-tight" href="#">Cẩm nang</a>
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 pb-1 font-['Be_Vietnam_Pro'] tracking-tight" href="../tuy_n_d_ng_vn_search_results/code.html">Việc làm</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-colors duration-200 font-['Be_Vietnam_Pro'] tracking-tight" href="../danh_s_ch_c_ng_ty_tuy_n_d_ng_vn/code.html">Công ty</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-colors duration-200 font-['Be_Vietnam_Pro'] tracking-tight" href="../h_s_c_a_t_i_tuy_n_d_ng_vn/code.html">Hồ sơ &amp; CV</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-blue-600 transition-colors duration-200 font-['Be_Vietnam_Pro'] tracking-tight" href="#">Cẩm nang</a>
 </div>
 </div>
 <div class="flex-1 max-w-md mx-8 relative hidden md:block">
 <div class="relative">
 <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
-<input class="w-full bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/40 transition-all" placeholder="Tìm kiếm công việc..." type="text" value="React Developer, Hà Nội"/>
+<input class="w-full bg-surface-container-low border-none rounded-lg pl-10 pr-4 py-2 text-sm focus:ring-2 focus:ring-primary/40 transition-all" placeholder="Tìm kiếm công việc..." type="text" value="React Developer, TP.HCM &amp; Hà Nội"/>
 </div>
 </div>
 <div class="flex items-center gap-4">
-<button class="hidden xl:block bg-gradient-to-r from-[#2563EB] to-[#0EA5E9] text-white px-5 py-2 rounded-lg font-semibold text-sm active:scale-95 transition-transform">Đăng tin tuyển dụng</button>
-<div class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary-fixed">
+<!-- Candidate Point Widget -->
+<a href="../billing_subscriptions/code.html" class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-900 text-xs font-semibold hover:bg-amber-100 transition-colors shadow-sm" title="Ví điểm thưởng của bạn">
+    <span class="material-symbols-outlined text-amber-600 text-base">stars</span>
+    <span><strong class="text-amber-700">45 Điểm</strong></span>
+    <span class="px-1.5 py-0.5 rounded bg-amber-200 text-amber-800 text-[10px] font-bold">Bạc</span>
+</a>
+<a href="../tuy_n_d_ng_vn_dashboard_doanh_nghi_p/code.html" class="hidden xl:block bg-gradient-to-r from-[#2563EB] to-[#0EA5E9] text-white px-4 py-2 rounded-lg font-semibold text-xs active:scale-95 transition-transform">Đăng tin</a>
+<a href="../h_s_c_a_t_i_tuy_n_d_ng_vn/code.html" class="w-10 h-10 rounded-full overflow-hidden ring-2 ring-primary-fixed hover:opacity-90 transition-opacity">
 <img alt="Ảnh đại diện người dùng" data-alt="professional portrait of a young man with a friendly smile, neutral background, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB15D_IGu_YDOxSLo6Qu3M48VJRehhqOuVX6-Zn4hiQtuW32Vc4Ufl5PeBObCrSeFvRo3ZkV4pfyni7DAMBswHLEhxtOXslTNA-15_9D70amDASqlMBMWPuexT3nRPPznIByqmcH6ERwaOaybva3YD3oka8rAc_RLvoV67QB7C085UUlWyzozmZBmogr_MRFkdzoSj2B1XtvhQ3_9yXvo6yNyTnxj3K9EQEVtxd5rKaHdTiQ-O-QPTihKv-vFMQTvheuZ9deRKhZUhA"/>
-</div>
+</a>
 </div>
 </div>
 </nav>
@@ -228,6 +237,23 @@
 </label>
 </div>
 </div>
+<!-- Đặc Quyền Ứng Viên / Insights Filter -->
+<div class="space-y-3 pt-4 border-t border-outline-variant/30">
+<h3 class="font-bold text-xs uppercase tracking-wider text-amber-800 flex items-center gap-1">
+    <span class="material-symbols-outlined text-sm text-amber-600">stars</span>
+    Đặc Quyền Ứng Viên
+</h3>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-amber-300 text-amber-600 focus:ring-amber-400" type="checkbox"/>
+<span class="text-sm font-semibold text-amber-950 group-hover:text-primary transition-colors">Có Báo Cáo Cạnh Tranh (Insights)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-primary transition-colors">Thưởng +5 Điểm Khi Ứng Tuyển</span>
+</label>
+</div>
+</div>
 </div>
 </div>
 </aside>
@@ -236,8 +262,8 @@
 <!-- Results Header -->
 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
 <div>
-<h1 class="text-2xl font-bold font-headline tracking-tight">React Developer tại Hà Nội</h1>
-<p class="text-outline text-sm mt-1">Hiển thị 1-20 / 1,247 kết quả</p>
+<h1 class="text-2xl font-bold font-headline tracking-tight">React Developer tại TP.HCM &amp; Hà Nội</h1>
+<p class="text-outline text-sm mt-1">Hiển thị 1-20 / 1,247 kết quả • Đã lọc tin có Báo Cáo Cạnh Tranh</p>
 </div>
 <div class="flex items-center gap-4">
 <div class="flex bg-surface-container rounded-lg p-1">
@@ -257,52 +283,68 @@
 </div>
 <!-- Active Chips -->
 <div class="flex flex-wrap gap-2">
-<span class="bg-primary-container/10 text-primary px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-2">
-                    Toàn thời gian <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+<span class="bg-amber-100 text-amber-900 border border-amber-300 px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-2">
+    ⭐ Có Báo Cáo Cạnh Tranh (TopCV Model) <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
 </span>
 <span class="bg-primary-container/10 text-primary px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-2">
-                    1-3 năm <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+    Toàn thời gian <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
 </span>
 <span class="bg-primary-container/10 text-primary px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-2">
-                    Hà Nội <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
+    3-5 năm <span class="material-symbols-outlined text-sm cursor-pointer">close</span>
 </span>
 </div>
 <!-- Job List -->
 <div class="space-y-6">
-<!-- Job Card 1 -->
-<div class="group relative bg-surface-container-lowest rounded-[12px] p-6 hover:shadow-[0px_20px_40px_rgba(0,74,198,0.06)] transition-all duration-300">
-<div class="flex gap-6">
-<div class="w-16 h-16 rounded-lg bg-surface-container flex items-center justify-center shrink-0">
-<img alt="Company Logo" class="w-12 h-12 rounded" data-alt="minimalist modern corporate logo icon on white background, tech company aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIwd4-T7YKTnpQ2HIo2WLWsPba_y9VW4bPN85KLAwvZ5jZFrZDYs-Wg8Z-2svjKvEq1VKWwr1Bn6ZmvLf4QV_mSFuX1B9kJopb4EsOPkNmq6LKIdT2Zcz3S4uwNEVTHnERriMiFl1KsoxCZANeIzZusJ6KSVgsjzlcBAZkA2yPf4fvItxL0HwMzoifiV4nR-b1L525Pvc7TtY-1tB41mLPtgxYrlV-XgBvfH78VVNZoHZJkDfXzF4sVIR0AtmiQMkJiaz_H9g7M2EB"/>
+<!-- Job Card 1: VNG Senior Frontend Developer (Tích Hợp Báo Cáo Cạnh Tranh & Tích Điểm) -->
+<div class="group relative bg-surface-container-lowest rounded-[14px] p-6 hover:shadow-[0px_20px_40px_rgba(0,74,198,0.08)] transition-all duration-300 border-2 border-primary/25">
+<div class="flex flex-col sm:flex-row gap-6">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center shrink-0 border border-outline-variant/30 p-2">
+<img alt="VNG Logo" class="w-full h-full object-contain" data-alt="vibrant abstract tech company logo with geometric shapes and modern blue and orange color palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzTlTMBXCn41LFI4m1VFRir1evWTXPcoGVCQKt3mBiJa79A7HXXOdbNuqq7NCDwCA8MXu7SVGDXLXo12qpbRKIfQFsKNh3FTYAqVoD1UuZ1lbOUBM-HUNaP2XXL0WPwTii9RE_UgX8vVJQqlA8-0LkLrezl6gA5GYUniTHTIzUCsbv6jH5q_uwpEniYm4v4VrZBNDPEin_35BYugs1sffUBqq3Ihusq4bE4rNmdWLsuSGNpm6Ch069kkMyvr9wCjk4vOdx3yL43qSg"/>
 </div>
 <div class="flex-1">
-<div class="flex justify-between items-start">
+<div class="flex justify-between items-start gap-4">
 <div>
-<h3 class="text-xl font-bold font-headline group-hover:text-primary transition-colors">Senior React Developer (Next.js &amp; TypeScript)</h3>
-<p class="text-secondary font-semibold text-sm mt-1">VinTech Global Solution</p>
+<div class="flex items-center gap-2">
+    <a href="../job_detail_senior_frontend_developer/code.html" class="text-xl font-bold font-headline text-on-surface hover:text-primary transition-colors">Senior Frontend Developer (React / TypeScript)</a>
+    <span class="material-symbols-outlined text-blue-600 text-sm" title="Doanh nghiệp đã xác thực">verified</span>
 </div>
-<span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Active</span>
+<a href="../company_profile_editor_vng_corporation/code.html" class="text-secondary font-semibold text-sm mt-1 hover:underline block">VNG Corporation</a>
 </div>
+<span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-widest shrink-0">Đang Tuyển</span>
+</div>
+
+<!-- Badge Báo Cáo Cạnh Tranh & Tích Điểm Nổi Bật -->
+<div class="mt-3 flex flex-wrap items-center gap-2">
+    <a href="../job_detail_candidate_insights_points/code.html" class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-xs font-bold hover:bg-amber-100 transition-colors shadow-sm">
+        <span class="material-symbols-outlined text-amber-600 text-sm">stars</span>
+        <span>42 Ứng viên đã nộp • Tỉ lệ chọi 1 : 21 • Mở khóa xem báo cáo</span>
+        <span class="material-symbols-outlined text-xs">arrow_forward</span>
+    </a>
+    <span class="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-800 text-[11px] font-semibold">
+        Thưởng +5 Điểm khi ứng tuyển
+    </span>
+</div>
+
 <div class="flex flex-wrap gap-x-6 gap-y-2 mt-4 text-sm text-outline font-medium">
 <div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[18px]">location_on</span> Hà Nội, Nam Từ Liêm
-                                </div>
-<div class="flex items-center gap-1 text-tertiary font-bold">
-<span class="material-symbols-outlined text-[18px]">payments</span> 25 - 45 triệu
-                                </div>
+<span class="material-symbols-outlined text-[18px]">location_on</span> Quận 7, TP.HCM (VNG Campus)
+</div>
+<div class="flex items-center gap-1 text-tertiary font-bold text-emerald-700">
+<span class="material-symbols-outlined text-[18px]">payments</span> 25 - 40 triệu
+</div>
 <div class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[18px]">schedule</span> 2 giờ trước
-                                </div>
+<span class="material-symbols-outlined text-[18px]">schedule</span> 1 giờ trước
+</div>
 </div>
 <div class="flex gap-2 mt-4">
 <span class="px-3 py-1 bg-surface-container-low rounded-lg text-xs font-semibold text-on-surface-variant">React</span>
-<span class="px-3 py-1 bg-surface-container-low rounded-lg text-xs font-semibold text-on-surface-variant">Node.js</span>
 <span class="px-3 py-1 bg-surface-container-low rounded-lg text-xs font-semibold text-on-surface-variant">TypeScript</span>
+<span class="px-3 py-1 bg-surface-container-low rounded-lg text-xs font-semibold text-on-surface-variant">Tailwind</span>
 </div>
 </div>
-<div class="flex flex-col gap-3 justify-center items-end min-w-[140px]">
-<button class="w-full bg-gradient-to-r from-[#2563EB] to-[#0EA5E9] text-white py-2.5 rounded-lg font-bold text-sm active:scale-95 transition-all">Nộp CV</button>
-<button class="w-full border border-outline-variant text-on-surface-variant py-2.5 rounded-lg font-bold text-sm hover:bg-surface-container-low transition-all">Lưu</button>
+<div class="flex flex-row sm:flex-col gap-2 justify-center items-end min-w-[150px]">
+<a href="../job_detail_senior_frontend_developer/code.html" class="w-full text-center border border-outline-variant text-on-surface-variant py-2.5 rounded-lg font-bold text-xs hover:bg-surface-container-low transition-all">Chi tiết công việc</a>
+<a href="../ng_tuy_n_b_c_1_th_ng_tin_c_nh_n/code.html" class="w-full text-center bg-gradient-to-r from-[#2563EB] to-[#0EA5E9] text-white py-2.5 rounded-lg font-bold text-xs active:scale-95 transition-all shadow-sm">Nộp CV (+5đ)</a>
 </div>
 </div>
 </div>

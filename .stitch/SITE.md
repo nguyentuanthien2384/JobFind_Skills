@@ -4,4 +4,4 @@ Công khai (Public): trang chủ/tìm kiếm việc làm/chi tiết việc làm/
 
 Danh mục route React nằm tại .docs/ui-mockups/route-coverage.json, không tự tạo route từ sơ đồ này. Các biến thể Desktop/Mobile/Trạng thái có thể dùng chung một route. Ánh xạ từng tác vụ vào đúng tính năng/vai trò/quyền/tenant/đơn vị sở hữu mã nguồn thật.
 
-37 màn gốc là tiêu chuẩn cơ sở (baseline). Figma V2 192 màn là mục tiêu mở rộng bổ sung; các màn/trạng thái mới sử dụng backlog và bằng chứng mã nguồn thực tế. Các đề xuất mở rộng được đánh dấu trong DESIGN_GAPS và tài liệu tính năng.
+37 màn gốc là tiêu chuẩn cơ sở (baseline). Figma V2 192 màn là mục tiêu mở rộng bổ sung; các màn/trạng thái mới sử dụng backlog và bằng chứng mã nguồn thực tế. Các đề xuất mở rộng được đánh dấu trong DESIGN_GAPS và tài liệu tính năng. Màn mở rộng Báo cáo cạnh tranh & Tích điểm (EXT-JF-010-CANDIDATE-INSIGHTS) đã được tích hợp trực tiếp vào chi tiết việc làm chuẩn JF-010 và liên kết đa chiều với trang chủ (JF-036), tìm kiếm (JF-037), hồ sơ ứng viên (JF-009) và quản lý thanh toán (JF-003).

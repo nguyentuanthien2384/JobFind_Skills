@@ -4228,6 +4228,36 @@
       "test_status": "not-run",
       "evidence": [],
       "next_action": "Prepare prompt from JF-036; preserve source filters/URL mode and define mobile filter sheet."
+    },
+    {
+      "id": "EXT-JF-010-CANDIDATE-INSIGHTS",
+      "kind": "screen-extension",
+      "feature_id": "job-detail",
+      "screen_id": "JF-010",
+      "title": "Job Detail — Báo cáo ứng tuyển, tỉ lệ cạnh tranh & tích điểm xem số lượng CV",
+      "mode": "match-reference",
+      "design_status": "integrated",
+      "code_status": "planned",
+      "test_status": "verified-browser",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/job_detail_senior_frontend_developer/code.html"
+        },
+        {
+          "field": "standalone_view",
+          "ref": ".stitch/designs/job_detail_candidate_insights_points/code.html"
+        },
+        {
+          "field": "prompt",
+          "ref": ".stitch/prompts/EXT-JF-010-CANDIDATE-INSIGHTS.md"
+        },
+        {
+          "field": "integrated_screens",
+          "ref": "JF-010, JF-036, JF-037, JF-009, JF-003"
+        }
+      ],
+      "next_action": "Ready for backend/frontend API integration into React JobDetail.js and ApplicationInsightsCard."
     }
   ]
 }

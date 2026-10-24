@@ -7,7 +7,7 @@ Snapshot source presence không là completed implementation. Phiên này chỉ 
 | master-layout | Extension/Figma catalog | reference/spec present | source mapped; changes not implemented | NOT_RUN |
 | home | JF-035 | reference/spec present | source mapped; changes not implemented | NOT_RUN |
 | job-search | JF-036 | reference/spec present | source mapped; changes not implemented | NOT_RUN |
-| job-detail | JF-010, JF-022, JF-023, JF-024 | reference/spec present | source mapped; changes not implemented | NOT_RUN |
+| job-detail | JF-010 (tích hợp EXT-JF-010-CANDIDATE-INSIGHTS), JF-022, JF-023, JF-024 | reference/spec present; integrated mockup | source mapped; changes not implemented | design verified browser |
 | companies | JF-006, JF-007 | reference/spec present | source mapped; changes not implemented | NOT_RUN |
 | auth-login | JF-015, JF-016, JF-017 | reference/spec present | source mapped; changes not implemented | NOT_RUN |
 | auth-register | JF-019, JF-020, JF-028 | reference/spec present | source mapped; changes not implemented | NOT_RUN |

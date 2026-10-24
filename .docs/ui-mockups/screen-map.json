@@ -284,7 +284,7 @@
     "note": "Một phần: mua gói có; recurring subscription chưa có route riêng",
     "width": 1600,
     "height": 1450,
-    "html_sha256": "1d4014caacfb9516bf6ea1669f2b93214371c65d2fa743e02eec8414963a7ed5",
+    "html_sha256": "98ef893cee34094a983b18bc94513bbdb907a686bf09a698e37fca236c117722",
     "image_sha256": "9c017051d1e3e733136da790e563ef74ed0b7167064472e8d2f8d49d0564f01c",
     "feature_id": "billing-packages",
     "roles": [
@@ -1356,7 +1356,7 @@
     "note": "Có route; kiểm tra dữ liệu hồ sơ thật",
     "width": 1171,
     "height": 1600,
-    "html_sha256": "47aec7d77ef97adc8b372b91db7fd94e5557a649a6ea2b743003c0e81d214bc4",
+    "html_sha256": "0c0f21414f3710b3bc267dd7fbdb07ccc49e92104b1aa7a6085f70a28424af8e",
     "image_sha256": "8384ed5344b1c4fc8f65a560cb3238c240c4e2f650a0c3c8ece0351709398614",
     "feature_id": "candidate-profile",
     "roles": [
@@ -1525,7 +1525,7 @@
     "note": "Có route; CV nộp qua modal",
     "width": 989,
     "height": 1600,
-    "html_sha256": "8e62cc6f91186cb8de9c9723f1feeb8c62b64942ed90a0279ebc47f71ff8315f",
+    "html_sha256": "37ab5b8d24a8aa39639e7960c1cf077d37d08bd5e4f66db39ddb11cb19374369",
     "image_sha256": "09fb22003da595aa42154ca6bc3d8516095b2d657f06ccfd667daf0ea2c83ab1",
     "feature_id": "job-detail",
     "roles": [
@@ -5560,7 +5560,7 @@
     "note": "Có route; dữ liệu trong thiết kế là minh họa",
     "width": 589,
     "height": 1600,
-    "html_sha256": "cf4902828f647c31ad530fe4bb800f2d6c683b0f9dfe269d38686358bdb2c7e7",
+    "html_sha256": "e72ef7abb1af0441ec1b6925336ceb0f149d44171f23ac43f93d278eb76cbeff",
     "image_sha256": "ca631e65c5b5f68d66c3fed4d93e4dd2a92b2b8296ecf7cf1eaa3d323911a446",
     "feature_id": "home",
     "roles": [
@@ -5767,7 +5767,7 @@
     "note": "Có route; URL filter/history, không tự đổi mode",
     "width": 1053,
     "height": 1600,
-    "html_sha256": "153421448493202c653f1cee5da45b75781b7149ca22ecf1d234ffcfcd375540",
+    "html_sha256": "82b356fe09ae1efb8acbde045a3b2e9a865954daa0ddbaafbf37c758afe738d0",
     "image_sha256": "1f519dfe18449b30acc609fc9b4e77af2b4162f02651cfc3a0c9aee63d834e69",
     "feature_id": "job-search",
     "roles": [
