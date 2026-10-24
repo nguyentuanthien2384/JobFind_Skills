@@ -1,0 +1,199 @@
+[
+  {
+    "id": "JF-021",
+    "folder": "ng_tin_tuy_n_d_ng_b_c_1",
+    "title": "Đăng Tin Tuyển Dụng - Bước 1",
+    "group": "Doanh nghiệp",
+    "route": "/admin/add-post",
+    "component": "container/system/Post/AddPost.js",
+    "api": "POST /api/create-new-post ; POST /api/create-reup-post ; PUT /api/update-post ; POST /api/jobs ; PUT /api/jobs/:id ; POST /api/jobs/:id/repost ; GET /api/jobs/manage",
+    "note": "Có route; wizard là trình bày, không tạo route backend mới",
+    "width": 1487,
+    "height": 1600,
+    "html_sha256": "1dd5e40fd8965c7cf1ef6f39f8cb74d690f77c2c39b5727fe30ab77d310a8662",
+    "image_sha256": "566392bb9141418ae07e1fa2f75f3381a98f6e318750202d47e0267e73357b29",
+    "feature_id": "job-posting",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1377,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1487,
+      "height": 1600
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/system/Post/AddPost.js",
+      "frontend/src/service/jobPostingService.js",
+      "backend/src/routes/web.js",
+      "microservices/shared/contracts/operations.js"
+    ],
+    "api_contracts": [
+      "POST /api/create-new-post",
+      "POST /api/create-reup-post",
+      "PUT /api/update-post",
+      "POST /api/jobs",
+      "PUT /api/jobs/:id",
+      "POST /api/jobs/:id/repost",
+      "GET /api/jobs/manage"
+    ],
+    "observations": {
+      "headings": [
+        "VNG Corporation",
+        "Đăng Tin Tuyển Dụng",
+        "Thông Tin Cơ Bản",
+        "Mẹo nhỏ cho bạn",
+        "Xem trước thẻ tin"
+      ],
+      "labels": [
+        "Tên vị trí*",
+        "Ngành nghề*",
+        "Cấp bậc*",
+        "Loại công việc*",
+        "Toàn thời gian",
+        "Bán thời gian",
+        "Remote",
+        "Hợp đồng",
+        "Số lượng*",
+        "Địa điểm làm việc*",
+        "Mức lương*",
+        "Thỏa thuận",
+        "Hạn nộp hồ sơ*",
+        "Kinh nghiệm*"
+      ],
+      "controls": [
+        {
+          "type": "text",
+          "placeholder": "Ví dụ: Senior Frontend Developer"
+        },
+        {},
+        {},
+        {
+          "type": "radio",
+          "name": "job_type"
+        },
+        {
+          "type": "radio",
+          "name": "job_type"
+        },
+        {
+          "type": "radio",
+          "name": "job_type"
+        },
+        {
+          "type": "radio",
+          "name": "job_type"
+        },
+        {
+          "type": "number"
+        },
+        {
+          "type": "text",
+          "placeholder": "Thêm địa điểm..."
+        },
+        {
+          "type": "text",
+          "placeholder": "Mức lương từ"
+        },
+        {
+          "type": "text",
+          "placeholder": "Đến"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "date"
+        },
+        {}
+      ],
+      "actions": [
+        "Lưu Nháp",
+        "Tiếp Theo arrow_forward"
+      ],
+      "colors": {
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "secondary": "#006591",
+        "on-background": "#191C1E",
+        "tertiary": "#943700",
+        "primary-fixed-dim": "#B4C5FF",
+        "error": "#BA1A1A",
+        "on-surface-variant": "#434655",
+        "surface-container-lowest": "#FFFFFF",
+        "inverse-surface": "#2D3133",
+        "tertiary-fixed-dim": "#FFB596",
+        "primary": "#004AC6",
+        "on-error": "#FFFFFF",
+        "on-secondary-fixed": "#001E2F",
+        "on-primary": "#FFFFFF",
+        "surface-tint": "#0053DB",
+        "tertiary-container": "#BC4800",
+        "secondary-container": "#39B8FD",
+        "background": "#F7F9FB",
+        "primary-fixed": "#DBE1FF",
+        "on-secondary-container": "#004666",
+        "outline-variant": "#C3C6D7",
+        "surface-variant": "#E0E3E5",
+        "on-tertiary": "#FFFFFF",
+        "on-surface": "#191C1E",
+        "secondary-fixed": "#C9E6FF",
+        "inverse-on-surface": "#EFF1F3",
+        "outline": "#737686",
+        "surface-container": "#ECEEF0",
+        "on-error-container": "#93000A",
+        "on-primary-container": "#EEEFFF",
+        "secondary-fixed-dim": "#89CEFF",
+        "on-tertiary-container": "#FFEDE6",
+        "on-primary-fixed-variant": "#003EA8",
+        "on-secondary-fixed-variant": "#004C6E",
+        "surface-dim": "#D8DADC",
+        "surface-bright": "#F7F9FB",
+        "inverse-primary": "#B4C5FF",
+        "surface": "#F7F9FB",
+        "surface-container-highest": "#E0E3E5",
+        "surface-container-low": "#F2F4F6",
+        "on-primary-fixed": "#00174B",
+        "primary-container": "#2563EB",
+        "on-secondary": "#FFFFFF",
+        "tertiary-fixed": "#FFDBCD",
+        "error-container": "#FFDAD6",
+        "on-tertiary-fixed": "#360F00",
+        "surface-container-high": "#E6E8EA"
+      },
+      "fonts": {
+        "headline": "Be Vietnam Pro",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "User Avatar",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB0w5SWCcJoUJjNfON780zjExXb_-EvkQr5Cq8TTXVCWs-LTfVx5Rfns3JDECQWQy6q8MDuJLkTNnk8sVnMihXVjtRI_J-Vb3MkdGGquy87SImmABAdKgWkYs2RI2u3Jz7Q6BkE_AWyY4aC0pAmNNY0rXCYPdeWmHds-uubFkLhrDtKDtVSnJQ8C0Dr4xVzi2iFIhUgr1rD407--6ZwcDRk-q5XWTLnLN7MpHPi69vHLYavsn9W3kaG0NQrq2xq9-Po5v39blxpRvtc",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/ng_tin_tuy_n_d_ng_b_c_1/code.html",
+      "image": ".stitch/designs/ng_tin_tuy_n_d_ng_b_c_1/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-021.md",
+    "prompt": ".stitch/prompts/JF-021.md"
+  }
+]

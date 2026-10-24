@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Đánh giá component tùy chọn
+  short_description: Đánh giá component tùy chọn cho dự án JobFind
+  default_prompt: Dùng $shadcn-ui đánh giá thay Dialog của modal CV bằng primitive
+    phù hợp.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

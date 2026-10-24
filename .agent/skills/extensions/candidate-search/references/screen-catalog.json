@@ -1,0 +1,159 @@
+[
+  {
+    "id": "JF-012",
+    "folder": "kho_ng_vi_n_tuy_n_d_ng_vn",
+    "title": "Kho Ứng Viên - Tuyển Dụng VN",
+    "group": "Doanh nghiệp",
+    "route": "/admin/list-candiate",
+    "component": "container/system/Cv/FilterCv.js",
+    "api": "GET /api/fillter-cv-by-selection ; GET /api/candidate-search-jobs ; GET /api/check-see-candiate ; GET /api/talent-pool ; POST /api/talent-pool",
+    "note": "Có route; giữ spelling candiate; unlock/entitlement trước xem CV",
+    "width": 1600,
+    "height": 1872,
+    "html_sha256": "5394d02a56b363edb4b9a55aa7115fd052915669f468f83e1246c27ebca81d1e",
+    "image_sha256": "5e1d7766489718825490c07910a45caf344ccac3e921b8449b3f769fc3906e87",
+    "feature_id": "candidate-search",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1501,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1600,
+      "height": 1872
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/system/Cv/FilterCv.js",
+      "frontend/src/service/cvService.js",
+      "backend/src/services/candidateSearchService.js"
+    ],
+    "api_contracts": [
+      "GET /api/fillter-cv-by-selection",
+      "GET /api/candidate-search-jobs",
+      "GET /api/check-see-candiate",
+      "GET /api/talent-pool",
+      "POST /api/talent-pool"
+    ],
+    "observations": {
+      "headings": [
+        "VNG Corporation",
+        "Kho Ứng Viên",
+        "Nguyễn Văn An",
+        "Trần Minh Hoàng",
+        "Phạm Anh Thư",
+        "Lê Nhật Nam",
+        "Vũ Duy Anh",
+        "Mai Thanh Tùng"
+      ],
+      "labels": [],
+      "controls": [
+        {
+          "type": "text",
+          "placeholder": "Tìm theo kỹ năng, vị trí, tên..."
+        }
+      ],
+      "actions": [
+        "filter_list",
+        "notifications",
+        "help",
+        "ios_share Xuất dữ liệu",
+        "search Tìm Ứng Viên",
+        "close",
+        "+ Thêm bộ lọc",
+        "grid_view",
+        "reorder",
+        "Xem Hồ Sơ",
+        "Liên Hệ",
+        "bookmark",
+        "chevron_left",
+        "1",
+        "2",
+        "3",
+        "71",
+        "chevron_right"
+      ],
+      "colors": {
+        "on-tertiary-fixed": "#360F00",
+        "tertiary-container": "#BC4800",
+        "surface-container-low": "#F2F4F6",
+        "on-surface": "#191C1E",
+        "inverse-surface": "#2D3133",
+        "primary-container": "#2563EB",
+        "secondary": "#006591",
+        "secondary-container": "#39B8FD",
+        "outline-variant": "#C3C6D7",
+        "tertiary": "#943700",
+        "primary-fixed-dim": "#B4C5FF",
+        "on-primary-fixed": "#00174B",
+        "surface-container-high": "#E6E8EA",
+        "outline": "#737686",
+        "surface-variant": "#E0E3E5",
+        "on-tertiary-container": "#FFEDE6",
+        "on-tertiary": "#FFFFFF",
+        "surface-dim": "#D8DADC",
+        "primary": "#004AC6",
+        "secondary-fixed-dim": "#89CEFF",
+        "on-error": "#FFFFFF",
+        "surface": "#F7F9FB",
+        "on-primary": "#FFFFFF",
+        "background": "#F7F9FB",
+        "on-secondary": "#FFFFFF",
+        "error-container": "#FFDAD6",
+        "on-background": "#191C1E",
+        "on-surface-variant": "#434655",
+        "inverse-on-surface": "#EFF1F3",
+        "surface-container-highest": "#E0E3E5",
+        "tertiary-fixed": "#FFDBCD",
+        "inverse-primary": "#B4C5FF",
+        "error": "#BA1A1A",
+        "surface-container-lowest": "#FFFFFF",
+        "on-secondary-fixed-variant": "#004C6E",
+        "tertiary-fixed-dim": "#FFB596",
+        "on-primary-container": "#EEEFFF",
+        "on-error-container": "#93000A",
+        "primary-fixed": "#DBE1FF",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "on-secondary-fixed": "#001E2F",
+        "on-secondary-container": "#004666",
+        "surface-tint": "#0053DB",
+        "surface-bright": "#F7F9FB",
+        "secondary-fixed": "#C9E6FF",
+        "surface-container": "#ECEEF0",
+        "on-primary-fixed-variant": "#003EA8"
+      },
+      "fonts": {
+        "headline": "Be Vietnam Pro",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "User Profile",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAX-aiztP9QtB6ZQD3I364Tr3Ks0-qlJVcRls4xn5DctBjfYIC9jxNiHWV_FhyUAoA7YamPML_zc8QJywqTG6CwYxoUSmI_Ku7L_Vt5tuBO5nnRQRDTjIRSVe25KmEsDWmT7Fu5NYOFnaiALQGhCxXCXz3ZAnQKrWTxaRyWl-qphqxPqS-wk4dbLlaiXz7VlJgjzEpGvSbx5wHe1scKzx9Z60JpR1m2defAmicEhta8kK0t8rV9_8ZPFKviPfHSNfyjrAnT19ivqgIV",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/kho_ng_vi_n_tuy_n_d_ng_vn/code.html",
+      "image": ".stitch/designs/kho_ng_vi_n_tuy_n_d_ng_vn/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-012.md",
+    "prompt": ".stitch/prompts/JF-012.md"
+  }
+]

@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Hồ sơ và CV ứng viên
+  short_description: Hồ sơ và CV ứng viên cho dự án JobFind
+  default_prompt: Dùng $candidate-profile hoàn thiện JF-009 giống Stitch.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

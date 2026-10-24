@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Lập kế hoạch nhiều lớp
+  short_description: Lập kế hoạch nhiều lớp cho dự án JobFind
+  default_prompt: Dùng $system-planner lập kế hoạch đưa JF-014 thành lịch tổng hợp hoạt
+    động.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

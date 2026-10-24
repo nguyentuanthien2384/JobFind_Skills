@@ -1,0 +1,4233 @@
+{
+  "format": 3,
+  "source_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+  "scope": "Native references, feature work and supplementary Figma targets have separate statuses.",
+  "next_task_id": "EXT-JF-036-MOBILE",
+  "tasks": [
+    {
+      "id": "JF-001",
+      "kind": "native-reference",
+      "feature_id": "master-layout",
+      "screen_id": "JF-001",
+      "title": "404 Page - Tuyển Dụng VN",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/404_page_tuy_n_d_ng_vn/screen.png",
+          "sha256": "76ee0f0ac9b4bf871b7cdd7b87f55a463963b124bdb8ef04e5e2d0aa49e4ec11"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-002",
+      "kind": "native-reference",
+      "feature_id": "admin-overview",
+      "screen_id": "JF-002",
+      "title": "Admin Dashboard Overview",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/admin_dashboard_overview/screen.png",
+          "sha256": "52076b9512811388c2dff975b8c18303cc4347b65d1dd546b812cbe019102beb"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-003",
+      "kind": "native-reference",
+      "feature_id": "billing-packages",
+      "screen_id": "JF-003",
+      "title": "Billing & Subscriptions",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/billing_subscriptions/screen.png",
+          "sha256": "9c017051d1e3e733136da790e563ef74ed0b7167064472e8d2f8d49d0564f01c"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-004",
+      "kind": "native-reference",
+      "feature_id": "system-proposals",
+      "screen_id": "JF-004",
+      "title": "Cài Đặt Hệ Thống - Admin Panel",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/c_i_t_h_th_ng_admin_panel/screen.png",
+          "sha256": "d13adf937a848f6aa238aa827e8b886b53d9e4de625411e8dd8b4e5fda235fe0"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-005",
+      "kind": "native-reference",
+      "feature_id": "company-profile",
+      "screen_id": "JF-005",
+      "title": "Company Profile Editor - VNG Corporation",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/company_profile_editor_vng_corporation/screen.png",
+          "sha256": "93385013f5426332dc5c0bec75977cfc86f4876d0d1ea8de2d4a4737ab30786d"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-006",
+      "kind": "native-reference",
+      "feature_id": "companies",
+      "screen_id": "JF-006",
+      "title": "Danh Mục Công Ty",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/danh_m_c_c_ng_ty/screen.png",
+          "sha256": "cdf95ef605693efc0e7f3f52cc52a85137b49793e9dc2f7b419b40ce7bdbbe01"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-007",
+      "kind": "native-reference",
+      "feature_id": "companies",
+      "screen_id": "JF-007",
+      "title": "Danh Sách Công Ty - Tuyển Dụng VN",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/danh_s_ch_c_ng_ty_tuy_n_d_ng_vn/screen.png",
+          "sha256": "e9958081d871163b5018e1d745d10cc4c6d57e03e16bd1c81ba5a4b54949747f"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-008",
+      "kind": "native-reference",
+      "feature_id": "admin-companies",
+      "screen_id": "JF-008",
+      "title": "Duyệt Hồ Sơ Công Ty",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/duy_t_h_s_c_ng_ty/screen.png",
+          "sha256": "0dbc2b3cafd938d400daf06f37d42d48735c9889a4944a58dd7ed3fde3f5136b"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-009",
+      "kind": "native-reference",
+      "feature_id": "candidate-profile",
+      "screen_id": "JF-009",
+      "title": "Hồ Sơ Của Tôi - Tuyển Dụng VN",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/h_s_c_a_t_i_tuy_n_d_ng_vn/screen.png",
+          "sha256": "8384ed5344b1c4fc8f65a560cb3238c240c4e2f650a0c3c8ece0351709398614"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-010",
+      "kind": "native-reference",
+      "feature_id": "job-detail",
+      "screen_id": "JF-010",
+      "title": "Job Detail - Senior Frontend Developer",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/job_detail_senior_frontend_developer/screen.png",
+          "sha256": "09fb22003da595aa42154ca6bc3d8516095b2d657f06ccfd667daf0ea2c83ab1"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-011",
+      "kind": "native-reference",
+      "feature_id": "admin-jobs",
+      "screen_id": "JF-011",
+      "title": "Job Moderation - Admin Panel",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/job_moderation_admin_panel/screen.png",
+          "sha256": "0dfc136c60a954d5e3ebe1315e53ee7bbca00230778421fe166b797955f4c559"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-012",
+      "kind": "native-reference",
+      "feature_id": "candidate-search",
+      "screen_id": "JF-012",
+      "title": "Kho Ứng Viên - Tuyển Dụng VN",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/kho_ng_vi_n_tuy_n_d_ng_vn/screen.png",
+          "sha256": "5e1d7766489718825490c07910a45caf344ccac3e921b8449b3f769fc3906e87"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-013",
+      "kind": "native-reference",
+      "feature_id": "interviews-offers",
+      "screen_id": "JF-013",
+      "title": "Lịch Phỏng Vấn & Agenda",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/l_ch_ph_ng_v_n_agenda/screen.png",
+          "sha256": "d3170786a1851750047943063835c4a49327a5d14c42424d040d55f5e8bf7864"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-014",
+      "kind": "native-reference",
+      "feature_id": "interviews-offers",
+      "screen_id": "JF-014",
+      "title": "Lịch Phỏng Vấn - Career Architect",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/l_ch_ph_ng_v_n_career_architect/screen.png",
+          "sha256": "ffadee70dc13a88242c730f78216e21d2dfed1d904e9cd3228606d0cc1978b15"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-015",
+      "kind": "native-reference",
+      "feature_id": "auth-login",
+      "screen_id": "JF-015",
+      "title": "Login - Premium Desktop",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/login_premium_desktop/screen.png",
+          "sha256": "29b5d344e8fcc3cd52689a5cda1647cd06f0cd6ea60bbb8d57cc473399d15068"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-016",
+      "kind": "native-reference",
+      "feature_id": "auth-login",
+      "screen_id": "JF-016",
+      "title": "Login - Tuyển Dụng VN",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/login_tuy_n_d_ng_vn_1/screen.png",
+          "sha256": "3b9fb380fb7e3ea6ad165de16a0de54ce3e71cc15134c5aa0eed63a9923d882a"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-017",
+      "kind": "native-reference",
+      "feature_id": "auth-login",
+      "screen_id": "JF-017",
+      "title": "Login - Tuyển Dụng VN",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/login_tuy_n_d_ng_vn_2/screen.png",
+          "sha256": "792274ec91dfbebb0ba9ac05fdbe7669be04dbe257c5a729b2aadc6bde67432b"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-018",
+      "kind": "native-reference",
+      "feature_id": "applications",
+      "screen_id": "JF-018",
+      "title": "Đơn Ứng Tuyển Của Tôi - Tuyển Dụng VN",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/n_ng_tuy_n_c_a_t_i_tuy_n_d_ng_vn/screen.png",
+          "sha256": "174d66740bcf8d04fd1d46f60bd9c89dc0323f2f6a6070c97bf54e503ea6fc96"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-019",
+      "kind": "native-reference",
+      "feature_id": "auth-register",
+      "screen_id": "JF-019",
+      "title": "Đăng ký - Chọn vai trò",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/ng_k_ch_n_vai_tr/screen.png",
+          "sha256": "8df19a12fa95534eba90f776b7d6909a6c052e74c46e94a1d9ad2a8cfd5ca7ec"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-020",
+      "kind": "native-reference",
+      "feature_id": "auth-register",
+      "screen_id": "JF-020",
+      "title": "Đăng Ký - Tuyển Dụng VN",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/ng_k_tuy_n_d_ng_vn/screen.png",
+          "sha256": "5c7c879a0dfcd52966f26541f64b759203dee90a0e0be0a8b689ff375f92a651"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-021",
+      "kind": "native-reference",
+      "feature_id": "job-posting",
+      "screen_id": "JF-021",
+      "title": "Đăng Tin Tuyển Dụng - Bước 1",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/ng_tin_tuy_n_d_ng_b_c_1/screen.png",
+          "sha256": "566392bb9141418ae07e1fa2f75f3381a98f6e318750202d47e0267e73357b29"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-022",
+      "kind": "native-reference",
+      "feature_id": "applications",
+      "screen_id": "JF-022",
+      "title": "Ứng tuyển: Bước 1 - Thông tin cá nhân",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/ng_tuy_n_b_c_1_th_ng_tin_c_nh_n/screen.png",
+          "sha256": "2e4e1eaaac0d14dc206029d3ebd6e24e640368bcd7cef3d6c37b44143cb30a5f"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-023",
+      "kind": "native-reference",
+      "feature_id": "applications",
+      "screen_id": "JF-023",
+      "title": "Ứng tuyển: Senior UI/UX Designer",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer/screen.png",
+          "sha256": "fa72e4475da841dd5ada8c770f73ec11b18d425568d42422ac5dce4353e111f8"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-024",
+      "kind": "native-reference",
+      "feature_id": "applications",
+      "screen_id": "JF-024",
+      "title": "Ứng tuyển: Senior UI/UX Designer (Desktop)",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer_desktop/screen.png",
+          "sha256": "2f053ec41d0b316d185944e6f86241aaf9793ed482e1d857faefe937cdb19516"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-025",
+      "kind": "native-reference",
+      "feature_id": "pipeline",
+      "screen_id": "JF-025",
+      "title": "Phễu Tuyển Dụng - Senior Frontend Developer",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/ph_u_tuy_n_d_ng_senior_frontend_developer/screen.png",
+          "sha256": "8746dbb9294309a211deb6c081ffcc830218ef7b789807ff020179a54a8bd15f"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-026",
+      "kind": "native-reference",
+      "feature_id": "admin-packages",
+      "screen_id": "JF-026",
+      "title": "Quản lý Gói dịch vụ",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/qu_n_l_g_i_d_ch_v/screen.png",
+          "sha256": "accffff8d3aea2584fb09eff9ff7d6dcf7f46a3d3dd09639fcaa4292f91cbf91"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-027",
+      "kind": "native-reference",
+      "feature_id": "admin-users",
+      "screen_id": "JF-027",
+      "title": "Quản Lý Người Dùng - Admin Panel",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/qu_n_l_ng_i_d_ng_admin_panel/screen.png",
+          "sha256": "c123b219af084c7d70b64fa22f0c927010c61fc208a0e23c54870194498ca447"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-028",
+      "kind": "native-reference",
+      "feature_id": "auth-register",
+      "screen_id": "JF-028",
+      "title": "Registration - Premium Desktop",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/registration_premium_desktop/screen.png",
+          "sha256": "fb12f2d57cad2ed0bbef45bf3c12e66edc88ac786a1ee130209f26b3cf4fff8f"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-029",
+      "kind": "native-reference",
+      "feature_id": "admin-reports-audit",
+      "screen_id": "JF-029",
+      "title": "Revenue & Analytics Dashboard",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/revenue_analytics_dashboard/screen.png",
+          "sha256": "b8542304f2b096558a43a073ff8a92df17cd91ce4d1fa96fb9f97b5216161aaf"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-030",
+      "kind": "native-reference",
+      "feature_id": "chat",
+      "screen_id": "JF-030",
+      "title": "Tin nhắn tuyển dụng",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/tin_nh_n_tuy_n_d_ng/screen.png",
+          "sha256": "3b478c2e3e7601049d7cc8c4a84546d97cd24f8042396857f993fb6da448b2d2"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-031",
+      "kind": "native-reference",
+      "feature_id": "chat",
+      "screen_id": "JF-031",
+      "title": "Trò chuyện & Tin nhắn",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/tr_chuy_n_tin_nh_n/screen.png",
+          "sha256": "84d2b2be65e13dd4745cb706c717a2df8324b5347580198f834c938747145d4b"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-032",
+      "kind": "native-reference",
+      "feature_id": "master-layout",
+      "screen_id": "JF-032",
+      "title": "Trang 404 - Không Tìm Thấy",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/trang_404_kh_ng_t_m_th_y/screen.png",
+          "sha256": "a8edd445d8afdb2bb9063274d94db89090f9f602d6e587067c4f7c1aa9c7da4d"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-033",
+      "kind": "native-reference",
+      "feature_id": "notifications",
+      "screen_id": "JF-033",
+      "title": "Trung Tâm Thông Báo - Tuyển Dụng VN",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/trung_t_m_th_ng_b_o_tuy_n_d_ng_vn/screen.png",
+          "sha256": "bba7fd7ab73f8dd77c5011a6b039648d7109dd3c7f7528d35f07fbc0bab27179"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-034",
+      "kind": "native-reference",
+      "feature_id": "employer-dashboard",
+      "screen_id": "JF-034",
+      "title": "Tuyển Dụng VN - Dashboard Doanh Nghiệp",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/tuy_n_d_ng_vn_dashboard_doanh_nghi_p/screen.png",
+          "sha256": "b55afeec2d8abf0708c50414d1fb46d5be08d507d47d2d8bade52ce98bc4f9f4"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-035",
+      "kind": "native-reference",
+      "feature_id": "home",
+      "screen_id": "JF-035",
+      "title": "Tuyển Dụng VN - Homepage",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/tuy_n_d_ng_vn_homepage/screen.png",
+          "sha256": "ca631e65c5b5f68d66c3fed4d93e4dd2a92b2b8296ecf7cf1eaa3d323911a446"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-036",
+      "kind": "native-reference",
+      "feature_id": "job-search",
+      "screen_id": "JF-036",
+      "title": "Tuyển Dụng VN - Search Results",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/tuy_n_d_ng_vn_search_results/screen.png",
+          "sha256": "1f519dfe18449b30acc609fc9b4e77af2b4162f02651cfc3a0c9aee63d834e69"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "JF-037",
+      "kind": "native-reference",
+      "feature_id": "admin-companies",
+      "screen_id": "JF-037",
+      "title": "Xác thực Doanh nghiệp - Admin",
+      "mode": "match-reference",
+      "design_status": "reference-complete",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": ".stitch/designs/x_c_th_c_doanh_nghi_p_admin/screen.png",
+          "sha256": "ff262edc63441f2b08edfa8cc7094d4400061eb09eecf153300eb312b42b0016"
+        }
+      ],
+      "next_action": "Read screen contract and actual source before implementing requested scope."
+    },
+    {
+      "id": "FEATURE-master-layout",
+      "kind": "full-feature",
+      "feature_id": "master-layout",
+      "screens": [],
+      "title": "Shell, navigation và layout chung",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/master-layout-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-home",
+      "kind": "full-feature",
+      "feature_id": "home",
+      "screens": [
+        "JF-035"
+      ],
+      "title": "Trang chủ và khám phá việc làm",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/home-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-job-search",
+      "kind": "full-feature",
+      "feature_id": "job-search",
+      "screens": [
+        "JF-036"
+      ],
+      "title": "Kết quả tìm việc và bộ lọc",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/job-search-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-job-detail",
+      "kind": "full-feature",
+      "feature_id": "job-detail",
+      "screens": [
+        "JF-010",
+        "JF-022",
+        "JF-023",
+        "JF-024"
+      ],
+      "title": "Chi tiết và external job",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/job-detail-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-companies",
+      "kind": "full-feature",
+      "feature_id": "companies",
+      "screens": [
+        "JF-006",
+        "JF-007"
+      ],
+      "title": "Danh sách và chi tiết công ty",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/companies-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-auth-login",
+      "kind": "full-feature",
+      "feature_id": "auth-login",
+      "screens": [
+        "JF-015",
+        "JF-016",
+        "JF-017"
+      ],
+      "title": "Đăng nhập và social SSO",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/auth-login-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-auth-register",
+      "kind": "full-feature",
+      "feature_id": "auth-register",
+      "screens": [
+        "JF-019",
+        "JF-020",
+        "JF-028"
+      ],
+      "title": "Chọn vai trò và đăng ký",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/auth-register-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-auth-recovery-security",
+      "kind": "full-feature",
+      "feature_id": "auth-recovery-security",
+      "screens": [],
+      "title": "Khôi phục và bảo mật tài khoản",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/auth-recovery-security-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-candidate-profile",
+      "kind": "full-feature",
+      "feature_id": "candidate-profile",
+      "screens": [
+        "JF-009"
+      ],
+      "title": "Hồ sơ cá nhân ứng viên",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/candidate-profile-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-candidate-cv-ai",
+      "kind": "full-feature",
+      "feature_id": "candidate-cv-ai",
+      "screens": [],
+      "title": "CV đã chuẩn bị và AI CV",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/candidate-cv-ai-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-applications",
+      "kind": "full-feature",
+      "feature_id": "applications",
+      "screens": [
+        "JF-018",
+        "JF-022",
+        "JF-023",
+        "JF-024"
+      ],
+      "title": "Ứng tuyển và theo dõi đơn",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/applications-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-saved-jobs-follow",
+      "kind": "full-feature",
+      "feature_id": "saved-jobs-follow",
+      "screens": [],
+      "title": "Việc đã lưu và công ty theo dõi",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/saved-jobs-follow-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-notifications",
+      "kind": "full-feature",
+      "feature_id": "notifications",
+      "screens": [
+        "JF-033"
+      ],
+      "title": "Trung tâm thông báo",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/notifications-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-chat",
+      "kind": "full-feature",
+      "feature_id": "chat",
+      "screens": [
+        "JF-030",
+        "JF-031"
+      ],
+      "title": "Tin nhắn tuyển dụng",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/chat-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-support-assistant",
+      "kind": "full-feature",
+      "feature_id": "support-assistant",
+      "screens": [],
+      "title": "Trợ lý hỗ trợ và handoff",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/support-assistant-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-company-profile",
+      "kind": "full-feature",
+      "feature_id": "company-profile",
+      "screens": [
+        "JF-005"
+      ],
+      "title": "Chỉnh sửa hồ sơ doanh nghiệp",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/company-profile-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-company-team",
+      "kind": "full-feature",
+      "feature_id": "company-team",
+      "screens": [],
+      "title": "Nhân sự và tuyển dụng theo tenant",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/company-team-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-employer-dashboard",
+      "kind": "full-feature",
+      "feature_id": "employer-dashboard",
+      "screens": [
+        "JF-034"
+      ],
+      "title": "Dashboard doanh nghiệp",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/employer-dashboard-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-job-posting",
+      "kind": "full-feature",
+      "feature_id": "job-posting",
+      "screens": [
+        "JF-021"
+      ],
+      "title": "Đăng và quản lý tin",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/job-posting-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-candidate-search",
+      "kind": "full-feature",
+      "feature_id": "candidate-search",
+      "screens": [
+        "JF-012"
+      ],
+      "title": "Kho ứng viên và mở CV",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/candidate-search-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-pipeline",
+      "kind": "full-feature",
+      "feature_id": "pipeline",
+      "screens": [
+        "JF-025"
+      ],
+      "title": "Kanban, đánh giá và AI tuyển dụng",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/pipeline-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-interviews-offers",
+      "kind": "full-feature",
+      "feature_id": "interviews-offers",
+      "screens": [
+        "JF-013",
+        "JF-014"
+      ],
+      "title": "Phỏng vấn và thư mời",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/interviews-offers-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-billing-packages",
+      "kind": "full-feature",
+      "feature_id": "billing-packages",
+      "screens": [
+        "JF-003"
+      ],
+      "title": "Mua gói và lịch sử giao dịch",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/billing-packages-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-admin-overview",
+      "kind": "full-feature",
+      "feature_id": "admin-overview",
+      "screens": [
+        "JF-002"
+      ],
+      "title": "Tổng quan quản trị",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/admin-overview-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-admin-users",
+      "kind": "full-feature",
+      "feature_id": "admin-users",
+      "screens": [
+        "JF-027"
+      ],
+      "title": "Quản lý người dùng",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/admin-users-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-admin-jobs",
+      "kind": "full-feature",
+      "feature_id": "admin-jobs",
+      "screens": [
+        "JF-011"
+      ],
+      "title": "Kiểm duyệt tin tuyển dụng",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/admin-jobs-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-admin-companies",
+      "kind": "full-feature",
+      "feature_id": "admin-companies",
+      "screens": [
+        "JF-008",
+        "JF-037"
+      ],
+      "title": "Duyệt và xác thực doanh nghiệp",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/admin-companies-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-admin-packages",
+      "kind": "full-feature",
+      "feature_id": "admin-packages",
+      "screens": [
+        "JF-026"
+      ],
+      "title": "Quản lý gói đăng tin và CV",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/admin-packages-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-admin-reports-audit",
+      "kind": "full-feature",
+      "feature_id": "admin-reports-audit",
+      "screens": [
+        "JF-029"
+      ],
+      "title": "Báo cáo và audit",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/admin-reports-audit-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-recruitment-catalogs",
+      "kind": "full-feature",
+      "feature_id": "recruitment-catalogs",
+      "screens": [],
+      "title": "Danh mục nghề nghiệp và kỹ năng",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/recruitment-catalogs-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "FEATURE-system-proposals",
+      "kind": "full-feature",
+      "feature_id": "system-proposals",
+      "screens": [
+        "JF-004",
+        "JF-013",
+        "JF-014",
+        "JF-003"
+      ],
+      "title": "Màn tổng hợp chưa có đầy đủ source",
+      "design_status": "planned",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Read .docs/ideas/system-proposals-idea.md and current source; implement only requested delta."
+    },
+    {
+      "id": "V2-home",
+      "kind": "figma-supplementary",
+      "title": "Trang chủ · cơ hội và nghề nghiệp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-4"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-search",
+      "kind": "figma-supplementary",
+      "title": "Tìm việc · kết quả và bộ lọc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-193"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-job-detail",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết việc làm",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-349"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-external-job",
+      "kind": "figma-supplementary",
+      "title": "Việc làm từ nguồn bên ngoài",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-481"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-companies",
+      "kind": "figma-supplementary",
+      "title": "Danh sách doanh nghiệp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-611"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-company-detail",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết doanh nghiệp và tin tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-701"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-about",
+      "kind": "figma-supplementary",
+      "title": "Về JobFind",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-824"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-contact",
+      "kind": "figma-supplementary",
+      "title": "Liên hệ JobFind",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-871"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-login",
+      "kind": "figma-supplementary",
+      "title": "Đăng nhập",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-register-role",
+      "kind": "figma-supplementary",
+      "title": "Đăng ký · chọn loại tài khoản",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-54"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-register-candidate",
+      "kind": "figma-supplementary",
+      "title": "Đăng ký ứng viên · thông tin cá nhân",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-86"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-register-company",
+      "kind": "figma-supplementary",
+      "title": "Đăng ký nhà tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-134"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-register-account",
+      "kind": "figma-supplementary",
+      "title": "Đăng ký · thiết lập tài khoản",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-185"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-register-success",
+      "kind": "figma-supplementary",
+      "title": "Đăng ký thành công",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-235"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-forgot",
+      "kind": "figma-supplementary",
+      "title": "Quên mật khẩu",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-259"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-forgot-result",
+      "kind": "figma-supplementary",
+      "title": "Yêu cầu đặt lại mật khẩu",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-287"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-social-onboarding",
+      "kind": "figma-supplementary",
+      "title": "Đăng ký liên kết · hoàn thiện thông tin",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-311"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-social-error",
+      "kind": "figma-supplementary",
+      "title": "Đăng nhập liên kết chưa hoàn tất",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-354"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-candidate-profile",
+      "kind": "figma-supplementary",
+      "title": "Hồ sơ cá nhân",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-379"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-candidate-settings",
+      "kind": "figma-supplementary",
+      "title": "Cài đặt hồ sơ và thông báo",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-543"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-candidate-password",
+      "kind": "figma-supplementary",
+      "title": "Đổi mật khẩu · ứng viên",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-695"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-saved",
+      "kind": "figma-supplementary",
+      "title": "Việc làm đã lưu",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-813"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-followed",
+      "kind": "figma-supplementary",
+      "title": "Việc làm đang theo dõi",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1002"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-recommended",
+      "kind": "figma-supplementary",
+      "title": "Việc làm được gợi ý",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1189"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-notifications",
+      "kind": "figma-supplementary",
+      "title": "Trung tâm thông báo",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1376"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-profile-edit",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa hồ sơ cá nhân",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1499"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-ai-workspace",
+      "kind": "figma-supplementary",
+      "title": "CV và trợ lý AI",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1637"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-ai-create",
+      "kind": "figma-supplementary",
+      "title": "Tạo CV AI · thông tin đầu vào",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1794"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-ai-pending",
+      "kind": "figma-supplementary",
+      "title": "CV AI · đang xử lý",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1939"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-cv-editor",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa CV đã lưu",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2057"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-cv-preview",
+      "kind": "figma-supplementary",
+      "title": "Xem trước và xuất CV PDF",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2292"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-ai-match",
+      "kind": "figma-supplementary",
+      "title": "Phân tích mức phù hợp với việc làm",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2414"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-ai-match-result",
+      "kind": "figma-supplementary",
+      "title": "Kết quả phân tích CV và công việc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2534"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-ai-cover",
+      "kind": "figma-supplementary",
+      "title": "Thư ứng tuyển AI · bản nháp chỉnh sửa",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2652"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-applications",
+      "kind": "figma-supplementary",
+      "title": "Danh sách hồ sơ đã nộp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2774"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-application-document",
+      "kind": "figma-supplementary",
+      "title": "Tài liệu hồ sơ đã nộp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2943"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-apply-info",
+      "kind": "figma-supplementary",
+      "title": "Ứng tuyển · 1. Thông tin liên hệ",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3065"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-apply-cv",
+      "kind": "figma-supplementary",
+      "title": "Ứng tuyển · 2. Chọn CV",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3152"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-apply-review",
+      "kind": "figma-supplementary",
+      "title": "Ứng tuyển · 3. Kiểm tra hồ sơ",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3236"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-apply-success",
+      "kind": "figma-supplementary",
+      "title": "Ứng tuyển thành công",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3322"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-application-detail",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết và lịch sử hồ sơ ứng tuyển",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3346"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-apply-upload-error",
+      "kind": "figma-supplementary",
+      "title": "Ứng tuyển · tệp không hợp lệ",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3475"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-company-create",
+      "kind": "figma-supplementary",
+      "title": "Tạo hồ sơ doanh nghiệp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3560"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-company-edit",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa hồ sơ doanh nghiệp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3748"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-company-pending",
+      "kind": "figma-supplementary",
+      "title": "Doanh nghiệp · chờ xét duyệt",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3936"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-posts",
+      "kind": "figma-supplementary",
+      "title": "Quản lý tin tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4075"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-post-create",
+      "kind": "figma-supplementary",
+      "title": "Đăng tin · thông tin và tiêu chí",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4279"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-post-edit",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa tin tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4480"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-post-content",
+      "kind": "figma-supplementary",
+      "title": "Đăng tin · mô tả và quyền lợi",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4681"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-post-preview",
+      "kind": "figma-supplementary",
+      "title": "Đăng tin · xem trước và gửi duyệt",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4847"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-team",
+      "kind": "figma-supplementary",
+      "title": "Quản lý nhân sự tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5035"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-team-invite",
+      "kind": "figma-supplementary",
+      "title": "Thêm nhân viên bằng tài khoản đã có",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5194"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-team-create",
+      "kind": "figma-supplementary",
+      "title": "Tạo tài khoản nhân viên",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5343"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-talent-search",
+      "kind": "figma-supplementary",
+      "title": "Tìm kiếm và lọc ứng viên",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5501"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-talent-detail",
+      "kind": "figma-supplementary",
+      "title": "Hồ sơ ứng viên trong kho",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5699"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-post-applications",
+      "kind": "figma-supplementary",
+      "title": "Hồ sơ ứng tuyển theo tin",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5855"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-post-notes",
+      "kind": "figma-supplementary",
+      "title": "Ghi chú tin tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6013"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-talent-document",
+      "kind": "figma-supplementary",
+      "title": "Xem CV ứng viên",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6157"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-employer-profile",
+      "kind": "figma-supplementary",
+      "title": "Thông tin tài khoản tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6300"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-employer-password",
+      "kind": "figma-supplementary",
+      "title": "Đổi mật khẩu · nhà tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6449"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-pipeline",
+      "kind": "figma-supplementary",
+      "title": "Pipeline · 6 giai đoạn tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6589"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-pipeline-detail",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết ứng viên · ghi chú và đánh giá",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6805"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-interview-form",
+      "kind": "figma-supplementary",
+      "title": "Soạn thư mời phỏng vấn",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6991"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-interview-preview",
+      "kind": "figma-supplementary",
+      "title": "Xem trước thư mời phỏng vấn",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7185"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-offer-form",
+      "kind": "figma-supplementary",
+      "title": "Soạn thư mời nhận việc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7340"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-offer-preview",
+      "kind": "figma-supplementary",
+      "title": "Xem trước thư mời nhận việc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7556"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-mail-queued",
+      "kind": "figma-supplementary",
+      "title": "Thư tuyển dụng · đã vào hàng đợi",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7711"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-reject",
+      "kind": "figma-supplementary",
+      "title": "Từ chối hồ sơ · xem lại nội dung",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7744"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-hire",
+      "kind": "figma-supplementary",
+      "title": "Xác nhận ứng viên đã nhận việc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7896"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-ai-screening",
+      "kind": "figma-supplementary",
+      "title": "Sàng lọc AI · đề xuất để HR kiểm tra",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8053"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-buy-post",
+      "kind": "figma-supplementary",
+      "title": "Mua gói đăng tin",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8916"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-buy-cv",
+      "kind": "figma-supplementary",
+      "title": "Mua lượt xem CV",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9088"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-payment-success",
+      "kind": "figma-supplementary",
+      "title": "Thanh toán gói đăng tin · thành công",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9260"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-payment-cancel",
+      "kind": "figma-supplementary",
+      "title": "Thanh toán gói đăng tin · đã hủy",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9400"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-payment-cv-success",
+      "kind": "figma-supplementary",
+      "title": "Thanh toán gói CV · thành công",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9531"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-payment-cv-cancel",
+      "kind": "figma-supplementary",
+      "title": "Thanh toán gói CV · đã hủy",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9671"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-history-post",
+      "kind": "figma-supplementary",
+      "title": "Lịch sử mua gói đăng tin",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9802"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-history-cv",
+      "kind": "figma-supplementary",
+      "title": "Lịch sử mua lượt xem CV",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9966"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-transaction-detail",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết giao dịch và hạn mức",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10130"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-chat-list",
+      "kind": "figma-supplementary",
+      "title": "Tin nhắn · danh sách hội thoại",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8206"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-chat-thread",
+      "kind": "figma-supplementary",
+      "title": "Tin nhắn · hội thoại đang mở",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8328"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-chat-pdf",
+      "kind": "figma-supplementary",
+      "title": "Tin nhắn · xem tài liệu PDF",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8476"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-chat-share-job",
+      "kind": "figma-supplementary",
+      "title": "Tin nhắn · chia sẻ việc làm",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8604"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-chat-reconnect",
+      "kind": "figma-supplementary",
+      "title": "Tin nhắn · kết nối lại và gửi thất bại",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8758"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-help",
+      "kind": "figma-supplementary",
+      "title": "Hướng dẫn và câu hỏi thường gặp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10290"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-support-widget",
+      "kind": "figma-supplementary",
+      "title": "Trợ lý hỗ trợ · trò chuyện và gợi ý",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10372"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-support-history",
+      "kind": "figma-supplementary",
+      "title": "Trợ lý hỗ trợ · lịch sử hội thoại",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10441"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-support-handoff",
+      "kind": "figma-supplementary",
+      "title": "Chia sẻ hội thoại cho nhân viên",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10570"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-support-chat",
+      "kind": "figma-supplementary",
+      "title": "Trao đổi với nhân viên hỗ trợ",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10691"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-support-inbox",
+      "kind": "figma-supplementary",
+      "title": "Quản trị · yêu cầu hỗ trợ chatbot",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10839"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-support-ticket",
+      "kind": "figma-supplementary",
+      "title": "Quản trị · xử lý yêu cầu hỗ trợ",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11008"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-admin-dashboard",
+      "kind": "figma-supplementary",
+      "title": "Tổng quan quản trị",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11166"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-reports",
+      "kind": "figma-supplementary",
+      "title": "Báo cáo nền tảng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11363"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-chart-post",
+      "kind": "figma-supplementary",
+      "title": "Thống kê giao dịch gói đăng tin",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11545"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-chart-cv",
+      "kind": "figma-supplementary",
+      "title": "Thống kê giao dịch gói CV",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11732"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-users",
+      "kind": "figma-supplementary",
+      "title": "Quản lý người dùng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11919"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-user-create",
+      "kind": "figma-supplementary",
+      "title": "Thêm tài khoản người dùng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12091"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-user-edit",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa tài khoản người dùng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12250"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-companies-review",
+      "kind": "figma-supplementary",
+      "title": "Quản lý và xét duyệt doanh nghiệp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12400"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-company-review",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết hồ sơ xác thực doanh nghiệp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12561"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-admin-company-edit",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa doanh nghiệp · quản trị",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12723"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-jobs-review",
+      "kind": "figma-supplementary",
+      "title": "Kiểm duyệt tin tuyển dụng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12903"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-job-review",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết tin · quyết định kiểm duyệt",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13066"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-list-job-type",
+      "kind": "figma-supplementary",
+      "title": "Danh mục · Ngành nghề",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14696"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-add-job-type",
+      "kind": "figma-supplementary",
+      "title": "Thêm ngành nghề",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14856"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-edit-job-type",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa ngành nghề",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14990"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-list-job-skill",
+      "kind": "figma-supplementary",
+      "title": "Danh mục · Kỹ năng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15124"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-add-job-skill",
+      "kind": "figma-supplementary",
+      "title": "Thêm kỹ năng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15284"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-edit-job-skill",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa kỹ năng",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15411"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-list-job-level",
+      "kind": "figma-supplementary",
+      "title": "Danh mục · Cấp bậc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15538"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-add-job-level",
+      "kind": "figma-supplementary",
+      "title": "Thêm cấp bậc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15698"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-edit-job-level",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa cấp bậc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15825"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-list-work-type",
+      "kind": "figma-supplementary",
+      "title": "Danh mục · Hình thức làm việc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15952"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-add-work-type",
+      "kind": "figma-supplementary",
+      "title": "Thêm hình thức làm việc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16112"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-edit-work-type",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa hình thức làm việc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16239"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-list-salary-type",
+      "kind": "figma-supplementary",
+      "title": "Danh mục · Khoảng lương",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16366"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-add-salary-type",
+      "kind": "figma-supplementary",
+      "title": "Thêm khoảng lương",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16526"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-edit-salary-type",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa khoảng lương",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16653"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-list-exp-type",
+      "kind": "figma-supplementary",
+      "title": "Danh mục · Kinh nghiệm",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16780"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-add-exp-type",
+      "kind": "figma-supplementary",
+      "title": "Thêm kinh nghiệm",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16940"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-edit-exp-type",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa kinh nghiệm",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17067"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-list-package-post",
+      "kind": "figma-supplementary",
+      "title": "Quản lý gói đăng tin",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13230"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-add-package-post",
+      "kind": "figma-supplementary",
+      "title": "Thêm gói đăng tin",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13386"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-edit-package-post",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa gói đăng tin",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13525"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-list-package-cv",
+      "kind": "figma-supplementary",
+      "title": "Quản lý gói lượt xem CV",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13664"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-add-package-cv",
+      "kind": "figma-supplementary",
+      "title": "Thêm gói lượt xem CV",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13820"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-edit-package-cv",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa gói lượt xem CV",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13955"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-security",
+      "kind": "figma-supplementary",
+      "title": "Bảo mật và tài khoản liên kết",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14091"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-security-sessions",
+      "kind": "figma-supplementary",
+      "title": "Thiết bị và phiên đăng nhập",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14226"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-security-history",
+      "kind": "figma-supplementary",
+      "title": "Lịch sử bảo mật",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14349"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-link-confirm",
+      "kind": "figma-supplementary",
+      "title": "Liên kết tài khoản · xác minh mật khẩu",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14473"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-session-confirm",
+      "kind": "figma-supplementary",
+      "title": "Đăng xuất phiên · xác nhận",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14582"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-forbidden",
+      "kind": "figma-supplementary",
+      "title": "403 · quyền truy cập",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17195"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-not-found",
+      "kind": "figma-supplementary",
+      "title": "404 · không tìm thấy trang",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17304"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-search-empty",
+      "kind": "figma-supplementary",
+      "title": "Tìm việc · không có kết quả",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17329"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-search-loading",
+      "kind": "figma-supplementary",
+      "title": "Tìm việc · đang tải",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17358"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-search-error",
+      "kind": "figma-supplementary",
+      "title": "Tìm việc · lỗi kết nối",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17386"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-session-ended",
+      "kind": "figma-supplementary",
+      "title": "Phiên đăng nhập đã kết thúc",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17410"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-delete-confirm",
+      "kind": "figma-supplementary",
+      "title": "Xóa dữ liệu · xác nhận",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17434"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-quota-empty",
+      "kind": "figma-supplementary",
+      "title": "Hạn mức đăng tin đã hết",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17567"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-provider-error",
+      "kind": "figma-supplementary",
+      "title": "AI · chưa xử lý được yêu cầu",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17702"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-save-conflict",
+      "kind": "figma-supplementary",
+      "title": "Thay đổi chưa được lưu",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17726"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-calendar",
+      "kind": "figma-supplementary",
+      "title": "Lịch phỏng vấn tổng hợp",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=37-4"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-subscriptions",
+      "kind": "figma-supplementary",
+      "title": "Gói định kỳ và hóa đơn",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=37-219"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-system-settings",
+      "kind": "figma-supplementary",
+      "title": "Cài đặt hệ thống",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=37-380"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-home",
+      "kind": "figma-supplementary",
+      "title": "Trang chủ · cơ hội và nghề nghiệp · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17859"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-search",
+      "kind": "figma-supplementary",
+      "title": "Tìm việc · kết quả và bộ lọc · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18038"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-job-detail",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết việc làm · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18181"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-external-job",
+      "kind": "figma-supplementary",
+      "title": "Việc làm từ nguồn bên ngoài · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18299"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-companies",
+      "kind": "figma-supplementary",
+      "title": "Danh sách doanh nghiệp · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18415"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-company-detail",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết doanh nghiệp và tin tuyển dụng · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18492"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-login",
+      "kind": "figma-supplementary",
+      "title": "Đăng nhập · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18601"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-register-role",
+      "kind": "figma-supplementary",
+      "title": "Đăng ký · chọn loại tài khoản · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18639"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-register-candidate",
+      "kind": "figma-supplementary",
+      "title": "Đăng ký ứng viên · thông tin cá nhân · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18661"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-forgot",
+      "kind": "figma-supplementary",
+      "title": "Quên mật khẩu · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18699"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-help",
+      "kind": "figma-supplementary",
+      "title": "Hướng dẫn và câu hỏi thường gặp · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18717"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-candidate-profile",
+      "kind": "figma-supplementary",
+      "title": "Hồ sơ cá nhân · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18786"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-saved",
+      "kind": "figma-supplementary",
+      "title": "Việc làm đã lưu · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18879"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-notifications",
+      "kind": "figma-supplementary",
+      "title": "Trung tâm thông báo · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19008"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-ai-workspace",
+      "kind": "figma-supplementary",
+      "title": "CV và trợ lý AI · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19069"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-ai-create",
+      "kind": "figma-supplementary",
+      "title": "Tạo CV AI · thông tin đầu vào · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19174"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-cv-editor",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa CV đã lưu · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19254"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-ai-match-result",
+      "kind": "figma-supplementary",
+      "title": "Kết quả phân tích CV và công việc · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19429"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-applications",
+      "kind": "figma-supplementary",
+      "title": "Danh sách hồ sơ đã nộp · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19485"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-apply-info",
+      "kind": "figma-supplementary",
+      "title": "Ứng tuyển · 1. Thông tin liên hệ · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19621"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-apply-cv",
+      "kind": "figma-supplementary",
+      "title": "Ứng tuyển · 2. Chọn CV · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19703"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-apply-review",
+      "kind": "figma-supplementary",
+      "title": "Ứng tuyển · 3. Kiểm tra hồ sơ · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19781"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-apply-success",
+      "kind": "figma-supplementary",
+      "title": "Ứng tuyển thành công · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19861"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-security",
+      "kind": "figma-supplementary",
+      "title": "Bảo mật và tài khoản liên kết · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19879"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-chat-list",
+      "kind": "figma-supplementary",
+      "title": "Tin nhắn · danh sách hội thoại · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19952"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-chat-thread",
+      "kind": "figma-supplementary",
+      "title": "Tin nhắn · hội thoại đang mở · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20003"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-support-widget",
+      "kind": "figma-supplementary",
+      "title": "Trợ lý hỗ trợ · trò chuyện và gợi ý · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20074"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-posts",
+      "kind": "figma-supplementary",
+      "title": "Quản lý tin tuyển dụng · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20132"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-post-create",
+      "kind": "figma-supplementary",
+      "title": "Đăng tin · thông tin và tiêu chí · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20287"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-post-content",
+      "kind": "figma-supplementary",
+      "title": "Đăng tin · mô tả và quyền lợi · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20416"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-post-preview",
+      "kind": "figma-supplementary",
+      "title": "Đăng tin · xem trước và gửi duyệt · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20504"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-talent-search",
+      "kind": "figma-supplementary",
+      "title": "Tìm kiếm và lọc ứng viên · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20614"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-pipeline",
+      "kind": "figma-supplementary",
+      "title": "Pipeline · 6 giai đoạn tuyển dụng · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20765"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-pipeline-detail",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết ứng viên · ghi chú và đánh giá · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20841"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-interview-form",
+      "kind": "figma-supplementary",
+      "title": "Soạn thư mời phỏng vấn · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20949"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-offer-form",
+      "kind": "figma-supplementary",
+      "title": "Soạn thư mời nhận việc · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21071"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-buy-post",
+      "kind": "figma-supplementary",
+      "title": "Mua gói đăng tin · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21216"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-company-edit",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa hồ sơ doanh nghiệp · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21310"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-team",
+      "kind": "figma-supplementary",
+      "title": "Quản lý nhân sự tuyển dụng · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21423"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-admin-dashboard",
+      "kind": "figma-supplementary",
+      "title": "Tổng quan quản trị · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21525"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-users",
+      "kind": "figma-supplementary",
+      "title": "Quản lý người dùng · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21635"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-jobs-review",
+      "kind": "figma-supplementary",
+      "title": "Kiểm duyệt tin tuyển dụng · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21765"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-company-review",
+      "kind": "figma-supplementary",
+      "title": "Chi tiết hồ sơ xác thực doanh nghiệp · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21877"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-list-job-type",
+      "kind": "figma-supplementary",
+      "title": "Danh mục · Ngành nghề · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21969"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-edit-job-type",
+      "kind": "figma-supplementary",
+      "title": "Chỉnh sửa ngành nghề · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-22080"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-list-package-post",
+      "kind": "figma-supplementary",
+      "title": "Quản lý gói đăng tin · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-22144"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "V2-m-support-ticket",
+      "kind": "figma-supplementary",
+      "title": "Quản trị · xử lý yêu cầu hỗ trợ · Mobile",
+      "route": null,
+      "design_status": "designed",
+      "code_status": "unverified",
+      "test_status": "not-run",
+      "evidence": [
+        {
+          "field": "design_status",
+          "ref": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-22249"
+        }
+      ],
+      "next_action": "Inspect live frame and current source; supplementary design does not prove implementation."
+    },
+    {
+      "id": "EXT-JF-036-MOBILE",
+      "kind": "screen-extension",
+      "feature_id": "job-search",
+      "screen_id": "JF-036",
+      "title": "Job search — mobile extension",
+      "mode": "match-reference",
+      "design_status": "planned",
+      "code_status": "planned",
+      "test_status": "not-run",
+      "evidence": [],
+      "next_action": "Prepare prompt from JF-036; preserve source filters/URL mode and define mobile filter sheet."
+    }
+  ]
+}

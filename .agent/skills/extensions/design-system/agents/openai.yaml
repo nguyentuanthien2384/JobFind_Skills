@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Design system từ mẫu
+  short_description: Design system từ mẫu cho dự án JobFind
+  default_prompt: Dùng $design-system trích style JF-036 để vẽ thêm mobile.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

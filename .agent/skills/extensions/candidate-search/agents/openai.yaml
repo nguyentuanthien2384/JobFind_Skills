@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Tìm và mở hồ sơ ứng viên
+  short_description: Tìm và mở hồ sơ ứng viên cho dự án JobFind
+  default_prompt: Dùng $candidate-search hoàn thiện JF-012 khớp Stitch.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

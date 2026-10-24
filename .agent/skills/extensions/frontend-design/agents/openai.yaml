@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Chất lượng thị giác
+  short_description: Chất lượng thị giác cho dự án JobFind
+  default_prompt: Dùng $frontend-design chỉnh JF-034 khớp dashboard doanh
+    nghiệp Stitch.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#faf8ff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-surface-variant": "#434655",
+                        "primary-fixed": "#dbe1ff",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b4c5ff",
+                        "secondary-fixed": "#dbe1ff",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-container-highest": "#e1e2ed",
+                        "tertiary": "#943700",
+                        "surface-container-low": "#f3f3fe",
+                        "error": "#ba1a1a",
+                        "primary-container": "#2563eb",
+                        "on-secondary-container": "#394c84",
+                        "surface-variant": "#e1e2ed",
+                        "tertiary-container": "#bc4800",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-primary-fixed": "#00174b",
+                        "error-container": "#ffdad6",
+                        "secondary": "#495c95",
+                        "surface-tint": "#0053db",
+                        "on-secondary-fixed": "#00174b",
+                        "on-surface": "#191b23",
+                        "on-tertiary-container": "#ffede6",
+                        "on-error-container": "#93000a",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-secondary-fixed-variant": "#31447b",
+                        "on-tertiary-fixed": "#360f00",
+                        "primary": "#004ac6",
+                        "surface-container": "#ededf9",
+                        "secondary-container": "#acbfff",
+                        "inverse-on-surface": "#f0f0fb",
+                        "on-background": "#191b23",
+                        "surface-dim": "#d9d9e5",
+                        "inverse-surface": "#2e3039",
+                        "on-primary-container": "#eeefff",
+                        "outline": "#737686",
+                        "background": "#faf8ff",
+                        "surface-container-high": "#e7e7f3",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#faf8ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "outline-variant": "#c3c6d7",
+                        "on-error": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-ring {
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full z-50 bg-[#faf8ff] dark:bg-slate-950 shadow-[0_12px_40px_rgba(25,27,35,0.06)]">
+<div class="max-w-[1200px] mx-auto flex justify-between items-center px-8 py-6">
+<div class="text-2xl font-bold tracking-tighter text-[#191b23] dark:text-white">
+                Tuyển Dụng VN
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-[#434655] dark:text-slate-400 hover:text-[#004ac6] transition-opacity duration-300 font-['Inter'] tracking-tight" href="#">Tìm việc làm</a>
+<a class="text-[#434655] dark:text-slate-400 hover:text-[#004ac6] transition-opacity duration-300 font-['Inter'] tracking-tight" href="#">Cẩm nang nghề nghiệp</a>
+<a class="text-[#434655] dark:text-slate-400 hover:text-[#004ac6] transition-opacity duration-300 font-['Inter'] tracking-tight" href="#">Dành cho Nhà tuyển dụng</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#004ac6] dark:text-blue-400 font-bold border-b-2 border-[#004ac6] pb-1 active:scale-95 transition-transform">Login</button>
+</div>
+</div>
+</nav>
+<!-- Main Registration Canvas -->
+<main class="flex-grow flex flex-col items-center py-20 px-8">
+<div class="max-w-[1200px] w-full flex flex-col items-center">
+<!-- Headline -->
+<h1 class="text-5xl font-black text-on-surface tracking-tighter mb-16 text-center leading-tight">
+                Bắt đầu hành trình của bạn
+            </h1>
+<!-- Selection Area -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-[1040px] mb-20">
+<!-- Left Card: Candidate (Active) -->
+<div class="group relative flex flex-col items-center justify-center p-12 bg-surface-container-lowest border-2 border-[#2563eb] rounded-xl active-ring transition-all duration-300 cursor-pointer h-[320px]">
+<div class="w-20 h-20 rounded-full bg-primary-container/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="person">person</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">Ứng viên</h3>
+<p class="text-on-surface-variant text-center">Tôi đang tìm kiếm cơ hội nghề nghiệp mới</p>
+<div class="absolute top-4 right-4">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Right Card: Employer -->
+<div class="group relative flex flex-col items-center justify-center p-12 bg-surface-container-low border-2 border-transparent hover:border-outline-variant/30 rounded-xl transition-all duration-300 cursor-pointer h-[320px]">
+<div class="w-20 h-20 rounded-full bg-on-surface-variant/5 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-surface-variant text-4xl" data-icon="domain">domain</span>
+</div>
+<h3 class="text-2xl font-bold text-on-surface mb-2">Nhà tuyển dụng</h3>
+<p class="text-on-surface-variant text-center">Tôi muốn đăng tin và tìm kiếm nhân tài</p>
+</div>
+</div>
+<!-- Form Area -->
+<div class="w-full max-w-[1040px] bg-surface-container-low rounded-xl p-10 md:p-12">
+<form class="flex flex-col gap-10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Name Field -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold tracking-widest text-on-surface-variant uppercase ml-1">Họ và tên</label>
+<input class="w-full h-14 px-5 rounded-lg border-none bg-surface-container-highest focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all duration-300 text-on-surface placeholder:text-outline-variant" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<!-- Email Field -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold tracking-widest text-on-surface-variant uppercase ml-1">Email</label>
+<input class="w-full h-14 px-5 rounded-lg border-none bg-surface-container-highest focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all duration-300 text-on-surface placeholder:text-outline-variant" placeholder="email@vi-du.vn" type="email"/>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<label class="text-xs font-bold tracking-widest text-on-surface-variant uppercase ml-1">Mật khẩu</label>
+<input class="w-full h-14 px-5 rounded-lg border-none bg-surface-container-highest focus:bg-surface-container-lowest focus:ring-1 focus:ring-primary transition-all duration-300 text-on-surface placeholder:text-outline-variant" placeholder="••••••••" type="password"/>
+</div>
+</div>
+<!-- Action Button Area -->
+<div class="flex flex-col items-center mt-4">
+<button class="w-full md:w-auto px-16 h-16 bg-gradient-to-br from-[#2563eb] to-[#004ac6] text-white font-bold text-lg rounded-xl hover:opacity-90 active:scale-[0.98] transition-all duration-300">
+                            Tạo tài khoản ngay
+                        </button>
+<p class="mt-6 text-sm text-on-surface-variant">
+                            Bằng cách đăng ký, bạn đồng ý với <a class="text-primary font-medium hover:underline" href="#">Điều khoản dịch vụ</a> của chúng tôi.
+                        </p>
+</div>
+</form>
+</div>
+<!-- Trust Badges (Architectural Curator Style) -->
+<div class="flex flex-wrap justify-center gap-12 mt-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="verified_user">verified_user</span>
+<span class="text-xs font-bold tracking-widest uppercase">Dữ liệu bảo mật</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="partner_reports">partner_reports</span>
+<span class="text-xs font-bold tracking-widest uppercase">Hơn 5000+ Doanh nghiệp</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="bolt">bolt</span>
+<span class="text-xs font-bold tracking-widest uppercase">Kết nối tức thì</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-[#f3f3fe] dark:bg-slate-900 border-t border-outline-variant/10">
+<div class="max-w-[1200px] mx-auto py-16 px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<div class="text-lg font-black text-[#191b23] dark:text-white">Tuyển Dụng VN</div>
+<p class="font-['Inter'] text-sm tracking-wide uppercase font-medium text-[#434655] dark:text-slate-400">© 2024 Tuyển Dụng VN. The Architectural Curator.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-sm tracking-wide uppercase font-medium text-[#434655] dark:text-slate-500 hover:text-[#004ac6] dark:hover:text-blue-300 transition-colors cursor-pointer" href="#">Terms of Service</a>
+<a class="font-['Inter'] text-sm tracking-wide uppercase font-medium text-[#434655] dark:text-slate-500 hover:text-[#004ac6] dark:hover:text-blue-300 transition-colors cursor-pointer" href="#">Privacy Policy</a>
+<a class="font-['Inter'] text-sm tracking-wide uppercase font-medium text-[#434655] dark:text-slate-500 hover:text-[#004ac6] dark:hover:text-blue-300 transition-colors cursor-pointer" href="#">Cookie Settings</a>
+<a class="font-['Inter'] text-sm tracking-wide uppercase font-medium text-[#434655] dark:text-slate-500 hover:text-[#004ac6] dark:hover:text-blue-300 transition-colors cursor-pointer" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

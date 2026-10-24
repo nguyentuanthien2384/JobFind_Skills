@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Kiểm thử và nghiệm thu
+  short_description: Kiểm thử và nghiệm thu cho dự án JobFind
+  default_prompt: Dùng $test-release nghiệm thu màn tìm việc và API filters
+    vừa sửa.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

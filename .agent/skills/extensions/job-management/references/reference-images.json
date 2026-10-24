@@ -1,0 +1,11 @@
+[
+  {
+    "screen_id": "JF-021",
+    "feature_id": "job-posting",
+    "owner": "jobfind-job-management",
+    "asset": "assets/stitch-reference/JF-021/screen.png",
+    "output": ".stitch/designs/ng_tin_tuy_n_d_ng_b_c_1/screen.png",
+    "sha256": "566392bb9141418ae07e1fa2f75f3381a98f6e318750202d47e0267e73357b29",
+    "bytes": 263746
+  }
+]

@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Điều phối dự án
+  short_description: Điều phối dự án cho dự án JobFind
+  default_prompt: Dùng $workflow thiết lập đầy đủ .agent, .docs, .stitch cho
+    source JobFind hiện tại.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cài Đặt Hệ Thống - Tuyển Dụng VN</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#283044",
+                    "surface-tint": "#0053db",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#dae2fd",
+                    "surface-dim": "#d2d9f4",
+                    "outline-variant": "#c3c6d7",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-container-low": "#f2f3ff",
+                    "tertiary-fixed": "#ffdbcd",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-background": "#131b2e",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "primary-fixed": "#dbe1ff",
+                    "primary": "#004ac6",
+                    "secondary-container": "#39b8fd",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#eaedff",
+                    "on-secondary-fixed": "#001e2f",
+                    "on-tertiary-container": "#ffede6",
+                    "on-tertiary-fixed": "#360f00",
+                    "tertiary": "#943700",
+                    "outline": "#737686",
+                    "on-secondary-container": "#004666",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#2563eb",
+                    "secondary": "#006591",
+                    "secondary-fixed-dim": "#89ceff",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "tertiary-container": "#bc4800",
+                    "on-surface-variant": "#434655",
+                    "surface-container-highest": "#dae2fd",
+                    "on-error": "#ffffff",
+                    "background": "#faf8ff",
+                    "surface-container-high": "#e2e7ff",
+                    "surface": "#faf8ff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "surface-bright": "#faf8ff",
+                    "secondary-fixed": "#c9e6ff",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#00174b",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "inverse-on-surface": "#eef0ff",
+                    "on-primary-container": "#eeefff",
+                    "on-surface": "#131b2e",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Be Vietnam Pro"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Be Vietnam Pro', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased">
+<!-- Sidebar Navigation (Main) -->
+<aside class="w-64 h-screen fixed left-0 top-0 bg-[#0F172A] flex flex-col py-6 px-4 font-['Be_Vietnam_Pro'] tracking-tight z-50">
+<div class="mb-8 px-2">
+<h1 class="text-xl font-bold text-white">Tuyển Dụng VN</h1>
+<p class="text-xs text-slate-400 mt-1 uppercase tracking-widest">Recruiter Console</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150">dashboard</span>
+<span class="text-sm font-medium">Tổng Quan</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150">fact_check</span>
+<span class="text-sm font-medium">Duyệt Tin</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150">group</span>
+<span class="text-sm font-medium">Quản Lý Users</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-slate-400 hover:text-white hover:bg-slate-800 transition-colors rounded-lg group" href="#">
+<span class="material-symbols-outlined group-active:scale-95 duration-150">payments</span>
+<span class="text-sm font-medium">Doanh Thu</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 bg-blue-600/10 text-white font-semibold rounded-lg group" href="#">
+<span class="material-symbols-outlined text-blue-400 group-active:scale-95 duration-150">settings</span>
+<span class="text-sm font-medium">Cài Đặt</span>
+</a>
+</nav>
+<div class="mt-auto pt-6 border-t border-slate-800 space-y-4">
+<div class="flex items-center gap-3 px-3">
+<span class="material-symbols-outlined text-slate-400">account_circle</span>
+<div class="overflow-hidden">
+<p class="text-sm font-medium text-white truncate">Trần Admin</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-tight">Super Admin</p>
+</div>
+<span class="material-symbols-outlined text-blue-400 text-xs ml-auto" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+</div>
+</div>
+</aside>
+<!-- Sub-navigation (Settings Specific) -->
+<aside class="fixed left-64 top-16 w-[220px] h-[calc(100vh-64px)] bg-white dark:bg-slate-800 flex flex-col py-4 border-r border-slate-100 dark:border-slate-700 z-30">
+<div class="px-6 mb-4">
+<span class="text-[10px] font-bold uppercase text-slate-400 tracking-widest">Cấu Hình Hệ Thống</span>
+</div>
+<nav class="space-y-1 px-3">
+<a class="flex items-center gap-3 px-4 py-2.5 text-[#004ac6] font-bold bg-blue-50 dark:bg-blue-900/20 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">settings</span>
+<span class="text-sm">Chung</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">payments</span>
+<span class="text-sm">Gói Cước</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+<span class="text-sm">Email &amp; Thông Báo</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">gavel</span>
+<span class="text-sm">Kiểm Duyệt</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">shield</span>
+<span class="text-sm">Bảo Mật</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">hub</span>
+<span class="text-sm">Tích Hợp</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-2.5 text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-lg">info</span>
+<span class="text-sm">Về Nền Tảng</span>
+</a>
+</nav>
+</aside>
+<!-- Top AppBar -->
+<header class="fixed top-0 right-0 w-[calc(100%-256px)] h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl flex justify-between items-center px-8 z-40">
+<h2 class="text-xl font-bold text-slate-900 dark:text-white font-['Be_Vietnam_Pro'] headline-lg tracking-tight">Cài Đặt Chung</h2>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 bg-gradient-to-r from-[#004ac6] to-[#2563eb] text-white text-sm font-semibold rounded-lg shadow-sm active:scale-95 transition-transform">
+                Lưu thay đổi
+            </button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[476px] mt-16 p-8 max-w-5xl">
+<div class="grid grid-cols-12 gap-8">
+<!-- Left Column: Primary Settings -->
+<div class="col-span-12 lg:col-span-8 space-y-8">
+<!-- Card 1: Thông tin nền tảng -->
+<section class="bg-surface-container-lowest rounded-xl p-6 border border-slate-100/50">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">corporate_fare</span>
+<h3 class="text-lg font-bold text-on-surface">Thông tin nền tảng</h3>
+</div>
+<div class="space-y-5">
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1.5">
+<label class="text-xs font-semibold text-outline uppercase tracking-wider">Tên nền tảng</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all" type="text" value="TuyenDung.vn"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-semibold text-outline uppercase tracking-wider">Support Email</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all" type="email" value="support@tuyendung.vn"/>
+</div>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-semibold text-outline uppercase tracking-wider">Tagline</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all" type="text" value="Kết nối nhân tài - Vươn tầm sự nghiệp"/>
+</div>
+<div class="grid grid-cols-2 gap-6 pt-2">
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center border border-slate-200">
+<span class="material-symbols-outlined text-slate-400">upload_file</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Logo Nền Tảng</p>
+<button class="text-[10px] font-bold text-primary uppercase mt-1 hover:underline">Tải lên mới</button>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 bg-surface-container-low rounded-xl">
+<div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center border border-slate-200">
+<span class="material-symbols-outlined text-slate-400">search_logo</span>
+</div>
+<div>
+<p class="text-xs font-bold text-on-surface">Favicon</p>
+<button class="text-[10px] font-bold text-primary uppercase mt-1 hover:underline">Tải lên mới</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Card 2: Tính năng -->
+<section class="bg-surface-container-lowest rounded-xl p-6 border border-slate-100/50">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">toggle_on</span>
+<h3 class="text-lg font-bold text-on-surface">Tính năng</h3>
+</div>
+<div class="divide-y divide-slate-50">
+<div class="flex items-center justify-between py-4">
+<div>
+<p class="text-sm font-semibold text-on-surface">Mở đăng ký tài khoản</p>
+<p class="text-xs text-slate-500">Cho phép người dùng mới đăng ký trên hệ thống</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between py-4">
+<div>
+<p class="text-sm font-semibold text-on-surface">Xác minh Email</p>
+<p class="text-xs text-slate-500">Yêu cầu người dùng xác thực email trước khi sử dụng</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between py-4">
+<div>
+<p class="text-sm font-semibold text-on-surface">Đăng nhập mạng xã hội</p>
+<p class="text-xs text-slate-500">Cho phép Google, Facebook, LinkedIn</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between py-4">
+<div>
+<p class="text-sm font-semibold text-on-surface">Hiển thị lương</p>
+<p class="text-xs text-slate-500">Hiển thị mức lương trên tin tuyển dụng</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+<div class="flex items-center justify-between py-4">
+<div>
+<p class="text-sm font-semibold text-on-surface">Ẩn hồ sơ ứng viên</p>
+<p class="text-xs text-slate-500">Mặc định ẩn thông tin liên hệ cho đến khi NTD mở khóa</p>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</section>
+<!-- Card 4: SEO & Analytics -->
+<section class="bg-surface-container-lowest rounded-xl p-6 border border-slate-100/50">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<h3 class="text-lg font-bold text-on-surface">SEO &amp; Analytics</h3>
+</div>
+<div class="space-y-6">
+<div class="space-y-1.5">
+<label class="text-xs font-semibold text-outline uppercase tracking-wider">Google Analytics ID</label>
+<input class="w-full bg-surface-container-high border-none rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all" placeholder="G-XXXXXXXXXX" type="text"/>
+</div>
+<div class="space-y-1.5">
+<label class="text-xs font-semibold text-outline uppercase tracking-wider">Meta Description</label>
+<textarea class="w-full bg-surface-container-high border-none rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-primary focus:bg-white transition-all resize-none" rows="3">Tìm kiếm việc làm mơ ước và kết nối với các nhà tuyển dụng hàng đầu Việt Nam tại TuyenDung.vn.</textarea>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-slate-500">account_tree</span>
+<div>
+<p class="text-sm font-bold text-on-surface">Tự động tạo Sitemap</p>
+<p class="text-[11px] text-slate-500">Cập nhật mỗi 24 giờ</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-10 h-5 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+</label>
+<button class="px-3 py-1.5 text-[11px] font-bold text-primary bg-white border border-blue-100 rounded-lg shadow-sm hover:bg-blue-50 transition-colors">Tạo sitemap ngay</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Secondary Settings / Limits -->
+<div class="col-span-12 lg:col-span-4 space-y-8">
+<!-- Card 3: Giới hạn hệ thống -->
+<section class="bg-surface-container-lowest rounded-xl p-6 border border-slate-100/50 shadow-sm">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary">speed</span>
+<h3 class="text-sm font-bold text-on-surface uppercase tracking-tight">Giới hạn hệ thống</h3>
+</div>
+<div class="space-y-4">
+<div class="p-3 bg-surface-container-low rounded-xl border-l-4 border-primary">
+<label class="block text-[10px] font-bold text-outline uppercase mb-1">Max tin đăng/tháng (Free)</label>
+<div class="flex items-center gap-2">
+<input class="w-full bg-transparent border-none p-0 text-lg font-bold text-primary focus:ring-0" type="number" value="5"/>
+<span class="text-xs text-slate-400 font-medium">Tin</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl border-l-4 border-secondary">
+<label class="block text-[10px] font-bold text-outline uppercase mb-1">Max view ứng viên/ngày</label>
+<div class="flex items-center gap-2">
+<input class="w-full bg-transparent border-none p-0 text-lg font-bold text-secondary focus:ring-0" type="number" value="50"/>
+<span class="text-xs text-slate-400 font-medium">Lượt</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl border-l-4 border-slate-400">
+<label class="block text-[10px] font-bold text-outline uppercase mb-1">Thời hạn tin đăng</label>
+<div class="flex items-center gap-2">
+<input class="w-full bg-transparent border-none p-0 text-lg font-bold text-slate-700 focus:ring-0" type="number" value="30"/>
+<span class="text-xs text-slate-400 font-medium">Ngày</span>
+</div>
+</div>
+<div class="p-3 bg-surface-container-low rounded-xl border-l-4 border-slate-400">
+<label class="block text-[10px] font-bold text-outline uppercase mb-1">Kích thước CV tối đa</label>
+<div class="flex items-center gap-2">
+<input class="w-full bg-transparent border-none p-0 text-lg font-bold text-slate-700 focus:ring-0" type="number" value="10"/>
+<span class="text-xs text-slate-400 font-medium">MB</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Card 5: Bảo trì -->
+<section class="bg-[#FFFBEB] dark:bg-amber-900/10 rounded-xl p-6 border border-amber-100 dark:border-amber-900/20">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-600">engineering</span>
+<h3 class="text-sm font-bold text-amber-900 uppercase tracking-tight">Bảo trì</h3>
+</div>
+<span class="px-2 py-1 bg-green-100 text-green-700 text-[9px] font-bold uppercase rounded-full">Hoạt động bình thường</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between bg-white/50 p-3 rounded-lg">
+<span class="text-xs font-semibold text-amber-900">Chế độ bảo trì</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-8 h-4 bg-slate-300 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-3 after:w-3 after:transition-all peer-checked:bg-amber-600"></div>
+</label>
+</div>
+<div class="space-y-1.5">
+<label class="text-[10px] font-bold text-amber-700 uppercase">Lịch bảo trì dự kiến</label>
+<input class="w-full bg-white border-amber-100 rounded-lg px-3 py-2 text-xs focus:ring-amber-500 text-amber-900" type="date"/>
+</div>
+<button class="w-full py-2.5 bg-amber-600 text-white text-[10px] font-bold uppercase tracking-wider rounded-lg shadow-sm hover:bg-amber-700 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">notifications_active</span>
+                            Thông báo cho users
+                        </button>
+</div>
+</section>
+<!-- Helpful Tip (Editorial element) -->
+<div class="p-6 bg-primary-container/10 rounded-2xl relative overflow-hidden group">
+<div class="relative z-10">
+<h4 class="text-primary font-bold text-sm mb-2">Tư vấn cấu hình</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Bạn đang áp dụng cấu hình hệ thống tiêu chuẩn. Để tối ưu SEO, hãy đảm bảo Sitemap được cập nhật hàng ngày.</p>
+<a class="inline-block mt-3 text-[10px] font-bold text-primary uppercase border-b border-primary/20 hover:border-primary transition-all" href="#">Xem tài liệu hướng dẫn</a>
+</div>
+<span class="material-symbols-outlined absolute -bottom-4 -right-4 text-8xl text-primary/5 rotate-12 group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+</div>
+</div>
+</main>
+</body></html>

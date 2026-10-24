@@ -1,0 +1,644 @@
+{
+  "project": "JobFind",
+  "source_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+  "original_url": "https://stitch.withgoogle.com/projects/11086475323725615160",
+  "verified_on": "2026-10-05",
+  "screen_count": 37,
+  "desktop": 34,
+  "mobile": 3,
+  "mode": "match-reference",
+  "screen_ids_status": "not retrieved; use exact title and dimensions",
+  "screens": [
+    {
+      "local_id": "JF-001",
+      "title": "Trang 404 - Tuyển Dụng VN",
+      "canvas": {
+        "width": 1280,
+        "height": 1063,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/404_page_tuy_n_d_ng_vn/code.html",
+        "image": ".stitch/designs/404_page_tuy_n_d_ng_vn/screen.png"
+      },
+      "feature_id": "master-layout",
+      "reference_title": "404 Page - Tuyển Dụng VN",
+      "title_vi": "Trang 404 - Tuyển Dụng VN"
+    },
+    {
+      "local_id": "JF-002",
+      "title": "Tổng Quan Bảng Điều Khiển Quản Trị",
+      "canvas": {
+        "width": 1280,
+        "height": 1434,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/admin_dashboard_overview/code.html",
+        "image": ".stitch/designs/admin_dashboard_overview/screen.png"
+      },
+      "feature_id": "admin-overview",
+      "reference_title": "Admin Dashboard Overview",
+      "title_vi": "Tổng Quan Bảng Điều Khiển Quản Trị"
+    },
+    {
+      "local_id": "JF-003",
+      "title": "Thanh Toán & Gói Dịch Vụ",
+      "canvas": {
+        "width": 1280,
+        "height": 1160,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/billing_subscriptions/code.html",
+        "image": ".stitch/designs/billing_subscriptions/screen.png"
+      },
+      "feature_id": "billing-packages",
+      "reference_title": "Billing & Subscriptions",
+      "title_vi": "Thanh Toán & Gói Dịch Vụ"
+    },
+    {
+      "local_id": "JF-004",
+      "title": "Cài Đặt Hệ Thống - Bảng Quản Trị",
+      "canvas": {
+        "width": 1280,
+        "height": 1413,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/c_i_t_h_th_ng_admin_panel/code.html",
+        "image": ".stitch/designs/c_i_t_h_th_ng_admin_panel/screen.png"
+      },
+      "feature_id": "system-proposals",
+      "reference_title": "Cài Đặt Hệ Thống - Admin Panel",
+      "title_vi": "Cài Đặt Hệ Thống - Bảng Quản Trị"
+    },
+    {
+      "local_id": "JF-005",
+      "title": "Chỉnh Sửa Hồ Sơ Công Ty - VNG Corporation",
+      "canvas": {
+        "width": 1280,
+        "height": 2210,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/company_profile_editor_vng_corporation/code.html",
+        "image": ".stitch/designs/company_profile_editor_vng_corporation/screen.png"
+      },
+      "feature_id": "company-profile",
+      "reference_title": "Company Profile Editor - VNG Corporation",
+      "title_vi": "Chỉnh Sửa Hồ Sơ Công Ty - VNG Corporation"
+    },
+    {
+      "local_id": "JF-006",
+      "title": "Danh Mục Công Ty",
+      "canvas": {
+        "width": 1280,
+        "height": 2475,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/danh_m_c_c_ng_ty/code.html",
+        "image": ".stitch/designs/danh_m_c_c_ng_ty/screen.png"
+      },
+      "feature_id": "companies",
+      "reference_title": "Danh Mục Công Ty",
+      "title_vi": "Danh Mục Công Ty"
+    },
+    {
+      "local_id": "JF-007",
+      "title": "Danh Sách Công Ty - Tuyển Dụng VN",
+      "canvas": {
+        "width": 1280,
+        "height": 1758,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/danh_s_ch_c_ng_ty_tuy_n_d_ng_vn/code.html",
+        "image": ".stitch/designs/danh_s_ch_c_ng_ty_tuy_n_d_ng_vn/screen.png"
+      },
+      "feature_id": "companies",
+      "reference_title": "Danh Sách Công Ty - Tuyển Dụng VN",
+      "title_vi": "Danh Sách Công Ty - Tuyển Dụng VN"
+    },
+    {
+      "local_id": "JF-008",
+      "title": "Phê Duyệt Hồ Sơ Doanh Nghiệp",
+      "canvas": {
+        "width": 1280,
+        "height": 1057,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/duy_t_h_s_c_ng_ty/code.html",
+        "image": ".stitch/designs/duy_t_h_s_c_ng_ty/screen.png"
+      },
+      "feature_id": "admin-companies",
+      "reference_title": "Duyệt Hồ Sơ Công Ty",
+      "title_vi": "Phê Duyệt Hồ Sơ Doanh Nghiệp"
+    },
+    {
+      "local_id": "JF-009",
+      "title": "Hồ Sơ Của Tôi - Tuyển Dụng VN",
+      "canvas": {
+        "width": 1280,
+        "height": 1749,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/h_s_c_a_t_i_tuy_n_d_ng_vn/code.html",
+        "image": ".stitch/designs/h_s_c_a_t_i_tuy_n_d_ng_vn/screen.png"
+      },
+      "feature_id": "candidate-profile",
+      "reference_title": "Hồ Sơ Của Tôi - Tuyển Dụng VN",
+      "title_vi": "Hồ Sơ Của Tôi - Tuyển Dụng VN"
+    },
+    {
+      "local_id": "JF-010",
+      "title": "Chi Tiết Việc Làm - Senior Frontend Developer",
+      "canvas": {
+        "width": 1280,
+        "height": 2070,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/job_detail_senior_frontend_developer/code.html",
+        "image": ".stitch/designs/job_detail_senior_frontend_developer/screen.png"
+      },
+      "feature_id": "job-detail",
+      "reference_title": "Job Detail - Senior Frontend Developer",
+      "title_vi": "Chi Tiết Việc Làm - Senior Frontend Developer"
+    },
+    {
+      "local_id": "JF-011",
+      "title": "Kiểm Duyệt Tin Tuyển Dụng - Bảng Quản Trị",
+      "canvas": {
+        "width": 1280,
+        "height": 1024,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/job_moderation_admin_panel/code.html",
+        "image": ".stitch/designs/job_moderation_admin_panel/screen.png"
+      },
+      "feature_id": "admin-jobs",
+      "reference_title": "Job Moderation - Admin Panel",
+      "title_vi": "Kiểm Duyệt Tin Tuyển Dụng - Bảng Quản Trị"
+    },
+    {
+      "local_id": "JF-012",
+      "title": "Kho Ứng Viên - Tuyển Dụng VN",
+      "canvas": {
+        "width": 1280,
+        "height": 1501,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/kho_ng_vi_n_tuy_n_d_ng_vn/code.html",
+        "image": ".stitch/designs/kho_ng_vi_n_tuy_n_d_ng_vn/screen.png"
+      },
+      "feature_id": "candidate-search",
+      "reference_title": "Kho Ứng Viên - Tuyển Dụng VN",
+      "title_vi": "Kho Ứng Viên - Tuyển Dụng VN"
+    },
+    {
+      "local_id": "JF-013",
+      "title": "Lịch Phỏng Vấn & Lịch Trình",
+      "canvas": {
+        "width": 1280,
+        "height": 1049,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/l_ch_ph_ng_v_n_agenda/code.html",
+        "image": ".stitch/designs/l_ch_ph_ng_v_n_agenda/screen.png"
+      },
+      "feature_id": "interviews-offers",
+      "reference_title": "Lịch Phỏng Vấn & Agenda",
+      "title_vi": "Lịch Phỏng Vấn & Lịch Trình"
+    },
+    {
+      "local_id": "JF-014",
+      "title": "Lịch Phỏng Vấn Tuyển Dụng",
+      "canvas": {
+        "width": 1280,
+        "height": 1035,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/l_ch_ph_ng_v_n_career_architect/code.html",
+        "image": ".stitch/designs/l_ch_ph_ng_v_n_career_architect/screen.png"
+      },
+      "feature_id": "interviews-offers",
+      "reference_title": "Lịch Phỏng Vấn - Career Architect",
+      "title_vi": "Lịch Phỏng Vấn Tuyển Dụng"
+    },
+    {
+      "local_id": "JF-015",
+      "title": "Đăng Nhập - Bản Cao Cấp Desktop",
+      "canvas": {
+        "width": 1280,
+        "height": 1252,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/login_premium_desktop/code.html",
+        "image": ".stitch/designs/login_premium_desktop/screen.png"
+      },
+      "feature_id": "auth-login",
+      "reference_title": "Login - Premium Desktop",
+      "title_vi": "Đăng Nhập - Bản Cao Cấp Desktop"
+    },
+    {
+      "local_id": "JF-016",
+      "title": "Đăng Nhập - Tuyển Dụng VN",
+      "canvas": {
+        "width": 1280,
+        "height": 1024,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/login_tuy_n_d_ng_vn_1/code.html",
+        "image": ".stitch/designs/login_tuy_n_d_ng_vn_1/screen.png"
+      },
+      "feature_id": "auth-login",
+      "reference_title": "Login - Tuyển Dụng VN",
+      "title_vi": "Đăng Nhập - Tuyển Dụng VN"
+    },
+    {
+      "local_id": "JF-017",
+      "title": "Đăng Nhập - Tuyển Dụng VN",
+      "canvas": {
+        "width": 390,
+        "height": 1045,
+        "device": "MOBILE"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/login_tuy_n_d_ng_vn_2/code.html",
+        "image": ".stitch/designs/login_tuy_n_d_ng_vn_2/screen.png"
+      },
+      "feature_id": "auth-login",
+      "reference_title": "Login - Tuyển Dụng VN",
+      "title_vi": "Đăng Nhập - Tuyển Dụng VN"
+    },
+    {
+      "local_id": "JF-018",
+      "title": "Đơn Ứng Tuyển Của Tôi - Tuyển Dụng VN",
+      "canvas": {
+        "width": 1280,
+        "height": 1938,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/n_ng_tuy_n_c_a_t_i_tuy_n_d_ng_vn/code.html",
+        "image": ".stitch/designs/n_ng_tuy_n_c_a_t_i_tuy_n_d_ng_vn/screen.png"
+      },
+      "feature_id": "applications",
+      "reference_title": "Đơn Ứng Tuyển Của Tôi - Tuyển Dụng VN",
+      "title_vi": "Đơn Ứng Tuyển Của Tôi - Tuyển Dụng VN"
+    },
+    {
+      "local_id": "JF-019",
+      "title": "Đăng Ký - Chọn Vai Trò",
+      "canvas": {
+        "width": 1280,
+        "height": 1267,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/ng_k_ch_n_vai_tr/code.html",
+        "image": ".stitch/designs/ng_k_ch_n_vai_tr/screen.png"
+      },
+      "feature_id": "auth-register",
+      "reference_title": "Đăng ký - Chọn vai trò",
+      "title_vi": "Đăng Ký - Chọn Vai Trò"
+    },
+    {
+      "local_id": "JF-020",
+      "title": "Đăng Ký - Tuyển Dụng VN",
+      "canvas": {
+        "width": 390,
+        "height": 1348,
+        "device": "MOBILE"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/ng_k_tuy_n_d_ng_vn/code.html",
+        "image": ".stitch/designs/ng_k_tuy_n_d_ng_vn/screen.png"
+      },
+      "feature_id": "auth-register",
+      "reference_title": "Đăng Ký - Tuyển Dụng VN",
+      "title_vi": "Đăng Ký - Tuyển Dụng VN"
+    },
+    {
+      "local_id": "JF-021",
+      "title": "Đăng Tin Tuyển Dụng - Bước 1",
+      "canvas": {
+        "width": 1280,
+        "height": 1377,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/ng_tin_tuy_n_d_ng_b_c_1/code.html",
+        "image": ".stitch/designs/ng_tin_tuy_n_d_ng_b_c_1/screen.png"
+      },
+      "feature_id": "job-posting",
+      "reference_title": "Đăng Tin Tuyển Dụng - Bước 1",
+      "title_vi": "Đăng Tin Tuyển Dụng - Bước 1"
+    },
+    {
+      "local_id": "JF-022",
+      "title": "Ứng Tuyển: Bước 1 - Thông Tin Cá Nhân",
+      "canvas": {
+        "width": 1280,
+        "height": 1053,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/ng_tuy_n_b_c_1_th_ng_tin_c_nh_n/code.html",
+        "image": ".stitch/designs/ng_tuy_n_b_c_1_th_ng_tin_c_nh_n/screen.png"
+      },
+      "feature_id": "applications",
+      "reference_title": "Ứng tuyển: Bước 1 - Thông tin cá nhân",
+      "title_vi": "Ứng Tuyển: Bước 1 - Thông Tin Cá Nhân"
+    },
+    {
+      "local_id": "JF-023",
+      "title": "Ứng Tuyển: Senior UI/UX Designer (Mobile)",
+      "canvas": {
+        "width": 390,
+        "height": 1817,
+        "device": "MOBILE"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer/code.html",
+        "image": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer/screen.png"
+      },
+      "feature_id": "applications",
+      "reference_title": "Ứng tuyển: Senior UI/UX Designer",
+      "title_vi": "Ứng Tuyển: Senior UI/UX Designer (Mobile)"
+    },
+    {
+      "local_id": "JF-024",
+      "title": "Ứng Tuyển: Senior UI/UX Designer (Desktop)",
+      "canvas": {
+        "width": 1280,
+        "height": 1249,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer_desktop/code.html",
+        "image": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer_desktop/screen.png"
+      },
+      "feature_id": "applications",
+      "reference_title": "Ứng tuyển: Senior UI/UX Designer (Desktop)",
+      "title_vi": "Ứng Tuyển: Senior UI/UX Designer (Desktop)"
+    },
+    {
+      "local_id": "JF-025",
+      "title": "Phễu Tuyển Dụng - Senior Frontend Developer",
+      "canvas": {
+        "width": 1280,
+        "height": 1024,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/ph_u_tuy_n_d_ng_senior_frontend_developer/code.html",
+        "image": ".stitch/designs/ph_u_tuy_n_d_ng_senior_frontend_developer/screen.png"
+      },
+      "feature_id": "pipeline",
+      "reference_title": "Phễu Tuyển Dụng - Senior Frontend Developer",
+      "title_vi": "Phễu Tuyển Dụng - Senior Frontend Developer"
+    },
+    {
+      "local_id": "JF-026",
+      "title": "Quản Lý Gói Dịch Vụ Doanh Nghiệp",
+      "canvas": {
+        "width": 1280,
+        "height": 1580,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/qu_n_l_g_i_d_ch_v/code.html",
+        "image": ".stitch/designs/qu_n_l_g_i_d_ch_v/screen.png"
+      },
+      "feature_id": "admin-packages",
+      "reference_title": "Quản lý Gói dịch vụ",
+      "title_vi": "Quản Lý Gói Dịch Vụ Doanh Nghiệp"
+    },
+    {
+      "local_id": "JF-027",
+      "title": "Quản Lý Người Dùng - Bảng Quản Trị",
+      "canvas": {
+        "width": 1280,
+        "height": 1138,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/qu_n_l_ng_i_d_ng_admin_panel/code.html",
+        "image": ".stitch/designs/qu_n_l_ng_i_d_ng_admin_panel/screen.png"
+      },
+      "feature_id": "admin-users",
+      "reference_title": "Quản Lý Người Dùng - Admin Panel",
+      "title_vi": "Quản Lý Người Dùng - Bảng Quản Trị"
+    },
+    {
+      "local_id": "JF-028",
+      "title": "Đăng Ký - Bản Cao Cấp Desktop",
+      "canvas": {
+        "width": 1280,
+        "height": 1409,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/registration_premium_desktop/code.html",
+        "image": ".stitch/designs/registration_premium_desktop/screen.png"
+      },
+      "feature_id": "auth-register",
+      "reference_title": "Registration - Premium Desktop",
+      "title_vi": "Đăng Ký - Bản Cao Cấp Desktop"
+    },
+    {
+      "local_id": "JF-029",
+      "title": "Báo Cáo Doanh Thu & Phân Tích",
+      "canvas": {
+        "width": 1280,
+        "height": 1613,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/revenue_analytics_dashboard/code.html",
+        "image": ".stitch/designs/revenue_analytics_dashboard/screen.png"
+      },
+      "feature_id": "admin-reports-audit",
+      "reference_title": "Revenue & Analytics Dashboard",
+      "title_vi": "Báo Cáo Doanh Thu & Phân Tích"
+    },
+    {
+      "local_id": "JF-030",
+      "title": "Tin Nhắn Tuyển Dụng",
+      "canvas": {
+        "width": 1280,
+        "height": 1024,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/tin_nh_n_tuy_n_d_ng/code.html",
+        "image": ".stitch/designs/tin_nh_n_tuy_n_d_ng/screen.png"
+      },
+      "feature_id": "chat",
+      "reference_title": "Tin nhắn tuyển dụng",
+      "title_vi": "Tin Nhắn Tuyển Dụng"
+    },
+    {
+      "local_id": "JF-031",
+      "title": "Trò Chuyện & Hộp Thư Tuyển Dụng",
+      "canvas": {
+        "width": 1280,
+        "height": 1024,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/tr_chuy_n_tin_nh_n/code.html",
+        "image": ".stitch/designs/tr_chuy_n_tin_nh_n/screen.png"
+      },
+      "feature_id": "chat",
+      "reference_title": "Trò chuyện & Tin nhắn",
+      "title_vi": "Trò Chuyện & Hộp Thư Tuyển Dụng"
+    },
+    {
+      "local_id": "JF-032",
+      "title": "Trang 404 - Không Tìm Thấy",
+      "canvas": {
+        "width": 1280,
+        "height": 1367,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/trang_404_kh_ng_t_m_th_y/code.html",
+        "image": ".stitch/designs/trang_404_kh_ng_t_m_th_y/screen.png"
+      },
+      "feature_id": "master-layout",
+      "reference_title": "Trang 404 - Không Tìm Thấy",
+      "title_vi": "Trang 404 - Không Tìm Thấy"
+    },
+    {
+      "local_id": "JF-033",
+      "title": "Trung Tâm Thông Báo - Tuyển Dụng VN",
+      "canvas": {
+        "width": 1280,
+        "height": 1378,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/trung_t_m_th_ng_b_o_tuy_n_d_ng_vn/code.html",
+        "image": ".stitch/designs/trung_t_m_th_ng_b_o_tuy_n_d_ng_vn/screen.png"
+      },
+      "feature_id": "notifications",
+      "reference_title": "Trung Tâm Thông Báo - Tuyển Dụng VN",
+      "title_vi": "Trung Tâm Thông Báo - Tuyển Dụng VN"
+    },
+    {
+      "local_id": "JF-034",
+      "title": "Tuyển Dụng VN - Bảng Điều Khiển Doanh Nghiệp",
+      "canvas": {
+        "width": 1280,
+        "height": 1455,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/tuy_n_d_ng_vn_dashboard_doanh_nghi_p/code.html",
+        "image": ".stitch/designs/tuy_n_d_ng_vn_dashboard_doanh_nghi_p/screen.png"
+      },
+      "feature_id": "employer-dashboard",
+      "reference_title": "Tuyển Dụng VN - Dashboard Doanh Nghiệp",
+      "title_vi": "Tuyển Dụng VN - Bảng Điều Khiển Doanh Nghiệp"
+    },
+    {
+      "local_id": "JF-035",
+      "title": "Tuyển Dụng VN - Trang Chủ",
+      "canvas": {
+        "width": 1280,
+        "height": 3456,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/tuy_n_d_ng_vn_homepage/code.html",
+        "image": ".stitch/designs/tuy_n_d_ng_vn_homepage/screen.png"
+      },
+      "feature_id": "home",
+      "reference_title": "Tuyển Dụng VN - Homepage",
+      "title_vi": "Tuyển Dụng VN - Trang Chủ"
+    },
+    {
+      "local_id": "JF-036",
+      "title": "Tuyển Dụng VN - Kết Quả Tìm Kiếm Việc Làm",
+      "canvas": {
+        "width": 1280,
+        "height": 1944,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/tuy_n_d_ng_vn_search_results/code.html",
+        "image": ".stitch/designs/tuy_n_d_ng_vn_search_results/screen.png"
+      },
+      "feature_id": "job-search",
+      "reference_title": "Tuyển Dụng VN - Search Results",
+      "title_vi": "Tuyển Dụng VN - Kết Quả Tìm Kiếm Việc Làm"
+    },
+    {
+      "local_id": "JF-037",
+      "title": "Xác Thực Doanh Nghiệp - Bảng Quản Trị",
+      "canvas": {
+        "width": 1280,
+        "height": 1024,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/x_c_th_c_doanh_nghi_p_admin/code.html",
+        "image": ".stitch/designs/x_c_th_c_doanh_nghi_p_admin/screen.png"
+      },
+      "feature_id": "admin-companies",
+      "reference_title": "Xác thực Doanh nghiệp - Admin",
+      "title_vi": "Xác Thực Doanh Nghiệp - Bảng Quản Trị"
+    }
+  ],
+  "language": "vi",
+  "localization_note": "Toàn bộ dự án Stitch được bản địa hóa 100% sang tiếng Việt theo yêu cầu người dùng."
+}

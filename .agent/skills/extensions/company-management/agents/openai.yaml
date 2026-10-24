@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Công ty và nhân sự
+  short_description: Công ty và nhân sự cho dự án JobFind
+  default_prompt: Dùng $company-management code profile editor JF-005.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

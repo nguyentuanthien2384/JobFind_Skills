@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Stitch sang React components
+  short_description: Stitch sang React components cho dự án JobFind
+  default_prompt: Dùng $react-components tách JobCard và FilterPanel từ JF-036.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

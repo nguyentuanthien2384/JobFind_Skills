@@ -1,0 +1,150 @@
+[
+  {
+    "id": "JF-003",
+    "folder": "billing_subscriptions",
+    "title": "Billing & Subscriptions",
+    "group": "Đề xuất",
+    "route": "/admin/buy-post; /admin/buy-cv",
+    "component": "container/system/Post/BuyPost.js",
+    "api": "GET /api/get-payment-link ; POST /api/payment-success ; GET /api/get-payment-cv-link ; POST /api/payment-cv-success ; GET /api/get-history-trade-post ; GET /api/get-history-trade-cv",
+    "note": "Một phần: mua gói có; recurring subscription chưa có route riêng",
+    "width": 1600,
+    "height": 1450,
+    "html_sha256": "6b3c452783305302fac18dd82b4c68decfb14e2373e0ee317d52669dd4ddcce7",
+    "image_sha256": "9c017051d1e3e733136da790e563ef74ed0b7167064472e8d2f8d49d0564f01c",
+    "feature_id": "billing-packages",
+    "roles": [
+      "COMPANY",
+      "ADMIN"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1160,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1600,
+      "height": 1450
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "partial",
+    "sources": [
+      "frontend/src/container/system/Post/BuyPost.js",
+      "frontend/src/container/system/PackageCv/BuyCv.js",
+      "backend/src/services/packageCvService.js",
+      "backend/src/routes/web.js"
+    ],
+    "api_contracts": [
+      "GET /api/get-payment-link",
+      "POST /api/payment-success",
+      "GET /api/get-payment-cv-link",
+      "POST /api/payment-cv-success",
+      "GET /api/get-history-trade-post",
+      "GET /api/get-history-trade-cv"
+    ],
+    "observations": {
+      "headings": [
+        "Billing & Subscriptions",
+        "Manage Your Ledger",
+        "Billing Summary",
+        "Quick Insights",
+        "Annual Savings",
+        "Free",
+        "Pro",
+        "Enterprise",
+        "Transaction History"
+      ],
+      "labels": [],
+      "controls": [],
+      "actions": [
+        "Upgrade Plan",
+        "notifications",
+        "help",
+        "Add Payment",
+        "Apply Yearly",
+        "Current Plan",
+        "Upgrade to Pro",
+        "Contact Sales",
+        "filter_list Filter",
+        "download Export CSV",
+        "download"
+      ],
+      "colors": {
+        "on-surface-variant": "#434655",
+        "error": "#BA1A1A",
+        "surface-container-lowest": "#FFFFFF",
+        "inverse-surface": "#283044",
+        "on-secondary-fixed": "#00174B",
+        "tertiary-fixed-dim": "#FFB596",
+        "on-error": "#FFFFFF",
+        "primary": "#004AC6",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "tertiary": "#943700",
+        "secondary": "#495C95",
+        "on-background": "#131B2E",
+        "primary-fixed-dim": "#B4C5FF",
+        "outline-variant": "#C3C6D7",
+        "primary-fixed": "#DBE1FF",
+        "on-secondary-container": "#394C84",
+        "surface-variant": "#DAE2FD",
+        "on-primary": "#FFFFFF",
+        "background": "#FAF8FF",
+        "tertiary-container": "#BC4800",
+        "secondary-container": "#ACBFFF",
+        "surface-tint": "#0053DB",
+        "on-secondary-fixed-variant": "#31447B",
+        "on-tertiary-container": "#FFEDE6",
+        "on-primary-fixed-variant": "#003EA8",
+        "secondary-fixed-dim": "#B4C5FF",
+        "surface-dim": "#D2D9F4",
+        "surface-bright": "#FAF8FF",
+        "on-surface": "#131B2E",
+        "on-tertiary": "#FFFFFF",
+        "outline": "#737686",
+        "inverse-on-surface": "#EEF0FF",
+        "secondary-fixed": "#DBE1FF",
+        "surface-container": "#EAEDFF",
+        "on-error-container": "#93000A",
+        "on-primary-container": "#EEEFFF",
+        "on-secondary": "#FFFFFF",
+        "primary-container": "#2563EB",
+        "error-container": "#FFDAD6",
+        "tertiary-fixed": "#FFDBCD",
+        "surface-container-high": "#E2E7FF",
+        "on-tertiary-fixed": "#360F00",
+        "inverse-primary": "#B4C5FF",
+        "surface": "#FAF8FF",
+        "surface-container-low": "#F2F3FF",
+        "on-primary-fixed": "#00174B",
+        "surface-container-highest": "#DAE2FD"
+      },
+      "fonts": {
+        "headline": "Inter",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "images": [
+        {
+          "alt": "User Avatar",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuADHUR4O5CoBTMMuUoXB-zqwDxIZAdPlzUq-QUxjB4DqYCgB676BpE9y3JENPLsklS7DqdEe13Gwis-aVP4_JFFz3l3iXl_cyFvg1orcR-MKQs8EGpuFW657-fYHYcbsuvIk22KaE8M1Gn45iOqsTldO16jWz5fuWce1d2jdAMAmw9IzzX0zW1p7JJ3Usgmw0AeXJ0B0d88emdfJyOxYuP8b7BbKSc7zlahhqiprkVDrsvzfF1QPNNB6C8SmCkVPEkHnJXE-lF8lA_P",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/billing_subscriptions/code.html",
+      "image": ".stitch/designs/billing_subscriptions/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-003.md",
+    "prompt": ".stitch/prompts/JF-003.md"
+  }
+]

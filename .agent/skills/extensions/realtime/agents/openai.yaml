@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Chat tuyển dụng
+  short_description: Chat tuyển dụng cho dự án JobFind
+  default_prompt: Dùng $realtime sửa tin nhắn lặp khi reconnect trên JF-031.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

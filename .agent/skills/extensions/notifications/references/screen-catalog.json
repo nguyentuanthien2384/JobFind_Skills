@@ -1,0 +1,184 @@
+[
+  {
+    "id": "JF-033",
+    "folder": "trung_t_m_th_ng_b_o_tuy_n_d_ng_vn",
+    "title": "Trung Tâm Thông Báo - Tuyển Dụng VN",
+    "group": "Ứng viên",
+    "route": "/candidate/notifications",
+    "component": "container/Candidate/CandidateNotifications.js",
+    "api": "GET /api/get-notification-by-user ; GET /api/get-notification-jobs ; POST /api/mark-read-notification ; GET /api/push/config ; POST /api/push/subscription ; DELETE /api/push/subscription",
+    "note": "Có route; chọn đích theo quyền",
+    "width": 1486,
+    "height": 1600,
+    "html_sha256": "cba51e6b5240324cb109fc3dc46efa20d2814453cd1c42778e6ee20b7c7b9ea3",
+    "image_sha256": "bba7fd7ab73f8dd77c5011a6b039648d7109dd3c7f7528d35f07fbc0bab27179",
+    "feature_id": "notifications",
+    "roles": [
+      "CANDIDATE",
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1378,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1486,
+      "height": 1600
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/Candidate/CandidateNotifications.js",
+      "frontend/src/service/notificationJobsService.js",
+      "backend/src/routes/web.js",
+      "microservices/notification-service/package.json"
+    ],
+    "api_contracts": [
+      "GET /api/get-notification-by-user",
+      "GET /api/get-notification-jobs",
+      "POST /api/mark-read-notification",
+      "GET /api/push/config",
+      "POST /api/push/subscription",
+      "DELETE /api/push/subscription"
+    ],
+    "observations": {
+      "headings": [
+        "notifications Thông Báo",
+        "Hôm Nay",
+        "Hôm Qua",
+        "Tuần Trước",
+        "Cài Đặt Thông Báo",
+        "Nâng cấp hồ sơ Pro"
+      ],
+      "labels": [
+        "Đơn ứng tuyển",
+        "Việc làm gợi ý",
+        "Nhắc lịch",
+        "Hệ thống"
+      ],
+      "controls": [
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        }
+      ],
+      "actions": [
+        "notifications 3",
+        "settings",
+        "settings Cài đặt",
+        "Tất Cả (12)",
+        "Chưa Đọc (3)",
+        "Việc Làm",
+        "Đơn Ứng Tuyển",
+        "Hệ Thống",
+        "Xem Chi Tiết",
+        "Thêm vào Lịch",
+        "Xem Đơn Ứng Tuyển",
+        "Lưu cấu hình",
+        "Tìm hiểu thêm"
+      ],
+      "colors": {
+        "secondary-container": "#39B8FD",
+        "outline": "#737686",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "secondary": "#006591",
+        "surface-dim": "#D8DADC",
+        "surface-container-lowest": "#FFFFFF",
+        "secondary-fixed": "#C9E6FF",
+        "on-surface": "#191C1E",
+        "inverse-on-surface": "#EFF1F3",
+        "primary-fixed-dim": "#B4C5FF",
+        "primary-container": "#2563EB",
+        "surface-tint": "#0053DB",
+        "on-tertiary-container": "#FFEDE6",
+        "surface-variant": "#E0E3E5",
+        "error-container": "#FFDAD6",
+        "primary-fixed": "#DBE1FF",
+        "surface-container-highest": "#E0E3E5",
+        "surface-container-high": "#E6E8EA",
+        "on-secondary-fixed": "#001E2F",
+        "on-surface-variant": "#434655",
+        "on-background": "#191C1E",
+        "background": "#F7F9FB",
+        "on-primary-fixed-variant": "#003EA8",
+        "tertiary-fixed-dim": "#FFB596",
+        "primary": "#004AC6",
+        "tertiary-container": "#BC4800",
+        "on-primary": "#FFFFFF",
+        "on-error-container": "#93000A",
+        "on-tertiary": "#FFFFFF",
+        "secondary-fixed-dim": "#89CEFF",
+        "tertiary-fixed": "#FFDBCD",
+        "on-secondary-container": "#004666",
+        "surface": "#F7F9FB",
+        "on-primary-fixed": "#00174B",
+        "on-primary-container": "#EEEFFF",
+        "surface-bright": "#F7F9FB",
+        "on-error": "#FFFFFF",
+        "inverse-surface": "#2D3133",
+        "error": "#BA1A1A",
+        "tertiary": "#943700",
+        "inverse-primary": "#B4C5FF",
+        "on-tertiary-fixed": "#360F00",
+        "on-secondary-fixed-variant": "#004C6E",
+        "on-secondary": "#FFFFFF",
+        "surface-container": "#ECEEF0",
+        "outline-variant": "#C3C6D7",
+        "surface-container-low": "#F2F4F6"
+      },
+      "fonts": {
+        "headline": "Be Vietnam Pro",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.5rem",
+        "lg": "1rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "Avatar",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuC2uUt1aJVI4xL0kZ3CafhQ2M2TYyTq62Bfu-NGdgH6fYMTFlH1ptdGne2iFCIi77KGd5lpxdPy6BK7ntpZfjxipTE6akMCU6E5wFGZAvcK9BlkAPEnyeAj63oyF-jJfIFoHY7Ga_uif92FI901f3TJ3g5DwRwYcnUsqdzlW-NaYlOYs9uj-tjJmdRRcNpppt2ePzI1XagQWgKMrdqr5KC29dzA8mWI5-l-Ozx2tbzp26fhugpL0DHSPX-8JbgAVCZkdtDll8sZA2JY",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "VNG Logo",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBbzMIvmIw2uHHPPSo6_2nnbuo4QPsakaHjXatuw0ZFu7_2Bx9BJsJG1M35lYzhurKILyfABtIKYfisZPDMxMBiY_Kc5a2BuhA-tX82tEG4w5Nh9FRBDFy8xe_FaWfv4Ufa1ZTu4tobcOP6OpE5e5DzpHrY6-H0RixG4AZJ-KOvDNRWQ6Aspc-Rxk-rkG_POdAHuFYA9HeLY8dPbcT5FD95yrubr0-aIxoD-pIFhKPsjjAAblEzRNanEKUK4IojsOfWwUp9-fsN_yd7",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Logo 1",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuA4iMNLl3qmdqm76Bp_Eiycgc-Xg2ockIY3vHr78Vu4hCgt73EnUTMUEVQo-Z-8M-I6oMpNzzmQtJRoehHMLX3GNdyQfZgSLshGHpycychnFwLWciQHq5PrYO8zAoCqwYTwZrfF62OBHa-EavIcRw32oe1hunXqKd40NJrIUCpUvWm4xyVTfMreS7pkZAs9A08qrcJkll2zeNeUDPSEP0eWA2GoHV_44l5wd34uwC2uktCT3ke2zjoLywDW7k1X-5E7nHGsaIg6MbSs",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Logo 2",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAqeVVWh2SjHPsDa598X1zzgfpeamPnLTVohO0Lveu1jGifTITzr097V2eD7dNDKWvXePp1acQr0_-P73qiDRIJ4Tyc7AzyEseStEJr1OIv5K0ku0ZNLVv-HvpihFFdWZ1ZhExxSbbCKGjYr-A5hq9QQCoRAZiNSovcXnrH8hBjDer62txJ_Ob41bhLuMc1FQyQVrq3iFejvFt033SZ6mRdDCFv2op7y9xzK1-gsqcBZrlTE7sq1taLLZTBIlMOGR-9BBeYKSE1DI4o",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/trung_t_m_th_ng_b_o_tuy_n_d_ng_vn/code.html",
+      "image": ".stitch/designs/trung_t_m_th_ng_b_o_tuy_n_d_ng_vn/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-033.md",
+    "prompt": ".stitch/prompts/JF-033.md"
+  }
+]

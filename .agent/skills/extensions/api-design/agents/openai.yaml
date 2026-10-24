@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Thiết kế hợp đồng API
+  short_description: Thiết kế hợp đồng API cho dự án JobFind
+  default_prompt: Dùng $api-design mô tả API cho trang lịch tổng hợp proposal.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

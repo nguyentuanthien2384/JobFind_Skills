@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Trình bày và demo dự án
+  short_description: Trình bày và demo dự án cho dự án JobFind
+  default_prompt: Dùng $frontend-slides lập demo luồng ứng tuyển từ Stitch
+    và source.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

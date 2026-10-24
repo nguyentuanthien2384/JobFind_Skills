@@ -1,0 +1,20 @@
+[
+  {
+    "screen_id": "JF-030",
+    "feature_id": "chat",
+    "owner": "jobfind-realtime",
+    "asset": "assets/stitch-reference/JF-030/screen.png",
+    "output": ".stitch/designs/tin_nh_n_tuy_n_d_ng/screen.png",
+    "sha256": "3b478c2e3e7601049d7cc8c4a84546d97cd24f8042396857f993fb6da448b2d2",
+    "bytes": 325300
+  },
+  {
+    "screen_id": "JF-031",
+    "feature_id": "chat",
+    "owner": "jobfind-realtime",
+    "asset": "assets/stitch-reference/JF-031/screen.png",
+    "output": ".stitch/designs/tr_chuy_n_tin_nh_n/screen.png",
+    "sha256": "84d2b2be65e13dd4745cb706c717a2df8324b5347580198f834c938747145d4b",
+    "bytes": 315489
+  }
+]

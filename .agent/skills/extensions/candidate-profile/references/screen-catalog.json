@@ -1,0 +1,171 @@
+[
+  {
+    "id": "JF-009",
+    "folder": "h_s_c_a_t_i_tuy_n_d_ng_vn",
+    "title": "Hồ Sơ Của Tôi - Tuyển Dụng VN",
+    "group": "Ứng viên",
+    "route": "/candidate/info",
+    "component": "container/Candidate/CandidateInfo.js",
+    "api": "PUT /api/update-user ; GET /api/profile ; PUT /api/profile ; PUT /api/setDataUserSetting",
+    "note": "Có route; kiểm tra dữ liệu hồ sơ thật",
+    "width": 1171,
+    "height": 1600,
+    "html_sha256": "47aec7d77ef97adc8b372b91db7fd94e5557a649a6ea2b743003c0e81d214bc4",
+    "image_sha256": "8384ed5344b1c4fc8f65a560cb3238c240c4e2f650a0c3c8ece0351709398614",
+    "feature_id": "candidate-profile",
+    "roles": [
+      "CANDIDATE"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1749,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1171,
+      "height": 1600
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/Candidate/CandidateInfo.js",
+      "frontend/src/service/aiSearchService.js",
+      "backend/src/controllers/userController.js",
+      "frontend/src/service/userService.js"
+    ],
+    "api_contracts": [
+      "PUT /api/update-user",
+      "GET /api/profile",
+      "PUT /api/profile",
+      "PUT /api/setDataUserSetting"
+    ],
+    "observations": {
+      "headings": [
+        "Nguyễn Văn Bình",
+        "person Thông Tin Cá Nhân",
+        "work Kinh Nghiệm Làm Việc",
+        "Senior React Developer",
+        "Frontend Developer",
+        "school Học Vấn",
+        "Đại học Bách Khoa TP.HCM",
+        "psychology Kỹ Năng",
+        "CV Đang Sử Dụng",
+        "Việc Làm Gợi Ý",
+        "Senior Frontend Architect",
+        "Lead React Developer",
+        "Technical Lead (JS/React)",
+        "Hoạt Động Gần Đây"
+      ],
+      "labels": [],
+      "controls": [
+        {
+          "type": "text",
+          "placeholder": "Thêm kỹ năng khác..."
+        }
+      ],
+      "actions": [
+        "notifications 3",
+        "photo_camera",
+        "Tải CV PDF",
+        "Cập Nhật Hồ Sơ",
+        "edit",
+        "add_circle Thêm Kinh Nghiệm",
+        "Thêm",
+        "add",
+        "download Tải xuống",
+        "sync Đổi CV"
+      ],
+      "colors": {
+        "surface-container": "#ECEEF0",
+        "on-tertiary": "#FFFFFF",
+        "on-primary-container": "#EEEFFF",
+        "on-primary-fixed-variant": "#003EA8",
+        "outline-variant": "#C3C6D7",
+        "on-surface": "#191C1E",
+        "tertiary-fixed": "#FFDBCD",
+        "on-tertiary-container": "#FFEDE6",
+        "background": "#F7F9FB",
+        "inverse-surface": "#2D3133",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "on-tertiary-fixed": "#360F00",
+        "secondary-container": "#39B8FD",
+        "on-error": "#FFFFFF",
+        "surface-container-lowest": "#FFFFFF",
+        "on-secondary": "#FFFFFF",
+        "on-surface-variant": "#434655",
+        "primary-fixed-dim": "#B4C5FF",
+        "primary-container": "#2563EB",
+        "on-secondary-container": "#004666",
+        "surface-variant": "#E0E3E5",
+        "on-primary-fixed": "#00174B",
+        "secondary-fixed-dim": "#89CEFF",
+        "tertiary-fixed-dim": "#FFB596",
+        "surface-dim": "#D8DADC",
+        "surface-tint": "#0053DB",
+        "secondary": "#006591",
+        "primary-fixed": "#DBE1FF",
+        "on-primary": "#FFFFFF",
+        "on-secondary-fixed": "#001E2F",
+        "tertiary": "#943700",
+        "surface-container-low": "#F2F4F6",
+        "outline": "#737686",
+        "inverse-primary": "#B4C5FF",
+        "error": "#BA1A1A",
+        "secondary-fixed": "#C9E6FF",
+        "surface": "#F7F9FB",
+        "error-container": "#FFDAD6",
+        "surface-container-highest": "#E0E3E5",
+        "surface-container-high": "#E6E8EA",
+        "on-error-container": "#93000A",
+        "tertiary-container": "#BC4800",
+        "surface-bright": "#F7F9FB",
+        "on-background": "#191C1E",
+        "inverse-on-surface": "#EFF1F3",
+        "primary": "#004AC6",
+        "on-secondary-fixed-variant": "#004C6E"
+      },
+      "fonts": {
+        "headline": "Be Vietnam Pro",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.5rem",
+        "lg": "1rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCsSptG52BhDJcX2xI9kyG4etLe5TASALd6POvs92r_0DETvUMfzRewY0N49LrZgCVfD8KzOdqRT_wqO24gFEHuuY4OliT3IabwMYDw3ilm_s9LKbmLPsli4tjbLNgE91tm4sBWNS55JR7_o_15ykRCordZMM7k4hmmLdDvYO1VDDjNL2FH2egtEjNZlkqg8XcY0P4B8UOoIJ5Qgvk-O-JLyjneMz72GUPQrObw7mC7aVZr_w713t8iK1K1Qj7r0S-tV29N2W8WDbK2",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDA7UYnKpp4jsM-zj6psg2tAC8oqCzuqC9y6Gzu985lqZc9j6k0C6Ltz6UZyBJgnJhd98tGbyy4mY8BUE3FhRZFo_vvRunmGXW7nc5UFNBxhla2lqkt3tSB0h8_WnGCf9bw6MpWgXIThMEw25vBqNxze9OLqlcm0NpsICuYjaw0Aijt56Sr53ba7w7EsAbJLXcoHNESNonj0T4Vm8Xs4G-XXRW5F1fPP6T-74i1jNm0D_Qmsssl1HRthJBBaPnOAbGAjRpj82HyBgcq",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDV87lHpIAu75udUu_flkSIKfTEQ9H8wcAbvlgJIS3tTpiSHIAfHdw7Dgpd4doSxoRJ86JPI0ezUhHxvJk-l_BIc16UFhTxOPYIBozZS8yD7KWKN5Q_UP09GVBzqkvUlrvRMxyB6Ek35QvdeMhlUfTujK4XBOzoG667r_vpetTCG93nrdU-xG6AALSsCPVuDuM5nmDEKPSpuD94fFYflQWcq_H2HYap8AP8UgTpyeDsnoRroX5O5SDNJlZn7VjA3UzRv7iNn2rEChr1",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDyDsEyVyROkmsjsLL48IiX3oQEEldoXpDQEfe6B-g9Y7sZrValCcrKxqZFy_5Eg0bVCQi0qWzFgYr7pOYXxUGSGHN24-dayo8VEpH35zRE-OiWxQqIa24bs73HPgkh6e-n78-Qk2JCmKcAlp_IhLYWpjPeDQw2JXP_fHyZnD9zqmP-FzOeXJzVX2j2TxwNdAA2dka--MjspiQPwQq2ibMk3K-2MWBLSHS7pN2XKb5eK_RhoAaFRKzZhg4yS3XjEAjT4BKO4e8NVC2j",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/h_s_c_a_t_i_tuy_n_d_ng_vn/code.html",
+      "image": ".stitch/designs/h_s_c_a_t_i_tuy_n_d_ng_vn/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-009.md",
+    "prompt": ".stitch/prompts/JF-009.md"
+  }
+]

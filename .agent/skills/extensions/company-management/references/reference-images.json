@@ -1,0 +1,38 @@
+[
+  {
+    "screen_id": "JF-005",
+    "feature_id": "company-profile",
+    "owner": "jobfind-company-management",
+    "asset": "assets/stitch-reference/JF-005/screen.png",
+    "output": ".stitch/designs/company_profile_editor_vng_corporation/screen.png",
+    "sha256": "93385013f5426332dc5c0bec75977cfc86f4876d0d1ea8de2d4a4737ab30786d",
+    "bytes": 1258832
+  },
+  {
+    "screen_id": "JF-006",
+    "feature_id": "companies",
+    "owner": "jobfind-company-management",
+    "asset": "assets/stitch-reference/JF-006/screen.png",
+    "output": ".stitch/designs/danh_m_c_c_ng_ty/screen.png",
+    "sha256": "cdf95ef605693efc0e7f3f52cc52a85137b49793e9dc2f7b419b40ce7bdbbe01",
+    "bytes": 421147
+  },
+  {
+    "screen_id": "JF-007",
+    "feature_id": "companies",
+    "owner": "jobfind-company-management",
+    "asset": "assets/stitch-reference/JF-007/screen.png",
+    "output": ".stitch/designs/danh_s_ch_c_ng_ty_tuy_n_d_ng_vn/screen.png",
+    "sha256": "e9958081d871163b5018e1d745d10cc4c6d57e03e16bd1c81ba5a4b54949747f",
+    "bytes": 435876
+  },
+  {
+    "screen_id": "JF-034",
+    "feature_id": "employer-dashboard",
+    "owner": "jobfind-company-management",
+    "asset": "assets/stitch-reference/JF-034/screen.png",
+    "output": ".stitch/designs/tuy_n_d_ng_vn_dashboard_doanh_nghi_p/screen.png",
+    "sha256": "b55afeec2d8abf0708c50414d1fb46d5be08d507d47d2d8bade52ce98bc4f9f4",
+    "bytes": 298922
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "screen_id": "JF-002",
+    "feature_id": "admin-overview",
+    "owner": "jobfind-admin-moderation",
+    "asset": "assets/stitch-reference/JF-002/screen.png",
+    "output": ".stitch/designs/admin_dashboard_overview/screen.png",
+    "sha256": "52076b9512811388c2dff975b8c18303cc4347b65d1dd546b812cbe019102beb",
+    "bytes": 434895
+  },
+  {
+    "screen_id": "JF-004",
+    "feature_id": "system-proposals",
+    "owner": "jobfind-admin-moderation",
+    "asset": "assets/stitch-reference/JF-004/screen.png",
+    "output": ".stitch/designs/c_i_t_h_th_ng_admin_panel/screen.png",
+    "sha256": "d13adf937a848f6aa238aa827e8b886b53d9e4de625411e8dd8b4e5fda235fe0",
+    "bytes": 315825
+  },
+  {
+    "screen_id": "JF-008",
+    "feature_id": "admin-companies",
+    "owner": "jobfind-admin-moderation",
+    "asset": "assets/stitch-reference/JF-008/screen.png",
+    "output": ".stitch/designs/duy_t_h_s_c_ng_ty/screen.png",
+    "sha256": "0dbc2b3cafd938d400daf06f37d42d48735c9889a4944a58dd7ed3fde3f5136b",
+    "bytes": 374554
+  },
+  {
+    "screen_id": "JF-011",
+    "feature_id": "admin-jobs",
+    "owner": "jobfind-admin-moderation",
+    "asset": "assets/stitch-reference/JF-011/screen.png",
+    "output": ".stitch/designs/job_moderation_admin_panel/screen.png",
+    "sha256": "0dfc136c60a954d5e3ebe1315e53ee7bbca00230778421fe166b797955f4c559",
+    "bytes": 324763
+  },
+  {
+    "screen_id": "JF-027",
+    "feature_id": "admin-users",
+    "owner": "jobfind-admin-moderation",
+    "asset": "assets/stitch-reference/JF-027/screen.png",
+    "output": ".stitch/designs/qu_n_l_ng_i_d_ng_admin_panel/screen.png",
+    "sha256": "c123b219af084c7d70b64fa22f0c927010c61fc208a0e23c54870194498ca447",
+    "bytes": 326908
+  },
+  {
+    "screen_id": "JF-029",
+    "feature_id": "admin-reports-audit",
+    "owner": "jobfind-admin-moderation",
+    "asset": "assets/stitch-reference/JF-029/screen.png",
+    "output": ".stitch/designs/revenue_analytics_dashboard/screen.png",
+    "sha256": "b8542304f2b096558a43a073ff8a92df17cd91ce4d1fa96fb9f97b5216161aaf",
+    "bytes": 286046
+  },
+  {
+    "screen_id": "JF-037",
+    "feature_id": "admin-companies",
+    "owner": "jobfind-admin-moderation",
+    "asset": "assets/stitch-reference/JF-037/screen.png",
+    "output": ".stitch/designs/x_c_th_c_doanh_nghi_p_admin/screen.png",
+    "sha256": "ff262edc63441f2b08edfa8cc7094d4400061eb09eecf153300eb312b42b0016",
+    "bytes": 486781
+  }
+]

@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Xác thực và quyền
+  short_description: Xác thực và quyền cho dự án JobFind
+  default_prompt: Dùng $auth-security hoàn thiện Google và GitHub qua Auth0
+    cho màn đăng nhập.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

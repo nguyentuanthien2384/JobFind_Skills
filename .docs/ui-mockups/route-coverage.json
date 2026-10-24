@@ -1,0 +1,3125 @@
+[
+  {
+    "path": "/account/security",
+    "declared_path": "/account/security",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [
+      "MANAGE_PROFILE"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "RouteGuard",
+      "Header",
+      "Suspense",
+      "RoutePageLoader",
+      "SecuritySettings",
+      "Footer"
+    ],
+    "feature_id": "auth-recovery-security",
+    "related_features": [
+      "auth-recovery-security"
+    ],
+    "planning_docs": [
+      ".docs/ideas/auth-recovery-security-idea.md",
+      ".docs/design-briefs/auth-recovery-security-brief.md",
+      ".docs/frontend-plans/auth-recovery-security-plan.md",
+      ".docs/backend-plans/auth-recovery-security-plan.md",
+      ".docs/endpoint-apis/auth-recovery-security-endpoints.md",
+      ".docs/qa/auth-recovery-security-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/",
+    "declared_path": "/",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "Home",
+      "Footer"
+    ],
+    "feature_id": "home",
+    "related_features": [
+      "home"
+    ],
+    "planning_docs": [
+      ".docs/ideas/home-idea.md",
+      ".docs/design-briefs/home-brief.md",
+      ".docs/frontend-plans/home-plan.md",
+      ".docs/backend-plans/home-plan.md",
+      ".docs/endpoint-apis/home-endpoints.md",
+      ".docs/qa/home-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-035"
+    ],
+    "feature_reference_screens": [
+      "JF-035"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/about",
+    "declared_path": "/about",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "About",
+      "Footer"
+    ],
+    "feature_id": "master-layout",
+    "related_features": [
+      "master-layout"
+    ],
+    "planning_docs": [
+      ".docs/ideas/master-layout-idea.md",
+      ".docs/design-briefs/master-layout-brief.md",
+      ".docs/frontend-plans/master-layout-plan.md",
+      ".docs/backend-plans/master-layout-plan.md",
+      ".docs/endpoint-apis/master-layout-endpoints.md",
+      ".docs/qa/master-layout-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/contact",
+    "declared_path": "/contact",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "Contact",
+      "Footer"
+    ],
+    "feature_id": "master-layout",
+    "related_features": [
+      "master-layout"
+    ],
+    "planning_docs": [
+      ".docs/ideas/master-layout-idea.md",
+      ".docs/design-briefs/master-layout-brief.md",
+      ".docs/frontend-plans/master-layout-plan.md",
+      ".docs/backend-plans/master-layout-plan.md",
+      ".docs/endpoint-apis/master-layout-endpoints.md",
+      ".docs/qa/master-layout-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/job",
+    "declared_path": "/job",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "JobPage",
+      "Footer"
+    ],
+    "feature_id": "job-search",
+    "related_features": [
+      "job-search"
+    ],
+    "planning_docs": [
+      ".docs/ideas/job-search-idea.md",
+      ".docs/design-briefs/job-search-brief.md",
+      ".docs/frontend-plans/job-search-plan.md",
+      ".docs/backend-plans/job-search-plan.md",
+      ".docs/endpoint-apis/job-search-endpoints.md",
+      ".docs/qa/job-search-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-036"
+    ],
+    "feature_reference_screens": [
+      "JF-036"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/company",
+    "declared_path": "/company",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "ListCompany",
+      "Footer"
+    ],
+    "feature_id": "companies",
+    "related_features": [
+      "companies"
+    ],
+    "planning_docs": [
+      ".docs/ideas/companies-idea.md",
+      ".docs/design-briefs/companies-brief.md",
+      ".docs/frontend-plans/companies-plan.md",
+      ".docs/backend-plans/companies-plan.md",
+      ".docs/endpoint-apis/companies-endpoints.md",
+      ".docs/qa/companies-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-006",
+      "JF-007"
+    ],
+    "feature_reference_screens": [
+      "JF-006",
+      "JF-007"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/detail-company/:id",
+    "declared_path": "/detail-company/:id",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "DetailCompany",
+      "Footer"
+    ],
+    "feature_id": "companies",
+    "related_features": [
+      "companies"
+    ],
+    "planning_docs": [
+      ".docs/ideas/companies-idea.md",
+      ".docs/design-briefs/companies-brief.md",
+      ".docs/frontend-plans/companies-plan.md",
+      ".docs/backend-plans/companies-plan.md",
+      ".docs/endpoint-apis/companies-endpoints.md",
+      ".docs/qa/companies-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-006",
+      "JF-007"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/external-job/:id",
+    "declared_path": "/external-job/:id",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "ExternalJobDetail",
+      "Footer"
+    ],
+    "feature_id": "job-detail",
+    "related_features": [
+      "job-detail"
+    ],
+    "planning_docs": [
+      ".docs/ideas/job-detail-idea.md",
+      ".docs/design-briefs/job-detail-brief.md",
+      ".docs/frontend-plans/job-detail-plan.md",
+      ".docs/backend-plans/job-detail-plan.md",
+      ".docs/endpoint-apis/job-detail-endpoints.md",
+      ".docs/qa/job-detail-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-010",
+      "JF-022",
+      "JF-023",
+      "JF-024"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/detail-job/:id",
+    "declared_path": "/detail-job/:id",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "DetailPage",
+      "Footer"
+    ],
+    "feature_id": "job-detail",
+    "related_features": [
+      "applications",
+      "job-detail"
+    ],
+    "planning_docs": [
+      ".docs/ideas/applications-idea.md",
+      ".docs/design-briefs/applications-brief.md",
+      ".docs/frontend-plans/applications-plan.md",
+      ".docs/backend-plans/applications-plan.md",
+      ".docs/endpoint-apis/applications-endpoints.md",
+      ".docs/qa/applications-qa.md",
+      ".docs/ideas/job-detail-idea.md",
+      ".docs/design-briefs/job-detail-brief.md",
+      ".docs/frontend-plans/job-detail-plan.md",
+      ".docs/backend-plans/job-detail-plan.md",
+      ".docs/endpoint-apis/job-detail-endpoints.md",
+      ".docs/qa/job-detail-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-010",
+      "JF-022",
+      "JF-023",
+      "JF-024"
+    ],
+    "feature_reference_screens": [
+      "JF-010",
+      "JF-018",
+      "JF-022",
+      "JF-023",
+      "JF-024"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/chat",
+    "declared_path": "/chat",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [
+      "USE_CHAT"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "RouteGuard",
+      "Header",
+      "ChatPage",
+      "Footer"
+    ],
+    "feature_id": "chat",
+    "related_features": [
+      "chat"
+    ],
+    "planning_docs": [
+      ".docs/ideas/chat-idea.md",
+      ".docs/design-briefs/chat-brief.md",
+      ".docs/frontend-plans/chat-plan.md",
+      ".docs/backend-plans/chat-plan.md",
+      ".docs/endpoint-apis/chat-endpoints.md",
+      ".docs/qa/chat-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-030",
+      "JF-031"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/chat/:partnerId",
+    "declared_path": "/chat/:partnerId",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [
+      "USE_CHAT"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "RouteGuard",
+      "Header",
+      "ChatPage",
+      "Footer"
+    ],
+    "feature_id": "chat",
+    "related_features": [
+      "chat"
+    ],
+    "planning_docs": [
+      ".docs/ideas/chat-idea.md",
+      ".docs/design-briefs/chat-brief.md",
+      ".docs/frontend-plans/chat-plan.md",
+      ".docs/backend-plans/chat-plan.md",
+      ".docs/endpoint-apis/chat-endpoints.md",
+      ".docs/qa/chat-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-030",
+      "JF-031"
+    ],
+    "feature_reference_screens": [
+      "JF-030",
+      "JF-031"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/login",
+    "declared_path": "/login",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "Login"
+    ],
+    "feature_id": "auth-login",
+    "related_features": [
+      "auth-login"
+    ],
+    "planning_docs": [
+      ".docs/ideas/auth-login-idea.md",
+      ".docs/design-briefs/auth-login-brief.md",
+      ".docs/frontend-plans/auth-login-plan.md",
+      ".docs/backend-plans/auth-login-plan.md",
+      ".docs/endpoint-apis/auth-login-endpoints.md",
+      ".docs/qa/auth-login-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-015",
+      "JF-016",
+      "JF-017"
+    ],
+    "feature_reference_screens": [
+      "JF-015",
+      "JF-016",
+      "JF-017"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/register",
+    "declared_path": "/register",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "Register"
+    ],
+    "feature_id": "auth-register",
+    "related_features": [
+      "auth-register"
+    ],
+    "planning_docs": [
+      ".docs/ideas/auth-register-idea.md",
+      ".docs/design-briefs/auth-register-brief.md",
+      ".docs/frontend-plans/auth-register-plan.md",
+      ".docs/backend-plans/auth-register-plan.md",
+      ".docs/endpoint-apis/auth-register-endpoints.md",
+      ".docs/qa/auth-register-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-019",
+      "JF-020",
+      "JF-028"
+    ],
+    "feature_reference_screens": [
+      "JF-019",
+      "JF-020",
+      "JF-028"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/forget-password",
+    "declared_path": "/forget-password",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "ForgetPassword",
+      "Footer"
+    ],
+    "feature_id": "auth-recovery-security",
+    "related_features": [
+      "auth-recovery-security"
+    ],
+    "planning_docs": [
+      ".docs/ideas/auth-recovery-security-idea.md",
+      ".docs/design-briefs/auth-recovery-security-brief.md",
+      ".docs/frontend-plans/auth-recovery-security-plan.md",
+      ".docs/backend-plans/auth-recovery-security-plan.md",
+      ".docs/endpoint-apis/auth-recovery-security-endpoints.md",
+      ".docs/qa/auth-recovery-security-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/*",
+    "declared_path": "/admin/*",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [
+      "ACCESS_ADMIN_AREA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "RouteGuard",
+      "Suspense",
+      "RoutePageLoader",
+      "HomeAdmin"
+    ],
+    "feature_id": "master-layout",
+    "related_features": [
+      "master-layout"
+    ],
+    "planning_docs": [
+      ".docs/ideas/master-layout-idea.md",
+      ".docs/design-briefs/master-layout-brief.md",
+      ".docs/frontend-plans/master-layout-plan.md",
+      ".docs/backend-plans/master-layout-plan.md",
+      ".docs/endpoint-apis/master-layout-endpoints.md",
+      ".docs/qa/master-layout-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/candidate/*",
+    "declared_path": "/candidate/*",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [
+      "VIEW_CANDIDATE_AREA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "RouteGuard",
+      "Header",
+      "Suspense",
+      "RoutePageLoader",
+      "HomeCandidate",
+      "Footer"
+    ],
+    "feature_id": "master-layout",
+    "related_features": [
+      "master-layout"
+    ],
+    "planning_docs": [
+      ".docs/ideas/master-layout-idea.md",
+      ".docs/design-briefs/master-layout-brief.md",
+      ".docs/frontend-plans/master-layout-plan.md",
+      ".docs/backend-plans/master-layout-plan.md",
+      ".docs/endpoint-apis/master-layout-endpoints.md",
+      ".docs/qa/master-layout-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/forbidden",
+    "declared_path": "/forbidden",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Header",
+      "Forbidden",
+      "Footer"
+    ],
+    "feature_id": "master-layout",
+    "related_features": [
+      "master-layout"
+    ],
+    "planning_docs": [
+      ".docs/ideas/master-layout-idea.md",
+      ".docs/design-briefs/master-layout-brief.md",
+      ".docs/frontend-plans/master-layout-plan.md",
+      ".docs/backend-plans/master-layout-plan.md",
+      ".docs/endpoint-apis/master-layout-endpoints.md",
+      ".docs/qa/master-layout-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/support/chat",
+    "declared_path": "/support/chat",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [
+      "SUPPORT_USE"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "RouteGuard",
+      "Header",
+      "ChatPage",
+      "Footer"
+    ],
+    "feature_id": "support-assistant",
+    "related_features": [
+      "support-assistant"
+    ],
+    "planning_docs": [
+      ".docs/ideas/support-assistant-idea.md",
+      ".docs/design-briefs/support-assistant-brief.md",
+      ".docs/frontend-plans/support-assistant-plan.md",
+      ".docs/backend-plans/support-assistant-plan.md",
+      ".docs/endpoint-apis/support-assistant-endpoints.md",
+      ".docs/qa/support-assistant-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/support/chat/:partnerId",
+    "declared_path": "/support/chat/:partnerId",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [
+      "SUPPORT_USE"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "RouteGuard",
+      "Header",
+      "ChatPage",
+      "Footer"
+    ],
+    "feature_id": "support-assistant",
+    "related_features": [
+      "support-assistant"
+    ],
+    "planning_docs": [
+      ".docs/ideas/support-assistant-idea.md",
+      ".docs/design-briefs/support-assistant-brief.md",
+      ".docs/frontend-plans/support-assistant-plan.md",
+      ".docs/backend-plans/support-assistant-plan.md",
+      ".docs/endpoint-apis/support-assistant-endpoints.md",
+      ".docs/qa/support-assistant-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/support/help",
+    "declared_path": "/support/help",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "SupportHelp"
+    ],
+    "feature_id": "support-assistant",
+    "related_features": [
+      "support-assistant"
+    ],
+    "planning_docs": [
+      ".docs/ideas/support-assistant-idea.md",
+      ".docs/design-briefs/support-assistant-brief.md",
+      ".docs/frontend-plans/support-assistant-plan.md",
+      ".docs/backend-plans/support-assistant-plan.md",
+      ".docs/endpoint-apis/support-assistant-endpoints.md",
+      ".docs/qa/support-assistant-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "*",
+    "declared_path": "*",
+    "source": "frontend/src/App.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "NotFound",
+      "Suspense",
+      "SupportChat"
+    ],
+    "feature_id": "master-layout",
+    "related_features": [
+      "master-layout"
+    ],
+    "planning_docs": [
+      ".docs/ideas/master-layout-idea.md",
+      ".docs/design-briefs/master-layout-brief.md",
+      ".docs/frontend-plans/master-layout-plan.md",
+      ".docs/backend-plans/master-layout-plan.md",
+      ".docs/endpoint-apis/master-layout-endpoints.md",
+      ".docs/qa/master-layout-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-001",
+      "JF-032"
+    ],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/candidate/notifications",
+    "declared_path": "/notifications",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "CandidateNotifications"
+    ],
+    "feature_id": "notifications",
+    "related_features": [
+      "notifications"
+    ],
+    "planning_docs": [
+      ".docs/ideas/notifications-idea.md",
+      ".docs/design-briefs/notifications-brief.md",
+      ".docs/frontend-plans/notifications-plan.md",
+      ".docs/backend-plans/notifications-plan.md",
+      ".docs/endpoint-apis/notifications-endpoints.md",
+      ".docs/qa/notifications-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-033"
+    ],
+    "feature_reference_screens": [
+      "JF-033"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/candidate/ai-cv",
+    "declared_path": "/ai-cv",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "CandidateAi"
+    ],
+    "feature_id": "candidate-cv-ai",
+    "related_features": [
+      "candidate-cv-ai"
+    ],
+    "planning_docs": [
+      ".docs/ideas/candidate-cv-ai-idea.md",
+      ".docs/design-briefs/candidate-cv-ai-brief.md",
+      ".docs/frontend-plans/candidate-cv-ai-plan.md",
+      ".docs/backend-plans/candidate-cv-ai-plan.md",
+      ".docs/endpoint-apis/candidate-cv-ai-endpoints.md",
+      ".docs/qa/candidate-cv-ai-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/candidate/followed-jobs",
+    "declared_path": "/followed-jobs",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "NotificationJobs"
+    ],
+    "feature_id": "saved-jobs-follow",
+    "related_features": [
+      "companies",
+      "notifications",
+      "saved-jobs-follow"
+    ],
+    "planning_docs": [
+      ".docs/ideas/saved-jobs-follow-idea.md",
+      ".docs/design-briefs/saved-jobs-follow-brief.md",
+      ".docs/frontend-plans/saved-jobs-follow-plan.md",
+      ".docs/backend-plans/saved-jobs-follow-plan.md",
+      ".docs/endpoint-apis/saved-jobs-follow-endpoints.md",
+      ".docs/qa/saved-jobs-follow-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-006",
+      "JF-007",
+      "JF-033"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "Cùng NotificationJobs nhưng source=followed; danh sách việc đang tuyển của công ty theo dõi, khác danh sách favorite posts.",
+    "mapping_evidence": [
+      "frontend/src/container/Candidate/NotificationJobs.js",
+      "frontend/src/service/notificationJobsService.js",
+      "frontend/src/container/Candidate/HomeCandidate.js"
+    ],
+    "related_planning_docs": {
+      "notifications": [
+        ".docs/ideas/notifications-idea.md",
+        ".docs/design-briefs/notifications-brief.md",
+        ".docs/frontend-plans/notifications-plan.md",
+        ".docs/backend-plans/notifications-plan.md",
+        ".docs/endpoint-apis/notifications-endpoints.md",
+        ".docs/qa/notifications-qa.md"
+      ],
+      "companies": [
+        ".docs/ideas/companies-idea.md",
+        ".docs/design-briefs/companies-brief.md",
+        ".docs/frontend-plans/companies-plan.md",
+        ".docs/backend-plans/companies-plan.md",
+        ".docs/endpoint-apis/companies-endpoints.md",
+        ".docs/qa/companies-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/candidate/recommended-jobs",
+    "declared_path": "/recommended-jobs",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "NotificationJobs"
+    ],
+    "feature_id": "notifications",
+    "related_features": [
+      "candidate-profile",
+      "job-search",
+      "notifications"
+    ],
+    "planning_docs": [
+      ".docs/ideas/notifications-idea.md",
+      ".docs/design-briefs/notifications-brief.md",
+      ".docs/frontend-plans/notifications-plan.md",
+      ".docs/backend-plans/notifications-plan.md",
+      ".docs/endpoint-apis/notifications-endpoints.md",
+      ".docs/qa/notifications-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-009",
+      "JF-033",
+      "JF-036"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "NotificationJobs source=recommended gọi getNotificationJobs; GET /api/get-notification-jobs scope bằng session. Đây là danh sách personalized, không phải API search chung.",
+    "mapping_evidence": [
+      "frontend/src/container/Candidate/NotificationJobs.js",
+      "frontend/src/service/notificationJobsService.js",
+      "frontend/src/container/Candidate/HomeCandidate.js"
+    ],
+    "related_planning_docs": {
+      "job-search": [
+        ".docs/ideas/job-search-idea.md",
+        ".docs/design-briefs/job-search-brief.md",
+        ".docs/frontend-plans/job-search-plan.md",
+        ".docs/backend-plans/job-search-plan.md",
+        ".docs/endpoint-apis/job-search-endpoints.md",
+        ".docs/qa/job-search-qa.md"
+      ],
+      "candidate-profile": [
+        ".docs/ideas/candidate-profile-idea.md",
+        ".docs/design-briefs/candidate-profile-brief.md",
+        ".docs/frontend-plans/candidate-profile-plan.md",
+        ".docs/backend-plans/candidate-profile-plan.md",
+        ".docs/endpoint-apis/candidate-profile-endpoints.md",
+        ".docs/qa/candidate-profile-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/candidate/info",
+    "declared_path": "/info",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "CandidateInfo"
+    ],
+    "feature_id": "candidate-profile",
+    "related_features": [
+      "candidate-profile"
+    ],
+    "planning_docs": [
+      ".docs/ideas/candidate-profile-idea.md",
+      ".docs/design-briefs/candidate-profile-brief.md",
+      ".docs/frontend-plans/candidate-profile-plan.md",
+      ".docs/backend-plans/candidate-profile-plan.md",
+      ".docs/endpoint-apis/candidate-profile-endpoints.md",
+      ".docs/qa/candidate-profile-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-009"
+    ],
+    "feature_reference_screens": [
+      "JF-009"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/candidate/usersetting",
+    "declared_path": "/usersetting",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "SettingUser"
+    ],
+    "feature_id": "candidate-profile",
+    "related_features": [
+      "candidate-profile"
+    ],
+    "planning_docs": [
+      ".docs/ideas/candidate-profile-idea.md",
+      ".docs/design-briefs/candidate-profile-brief.md",
+      ".docs/frontend-plans/candidate-profile-plan.md",
+      ".docs/backend-plans/candidate-profile-plan.md",
+      ".docs/endpoint-apis/candidate-profile-endpoints.md",
+      ".docs/qa/candidate-profile-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-009"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/candidate/changepassword",
+    "declared_path": "/changepassword",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "ChangePassword"
+    ],
+    "feature_id": "auth-recovery-security",
+    "related_features": [
+      "auth-recovery-security"
+    ],
+    "planning_docs": [
+      ".docs/ideas/auth-recovery-security-idea.md",
+      ".docs/design-briefs/auth-recovery-security-brief.md",
+      ".docs/frontend-plans/auth-recovery-security-plan.md",
+      ".docs/backend-plans/auth-recovery-security-plan.md",
+      ".docs/endpoint-apis/auth-recovery-security-endpoints.md",
+      ".docs/qa/auth-recovery-security-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/candidate/cv-post",
+    "declared_path": "/cv-post",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "ManageCvCandidate"
+    ],
+    "feature_id": "applications",
+    "related_features": [
+      "applications"
+    ],
+    "planning_docs": [
+      ".docs/ideas/applications-idea.md",
+      ".docs/design-briefs/applications-brief.md",
+      ".docs/frontend-plans/applications-plan.md",
+      ".docs/backend-plans/applications-plan.md",
+      ".docs/endpoint-apis/applications-endpoints.md",
+      ".docs/qa/applications-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-018"
+    ],
+    "feature_reference_screens": [
+      "JF-018",
+      "JF-022",
+      "JF-023",
+      "JF-024"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/candidate/saved-jobs",
+    "declared_path": "/saved-jobs",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "SavedJobs"
+    ],
+    "feature_id": "saved-jobs-follow",
+    "related_features": [
+      "saved-jobs-follow"
+    ],
+    "planning_docs": [
+      ".docs/ideas/saved-jobs-follow-idea.md",
+      ".docs/design-briefs/saved-jobs-follow-brief.md",
+      ".docs/frontend-plans/saved-jobs-follow-plan.md",
+      ".docs/backend-plans/saved-jobs-follow-plan.md",
+      ".docs/endpoint-apis/saved-jobs-follow-endpoints.md",
+      ".docs/qa/saved-jobs-follow-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "SavedJobs là danh sách favorite của actor CANDIDATE; không phải shell chung.",
+    "mapping_evidence": [
+      "frontend/src/container/Candidate/SavedJobs.js",
+      "frontend/src/container/Candidate/HomeCandidate.js"
+    ],
+    "related_planning_docs": {}
+  },
+  {
+    "path": "/candidate/cv-detail/:id",
+    "declared_path": "/cv-detail/:id",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "UserCv"
+    ],
+    "feature_id": "applications",
+    "related_features": [
+      "applications"
+    ],
+    "planning_docs": [
+      ".docs/ideas/applications-idea.md",
+      ".docs/design-briefs/applications-brief.md",
+      ".docs/frontend-plans/applications-plan.md",
+      ".docs/backend-plans/applications-plan.md",
+      ".docs/endpoint-apis/applications-endpoints.md",
+      ".docs/qa/applications-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-018",
+      "JF-022",
+      "JF-023",
+      "JF-024"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "UserCv xem bản CV đã nộp khi ứng tuyển qua getDetailCvService(id, role). id thuộc legacy Cv, không phải Mongo prepared-CV _id hay application.id.",
+    "mapping_evidence": [
+      "frontend/src/container/system/Cv/UserCv.js",
+      "frontend/src/service/cvService.js",
+      "frontend/src/container/Candidate/HomeCandidate.js"
+    ],
+    "related_planning_docs": {}
+  },
+  {
+    "path": "/candidate/*",
+    "declared_path": "*",
+    "source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Navigate"
+    ],
+    "feature_id": "master-layout",
+    "related_features": [
+      "master-layout"
+    ],
+    "planning_docs": [
+      ".docs/ideas/master-layout-idea.md",
+      ".docs/design-briefs/master-layout-brief.md",
+      ".docs/frontend-plans/master-layout-plan.md",
+      ".docs/backend-plans/master-layout-plan.md",
+      ".docs/endpoint-apis/master-layout-endpoints.md",
+      ".docs/qa/master-layout-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/",
+    "declared_path": "/",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "VIEW_ADMIN_HOME"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "Home",
+      "Navigate"
+    ],
+    "feature_id": "admin-overview",
+    "related_features": [
+      "admin-overview",
+      "employer-dashboard"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-overview-idea.md",
+      ".docs/design-briefs/admin-overview-brief.md",
+      ".docs/frontend-plans/admin-overview-plan.md",
+      ".docs/backend-plans/admin-overview-plan.md",
+      ".docs/endpoint-apis/admin-overview-endpoints.md",
+      ".docs/qa/admin-overview-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-002",
+      "JF-034"
+    ],
+    "feature_reference_screens": [
+      "JF-002",
+      "JF-034"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "Home dùng VIEW_ADMIN_HOME cho ADMIN và COMPANY/EMPLOYER đủ S1+CS1. Chọn dashboard variant theo actor và dữ liệu; tên prefix /admin không chứng minh ADMIN-only.",
+    "mapping_evidence": [
+      "frontend/src/container/system/Home.js",
+      "frontend/src/auth/accessControl.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {
+      "employer-dashboard": [
+        ".docs/ideas/employer-dashboard-idea.md",
+        ".docs/design-briefs/employer-dashboard-brief.md",
+        ".docs/frontend-plans/employer-dashboard-plan.md",
+        ".docs/backend-plans/employer-dashboard-plan.md",
+        ".docs/endpoint-apis/employer-dashboard-endpoints.md",
+        ".docs/qa/employer-dashboard-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/admin/chat",
+    "declared_path": "/chat",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "USE_CHAT"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ChatPage"
+    ],
+    "feature_id": "chat",
+    "related_features": [
+      "chat"
+    ],
+    "planning_docs": [
+      ".docs/ideas/chat-idea.md",
+      ".docs/design-briefs/chat-brief.md",
+      ".docs/frontend-plans/chat-plan.md",
+      ".docs/backend-plans/chat-plan.md",
+      ".docs/endpoint-apis/chat-endpoints.md",
+      ".docs/qa/chat-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-030",
+      "JF-031"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/support",
+    "declared_path": "/support",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "SUPPORT_MANAGE"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "SupportInbox"
+    ],
+    "feature_id": "support-assistant",
+    "related_features": [
+      "support-assistant"
+    ],
+    "planning_docs": [
+      ".docs/ideas/support-assistant-idea.md",
+      ".docs/design-briefs/support-assistant-brief.md",
+      ".docs/frontend-plans/support-assistant-plan.md",
+      ".docs/backend-plans/support-assistant-plan.md",
+      ".docs/endpoint-apis/support-assistant-endpoints.md",
+      ".docs/qa/support-assistant-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/chat/:partnerId",
+    "declared_path": "/chat/:partnerId",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "USE_CHAT"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ChatPage"
+    ],
+    "feature_id": "chat",
+    "related_features": [
+      "chat"
+    ],
+    "planning_docs": [
+      ".docs/ideas/chat-idea.md",
+      ".docs/design-briefs/chat-brief.md",
+      ".docs/frontend-plans/chat-plan.md",
+      ".docs/backend-plans/chat-plan.md",
+      ".docs/endpoint-apis/chat-endpoints.md",
+      ".docs/qa/chat-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-030",
+      "JF-031"
+    ],
+    "feature_reference_screens": [
+      "JF-030",
+      "JF-031"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-user",
+    "declared_path": "/list-user",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_USERS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageUser"
+    ],
+    "feature_id": "admin-users",
+    "related_features": [
+      "admin-users"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-users-idea.md",
+      ".docs/design-briefs/admin-users-brief.md",
+      ".docs/frontend-plans/admin-users-plan.md",
+      ".docs/backend-plans/admin-users-plan.md",
+      ".docs/endpoint-apis/admin-users-endpoints.md",
+      ".docs/qa/admin-users-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-027"
+    ],
+    "feature_reference_screens": [
+      "JF-027"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/pipeline",
+    "declared_path": "/pipeline",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_CANDIDATES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "KanbanBoard"
+    ],
+    "feature_id": "pipeline",
+    "related_features": [
+      "interviews-offers",
+      "pipeline"
+    ],
+    "planning_docs": [
+      ".docs/ideas/interviews-offers-idea.md",
+      ".docs/design-briefs/interviews-offers-brief.md",
+      ".docs/frontend-plans/interviews-offers-plan.md",
+      ".docs/backend-plans/interviews-offers-plan.md",
+      ".docs/endpoint-apis/interviews-offers-endpoints.md",
+      ".docs/qa/interviews-offers-qa.md",
+      ".docs/ideas/pipeline-idea.md",
+      ".docs/design-briefs/pipeline-brief.md",
+      ".docs/frontend-plans/pipeline-plan.md",
+      ".docs/backend-plans/pipeline-plan.md",
+      ".docs/endpoint-apis/pipeline-endpoints.md",
+      ".docs/qa/pipeline-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-013",
+      "JF-014",
+      "JF-025"
+    ],
+    "feature_reference_screens": [
+      "JF-013",
+      "JF-014",
+      "JF-025"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/reports",
+    "declared_path": "/reports",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "VIEW_PLATFORM_REPORTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ReportDashboard"
+    ],
+    "feature_id": "admin-reports-audit",
+    "related_features": [
+      "admin-reports-audit"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-reports-audit-idea.md",
+      ".docs/design-briefs/admin-reports-audit-brief.md",
+      ".docs/frontend-plans/admin-reports-audit-plan.md",
+      ".docs/backend-plans/admin-reports-audit-plan.md",
+      ".docs/endpoint-apis/admin-reports-audit-endpoints.md",
+      ".docs/qa/admin-reports-audit-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-029"
+    ],
+    "feature_reference_screens": [
+      "JF-029"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/add-user",
+    "declared_path": "/add-user",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_TEAM",
+      "MANAGE_USERS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddUser"
+    ],
+    "feature_id": "admin-users",
+    "related_features": [
+      "admin-users",
+      "company-team"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-users-idea.md",
+      ".docs/design-briefs/admin-users-brief.md",
+      ".docs/frontend-plans/admin-users-plan.md",
+      ".docs/backend-plans/admin-users-plan.md",
+      ".docs/endpoint-apis/admin-users-endpoints.md",
+      ".docs/qa/admin-users-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-027"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "AddUser dùng any(MANAGE_USERS, MANAGE_TEAM). ADMIN và COMPANY được phép theo readiness; COMPANY gửi companyId và có tập role khác. UI filtering chưa chứng minh server an toàn: kiểm tra service actor/tenant.",
+    "mapping_evidence": [
+      "frontend/src/container/system/User/AddUser.js",
+      "frontend/src/auth/accessControl.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {
+      "company-team": [
+        ".docs/ideas/company-team-idea.md",
+        ".docs/design-briefs/company-team-brief.md",
+        ".docs/frontend-plans/company-team-plan.md",
+        ".docs/backend-plans/company-team-plan.md",
+        ".docs/endpoint-apis/company-team-endpoints.md",
+        ".docs/qa/company-team-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/admin/edit-user/:id",
+    "declared_path": "/edit-user/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_TEAM",
+      "MANAGE_USERS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddUser"
+    ],
+    "feature_id": "admin-users",
+    "related_features": [
+      "admin-users",
+      "company-team"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-users-idea.md",
+      ".docs/design-briefs/admin-users-brief.md",
+      ".docs/frontend-plans/admin-users-plan.md",
+      ".docs/backend-plans/admin-users-plan.md",
+      ".docs/endpoint-apis/admin-users-endpoints.md",
+      ".docs/qa/admin-users-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-027"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "AddUser edit dùng cùng guard any(MANAGE_USERS, MANAGE_TEAM). Luồng platform user và company member dùng chung view nhưng phải giữ target ownership/role rules khác nhau.",
+    "mapping_evidence": [
+      "frontend/src/container/system/User/AddUser.js",
+      "frontend/src/auth/accessControl.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {
+      "company-team": [
+        ".docs/ideas/company-team-idea.md",
+        ".docs/design-briefs/company-team-brief.md",
+        ".docs/frontend-plans/company-team-plan.md",
+        ".docs/backend-plans/company-team-plan.md",
+        ".docs/endpoint-apis/company-team-endpoints.md",
+        ".docs/qa/company-team-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/admin/add-job-type",
+    "declared_path": "/add-job-type",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddJobType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-job-type",
+    "declared_path": "/list-job-type",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageJobType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-job-type/:code",
+    "declared_path": "/edit-job-type/:code",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddJobType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/add-job-skill",
+    "declared_path": "/add-job-skill",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddJobSkill"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-job-skill",
+    "declared_path": "/list-job-skill",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageJobSkill"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-job-skill/:code",
+    "declared_path": "/edit-job-skill/:code",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddJobSkill"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/add-job-level",
+    "declared_path": "/add-job-level",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddJobLevel"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "AddJobLevel dùng MANAGE_REFERENCE_DATA; xếp cùng nghề, kỹ năng, work/salary/experience types.",
+    "mapping_evidence": [
+      "frontend/src/container/system/JobLevel/AddJobLevel.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {}
+  },
+  {
+    "path": "/admin/list-job-level",
+    "declared_path": "/list-job-level",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageJobLevel"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "ManageJobLevel dùng MANAGE_REFERENCE_DATA; đây là danh mục cấp bậc tuyển dụng.",
+    "mapping_evidence": [
+      "frontend/src/container/system/JobLevel/ManageJobLevel.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {}
+  },
+  {
+    "path": "/admin/edit-job-level/:id",
+    "declared_path": "/edit-job-level/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddJobLevel"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "AddJobLevel ở edit mode đọc id; không đổi sang param :code của job-type/skill.",
+    "mapping_evidence": [
+      "frontend/src/container/system/JobLevel/AddJobLevel.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {}
+  },
+  {
+    "path": "/admin/add-work-type",
+    "declared_path": "/add-work-type",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddWorkType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-work-type",
+    "declared_path": "/list-work-type",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageWorkType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-work-type/:id",
+    "declared_path": "/edit-work-type/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddWorkType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/add-salary-type",
+    "declared_path": "/add-salary-type",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddSalaryType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-salary-type",
+    "declared_path": "/list-salary-type",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageSalaryType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-salary-type/:id",
+    "declared_path": "/edit-salary-type/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddSalaryType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/add-exp-type",
+    "declared_path": "/add-exp-type",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddExpType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-exp-type",
+    "declared_path": "/list-exp-type",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageExpType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-exp-type/:id",
+    "declared_path": "/edit-exp-type/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_REFERENCE_DATA"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddExpType"
+    ],
+    "feature_id": "recruitment-catalogs",
+    "related_features": [
+      "recruitment-catalogs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/recruitment-catalogs-idea.md",
+      ".docs/design-briefs/recruitment-catalogs-brief.md",
+      ".docs/frontend-plans/recruitment-catalogs-plan.md",
+      ".docs/backend-plans/recruitment-catalogs-plan.md",
+      ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
+      ".docs/qa/recruitment-catalogs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/add-package-post",
+    "declared_path": "/add-package-post",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddpackagePost"
+    ],
+    "feature_id": "admin-packages",
+    "related_features": [
+      "admin-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-packages-idea.md",
+      ".docs/design-briefs/admin-packages-brief.md",
+      ".docs/frontend-plans/admin-packages-plan.md",
+      ".docs/backend-plans/admin-packages-plan.md",
+      ".docs/endpoint-apis/admin-packages-endpoints.md",
+      ".docs/qa/admin-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-026"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-package-post",
+    "declared_path": "/list-package-post",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManagePackagePost"
+    ],
+    "feature_id": "admin-packages",
+    "related_features": [
+      "admin-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-packages-idea.md",
+      ".docs/design-briefs/admin-packages-brief.md",
+      ".docs/frontend-plans/admin-packages-plan.md",
+      ".docs/backend-plans/admin-packages-plan.md",
+      ".docs/endpoint-apis/admin-packages-endpoints.md",
+      ".docs/qa/admin-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-026"
+    ],
+    "feature_reference_screens": [
+      "JF-026"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-package-post/:id",
+    "declared_path": "/edit-package-post/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddpackagePost"
+    ],
+    "feature_id": "admin-packages",
+    "related_features": [
+      "admin-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-packages-idea.md",
+      ".docs/design-briefs/admin-packages-brief.md",
+      ".docs/frontend-plans/admin-packages-plan.md",
+      ".docs/backend-plans/admin-packages-plan.md",
+      ".docs/endpoint-apis/admin-packages-endpoints.md",
+      ".docs/qa/admin-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-026"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/add-package-cv",
+    "declared_path": "/add-package-cv",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddpackageCv"
+    ],
+    "feature_id": "admin-packages",
+    "related_features": [
+      "admin-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-packages-idea.md",
+      ".docs/design-briefs/admin-packages-brief.md",
+      ".docs/frontend-plans/admin-packages-plan.md",
+      ".docs/backend-plans/admin-packages-plan.md",
+      ".docs/endpoint-apis/admin-packages-endpoints.md",
+      ".docs/qa/admin-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-026"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-package-cv",
+    "declared_path": "/list-package-cv",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManagePackageCv"
+    ],
+    "feature_id": "admin-packages",
+    "related_features": [
+      "admin-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-packages-idea.md",
+      ".docs/design-briefs/admin-packages-brief.md",
+      ".docs/frontend-plans/admin-packages-plan.md",
+      ".docs/backend-plans/admin-packages-plan.md",
+      ".docs/endpoint-apis/admin-packages-endpoints.md",
+      ".docs/qa/admin-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-026"
+    ],
+    "feature_reference_screens": [
+      "JF-026"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-package-cv/:id",
+    "declared_path": "/edit-package-cv/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddpackageCv"
+    ],
+    "feature_id": "admin-packages",
+    "related_features": [
+      "admin-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-packages-idea.md",
+      ".docs/design-briefs/admin-packages-brief.md",
+      ".docs/frontend-plans/admin-packages-plan.md",
+      ".docs/backend-plans/admin-packages-plan.md",
+      ".docs/endpoint-apis/admin-packages-endpoints.md",
+      ".docs/qa/admin-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-026"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/add-company",
+    "declared_path": "/add-company",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "CREATE_COMPANY"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddCompany"
+    ],
+    "feature_id": "company-profile",
+    "related_features": [
+      "company-profile"
+    ],
+    "planning_docs": [
+      ".docs/ideas/company-profile-idea.md",
+      ".docs/design-briefs/company-profile-brief.md",
+      ".docs/frontend-plans/company-profile-plan.md",
+      ".docs/backend-plans/company-profile-plan.md",
+      ".docs/endpoint-apis/company-profile-endpoints.md",
+      ".docs/qa/company-profile-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-005"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-company",
+    "declared_path": "/edit-company",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_COMPANY"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddCompany"
+    ],
+    "feature_id": "company-profile",
+    "related_features": [
+      "company-profile"
+    ],
+    "planning_docs": [
+      ".docs/ideas/company-profile-idea.md",
+      ".docs/design-briefs/company-profile-brief.md",
+      ".docs/frontend-plans/company-profile-plan.md",
+      ".docs/backend-plans/company-profile-plan.md",
+      ".docs/endpoint-apis/company-profile-endpoints.md",
+      ".docs/qa/company-profile-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-005"
+    ],
+    "feature_reference_screens": [
+      "JF-005"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-company-admin/:id",
+    "declared_path": "/edit-company-admin/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MODERATE_COMPANIES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddCompany"
+    ],
+    "feature_id": "admin-companies",
+    "related_features": [
+      "admin-companies"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-companies-idea.md",
+      ".docs/design-briefs/admin-companies-brief.md",
+      ".docs/frontend-plans/admin-companies-plan.md",
+      ".docs/backend-plans/admin-companies-plan.md",
+      ".docs/endpoint-apis/admin-companies-endpoints.md",
+      ".docs/qa/admin-companies-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-008",
+      "JF-037"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/recruitment",
+    "declared_path": "/recruitment",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_TEAM"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "Recruitment"
+    ],
+    "feature_id": "company-team",
+    "related_features": [
+      "company-team"
+    ],
+    "planning_docs": [
+      ".docs/ideas/company-team-idea.md",
+      ".docs/design-briefs/company-team-brief.md",
+      ".docs/frontend-plans/company-team-plan.md",
+      ".docs/backend-plans/company-team-plan.md",
+      ".docs/endpoint-apis/company-team-endpoints.md",
+      ".docs/qa/company-team-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-employer",
+    "declared_path": "/list-employer",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_TEAM"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageEmployer"
+    ],
+    "feature_id": "company-team",
+    "related_features": [
+      "company-team"
+    ],
+    "planning_docs": [
+      ".docs/ideas/company-team-idea.md",
+      ".docs/design-briefs/company-team-brief.md",
+      ".docs/frontend-plans/company-team-plan.md",
+      ".docs/backend-plans/company-team-plan.md",
+      ".docs/endpoint-apis/company-team-endpoints.md",
+      ".docs/qa/company-team-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/add-post",
+    "declared_path": "/add-post",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_POSTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddPost"
+    ],
+    "feature_id": "job-posting",
+    "related_features": [
+      "job-posting"
+    ],
+    "planning_docs": [
+      ".docs/ideas/job-posting-idea.md",
+      ".docs/design-briefs/job-posting-brief.md",
+      ".docs/frontend-plans/job-posting-plan.md",
+      ".docs/backend-plans/job-posting-plan.md",
+      ".docs/endpoint-apis/job-posting-endpoints.md",
+      ".docs/qa/job-posting-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-021"
+    ],
+    "feature_reference_screens": [
+      "JF-021"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/edit-post/:id",
+    "declared_path": "/edit-post/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_POSTS",
+      "MODERATE_POSTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "AddPost"
+    ],
+    "feature_id": "job-posting",
+    "related_features": [
+      "admin-jobs",
+      "job-posting"
+    ],
+    "planning_docs": [
+      ".docs/ideas/job-posting-idea.md",
+      ".docs/design-briefs/job-posting-brief.md",
+      ".docs/frontend-plans/job-posting-plan.md",
+      ".docs/backend-plans/job-posting-plan.md",
+      ".docs/endpoint-apis/job-posting-endpoints.md",
+      ".docs/qa/job-posting-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-011",
+      "JF-021"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "AddPost edit dùng any(MANAGE_POSTS, MODERATE_POSTS). Giữ workspace/ownership và admin moderation path theo actor.",
+    "mapping_evidence": [
+      "frontend/src/container/system/Post/AddPost.js",
+      "frontend/src/auth/accessControl.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {
+      "admin-jobs": [
+        ".docs/ideas/admin-jobs-idea.md",
+        ".docs/design-briefs/admin-jobs-brief.md",
+        ".docs/frontend-plans/admin-jobs-plan.md",
+        ".docs/backend-plans/admin-jobs-plan.md",
+        ".docs/endpoint-apis/admin-jobs-endpoints.md",
+        ".docs/qa/admin-jobs-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/admin/list-post",
+    "declared_path": "/list-post",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_POSTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManagePost"
+    ],
+    "feature_id": "job-posting",
+    "related_features": [
+      "job-posting"
+    ],
+    "planning_docs": [
+      ".docs/ideas/job-posting-idea.md",
+      ".docs/design-briefs/job-posting-brief.md",
+      ".docs/frontend-plans/job-posting-plan.md",
+      ".docs/backend-plans/job-posting-plan.md",
+      ".docs/endpoint-apis/job-posting-endpoints.md",
+      ".docs/qa/job-posting-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-021"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-post/:id",
+    "declared_path": "/list-post/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_POSTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManagePost"
+    ],
+    "feature_id": "job-posting",
+    "related_features": [
+      "job-posting"
+    ],
+    "planning_docs": [
+      ".docs/ideas/job-posting-idea.md",
+      ".docs/design-briefs/job-posting-brief.md",
+      ".docs/frontend-plans/job-posting-plan.md",
+      ".docs/backend-plans/job-posting-plan.md",
+      ".docs/endpoint-apis/job-posting-endpoints.md",
+      ".docs/qa/job-posting-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-021"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/buy-post",
+    "declared_path": "/buy-post",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "PURCHASE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "BuyPost"
+    ],
+    "feature_id": "billing-packages",
+    "related_features": [
+      "billing-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/billing-packages-idea.md",
+      ".docs/design-briefs/billing-packages-brief.md",
+      ".docs/frontend-plans/billing-packages-plan.md",
+      ".docs/backend-plans/billing-packages-plan.md",
+      ".docs/endpoint-apis/billing-packages-endpoints.md",
+      ".docs/qa/billing-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-003"
+    ],
+    "feature_reference_screens": [
+      "JF-003"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/payment/success",
+    "declared_path": "/payment/success",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "PURCHASE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "PaymentSuccess"
+    ],
+    "feature_id": "billing-packages",
+    "related_features": [
+      "billing-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/billing-packages-idea.md",
+      ".docs/design-briefs/billing-packages-brief.md",
+      ".docs/frontend-plans/billing-packages-plan.md",
+      ".docs/backend-plans/billing-packages-plan.md",
+      ".docs/endpoint-apis/billing-packages-endpoints.md",
+      ".docs/qa/billing-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-003"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/payment/cancel",
+    "declared_path": "/payment/cancel",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "PURCHASE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "PaymentCancelled"
+    ],
+    "feature_id": "billing-packages",
+    "related_features": [
+      "billing-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/billing-packages-idea.md",
+      ".docs/design-briefs/billing-packages-brief.md",
+      ".docs/frontend-plans/billing-packages-plan.md",
+      ".docs/backend-plans/billing-packages-plan.md",
+      ".docs/endpoint-apis/billing-packages-endpoints.md",
+      ".docs/qa/billing-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-003"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/buy-cv",
+    "declared_path": "/buy-cv",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "PURCHASE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "BuyCv"
+    ],
+    "feature_id": "billing-packages",
+    "related_features": [
+      "billing-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/billing-packages-idea.md",
+      ".docs/design-briefs/billing-packages-brief.md",
+      ".docs/frontend-plans/billing-packages-plan.md",
+      ".docs/backend-plans/billing-packages-plan.md",
+      ".docs/endpoint-apis/billing-packages-endpoints.md",
+      ".docs/qa/billing-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-003"
+    ],
+    "feature_reference_screens": [
+      "JF-003"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/paymentCv/success",
+    "declared_path": "/paymentCv/success",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "PURCHASE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "PaymentSuccessCv"
+    ],
+    "feature_id": "billing-packages",
+    "related_features": [
+      "billing-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/billing-packages-idea.md",
+      ".docs/design-briefs/billing-packages-brief.md",
+      ".docs/frontend-plans/billing-packages-plan.md",
+      ".docs/backend-plans/billing-packages-plan.md",
+      ".docs/endpoint-apis/billing-packages-endpoints.md",
+      ".docs/qa/billing-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-003"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/paymentCv/cancel",
+    "declared_path": "/paymentCv/cancel",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "PURCHASE_PACKAGES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "PaymentCancelled"
+    ],
+    "feature_id": "billing-packages",
+    "related_features": [
+      "billing-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/billing-packages-idea.md",
+      ".docs/design-briefs/billing-packages-brief.md",
+      ".docs/frontend-plans/billing-packages-plan.md",
+      ".docs/backend-plans/billing-packages-plan.md",
+      ".docs/endpoint-apis/billing-packages-endpoints.md",
+      ".docs/qa/billing-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-003"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-post-admin",
+    "declared_path": "/list-post-admin",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MODERATE_POSTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManagePost"
+    ],
+    "feature_id": "admin-jobs",
+    "related_features": [
+      "admin-jobs"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-jobs-idea.md",
+      ".docs/design-briefs/admin-jobs-brief.md",
+      ".docs/frontend-plans/admin-jobs-plan.md",
+      ".docs/backend-plans/admin-jobs-plan.md",
+      ".docs/endpoint-apis/admin-jobs-endpoints.md",
+      ".docs/qa/admin-jobs-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-011"
+    ],
+    "feature_reference_screens": [
+      "JF-011"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/list-cv/:id",
+    "declared_path": "/list-cv/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_CANDIDATES",
+      "MODERATE_POSTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageCv"
+    ],
+    "feature_id": "pipeline",
+    "related_features": [
+      "admin-jobs",
+      "applications",
+      "pipeline"
+    ],
+    "planning_docs": [
+      ".docs/ideas/pipeline-idea.md",
+      ".docs/design-briefs/pipeline-brief.md",
+      ".docs/frontend-plans/pipeline-plan.md",
+      ".docs/backend-plans/pipeline-plan.md",
+      ".docs/endpoint-apis/pipeline-endpoints.md",
+      ".docs/qa/pipeline-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-011",
+      "JF-018",
+      "JF-022",
+      "JF-023",
+      "JF-024",
+      "JF-025"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "ManageCv dùng any(MANAGE_CANDIDATES, MODERATE_POSTS). Đây là danh sách hồ sơ của tin; đọc adapter để phân biệt post id, legacy CV id và application id, không suy từ tên route.",
+    "mapping_evidence": [
+      "frontend/src/container/system/Cv/ManageCv.js",
+      "frontend/src/service/cvService.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {
+      "applications": [
+        ".docs/ideas/applications-idea.md",
+        ".docs/design-briefs/applications-brief.md",
+        ".docs/frontend-plans/applications-plan.md",
+        ".docs/backend-plans/applications-plan.md",
+        ".docs/endpoint-apis/applications-endpoints.md",
+        ".docs/qa/applications-qa.md"
+      ],
+      "admin-jobs": [
+        ".docs/ideas/admin-jobs-idea.md",
+        ".docs/design-briefs/admin-jobs-brief.md",
+        ".docs/frontend-plans/admin-jobs-plan.md",
+        ".docs/backend-plans/admin-jobs-plan.md",
+        ".docs/endpoint-apis/admin-jobs-endpoints.md",
+        ".docs/qa/admin-jobs-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/admin/list-candiate",
+    "declared_path": "/list-candiate",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_CANDIDATES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "FilterCv"
+    ],
+    "feature_id": "candidate-search",
+    "related_features": [
+      "candidate-search"
+    ],
+    "planning_docs": [
+      ".docs/ideas/candidate-search-idea.md",
+      ".docs/design-briefs/candidate-search-brief.md",
+      ".docs/frontend-plans/candidate-search-plan.md",
+      ".docs/backend-plans/candidate-search-plan.md",
+      ".docs/endpoint-apis/candidate-search-endpoints.md",
+      ".docs/qa/candidate-search-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-012"
+    ],
+    "feature_reference_screens": [
+      "JF-012"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/candiate/:id",
+    "declared_path": "/candiate/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_CANDIDATES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "DetailFilterUser"
+    ],
+    "feature_id": "candidate-search",
+    "related_features": [
+      "candidate-search"
+    ],
+    "planning_docs": [
+      ".docs/ideas/candidate-search-idea.md",
+      ".docs/design-briefs/candidate-search-brief.md",
+      ".docs/frontend-plans/candidate-search-plan.md",
+      ".docs/backend-plans/candidate-search-plan.md",
+      ".docs/endpoint-apis/candidate-search-endpoints.md",
+      ".docs/qa/candidate-search-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-012"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/note/:id",
+    "declared_path": "/note/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_POSTS",
+      "MODERATE_POSTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "NotePost"
+    ],
+    "feature_id": "job-posting",
+    "related_features": [
+      "admin-jobs",
+      "job-posting"
+    ],
+    "planning_docs": [
+      ".docs/ideas/job-posting-idea.md",
+      ".docs/design-briefs/job-posting-brief.md",
+      ".docs/frontend-plans/job-posting-plan.md",
+      ".docs/backend-plans/job-posting-plan.md",
+      ".docs/endpoint-apis/job-posting-endpoints.md",
+      ".docs/qa/job-posting-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-011",
+      "JF-021"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "NotePost dùng any(MANAGE_POSTS, MODERATE_POSTS), chọn legacy getListNoteByPost hoặc core getManagedJobReview theo workspace. Ghi chú thủ công không phải toàn bộ lịch sử AI review.",
+    "mapping_evidence": [
+      "frontend/src/container/system/Post/NotePost.js",
+      "frontend/src/service/jobWorkspaceService.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {
+      "admin-jobs": [
+        ".docs/ideas/admin-jobs-idea.md",
+        ".docs/design-briefs/admin-jobs-brief.md",
+        ".docs/frontend-plans/admin-jobs-plan.md",
+        ".docs/backend-plans/admin-jobs-plan.md",
+        ".docs/endpoint-apis/admin-jobs-endpoints.md",
+        ".docs/qa/admin-jobs-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/admin/user-cv/:id",
+    "declared_path": "/user-cv/:id",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_CANDIDATES",
+      "MODERATE_POSTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "UserCv"
+    ],
+    "feature_id": "pipeline",
+    "related_features": [
+      "admin-jobs",
+      "applications",
+      "pipeline"
+    ],
+    "planning_docs": [
+      ".docs/ideas/pipeline-idea.md",
+      ".docs/design-briefs/pipeline-brief.md",
+      ".docs/frontend-plans/pipeline-plan.md",
+      ".docs/backend-plans/pipeline-plan.md",
+      ".docs/endpoint-apis/pipeline-endpoints.md",
+      ".docs/qa/pipeline-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-011",
+      "JF-018",
+      "JF-022",
+      "JF-023",
+      "JF-024",
+      "JF-025"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "UserCv là viewer CV đã nộp (legacy Cv.id) với any(MANAGE_CANDIDATES, MODERATE_POSTS). Không dùng id này cho prepared-CV hoặc application-detail API.",
+    "mapping_evidence": [
+      "frontend/src/container/system/Cv/UserCv.js",
+      "frontend/src/service/cvService.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {
+      "applications": [
+        ".docs/ideas/applications-idea.md",
+        ".docs/design-briefs/applications-brief.md",
+        ".docs/frontend-plans/applications-plan.md",
+        ".docs/backend-plans/applications-plan.md",
+        ".docs/endpoint-apis/applications-endpoints.md",
+        ".docs/qa/applications-qa.md"
+      ],
+      "admin-jobs": [
+        ".docs/ideas/admin-jobs-idea.md",
+        ".docs/design-briefs/admin-jobs-brief.md",
+        ".docs/frontend-plans/admin-jobs-plan.md",
+        ".docs/backend-plans/admin-jobs-plan.md",
+        ".docs/endpoint-apis/admin-jobs-endpoints.md",
+        ".docs/qa/admin-jobs-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/admin/changepassword",
+    "declared_path": "/changepassword",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_PROFILE"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ChangePassword"
+    ],
+    "feature_id": "auth-recovery-security",
+    "related_features": [
+      "auth-recovery-security"
+    ],
+    "planning_docs": [
+      ".docs/ideas/auth-recovery-security-idea.md",
+      ".docs/design-briefs/auth-recovery-security-brief.md",
+      ".docs/frontend-plans/auth-recovery-security-plan.md",
+      ".docs/backend-plans/auth-recovery-security-plan.md",
+      ".docs/endpoint-apis/auth-recovery-security-endpoints.md",
+      ".docs/qa/auth-recovery-security-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/user-info",
+    "declared_path": "/user-info",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MANAGE_PROFILE"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "UserInfo"
+    ],
+    "feature_id": "master-layout",
+    "related_features": [
+      "auth-recovery-security",
+      "master-layout"
+    ],
+    "planning_docs": [
+      ".docs/ideas/master-layout-idea.md",
+      ".docs/design-briefs/master-layout-brief.md",
+      ".docs/frontend-plans/master-layout-plan.md",
+      ".docs/backend-plans/master-layout-plan.md",
+      ".docs/endpoint-apis/master-layout-endpoints.md",
+      ".docs/qa/master-layout-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "UserInfo đọc getDetailUserById(userData.id), sửa hồ sơ của actor hiện tại; guard MANAGE_PROFILE nằm trong admin shell. ADMIN/COMPANY/EMPLOYER được vào shell theo state; không phải danh sách platform users và không phải candidate-only profile.",
+    "mapping_evidence": [
+      "frontend/src/container/system/User/UserInfo.js",
+      "frontend/src/auth/accessControl.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {
+      "auth-recovery-security": [
+        ".docs/ideas/auth-recovery-security-idea.md",
+        ".docs/design-briefs/auth-recovery-security-brief.md",
+        ".docs/frontend-plans/auth-recovery-security-plan.md",
+        ".docs/backend-plans/auth-recovery-security-plan.md",
+        ".docs/endpoint-apis/auth-recovery-security-endpoints.md",
+        ".docs/qa/auth-recovery-security-qa.md"
+      ]
+    }
+  },
+  {
+    "path": "/admin/list-company-admin",
+    "declared_path": "/list-company-admin",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "MODERATE_COMPANIES"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ManageCompany"
+    ],
+    "feature_id": "admin-companies",
+    "related_features": [
+      "admin-companies"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-companies-idea.md",
+      ".docs/design-briefs/admin-companies-brief.md",
+      ".docs/frontend-plans/admin-companies-plan.md",
+      ".docs/backend-plans/admin-companies-plan.md",
+      ".docs/endpoint-apis/admin-companies-endpoints.md",
+      ".docs/qa/admin-companies-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-008",
+      "JF-037"
+    ],
+    "feature_reference_screens": [
+      "JF-008",
+      "JF-037"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/history-post",
+    "declared_path": "/history-post",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "VIEW_TRANSACTIONS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "HistoryTradePost"
+    ],
+    "feature_id": "billing-packages",
+    "related_features": [
+      "billing-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/billing-packages-idea.md",
+      ".docs/design-briefs/billing-packages-brief.md",
+      ".docs/frontend-plans/billing-packages-plan.md",
+      ".docs/backend-plans/billing-packages-plan.md",
+      ".docs/endpoint-apis/billing-packages-endpoints.md",
+      ".docs/qa/billing-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-003"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "HistoryTradePost dùng VIEW_TRANSACTIONS; lịch sử mua gói đăng tin thuộc billing, không phải CRUD tin tuyển dụng.",
+    "mapping_evidence": [
+      "frontend/src/container/system/HistoryTrade/HistoryTradePost.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {}
+  },
+  {
+    "path": "/admin/history-cv",
+    "declared_path": "/history-cv",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "VIEW_TRANSACTIONS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "HistoryTradeCv"
+    ],
+    "feature_id": "billing-packages",
+    "related_features": [
+      "billing-packages"
+    ],
+    "planning_docs": [
+      ".docs/ideas/billing-packages-idea.md",
+      ".docs/design-briefs/billing-packages-brief.md",
+      ".docs/frontend-plans/billing-packages-plan.md",
+      ".docs/backend-plans/billing-packages-plan.md",
+      ".docs/endpoint-apis/billing-packages-endpoints.md",
+      ".docs/qa/billing-packages-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [
+      "JF-003"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately",
+    "source_owner_note": "HistoryTradeCv dùng VIEW_TRANSACTIONS; lịch sử mua gói CV thuộc billing, không phải pipeline ứng viên.",
+    "mapping_evidence": [
+      "frontend/src/container/system/HistoryTrade/HistoryTradeCv.js",
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "related_planning_docs": {}
+  },
+  {
+    "path": "/admin/sum-by-year-post",
+    "declared_path": "/sum-by-year-post",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "VIEW_PLATFORM_REPORTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ChartPost"
+    ],
+    "feature_id": "admin-reports-audit",
+    "related_features": [
+      "admin-reports-audit"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-reports-audit-idea.md",
+      ".docs/design-briefs/admin-reports-audit-brief.md",
+      ".docs/frontend-plans/admin-reports-audit-plan.md",
+      ".docs/backend-plans/admin-reports-audit-plan.md",
+      ".docs/endpoint-apis/admin-reports-audit-endpoints.md",
+      ".docs/qa/admin-reports-audit-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-029"
+    ],
+    "feature_reference_screens": [
+      "JF-029"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/sum-by-year-cv",
+    "declared_path": "/sum-by-year-cv",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [
+      "VIEW_PLATFORM_REPORTS"
+    ],
+    "components_in_route_block": [
+      "Route",
+      "ChartCv"
+    ],
+    "feature_id": "admin-reports-audit",
+    "related_features": [
+      "admin-reports-audit"
+    ],
+    "planning_docs": [
+      ".docs/ideas/admin-reports-audit-idea.md",
+      ".docs/design-briefs/admin-reports-audit-brief.md",
+      ".docs/frontend-plans/admin-reports-audit-plan.md",
+      ".docs/backend-plans/admin-reports-audit-plan.md",
+      ".docs/endpoint-apis/admin-reports-audit-endpoints.md",
+      ".docs/qa/admin-reports-audit-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [
+      "JF-029"
+    ],
+    "feature_reference_screens": [
+      "JF-029"
+    ],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  },
+  {
+    "path": "/admin/*",
+    "declared_path": "*",
+    "source": "frontend/src/container/system/HomeAdmin.js",
+    "permissions_in_route_block": [],
+    "components_in_route_block": [
+      "Route",
+      "Navigate",
+      "Footer"
+    ],
+    "feature_id": "master-layout",
+    "related_features": [
+      "master-layout"
+    ],
+    "planning_docs": [
+      ".docs/ideas/master-layout-idea.md",
+      ".docs/design-briefs/master-layout-brief.md",
+      ".docs/frontend-plans/master-layout-plan.md",
+      ".docs/backend-plans/master-layout-plan.md",
+      ".docs/endpoint-apis/master-layout-endpoints.md",
+      ".docs/qa/master-layout-qa.md"
+    ],
+    "permission_note": "Static parser only; read parent guard and service permission before changing access.",
+    "reference_screens": [],
+    "feature_reference_screens": [],
+    "coverage_status": "source declaration inventoried; design/code/runtime coverage evaluated separately"
+  }
+]

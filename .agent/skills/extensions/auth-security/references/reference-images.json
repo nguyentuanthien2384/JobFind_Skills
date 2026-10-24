@@ -1,0 +1,56 @@
+[
+  {
+    "screen_id": "JF-015",
+    "feature_id": "auth-login",
+    "owner": "jobfind-auth-security",
+    "asset": "assets/stitch-reference/JF-015/screen.png",
+    "output": ".stitch/designs/login_premium_desktop/screen.png",
+    "sha256": "29b5d344e8fcc3cd52689a5cda1647cd06f0cd6ea60bbb8d57cc473399d15068",
+    "bytes": 646747
+  },
+  {
+    "screen_id": "JF-016",
+    "feature_id": "auth-login",
+    "owner": "jobfind-auth-security",
+    "asset": "assets/stitch-reference/JF-016/screen.png",
+    "output": ".stitch/designs/login_tuy_n_d_ng_vn_1/screen.png",
+    "sha256": "3b9fb380fb7e3ea6ad165de16a0de54ce3e71cc15134c5aa0eed63a9923d882a",
+    "bytes": 918650
+  },
+  {
+    "screen_id": "JF-017",
+    "feature_id": "auth-login",
+    "owner": "jobfind-auth-security",
+    "asset": "assets/stitch-reference/JF-017/screen.png",
+    "output": ".stitch/designs/login_tuy_n_d_ng_vn_2/screen.png",
+    "sha256": "792274ec91dfbebb0ba9ac05fdbe7669be04dbe257c5a729b2aadc6bde67432b",
+    "bytes": 284438
+  },
+  {
+    "screen_id": "JF-019",
+    "feature_id": "auth-register",
+    "owner": "jobfind-auth-security",
+    "asset": "assets/stitch-reference/JF-019/screen.png",
+    "output": ".stitch/designs/ng_k_ch_n_vai_tr/screen.png",
+    "sha256": "8df19a12fa95534eba90f776b7d6909a6c052e74c46e94a1d9ad2a8cfd5ca7ec",
+    "bytes": 360054
+  },
+  {
+    "screen_id": "JF-020",
+    "feature_id": "auth-register",
+    "owner": "jobfind-auth-security",
+    "asset": "assets/stitch-reference/JF-020/screen.png",
+    "output": ".stitch/designs/ng_k_tuy_n_d_ng_vn/screen.png",
+    "sha256": "5c7c879a0dfcd52966f26541f64b759203dee90a0e0be0a8b689ff375f92a651",
+    "bytes": 143577
+  },
+  {
+    "screen_id": "JF-028",
+    "feature_id": "auth-register",
+    "owner": "jobfind-auth-security",
+    "asset": "assets/stitch-reference/JF-028/screen.png",
+    "output": ".stitch/designs/registration_premium_desktop/screen.png",
+    "sha256": "fb12f2d57cad2ed0bbef45bf3c12e66edc88ac786a1ee130209f26b3cf4fff8f",
+    "bytes": 181540
+  }
+]

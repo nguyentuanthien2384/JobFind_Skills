@@ -1,0 +1,1402 @@
+[
+  {
+    "screen_id": "JF-001",
+    "feature_id": "master-layout",
+    "route": "*",
+    "source_components_to_inspect": [
+      "frontend/src/container/NotFound/NotFound.js",
+      "frontend/src/container/system/HomeAdmin.js",
+      "frontend/src/container/Candidate/HomeCandidate.js"
+    ],
+    "reference_blocks": [
+      "Public header/footer và search entry",
+      "Candidate sidebar/profile/notification",
+      "Company/Employer sidebar theo membership và readiness",
+      "Admin navigation và data-dense workspace",
+      "Mobile drawer, breadcrumb và page header"
+    ],
+    "actions": [
+      "Đi đến đúng route qua menu",
+      "Giữ back/forward và deep-link",
+      "Đăng nhập/đăng xuất cập nhật shell"
+    ],
+    "actual_api_contracts": [
+      "GET /api/auth/me"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-002",
+    "feature_id": "admin-overview",
+    "route": "/admin/",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Home.js",
+      "frontend/src/container/system/Dashboard/AdminDashboard.js"
+    ],
+    "reference_blocks": [
+      "Admin sidebar/header",
+      "Platform metric cards",
+      "Revenue/user charts",
+      "Pending moderation table",
+      "Activity list và quick actions"
+    ],
+    "actions": [
+      "Đổi period",
+      "Mở target moderation",
+      "Mở reports",
+      "Export chỉ khi source hỗ trợ"
+    ],
+    "actual_api_contracts": [
+      "GET /api/admin/reports/overview",
+      "GET /api/admin/reports/timeseries",
+      "GET /api/admin/reports/distribution",
+      "GET /api/admin/reports/activity"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-003",
+    "feature_id": "billing-packages",
+    "route": "/admin/buy-post; /admin/buy-cv",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Post/BuyPost.js",
+      "frontend/src/container/system/PackageCv/BuyCv.js"
+    ],
+    "reference_blocks": [
+      "Package catalog và active entitlement",
+      "Post/CV quota summaries",
+      "Payment pending/success/cancel/failure",
+      "Transaction histories",
+      "Recurring section chỉ nếu triển khai proposal"
+    ],
+    "actions": [
+      "Chọn gói",
+      "Mở luồng thanh toán",
+      "Xem lịch sử",
+      "Đi sử dụng quota"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-payment-link",
+      "POST /api/payment-success",
+      "GET /api/get-payment-cv-link",
+      "POST /api/payment-cv-success",
+      "GET /api/get-history-trade-post",
+      "GET /api/get-history-trade-cv"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-004",
+    "feature_id": "system-proposals",
+    "route": "—",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/HomeAdmin.js"
+    ],
+    "reference_blocks": [
+      "System settings sections theo JF-004",
+      "Calendar/agenda theo JF-013/014",
+      "Recurring plans theo JF-003",
+      "Unavailable/proposal UI state"
+    ],
+    "actions": [
+      "Lập kế hoạch feature mới",
+      "Vẽ prototype có nhãn",
+      "Triển khai sau khi scope/dependencies xác định"
+    ],
+    "actual_api_contracts": [],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-005",
+    "feature_id": "company-profile",
+    "route": "/admin/edit-company",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Company/AddCompany.js"
+    ],
+    "reference_blocks": [
+      "Company shell",
+      "Cover/logo upload",
+      "Basic info, introduction/benefits",
+      "Locations theo field hiện có",
+      "Completion/save/preview",
+      "Pending verification status"
+    ],
+    "actions": [
+      "Create/edit company",
+      "Save draft/form",
+      "Preview public profile"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-detail-company-by-userId",
+      "POST /api/create-new-company",
+      "PUT /api/update-company"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-006",
+    "feature_id": "companies",
+    "route": "/company",
+    "source_components_to_inspect": [
+      "frontend/src/container/Company/ListCompany.js"
+    ],
+    "reference_blocks": [
+      "Company directory hero/search",
+      "Industry/location/size filters",
+      "Card hoặc list variant",
+      "Pagination/result count",
+      "Featured company section",
+      "Company detail jobs/reviews khi chọn"
+    ],
+    "actions": [
+      "Tìm/lọc/sort công ty",
+      "Mở /detail-company/:id",
+      "Theo dõi công ty",
+      "Review theo actor hợp lệ"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-list-company",
+      "GET /api/get-detail-company-by-id",
+      "GET /api/get-review-by-company",
+      "POST /api/toggle-follow-company"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-007",
+    "feature_id": "companies",
+    "route": "/company",
+    "source_components_to_inspect": [
+      "frontend/src/container/Company/ListCompany.js"
+    ],
+    "reference_blocks": [
+      "Company directory hero/search",
+      "Industry/location/size filters",
+      "Card hoặc list variant",
+      "Pagination/result count",
+      "Featured company section",
+      "Company detail jobs/reviews khi chọn"
+    ],
+    "actions": [
+      "Tìm/lọc/sort công ty",
+      "Mở /detail-company/:id",
+      "Theo dõi công ty",
+      "Review theo actor hợp lệ"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-list-company",
+      "GET /api/get-detail-company-by-id",
+      "GET /api/get-review-by-company",
+      "POST /api/toggle-follow-company"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-008",
+    "feature_id": "admin-companies",
+    "route": "/admin/list-company-admin",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Company/ManageCompany.js"
+    ],
+    "reference_blocks": [
+      "Verification summary/queue",
+      "Company table",
+      "Document/review side panel",
+      "Approve/reject theo actions source",
+      "Pending/empty/error feedback"
+    ],
+    "actions": [
+      "Chọn company",
+      "Đọc hồ sơ",
+      "Approve/ban/unban",
+      "Refresh queue"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-all-company",
+      "PUT /api/accecpt-company",
+      "PUT /api/ban-company",
+      "PUT /api/unban-company"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-009",
+    "feature_id": "candidate-profile",
+    "route": "/candidate/info",
+    "source_components_to_inspect": [
+      "frontend/src/container/Candidate/CandidateInfo.js"
+    ],
+    "reference_blocks": [
+      "Header và candidate navigation",
+      "Avatar/profile completion",
+      "Personal/contact info",
+      "Education/experience/skills theo fields thật",
+      "Preferences/CV section",
+      "Save và validation feedback"
+    ],
+    "actions": [
+      "Edit/save profile",
+      "Đổi avatar/CV theo cơ chế source",
+      "Mở CV workspace",
+      "Cập nhật preferences"
+    ],
+    "actual_api_contracts": [
+      "PUT /api/update-user",
+      "GET /api/profile",
+      "PUT /api/profile",
+      "PUT /api/setDataUserSetting"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-010",
+    "feature_id": "job-detail",
+    "route": "/detail-job/:id",
+    "source_components_to_inspect": [
+      "frontend/src/container/JobDetail/JobDetail.js",
+      "frontend/src/components/modal/SendCvModal.js"
+    ],
+    "reference_blocks": [
+      "Job/company summary",
+      "Salary/location/type metadata",
+      "Description, requirements và benefits",
+      "Recruiter/company sidebar",
+      "Apply/save/share CTA",
+      "Related jobs và application modal"
+    ],
+    "actions": [
+      "Mở/nộp modal CV",
+      "Lưu job",
+      "Mở company",
+      "Trở lại kết quả tìm"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-detail-post-by-id",
+      "GET /api/jobs/:id",
+      "POST /api/create-new-cv"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-011",
+    "feature_id": "admin-jobs",
+    "route": "/admin/list-post-admin",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Post/ManagePost.js"
+    ],
+    "reference_blocks": [
+      "Tabs/filter/moderation counts",
+      "Pending job table",
+      "Detail/review panel",
+      "Approve/ban/restore controls",
+      "Confirm và pending/error states"
+    ],
+    "actions": [
+      "Xem nội dung",
+      "Duyệt/ban/active",
+      "Refresh table"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-all-post-admin",
+      "PUT /api/accept-post",
+      "PUT /api/ban-post",
+      "PUT /api/active-post"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-012",
+    "feature_id": "candidate-search",
+    "route": "/admin/list-candiate",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Cv/FilterCv.js"
+    ],
+    "reference_blocks": [
+      "Keyword/job selection và advanced filters",
+      "Quota/unlock status",
+      "Candidate cards/table",
+      "Detail/PDF drawer",
+      "Talent pool action",
+      "Paging/empty/error"
+    ],
+    "actions": [
+      "Tìm/lọc/chuyển page",
+      "Mở/unlock CV",
+      "Lưu talent pool",
+      "Mở recruitment profile"
+    ],
+    "actual_api_contracts": [
+      "GET /api/fillter-cv-by-selection",
+      "GET /api/candidate-search-jobs",
+      "GET /api/check-see-candiate",
+      "GET /api/talent-pool",
+      "POST /api/talent-pool"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-013",
+    "feature_id": "interviews-offers",
+    "route": "/admin/pipeline",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Cv/KanbanBoard.js",
+      "frontend/src/container/system/Cv/InterviewInvitationForm.js",
+      "frontend/src/container/system/Cv/OfferLetterForm.js"
+    ],
+    "reference_blocks": [
+      "Calendar/agenda proposal theo JF-013/014",
+      "Interview form source",
+      "Offer/decision form source",
+      "Delivery status/history",
+      "Candidate interview/offer read view"
+    ],
+    "actions": [
+      "Lên lịch/gửi thư theo scope được giao",
+      "Preview nội dung",
+      "Xem decision/interview snapshot"
+    ],
+    "actual_api_contracts": [
+      "POST /api/applications/:id/interview-invitation",
+      "POST /api/applications/:id/decision-notification",
+      "GET /api/my-applications"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-014",
+    "feature_id": "interviews-offers",
+    "route": "/admin/pipeline",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Cv/KanbanBoard.js",
+      "frontend/src/container/system/Cv/InterviewInvitationForm.js",
+      "frontend/src/container/system/Cv/OfferLetterForm.js"
+    ],
+    "reference_blocks": [
+      "Calendar/agenda proposal theo JF-013/014",
+      "Interview form source",
+      "Offer/decision form source",
+      "Delivery status/history",
+      "Candidate interview/offer read view"
+    ],
+    "actions": [
+      "Lên lịch/gửi thư theo scope được giao",
+      "Preview nội dung",
+      "Xem decision/interview snapshot"
+    ],
+    "actual_api_contracts": [
+      "POST /api/applications/:id/interview-invitation",
+      "POST /api/applications/:id/decision-notification",
+      "GET /api/my-applications"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-015",
+    "feature_id": "auth-login",
+    "route": "/login",
+    "source_components_to_inspect": [
+      "frontend/src/container/login/Login.js"
+    ],
+    "reference_blocks": [
+      "Premium hoặc regular reference variant",
+      "Brand/visual panel theo đúng ảnh",
+      "Email/password với labels/errors",
+      "Forgot password",
+      "Provider buttons có unavailable state",
+      "Signup link và apply-intent redirect"
+    ],
+    "actions": [
+      "Đăng nhập password",
+      "Bắt đầu SSO",
+      "Mở recovery/signup",
+      "Quay lại job đã định ứng tuyển"
+    ],
+    "actual_api_contracts": [
+      "POST /api/auth/login",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/:provider/start",
+      "POST /api/auth/refresh"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-016",
+    "feature_id": "auth-login",
+    "route": "/login",
+    "source_components_to_inspect": [
+      "frontend/src/container/login/Login.js"
+    ],
+    "reference_blocks": [
+      "Premium hoặc regular reference variant",
+      "Brand/visual panel theo đúng ảnh",
+      "Email/password với labels/errors",
+      "Forgot password",
+      "Provider buttons có unavailable state",
+      "Signup link và apply-intent redirect"
+    ],
+    "actions": [
+      "Đăng nhập password",
+      "Bắt đầu SSO",
+      "Mở recovery/signup",
+      "Quay lại job đã định ứng tuyển"
+    ],
+    "actual_api_contracts": [
+      "POST /api/auth/login",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/:provider/start",
+      "POST /api/auth/refresh"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-017",
+    "feature_id": "auth-login",
+    "route": "/login",
+    "source_components_to_inspect": [
+      "frontend/src/container/login/Login.js"
+    ],
+    "reference_blocks": [
+      "Premium hoặc regular reference variant",
+      "Brand/visual panel theo đúng ảnh",
+      "Email/password với labels/errors",
+      "Forgot password",
+      "Provider buttons có unavailable state",
+      "Signup link và apply-intent redirect"
+    ],
+    "actions": [
+      "Đăng nhập password",
+      "Bắt đầu SSO",
+      "Mở recovery/signup",
+      "Quay lại job đã định ứng tuyển"
+    ],
+    "actual_api_contracts": [
+      "POST /api/auth/login",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/:provider/start",
+      "POST /api/auth/refresh"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-018",
+    "feature_id": "applications",
+    "route": "/candidate/cv-post",
+    "source_components_to_inspect": [
+      "frontend/src/container/Candidate/ManageCvCandidate.js",
+      "frontend/src/components/modal/SendCvModal.js",
+      "frontend/src/components/modal/PreparedCvPicker.js"
+    ],
+    "reference_blocks": [
+      "Personal step",
+      "Upload/select prepared CV",
+      "Cover/intro và review",
+      "Submitting/result feedback",
+      "My applications list, filter và progress",
+      "Interview/offer detail theo dữ liệu thật"
+    ],
+    "actions": [
+      "Nộp CV",
+      "Theo dõi trạng thái",
+      "Mở PDF/phỏng vấn/offer",
+      "Filter/paging đơn của mình"
+    ],
+    "actual_api_contracts": [
+      "POST /api/create-new-cv",
+      "GET /api/get-all-cv-by-userId",
+      "GET /api/my-applications",
+      "GET /api/get-detail-user-by-id",
+      "GET /api/profile/cvs"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-019",
+    "feature_id": "auth-register",
+    "route": "/register",
+    "source_components_to_inspect": [
+      "frontend/src/container/login/Register.js"
+    ],
+    "reference_blocks": [
+      "Role chooser JF-019",
+      "Personal/company-related input theo role hợp lệ",
+      "Credential step với validation",
+      "Provider signup và pending profile",
+      "Terms/link nội dung theo app source"
+    ],
+    "actions": [
+      "Chọn role",
+      "Tiếp tục/back bước",
+      "Submit signup",
+      "Hoàn tất SSO onboarding"
+    ],
+    "actual_api_contracts": [
+      "POST /api/create-new-user",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/signup",
+      "POST /api/auth/sso/signup"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-020",
+    "feature_id": "auth-register",
+    "route": "/register",
+    "source_components_to_inspect": [
+      "frontend/src/container/login/Register.js"
+    ],
+    "reference_blocks": [
+      "Role chooser JF-019",
+      "Personal/company-related input theo role hợp lệ",
+      "Credential step với validation",
+      "Provider signup và pending profile",
+      "Terms/link nội dung theo app source"
+    ],
+    "actions": [
+      "Chọn role",
+      "Tiếp tục/back bước",
+      "Submit signup",
+      "Hoàn tất SSO onboarding"
+    ],
+    "actual_api_contracts": [
+      "POST /api/create-new-user",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/signup",
+      "POST /api/auth/sso/signup"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-021",
+    "feature_id": "job-posting",
+    "route": "/admin/add-post",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Post/AddPost.js"
+    ],
+    "reference_blocks": [
+      "Header/stepper",
+      "Title/category/location/basic fields",
+      "Description/requirements/benefits",
+      "Salary/experience/work type",
+      "Preview/quota feedback",
+      "Validation và submitting state"
+    ],
+    "actions": [
+      "Tạo/sửa/repost tin",
+      "Preview",
+      "Quản lý/filter tin"
+    ],
+    "actual_api_contracts": [
+      "POST /api/create-new-post",
+      "POST /api/create-reup-post",
+      "PUT /api/update-post",
+      "POST /api/jobs",
+      "PUT /api/jobs/:id",
+      "POST /api/jobs/:id/repost",
+      "GET /api/jobs/manage"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-022",
+    "feature_id": "applications",
+    "route": "/detail-job/:id · modal",
+    "source_components_to_inspect": [
+      "frontend/src/components/modal/SendCvModal.js",
+      "frontend/src/components/modal/PreparedCvPicker.js",
+      "frontend/src/container/Candidate/ManageCvCandidate.js"
+    ],
+    "reference_blocks": [
+      "Personal step",
+      "Upload/select prepared CV",
+      "Cover/intro và review",
+      "Submitting/result feedback",
+      "My applications list, filter và progress",
+      "Interview/offer detail theo dữ liệu thật"
+    ],
+    "actions": [
+      "Nộp CV",
+      "Theo dõi trạng thái",
+      "Mở PDF/phỏng vấn/offer",
+      "Filter/paging đơn của mình"
+    ],
+    "actual_api_contracts": [
+      "POST /api/create-new-cv",
+      "GET /api/get-all-cv-by-userId",
+      "GET /api/my-applications",
+      "GET /api/get-detail-user-by-id",
+      "GET /api/profile/cvs"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-023",
+    "feature_id": "applications",
+    "route": "/detail-job/:id · modal",
+    "source_components_to_inspect": [
+      "frontend/src/components/modal/SendCvModal.js",
+      "frontend/src/components/modal/PreparedCvPicker.js",
+      "frontend/src/container/Candidate/ManageCvCandidate.js"
+    ],
+    "reference_blocks": [
+      "Personal step",
+      "Upload/select prepared CV",
+      "Cover/intro và review",
+      "Submitting/result feedback",
+      "My applications list, filter và progress",
+      "Interview/offer detail theo dữ liệu thật"
+    ],
+    "actions": [
+      "Nộp CV",
+      "Theo dõi trạng thái",
+      "Mở PDF/phỏng vấn/offer",
+      "Filter/paging đơn của mình"
+    ],
+    "actual_api_contracts": [
+      "POST /api/create-new-cv",
+      "GET /api/get-all-cv-by-userId",
+      "GET /api/my-applications",
+      "GET /api/get-detail-user-by-id",
+      "GET /api/profile/cvs"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-024",
+    "feature_id": "applications",
+    "route": "/detail-job/:id · modal",
+    "source_components_to_inspect": [
+      "frontend/src/components/modal/SendCvModal.js",
+      "frontend/src/components/modal/PreparedCvPicker.js",
+      "frontend/src/container/Candidate/ManageCvCandidate.js"
+    ],
+    "reference_blocks": [
+      "Personal step",
+      "Upload/select prepared CV",
+      "Cover/intro và review",
+      "Submitting/result feedback",
+      "My applications list, filter và progress",
+      "Interview/offer detail theo dữ liệu thật"
+    ],
+    "actions": [
+      "Nộp CV",
+      "Theo dõi trạng thái",
+      "Mở PDF/phỏng vấn/offer",
+      "Filter/paging đơn của mình"
+    ],
+    "actual_api_contracts": [
+      "POST /api/create-new-cv",
+      "GET /api/get-all-cv-by-userId",
+      "GET /api/my-applications",
+      "GET /api/get-detail-user-by-id",
+      "GET /api/profile/cvs"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-025",
+    "feature_id": "pipeline",
+    "route": "/admin/pipeline",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Cv/KanbanBoard.js"
+    ],
+    "reference_blocks": [
+      "Recruiter shell/job selector",
+      "6 Kanban columns",
+      "Candidate cards với state thật",
+      "Detail drawer/rating/notes/history",
+      "Actions phỏng vấn/offer",
+      "AI screening panel và readiness"
+    ],
+    "actions": [
+      "Move stage",
+      "Mở candidate detail",
+      "Rate/note",
+      "Yêu cầu screening",
+      "Mở interview/decision form"
+    ],
+    "actual_api_contracts": [
+      "GET /api/applications/stages",
+      "GET /api/applications/board",
+      "PATCH /api/applications/:id/stage",
+      "PATCH /api/applications/:id/rating",
+      "POST /api/applications/:id/notes"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-026",
+    "feature_id": "admin-packages",
+    "route": "/admin/list-package-post; /admin/list-package-cv",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/PackagePost/ManagePackagePost.js",
+      "frontend/src/container/system/PackageCv/ManagePackageCv.js"
+    ],
+    "reference_blocks": [
+      "Type tabs",
+      "Package table/cards",
+      "Create/edit form",
+      "Active state controls",
+      "Validation/confirm"
+    ],
+    "actions": [
+      "Create/edit package",
+      "Activate/deactivate",
+      "View catalog/paging"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-all-package",
+      "POST /api/create-package-post",
+      "PUT /api/update-package-post",
+      "PUT /api/set-active-package-post",
+      "GET /api/get-all-package-cv",
+      "POST /api/create-package-cv",
+      "PUT /api/update-package-cv"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-027",
+    "feature_id": "admin-users",
+    "route": "/admin/list-user",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/User/ManageUser.js"
+    ],
+    "reference_blocks": [
+      "Search/filter/status summary",
+      "Users table",
+      "Details/actions",
+      "Confirm/error/loading",
+      "Pagination"
+    ],
+    "actions": [
+      "Search/paging",
+      "Ban/unban theo quyền",
+      "Mở user detail"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-all-user",
+      "POST /api/ban-user",
+      "POST /api/unban-user"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-028",
+    "feature_id": "auth-register",
+    "route": "/register",
+    "source_components_to_inspect": [
+      "frontend/src/container/login/Register.js"
+    ],
+    "reference_blocks": [
+      "Role chooser JF-019",
+      "Personal/company-related input theo role hợp lệ",
+      "Credential step với validation",
+      "Provider signup và pending profile",
+      "Terms/link nội dung theo app source"
+    ],
+    "actions": [
+      "Chọn role",
+      "Tiếp tục/back bước",
+      "Submit signup",
+      "Hoàn tất SSO onboarding"
+    ],
+    "actual_api_contracts": [
+      "POST /api/create-new-user",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/signup",
+      "POST /api/auth/sso/signup"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-029",
+    "feature_id": "admin-reports-audit",
+    "route": "/admin/reports; /admin/sum-by-year-post; /admin/sum-by-year-cv",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Report/ReportDashboard.js"
+    ],
+    "reference_blocks": [
+      "Financial header/date range",
+      "Revenue metrics/chart",
+      "Package distribution",
+      "Transactions table",
+      "Audit/activity drilldown",
+      "Export control theo source"
+    ],
+    "actions": [
+      "Filter range",
+      "View report/audit target",
+      "Export nếu implemented"
+    ],
+    "actual_api_contracts": [
+      "GET /api/admin/reports/overview",
+      "GET /api/admin/reports/timeseries",
+      "GET /api/admin/reports/funnel",
+      "GET /api/admin/audit",
+      "GET /api/get-sum-by-year-post",
+      "GET /api/get-sum-by-year-cv"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-030",
+    "feature_id": "chat",
+    "route": "/chat/:partnerId; /admin/chat/:partnerId",
+    "source_components_to_inspect": [
+      "frontend/src/container/Chat/ChatPage.js"
+    ],
+    "reference_blocks": [
+      "Conversation sidebar",
+      "Message thread và delivery states",
+      "Composer/files/shared-job picker",
+      "Candidate/job context panel theo reference",
+      "Mobile conversation/thread views"
+    ],
+    "actions": [
+      "Chọn hội thoại",
+      "Gửi text/PDF/job card",
+      "Retry failed message",
+      "Reconnect/load missing messages"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-list-chat-conversation",
+      "GET /api/get-chat-conversation",
+      "POST /api/send-chat-message",
+      "POST /api/chat-attachments",
+      "GET /api/chat-attachments/:id",
+      "GET /api/chat-jobs"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-031",
+    "feature_id": "chat",
+    "route": "/chat/:partnerId; /admin/chat/:partnerId",
+    "source_components_to_inspect": [
+      "frontend/src/container/Chat/ChatPage.js"
+    ],
+    "reference_blocks": [
+      "Conversation sidebar",
+      "Message thread và delivery states",
+      "Composer/files/shared-job picker",
+      "Candidate/job context panel theo reference",
+      "Mobile conversation/thread views"
+    ],
+    "actions": [
+      "Chọn hội thoại",
+      "Gửi text/PDF/job card",
+      "Retry failed message",
+      "Reconnect/load missing messages"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-list-chat-conversation",
+      "GET /api/get-chat-conversation",
+      "POST /api/send-chat-message",
+      "POST /api/chat-attachments",
+      "GET /api/chat-attachments/:id",
+      "GET /api/chat-jobs"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-032",
+    "feature_id": "master-layout",
+    "route": "*",
+    "source_components_to_inspect": [
+      "frontend/src/container/NotFound/NotFound.js",
+      "frontend/src/container/system/HomeAdmin.js",
+      "frontend/src/container/Candidate/HomeCandidate.js"
+    ],
+    "reference_blocks": [
+      "Public header/footer và search entry",
+      "Candidate sidebar/profile/notification",
+      "Company/Employer sidebar theo membership và readiness",
+      "Admin navigation và data-dense workspace",
+      "Mobile drawer, breadcrumb và page header"
+    ],
+    "actions": [
+      "Đi đến đúng route qua menu",
+      "Giữ back/forward và deep-link",
+      "Đăng nhập/đăng xuất cập nhật shell"
+    ],
+    "actual_api_contracts": [
+      "GET /api/auth/me"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-033",
+    "feature_id": "notifications",
+    "route": "/candidate/notifications",
+    "source_components_to_inspect": [
+      "frontend/src/container/Candidate/CandidateNotifications.js"
+    ],
+    "reference_blocks": [
+      "Tabs all/unread/type",
+      "Date-grouped notification rows",
+      "Unread badges và actions",
+      "Preferences chỉ phần source hỗ trợ",
+      "Empty/error/loading"
+    ],
+    "actions": [
+      "Mở thông báo",
+      "Đánh dấu đọc",
+      "Chuyển tab/paging",
+      "Opt-in push theo UI action"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-notification-by-user",
+      "GET /api/get-notification-jobs",
+      "POST /api/mark-read-notification",
+      "GET /api/push/config",
+      "POST /api/push/subscription",
+      "DELETE /api/push/subscription"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-034",
+    "feature_id": "employer-dashboard",
+    "route": "/admin/",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Home.js",
+      "frontend/src/container/system/Dashboard/CompanyDashboard.js",
+      "frontend/src/container/system/adminNavigation.js"
+    ],
+    "reference_blocks": [
+      "Company sidebar/header",
+      "Recruitment metric cards",
+      "Jobs/application attention tables",
+      "Company-specific chart",
+      "Quick actions và readiness"
+    ],
+    "actions": [
+      "Đi quản lý tin/pipeline",
+      "Xem ứng viên",
+      "Mua gói theo quyền",
+      "Mở attention target"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-list-post-admin",
+      "GET /api/get-statistical-post",
+      "GET /api/get-statistical-cv"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-035",
+    "feature_id": "home",
+    "route": "/",
+    "source_components_to_inspect": [
+      "frontend/src/container/home/home.js"
+    ],
+    "reference_blocks": [
+      "Header với nav và auth CTA",
+      "Hero và keyword/location search",
+      "Nhóm ngành, việc nổi bật và công ty",
+      "Nội dung giá trị/CTA theo reference",
+      "Footer theo HTML gốc"
+    ],
+    "actions": [
+      "Tìm việc",
+      "Mở job detail",
+      "Mở công ty",
+      "Đăng ký/đăng nhập"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-filter-post",
+      "GET /api/get-list-company",
+      "GET /api/search/jobs"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-036",
+    "feature_id": "job-search",
+    "route": "/job",
+    "source_components_to_inspect": [
+      "frontend/src/container/JobPage/JobPage.js"
+    ],
+    "reference_blocks": [
+      "Header",
+      "Title/result count và sort",
+      "Sidebar filter hoặc mobile filter drawer",
+      "Job cards/list với salary/company/location",
+      "Pagination và empty/error state"
+    ],
+    "actions": [
+      "Đổi keyword/filter/sort",
+      "Chuyển trang",
+      "Mở chi tiết/lưu job",
+      "Clear filters"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-filter-post",
+      "GET /api/search/jobs",
+      "GET /api/search/facets",
+      "GET /api/search/suggest"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  },
+  {
+    "screen_id": "JF-037",
+    "feature_id": "admin-companies",
+    "route": "/admin/list-company-admin",
+    "source_components_to_inspect": [
+      "frontend/src/container/system/Company/ManageCompany.js"
+    ],
+    "reference_blocks": [
+      "Verification summary/queue",
+      "Company table",
+      "Document/review side panel",
+      "Approve/reject theo actions source",
+      "Pending/empty/error feedback"
+    ],
+    "actions": [
+      "Chọn company",
+      "Đọc hồ sơ",
+      "Approve/ban/unban",
+      "Refresh queue"
+    ],
+    "actual_api_contracts": [
+      "GET /api/get-all-company",
+      "PUT /api/accecpt-company",
+      "PUT /api/ban-company",
+      "PUT /api/unban-company"
+    ],
+    "status": "Source candidates and reference block spec; new presentation components are proposals until implemented.",
+    "common_states": [
+      "loading",
+      "empty",
+      "error",
+      "forbidden",
+      "submitting",
+      "success",
+      "disabled"
+    ]
+  }
+]

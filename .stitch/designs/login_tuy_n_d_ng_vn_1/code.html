@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#360f00",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "tertiary-fixed": "#ffdbcd",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-secondary-fixed": "#001e2f",
+                    "on-secondary-container": "#004666",
+                    "on-primary-container": "#eeefff",
+                    "surface-container": "#eceef0",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#b4c5ff",
+                    "primary-container": "#2563eb",
+                    "on-primary-fixed": "#00174b",
+                    "surface-container-highest": "#e0e3e5",
+                    "outline-variant": "#c3c6d7",
+                    "inverse-surface": "#2d3133",
+                    "surface-container-low": "#f2f4f6",
+                    "on-surface": "#191c1e",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "primary": "#004ac6",
+                    "secondary-container": "#39b8fd",
+                    "on-surface-variant": "#434655",
+                    "surface-dim": "#d8dadc",
+                    "tertiary": "#943700",
+                    "on-tertiary-container": "#ffede6",
+                    "on-error": "#ffffff",
+                    "surface": "#f7f9fb",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#89ceff",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "primary-fixed": "#dbe1ff",
+                    "secondary": "#006591",
+                    "secondary-fixed": "#c9e6ff",
+                    "background": "#f7f9fb",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "surface-variant": "#e0e3e5",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-tint": "#0053db",
+                    "tertiary-container": "#bc4800",
+                    "outline": "#737686",
+                    "on-background": "#191c1e",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed">
+<main class="min-h-screen flex flex-col md:flex-row overflow-hidden">
+<!-- Left Panel: Brand Experience -->
+<section class="relative hidden md:flex md:w-1/2 flex-col justify-between p-12 overflow-hidden bg-primary-container">
+<!-- Background Image with Gradient Overlay -->
+<div class="absolute inset-0 z-0">
+<img alt="Professional workers in office" class="w-full h-full object-cover opacity-60" data-alt="Professional Vietnamese team in a sunlit modern glass-walled office sharing ideas over a laptop with warm morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa1ZmIMone9FcUUHi0GRhdOEDeiPcFYXNGm8NXw5m3a2ct-m7ofNT8QQaz3KntJfmRryo62Z9BPcq3A-_O65Qb7ysb-Bl8M_fhKjexrUuENinx-JrmzoU3E0DCePvbYmR-WAgaOiCMNp3lYdATy-5cjsMdK4X1k8GR1BRaTfanYfN2r_TY808WpX9RONVmCiJHpvAXJ4ol-n98_Zm2w5Etic-hAAvjHytYE0uEqROCOn72v0qpbiQZCh-myVngA6x6GimLmv5PoxRB"/>
+<div class="absolute inset-0 bg-gradient-to-br from-primary-container via-primary-container/80 to-secondary-container/40 mix-blend-multiply"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10">
+<div class="flex items-center space-x-2 text-white">
+<span class="material-symbols-outlined text-3xl" data-icon="work">work</span>
+<span class="text-2xl font-extrabold tracking-tight">Tuyển Dụng VN</span>
+</div>
+</div>
+<div class="relative z-10 max-w-lg mb-12">
+<h1 class="text-5xl font-bold text-white leading-tight mb-4">
+                    Chào mừng trở lại với Tuyển Dụng VN
+                </h1>
+<p class="text-xl text-white/80 font-medium">
+                    Nơi kết nối sự nghiệp mơ ước.
+                </p>
+</div>
+<!-- Subtle Trust Indicator -->
+<div class="relative z-10 glass-panel p-6 rounded-xl inline-flex items-center space-x-4 max-w-max border border-white/10">
+<div class="flex -space-x-2">
+<img alt="avatar" class="w-10 h-10 rounded-full border-2 border-primary-container" data-alt="User avatar 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeoR9JYyNiF455zV8GEbDDltik0q4YAhUJ0SqdsceK8ro2FP9hiyz8tY2PovEGXYW9lIHJSUGMWbM99t8BBCOoP2qgqEceB6mjpTS-fzLr4ChAuC45q6pWh7qce2Y1holoP6aJW4FarTleXCkNye6UdE8D4r1wZUeAcSLPS5dClea6eceynMQ9drQCZtvccJ9ajf3-r2hkwFxoCqcGzcvMNWha5vS9BRT3f5b-xkhTatmupopnQXaZsXWMwZzVCYVt5vrhm3BCZRiS"/>
+<img alt="avatar" class="w-10 h-10 rounded-full border-2 border-primary-container" data-alt="User avatar 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe9ZsgMPTlj0iAQeDaXrlwfIQ3yIvh9GAp4ApPUOe5zKU_0nMJmwXj1mPA4yZy25Wzcsx-K4tpyU4kLUQOEnKSwZzNcK-NEEq_TP7tLPUOH4-_b4rVPHos5Bbd1LplK5VWI3iGhby7czE5I36iVP3l2TyAdfIDSODcx9A6IbXcnNtXiSbpqsTxsCz4gBelvEP3zZB8bza7xV-yfiUbI_2iGRo7GQZBKcZo8YISuRigTbBZwzleQe0EGzf2_-RGD_oITqKYQogPi6Zx"/>
+<img alt="avatar" class="w-10 h-10 rounded-full border-2 border-primary-container" data-alt="User avatar 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkd32OTUQGhuQaGwK9eeuytYsBtAYZl1b479OEugJAVumiYUQ9IhUp_PctR_v1Rtu83ahDhjmohk6fAbGOk7zLWn935VEtNBT1icTLzKZ_n93Z_mKJ-lw322kux0tG29TAjfq7X21-sYMjSZEU_1i1qklWM0pM1AiFH37Cctz9yfjwedyBHyobgN44kL0oRLu_s1J3FJCWOVvdt1wVNGlM0dunC-Ie_kj27ukU-e23kZypiV7j2DX53M0b0nigE_eIyFP5LglQeVd6"/>
+</div>
+<div class="text-white">
+<p class="text-sm font-semibold">Tham gia cùng +2,400 ứng viên</p>
+<p class="text-xs text-white/70">Tìm kiếm vị trí phù hợp ngay hôm nay</p>
+</div>
+</div>
+</section>
+<!-- Right Panel: Login Form -->
+<section class="flex-1 bg-surface-container-lowest flex flex-col items-center justify-center p-8 md:p-16 lg:p-24 overflow-y-auto">
+<div class="w-full max-w-md">
+<!-- Top Actions -->
+<div class="flex justify-between items-center mb-16">
+<div class="md:hidden flex items-center space-x-2 text-primary font-bold">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span>Tuyển Dụng VN</span>
+</div>
+<a class="flex items-center space-x-2 text-on-surface-variant hover:text-primary transition-colors text-sm font-semibold" href="/">
+<span class="material-symbols-outlined text-lg" data-icon="arrow_back">arrow_back</span>
+<span>Trở về Trang chủ</span>
+</a>
+</div>
+<!-- Header -->
+<div class="mb-10">
+<h2 class="text-3xl font-bold text-on-surface mb-2 tracking-tight">Đăng nhập</h2>
+<p class="text-on-surface-variant">Tiếp tục hành trình sự nghiệp của bạn.</p>
+</div>
+<!-- Form -->
+<form class="space-y-6">
+<div>
+<label class="block text-sm font-semibold text-on-surface mb-2" for="email">Email</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-on-surface-variant">
+<span class="material-symbols-outlined text-xl" data-icon="mail">mail</span>
+</span>
+<input class="block w-full pl-10 pr-4 py-3 bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline" id="email" name="email" placeholder="example@email.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold text-on-surface mb-2" for="password">Mật khẩu</label>
+<div class="relative">
+<span class="absolute inset-y-0 left-0 pl-3 flex items-center text-on-surface-variant">
+<span class="material-symbols-outlined text-xl" data-icon="lock">lock</span>
+</span>
+<input class="block w-full pl-10 pr-12 py-3 bg-surface-container-high border-none rounded-lg focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline" id="password" name="password" placeholder="••••••••" type="password"/>
+<button class="absolute inset-y-0 right-0 pr-3 flex items-center text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-xl" data-icon="visibility">visibility</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between text-sm">
+<label class="flex items-center space-x-2 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 transition-all" type="checkbox"/>
+<span class="text-on-surface-variant font-medium group-hover:text-on-surface">Ghi nhớ đăng nhập</span>
+</label>
+<a class="text-primary font-semibold hover:underline" href="#">Quên mật khẩu?</a>
+</div>
+<button class="w-full py-4 px-6 bg-primary hover:bg-on-primary-fixed-variant text-white font-bold rounded-lg shadow-lg shadow-primary/20 transform active:scale-[0.98] transition-all duration-200" type="submit">
+                        Đăng nhập
+                    </button>
+</form>
+<!-- Social Login -->
+<div class="mt-10">
+<div class="relative mb-8">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-outline-variant/30"></div>
+</div>
+<div class="relative flex justify-center text-xs font-bold uppercase tracking-wider">
+<span class="bg-surface-container-lowest px-4 text-on-surface-variant">Hoặc đăng nhập bằng</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center space-x-3 py-3 border border-outline-variant/30 rounded-lg hover:bg-surface-container-low transition-colors group">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"></path>
+<path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"></path>
+<path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"></path>
+<path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 12-4.53z" fill="#EA4335"></path>
+</svg>
+<span class="text-sm font-semibold text-on-surface">Google</span>
+</button>
+<button class="flex items-center justify-center space-x-3 py-3 border border-outline-variant/30 rounded-lg hover:bg-surface-container-low transition-colors group">
+<svg class="w-5 h-5" viewbox="0 0 24 24">
+<path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill="#0077b5"></path>
+</svg>
+<span class="text-sm font-semibold text-on-surface">LinkedIn</span>
+</button>
+</div>
+</div>
+<!-- Footer Link -->
+<div class="mt-12 text-center">
+<p class="text-sm text-on-surface-variant font-medium">
+                        Bạn chưa có tài khoản? 
+                        <a class="text-primary font-bold hover:underline ml-1" href="#">Đăng ký ngay</a>
+</p>
+</div>
+<!-- Mini Footer -->
+<div class="mt-16 flex justify-center space-x-6">
+<a class="text-xs text-outline hover:text-on-surface transition-colors" href="#">Điều khoản</a>
+<a class="text-xs text-outline hover:text-on-surface transition-colors" href="#">Bảo mật</a>
+<a class="text-xs text-outline hover:text-on-surface transition-colors" href="#">Hỗ trợ</a>
+</div>
+</div>
+</section>
+</main>
+</body></html>

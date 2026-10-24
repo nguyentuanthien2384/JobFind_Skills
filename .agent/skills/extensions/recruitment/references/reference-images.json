@@ -1,0 +1,65 @@
+[
+  {
+    "screen_id": "JF-013",
+    "feature_id": "interviews-offers",
+    "owner": "jobfind-recruitment",
+    "asset": "assets/stitch-reference/JF-013/screen.png",
+    "output": ".stitch/designs/l_ch_ph_ng_v_n_agenda/screen.png",
+    "sha256": "d3170786a1851750047943063835c4a49327a5d14c42424d040d55f5e8bf7864",
+    "bytes": 240422
+  },
+  {
+    "screen_id": "JF-014",
+    "feature_id": "interviews-offers",
+    "owner": "jobfind-recruitment",
+    "asset": "assets/stitch-reference/JF-014/screen.png",
+    "output": ".stitch/designs/l_ch_ph_ng_v_n_career_architect/screen.png",
+    "sha256": "ffadee70dc13a88242c730f78216e21d2dfed1d904e9cd3228606d0cc1978b15",
+    "bytes": 190232
+  },
+  {
+    "screen_id": "JF-018",
+    "feature_id": "applications",
+    "owner": "jobfind-recruitment",
+    "asset": "assets/stitch-reference/JF-018/screen.png",
+    "output": ".stitch/designs/n_ng_tuy_n_c_a_t_i_tuy_n_d_ng_vn/screen.png",
+    "sha256": "174d66740bcf8d04fd1d46f60bd9c89dc0323f2f6a6070c97bf54e503ea6fc96",
+    "bytes": 287196
+  },
+  {
+    "screen_id": "JF-022",
+    "feature_id": "applications",
+    "owner": "jobfind-recruitment",
+    "asset": "assets/stitch-reference/JF-022/screen.png",
+    "output": ".stitch/designs/ng_tuy_n_b_c_1_th_ng_tin_c_nh_n/screen.png",
+    "sha256": "2e4e1eaaac0d14dc206029d3ebd6e24e640368bcd7cef3d6c37b44143cb30a5f",
+    "bytes": 205745
+  },
+  {
+    "screen_id": "JF-023",
+    "feature_id": "applications",
+    "owner": "jobfind-recruitment",
+    "asset": "assets/stitch-reference/JF-023/screen.png",
+    "output": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer/screen.png",
+    "sha256": "fa72e4475da841dd5ada8c770f73ec11b18d425568d42422ac5dce4353e111f8",
+    "bytes": 310367
+  },
+  {
+    "screen_id": "JF-024",
+    "feature_id": "applications",
+    "owner": "jobfind-recruitment",
+    "asset": "assets/stitch-reference/JF-024/screen.png",
+    "output": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer_desktop/screen.png",
+    "sha256": "2f053ec41d0b316d185944e6f86241aaf9793ed482e1d857faefe937cdb19516",
+    "bytes": 278307
+  },
+  {
+    "screen_id": "JF-025",
+    "feature_id": "pipeline",
+    "owner": "jobfind-recruitment",
+    "asset": "assets/stitch-reference/JF-025/screen.png",
+    "output": ".stitch/designs/ph_u_tuy_n_d_ng_senior_frontend_developer/screen.png",
+    "sha256": "8746dbb9294309a211deb6c081ffcc830218ef7b789807ff020179a54a8bd15f",
+    "bytes": 251173
+  }
+]

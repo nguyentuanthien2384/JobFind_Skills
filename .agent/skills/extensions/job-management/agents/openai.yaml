@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Quản lý tin tuyển dụng
+  short_description: Quản lý tin tuyển dụng cho dự án JobFind
+  default_prompt: Dùng $job-management code wizard JF-021 từ AddPost.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

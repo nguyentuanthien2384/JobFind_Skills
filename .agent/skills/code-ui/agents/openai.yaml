@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Code giao diện
+  short_description: Code giao diện cho dự án JobFind
+  default_prompt: Dùng $code-ui code JF-036 giống Stitch trên /job, có empty/error/loading.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

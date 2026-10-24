@@ -1,0 +1,170 @@
+[
+  {
+    "id": "JF-025",
+    "folder": "ph_u_tuy_n_d_ng_senior_frontend_developer",
+    "title": "Phễu Tuyển Dụng - Senior Frontend Developer",
+    "group": "Doanh nghiệp",
+    "route": "/admin/pipeline",
+    "component": "container/system/Cv/KanbanBoard.js",
+    "api": "GET /api/applications/stages ; GET /api/applications/board ; PATCH /api/applications/:id/stage ; PATCH /api/applications/:id/rating ; POST /api/applications/:id/notes",
+    "note": "Có route; phải dùng 6 stage keys thật",
+    "width": 1600,
+    "height": 1280,
+    "html_sha256": "25b26524e0736b19034a2ba83f67b37be4691563a7ec7d909a8a9d4ccd74c806",
+    "image_sha256": "8746dbb9294309a211deb6c081ffcc830218ef7b789807ff020179a54a8bd15f",
+    "feature_id": "pipeline",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1024,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1600,
+      "height": 1280
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/system/Cv/KanbanBoard.js",
+      "frontend/src/service/applicationService.js",
+      "microservices/application-service/src/libs/db.js",
+      "microservices/application-service/src/controllers/applicationController.js"
+    ],
+    "api_contracts": [
+      "GET /api/applications/stages",
+      "GET /api/applications/board",
+      "PATCH /api/applications/:id/stage",
+      "PATCH /api/applications/:id/rating",
+      "POST /api/applications/:id/notes"
+    ],
+    "observations": {
+      "headings": [
+        "Architect Solutions",
+        "Phễu Tuyển Dụng",
+        "Mới (48)",
+        "Nguyễn Văn An",
+        "Lê Minh Tâm",
+        "Đang Xem Xét (35)",
+        "Phạm Minh Anh",
+        "Phỏng Vấn (22)",
+        "Trần Hoàng Long",
+        "Đề Nghị (8)",
+        "Hoàng Thùy Dương",
+        "Từ Chối (43)",
+        "Vũ Quốc Cường",
+        "Chi tiết ứng viên"
+      ],
+      "labels": [],
+      "controls": [],
+      "actions": [
+        "Invite Team",
+        "Xuất Excel",
+        "Gửi Email Hàng Loạt",
+        "more_horiz",
+        "Xem",
+        "swap_horiz",
+        "video_call",
+        "mail Gửi Offer Letter",
+        "close",
+        "Lên Lịch Phỏng Vấn",
+        "Gửi Thư Mời",
+        "Từ Chối"
+      ],
+      "colors": {
+        "primary-container": "#2563EB",
+        "primary": "#004AC6",
+        "surface-dim": "#D8DADC",
+        "tertiary-fixed-dim": "#FFB596",
+        "outline-variant": "#C3C6D7",
+        "secondary-container": "#39B8FD",
+        "on-error-container": "#93000A",
+        "on-surface": "#191C1E",
+        "on-secondary": "#FFFFFF",
+        "inverse-primary": "#B4C5FF",
+        "surface": "#F7F9FB",
+        "on-secondary-container": "#004666",
+        "on-tertiary-fixed": "#360F00",
+        "on-secondary-fixed-variant": "#004C6E",
+        "surface-container-highest": "#E0E3E5",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "inverse-surface": "#2D3133",
+        "secondary": "#006591",
+        "secondary-fixed-dim": "#89CEFF",
+        "on-tertiary": "#FFFFFF",
+        "surface-container-lowest": "#FFFFFF",
+        "surface-container": "#ECEEF0",
+        "secondary-fixed": "#C9E6FF",
+        "outline": "#737686",
+        "surface-variant": "#E0E3E5",
+        "on-error": "#FFFFFF",
+        "on-primary-container": "#EEEFFF",
+        "surface-container-high": "#E6E8EA",
+        "on-tertiary-container": "#FFEDE6",
+        "on-primary-fixed": "#00174B",
+        "tertiary": "#943700",
+        "primary-fixed": "#DBE1FF",
+        "error-container": "#FFDAD6",
+        "error": "#BA1A1A",
+        "background": "#F7F9FB",
+        "primary-fixed-dim": "#B4C5FF",
+        "on-surface-variant": "#434655",
+        "on-primary-fixed-variant": "#003EA8",
+        "tertiary-fixed": "#FFDBCD",
+        "on-primary": "#FFFFFF",
+        "surface-tint": "#0053DB",
+        "surface-bright": "#F7F9FB",
+        "on-background": "#191C1E",
+        "surface-container-low": "#F2F4F6",
+        "inverse-on-surface": "#EFF1F3",
+        "on-secondary-fixed": "#001E2F",
+        "tertiary-container": "#BC4800"
+      },
+      "fonts": {
+        "headline": "Be Vietnam Pro",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuApXc04hk5NcMSGIXS6CFMdpMFHq6qoBX5XSvinqQoLkkQufiqgLGRkkYqoE2Mvdwi723Ckyz4X27lbRdDKqE6oXFOCemn5arKrMPWA8ToIkwlH6Gr1MlDNbwpdfudGPPduUgGoY80NMWcVSw-g5ehQiCAm6lKSgei8jfFr9a9PveWn0mZRgQr8W065QonAMWWD07JkzKrMxOGXcNbi20hDOXTi8dEfOTDs5-m1HoX7V13JRX0f0KjPlYW8uDysD9EiL3lh00FoIZY0",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAZadgO24TqTLqg-8JlZyPvePHLq3Jc5CbPoqTnQYI9pgzYX-y1Ketp25J-m1tYZUHjLH9C1dz0gf7dDaWJb_mUysri6jamzPMQtoc0-ZaqCAlhGuBPGndIsQ2mka4TUxNg-hgIJR0xaMSVEshzkhj4ncy3xIfJOkTmdlDDCDkC781K33h2JhtN7VqgHJtgdp_vcxdqLWwel9CVT5o7hqJxYCqtiuklTEZFGyZ-Paw6-JGrvczZv_oZOR10RdgBTMdLZcIi5u146-lt",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBwmPFXXR6aWasF3etrJ1OeuX1hzD3voYTwlECRvwbeYvuXGT0T-MSvDC6Z-7BZNpMNg548JIMUj1YLo6RolsmAF9GceutcRYH26EifcdSkgv5KjMYL66dO3zFL6YApBQy8v7ZXAjL59JimEFixvVgslpTyLF-g97NQBIhhZBvSOek2f2CYrfqa6_TI_uCH8ATu0VpYZtr_WPXPf5gv52icy6NMeKcpnE08aZwogdGWNbv1dOXODWV_UwJEgvmxEHSUECRVwimA3zEY",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCY292yZQ8fP258znic8h7EUXvS4RHklVmgd49epT_BSIL8ZON8GuN0C37pi6slqYC7skyJyOqDRVLk1rbhhbvGyNXd5E9hCLVJj_SBK50dfwCNZCIbT1yscQDc33KWq-iGRvxGF8FBSgqUhUSsSnCAH-PE357jQkLlhd6GTZSHX26fj7n_DcXnsZxNUZjGgxB3Fg88Qodu4s-WZFoyjgy5xIxzD40DWzSb3sfE3tGM1utziUqp9uDy6ZqrOuLaO_jwIQQ4Ec42NQtr",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/ph_u_tuy_n_d_ng_senior_frontend_developer/code.html",
+      "image": ".stitch/designs/ph_u_tuy_n_d_ng_senior_frontend_developer/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-025.md",
+    "prompt": ".stitch/prompts/JF-025.md"
+  }
+]

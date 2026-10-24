@@ -1,0 +1,29 @@
+[
+  {
+    "screen_id": "JF-010",
+    "feature_id": "job-detail",
+    "owner": "jobfind-job-search",
+    "asset": "assets/stitch-reference/JF-010/screen.png",
+    "output": ".stitch/designs/job_detail_senior_frontend_developer/screen.png",
+    "sha256": "09fb22003da595aa42154ca6bc3d8516095b2d657f06ccfd667daf0ea2c83ab1",
+    "bytes": 343440
+  },
+  {
+    "screen_id": "JF-035",
+    "feature_id": "home",
+    "owner": "jobfind-job-search",
+    "asset": "assets/stitch-reference/JF-035/screen.png",
+    "output": ".stitch/designs/tuy_n_d_ng_vn_homepage/screen.png",
+    "sha256": "ca631e65c5b5f68d66c3fed4d93e4dd2a92b2b8296ecf7cf1eaa3d323911a446",
+    "bytes": 307079
+  },
+  {
+    "screen_id": "JF-036",
+    "feature_id": "job-search",
+    "owner": "jobfind-job-search",
+    "asset": "assets/stitch-reference/JF-036/screen.png",
+    "output": ".stitch/designs/tuy_n_d_ng_vn_search_results/screen.png",
+    "sha256": "1f519dfe18449b30acc609fc9b4e77af2b4162f02651cfc3a0c9aee63d834e69",
+    "bytes": 225935
+  }
+]

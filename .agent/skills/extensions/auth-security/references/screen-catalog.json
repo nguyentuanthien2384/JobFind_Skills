@@ -1,0 +1,456 @@
+[
+  {
+    "id": "JF-015",
+    "folder": "login_premium_desktop",
+    "title": "Login - Premium Desktop",
+    "group": "Xác thực",
+    "route": "/login",
+    "component": "container/login/Login.js",
+    "api": "POST /api/auth/login ; GET /api/auth/providers ; GET /api/auth/sso/:provider/start ; POST /api/auth/refresh",
+    "note": "Có route; provider theo readiness",
+    "width": 1600,
+    "height": 1565,
+    "html_sha256": "5e16a69040021ec947515cd9c9eaeaf6245baa3b42fac5e70d36e417d8a557d5",
+    "image_sha256": "29b5d344e8fcc3cd52689a5cda1647cd06f0cd6ea60bbb8d57cc473399d15068",
+    "feature_id": "auth-login",
+    "roles": [
+      "PUBLIC"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1252,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1600,
+      "height": 1565
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/login/Login.js",
+      "frontend/src/auth/authClient.js",
+      "frontend/src/auth/SocialButtons.js",
+      "backend/src/controllers/authController.js"
+    ],
+    "api_contracts": [
+      "POST /api/auth/login",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/:provider/start",
+      "POST /api/auth/refresh"
+    ],
+    "observations": {
+      "headings": [
+        "Tuyển Dụng VN",
+        "Chào mừng quay trở lại"
+      ],
+      "labels": [
+        "Email",
+        "Mật khẩu"
+      ],
+      "controls": [
+        {
+          "type": "email",
+          "id": "email",
+          "placeholder": " "
+        },
+        {
+          "type": "password",
+          "id": "password",
+          "placeholder": " "
+        }
+      ],
+      "actions": [
+        "ĐĂNG NHẬP",
+        "Google",
+        "LinkedIn"
+      ],
+      "colors": {
+        "tertiary": "#943700",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "on-background": "#191C1E",
+        "background": "#F7F9FB",
+        "on-secondary-fixed-variant": "#31447B",
+        "surface-variant": "#E0E3E5",
+        "surface-bright": "#F7F9FB",
+        "on-surface-variant": "#434655",
+        "secondary": "#495C95",
+        "tertiary-container": "#BC4800",
+        "on-tertiary-fixed": "#360F00",
+        "error-container": "#FFDAD6",
+        "on-error-container": "#93000A",
+        "inverse-on-surface": "#EFF1F3",
+        "surface": "#F7F9FB",
+        "surface-dim": "#D8DADC",
+        "on-primary": "#FFFFFF",
+        "secondary-fixed": "#DBE1FF",
+        "tertiary-fixed": "#FFDBCD",
+        "on-secondary-fixed": "#00174B",
+        "on-primary-fixed": "#00174B",
+        "surface-container-highest": "#E0E3E5",
+        "secondary-fixed-dim": "#B4C5FF",
+        "on-primary-container": "#EEEFFF",
+        "secondary-container": "#ACBFFF",
+        "primary-fixed": "#DBE1FF",
+        "primary-container": "#2563EB",
+        "inverse-primary": "#B4C5FF",
+        "outline-variant": "#C3C6D7",
+        "surface-container": "#ECEEF0",
+        "tertiary-fixed-dim": "#FFB596",
+        "inverse-surface": "#2D3133",
+        "on-tertiary-container": "#FFEDE6",
+        "on-error": "#FFFFFF",
+        "outline": "#737686",
+        "on-surface": "#191C1E",
+        "error": "#BA1A1A",
+        "primary-fixed-dim": "#B4C5FF",
+        "on-primary-fixed-variant": "#003EA8",
+        "surface-container-low": "#F2F4F6",
+        "on-secondary": "#FFFFFF",
+        "on-tertiary": "#FFFFFF",
+        "surface-tint": "#0053DB",
+        "surface-container-lowest": "#FFFFFF",
+        "primary": "#004AC6",
+        "on-secondary-container": "#394C84",
+        "surface-container-high": "#E6E8EA"
+      },
+      "fonts": {
+        "headline": "Inter",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.125rem",
+        "lg": "0.25rem",
+        "xl": "0.5rem",
+        "full": "0.75rem"
+      },
+      "images": [
+        {
+          "alt": "Modern corporate office interior",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCiLqmtFnRHHZDm2mh_o77YXwLmN4iElW1dKXSL7ZDJrKbU2CqBthszUD_1AYg1lMNnGBp6H_ge_36CCB3dL8QMP__2varA5yBM0EYU5gaIY7kMzHDm8IptUhcnxFgTzKvOHCb8eLE7AexQoOIcG0EE3pOP4pB9pHCsbQXBAZibQOcudsJ10ZVRg9jrpg9TTqVobfgQoVvLmkEBuf2fW1KgpJ1oQ7OK3JH7q7LqtrZyStgFfvAtAMwaYtSCUPdSUKB0ULA2nyu-U1Nh",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/login_premium_desktop/code.html",
+      "image": ".stitch/designs/login_premium_desktop/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-015.md",
+    "prompt": ".stitch/prompts/JF-015.md"
+  },
+  {
+    "id": "JF-016",
+    "folder": "login_tuy_n_d_ng_vn_1",
+    "title": "Login - Tuyển Dụng VN",
+    "group": "Xác thực",
+    "route": "/login",
+    "component": "container/login/Login.js",
+    "api": "POST /api/auth/login ; GET /api/auth/providers ; GET /api/auth/sso/:provider/start ; POST /api/auth/refresh",
+    "note": "Có route; không giữ LinkedIn như provider hiện có",
+    "width": 1600,
+    "height": 1280,
+    "html_sha256": "899f85de0ce0c2c1a3ac4c612767eb2cf12058aa35e31b0f1e725c471133f23f",
+    "image_sha256": "3b9fb380fb7e3ea6ad165de16a0de54ce3e71cc15134c5aa0eed63a9923d882a",
+    "feature_id": "auth-login",
+    "roles": [
+      "PUBLIC"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1024,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1600,
+      "height": 1280
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/login/Login.js",
+      "frontend/src/auth/authClient.js",
+      "frontend/src/auth/SocialButtons.js",
+      "backend/src/controllers/authController.js"
+    ],
+    "api_contracts": [
+      "POST /api/auth/login",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/:provider/start",
+      "POST /api/auth/refresh"
+    ],
+    "observations": {
+      "headings": [
+        "Chào mừng trở lại với Tuyển Dụng VN",
+        "Đăng nhập"
+      ],
+      "labels": [
+        "Email",
+        "Mật khẩu",
+        "Ghi nhớ đăng nhập"
+      ],
+      "controls": [
+        {
+          "type": "email",
+          "name": "email",
+          "id": "email",
+          "placeholder": "example@email.com"
+        },
+        {
+          "type": "password",
+          "name": "password",
+          "id": "password",
+          "placeholder": "••••••••"
+        },
+        {
+          "type": "checkbox"
+        }
+      ],
+      "actions": [
+        "visibility",
+        "Đăng nhập",
+        "Google",
+        "LinkedIn"
+      ],
+      "colors": {
+        "on-tertiary-fixed": "#360F00",
+        "on-primary": "#FFFFFF",
+        "surface-container-lowest": "#FFFFFF",
+        "primary-fixed-dim": "#B4C5FF",
+        "tertiary-fixed": "#FFDBCD",
+        "on-tertiary": "#FFFFFF",
+        "inverse-on-surface": "#EFF1F3",
+        "on-secondary-fixed": "#001E2F",
+        "on-secondary-container": "#004666",
+        "on-primary-container": "#EEEFFF",
+        "surface-container": "#ECEEF0",
+        "on-secondary": "#FFFFFF",
+        "inverse-primary": "#B4C5FF",
+        "primary-container": "#2563EB",
+        "on-primary-fixed": "#00174B",
+        "surface-container-highest": "#E0E3E5",
+        "outline-variant": "#C3C6D7",
+        "inverse-surface": "#2D3133",
+        "surface-container-low": "#F2F4F6",
+        "on-surface": "#191C1E",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "primary": "#004AC6",
+        "secondary-container": "#39B8FD",
+        "on-surface-variant": "#434655",
+        "surface-dim": "#D8DADC",
+        "tertiary": "#943700",
+        "on-tertiary-container": "#FFEDE6",
+        "on-error": "#FFFFFF",
+        "surface": "#F7F9FB",
+        "error-container": "#FFDAD6",
+        "secondary-fixed-dim": "#89CEFF",
+        "tertiary-fixed-dim": "#FFB596",
+        "primary-fixed": "#DBE1FF",
+        "secondary": "#006591",
+        "secondary-fixed": "#C9E6FF",
+        "background": "#F7F9FB",
+        "on-secondary-fixed-variant": "#004C6E",
+        "surface-variant": "#E0E3E5",
+        "surface-bright": "#F7F9FB",
+        "on-primary-fixed-variant": "#003EA8",
+        "surface-container-high": "#E6E8EA",
+        "surface-tint": "#0053DB",
+        "tertiary-container": "#BC4800",
+        "outline": "#737686",
+        "on-background": "#191C1E",
+        "error": "#BA1A1A",
+        "on-error-container": "#93000A"
+      },
+      "fonts": {
+        "headline": "Inter",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "Professional workers in office",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDa1ZmIMone9FcUUHi0GRhdOEDeiPcFYXNGm8NXw5m3a2ct-m7ofNT8QQaz3KntJfmRryo62Z9BPcq3A-_O65Qb7ysb-Bl8M_fhKjexrUuENinx-JrmzoU3E0DCePvbYmR-WAgaOiCMNp3lYdATy-5cjsMdK4X1k8GR1BRaTfanYfN2r_TY808WpX9RONVmCiJHpvAXJ4ol-n98_Zm2w5Etic-hAAvjHytYE0uEqROCOn72v0qpbiQZCh-myVngA6x6GimLmv5PoxRB",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "avatar",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCeoR9JYyNiF455zV8GEbDDltik0q4YAhUJ0SqdsceK8ro2FP9hiyz8tY2PovEGXYW9lIHJSUGMWbM99t8BBCOoP2qgqEceB6mjpTS-fzLr4ChAuC45q6pWh7qce2Y1holoP6aJW4FarTleXCkNye6UdE8D4r1wZUeAcSLPS5dClea6eceynMQ9drQCZtvccJ9ajf3-r2hkwFxoCqcGzcvMNWha5vS9BRT3f5b-xkhTatmupopnQXaZsXWMwZzVCYVt5vrhm3BCZRiS",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "avatar",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDe9ZsgMPTlj0iAQeDaXrlwfIQ3yIvh9GAp4ApPUOe5zKU_0nMJmwXj1mPA4yZy25Wzcsx-K4tpyU4kLUQOEnKSwZzNcK-NEEq_TP7tLPUOH4-_b4rVPHos5Bbd1LplK5VWI3iGhby7czE5I36iVP3l2TyAdfIDSODcx9A6IbXcnNtXiSbpqsTxsCz4gBelvEP3zZB8bza7xV-yfiUbI_2iGRo7GQZBKcZo8YISuRigTbBZwzleQe0EGzf2_-RGD_oITqKYQogPi6Zx",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "avatar",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAkd32OTUQGhuQaGwK9eeuytYsBtAYZl1b479OEugJAVumiYUQ9IhUp_PctR_v1Rtu83ahDhjmohk6fAbGOk7zLWn935VEtNBT1icTLzKZ_n93Z_mKJ-lw322kux0tG29TAjfq7X21-sYMjSZEU_1i1qklWM0pM1AiFH37Cctz9yfjwedyBHyobgN44kL0oRLu_s1J3FJCWOVvdt1wVNGlM0dunC-Ie_kj27ukU-e23kZypiV7j2DX53M0b0nigE_eIyFP5LglQeVd6",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/login_tuy_n_d_ng_vn_1/code.html",
+      "image": ".stitch/designs/login_tuy_n_d_ng_vn_1/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-016.md",
+    "prompt": ".stitch/prompts/JF-016.md"
+  },
+  {
+    "id": "JF-017",
+    "folder": "login_tuy_n_d_ng_vn_2",
+    "title": "Login - Tuyển Dụng VN",
+    "group": "Xác thực",
+    "route": "/login",
+    "component": "container/login/Login.js",
+    "api": "POST /api/auth/login ; GET /api/auth/providers ; GET /api/auth/sso/:provider/start ; POST /api/auth/refresh",
+    "note": "Có route; biến thể mobile",
+    "width": 597,
+    "height": 1600,
+    "html_sha256": "3b9038ee06fffb1df95f8aac18177d158b152eed48262ea7d91ffde35847faab",
+    "image_sha256": "792274ec91dfbebb0ba9ac05fdbe7669be04dbe257c5a729b2aadc6bde67432b",
+    "feature_id": "auth-login",
+    "roles": [
+      "PUBLIC"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 390,
+      "height": 1045,
+      "device": "MOBILE"
+    },
+    "raster": {
+      "width": 597,
+      "height": 1600
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/login/Login.js",
+      "frontend/src/auth/authClient.js",
+      "frontend/src/auth/SocialButtons.js",
+      "backend/src/controllers/authController.js"
+    ],
+    "api_contracts": [
+      "POST /api/auth/login",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/:provider/start",
+      "POST /api/auth/refresh"
+    ],
+    "observations": {
+      "headings": [
+        "Chào mừng quay trở lại"
+      ],
+      "labels": [
+        "Email",
+        "Mật khẩu"
+      ],
+      "controls": [
+        {
+          "type": "email",
+          "id": "email",
+          "placeholder": "name@company.com"
+        },
+        {
+          "type": "password",
+          "id": "password",
+          "placeholder": "••••••••"
+        }
+      ],
+      "actions": [
+        "visibility",
+        "Đăng nhập",
+        "Google",
+        "LinkedIn"
+      ],
+      "colors": {
+        "on-surface-variant": "#434655",
+        "secondary-container": "#ACBFFF",
+        "primary-fixed": "#DBE1FF",
+        "surface-container-lowest": "#FFFFFF",
+        "on-secondary-fixed-variant": "#31447B",
+        "on-secondary-fixed": "#00174B",
+        "error-container": "#FFDAD6",
+        "tertiary-container": "#BC4800",
+        "on-primary-fixed": "#00174B",
+        "surface-dim": "#D8DADC",
+        "surface": "#F7F9FB",
+        "tertiary-fixed": "#FFDBCD",
+        "primary": "#004AC6",
+        "inverse-primary": "#B4C5FF",
+        "surface-container-highest": "#E0E3E5",
+        "on-primary-container": "#EEEFFF",
+        "secondary-fixed": "#DBE1FF",
+        "tertiary": "#943700",
+        "on-surface": "#191C1E",
+        "on-background": "#191C1E",
+        "inverse-surface": "#2D3133",
+        "primary-fixed-dim": "#B4C5FF",
+        "on-error": "#FFFFFF",
+        "on-tertiary": "#FFFFFF",
+        "on-tertiary-container": "#FFEDE6",
+        "on-primary": "#FFFFFF",
+        "surface-tint": "#0053DB",
+        "surface-container-low": "#F2F4F6",
+        "outline-variant": "#C3C6D7",
+        "inverse-on-surface": "#EFF1F3",
+        "secondary-fixed-dim": "#B4C5FF",
+        "error": "#BA1A1A",
+        "surface-variant": "#E0E3E5",
+        "primary-container": "#2563EB",
+        "secondary": "#495C95",
+        "on-tertiary-fixed": "#360F00",
+        "on-secondary": "#FFFFFF",
+        "on-error-container": "#93000A",
+        "surface-container-high": "#E6E8EA",
+        "on-primary-fixed-variant": "#003EA8",
+        "background": "#F7F9FB",
+        "surface-bright": "#F7F9FB",
+        "outline": "#737686",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "tertiary-fixed-dim": "#FFB596",
+        "on-secondary-container": "#394C84",
+        "surface-container": "#ECEEF0"
+      },
+      "fonts": {
+        "headline": "Inter",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "Professional collaborative workspace",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCIq4M2yE45sbLGJPVPzeZBz-_HI40TtqmyMs5IjZbbj9OS1I_-pLzl0baTWW4CLOOb8Hhs9gDeCY7nLU4UceWXYgs9pGPMr8qFieCtPz7xlpj4dSiSWARvMQ2SJ03TfN9AQyRHBdU1ByVcjejVBXl0YxvMwPTITs9OOz82K4no4VGWuH5y1boPUrhYpg2zaxx0Lof_Q-_YVsTGn8_5amU4C6uso08qHAAn1VD-Sr1DnyDxhFjgyU39-YeW_01tH7INRo70ec-1e5yW",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/login_tuy_n_d_ng_vn_2/code.html",
+      "image": ".stitch/designs/login_tuy_n_d_ng_vn_2/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-017.md",
+    "prompt": ".stitch/prompts/JF-017.md"
+  }
+]

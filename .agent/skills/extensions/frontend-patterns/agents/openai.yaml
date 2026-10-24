@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Mẫu React và state
+  short_description: Mẫu React và state cho dự án JobFind
+  default_prompt: Dùng $frontend-patterns sửa pagination tìm ứng viên.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

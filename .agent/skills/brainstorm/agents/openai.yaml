@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Phân tích ý tưởng
+  short_description: Phân tích ý tưởng cho dự án JobFind
+  default_prompt: Dùng $brainstorm phân tích trang lịch phỏng vấn tổng hợp
+    từ pipeline hiện có.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,4877 @@
+{
+  "file_key": "aASrpnjI0sgztK3QB3fxtd",
+  "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=46-647",
+  "catalog_kind": "Supplementary V2; distinct from exact native 37",
+  "snapshot_date": "2026-10-05",
+  "screens": [
+    {
+      "id": "JF2-001",
+      "key": "home",
+      "title": "Trang chủ · cơ hội và nghề nghiệp",
+      "page": "02 · Công khai",
+      "kind": "home",
+      "role": "PUBLIC",
+      "routes": [
+        "/"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-035",
+      "next": "search",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/home/home.js"
+      ],
+      "figma_node_id": "34:4",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-4",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-002",
+      "key": "search",
+      "title": "Tìm việc · kết quả và bộ lọc",
+      "page": "02 · Công khai",
+      "kind": "search",
+      "role": "PUBLIC",
+      "routes": [
+        "/job"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-036",
+      "next": "job-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/JobPage/JobPage.js"
+      ],
+      "figma_node_id": "34:193",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-193",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-003",
+      "key": "job-detail",
+      "title": "Chi tiết việc làm",
+      "page": "02 · Công khai",
+      "kind": "job-detail",
+      "role": "PUBLIC",
+      "routes": [
+        "/detail-job/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-010",
+      "next": "apply-info",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/JobDetail/JobDetail.js"
+      ],
+      "figma_node_id": "34:349",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-349",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-004",
+      "key": "external-job",
+      "title": "Việc làm từ nguồn bên ngoài",
+      "page": "02 · Công khai",
+      "kind": "external-job",
+      "role": "PUBLIC",
+      "routes": [
+        "/external-job/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "search",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/JobDetail/ExternalJobDetail.js"
+      ],
+      "figma_node_id": "34:481",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-481",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-005",
+      "key": "companies",
+      "title": "Danh sách doanh nghiệp",
+      "page": "02 · Công khai",
+      "kind": "companies",
+      "role": "PUBLIC",
+      "routes": [
+        "/company"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-007",
+      "next": "company-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Company/ListCompany.js"
+      ],
+      "figma_node_id": "34:611",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-611",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-006",
+      "key": "company-detail",
+      "title": "Chi tiết doanh nghiệp và tin tuyển dụng",
+      "page": "02 · Công khai",
+      "kind": "company-detail",
+      "role": "PUBLIC",
+      "routes": [
+        "/detail-company/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "job-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Company/DetailCompany.js"
+      ],
+      "figma_node_id": "34:701",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-701",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-007",
+      "key": "about",
+      "title": "Về JobFind",
+      "page": "02 · Công khai",
+      "kind": "about",
+      "role": "PUBLIC",
+      "routes": [
+        "/about"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "search",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/About/About.js"
+      ],
+      "figma_node_id": "34:824",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-824",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-008",
+      "key": "contact",
+      "title": "Liên hệ JobFind",
+      "page": "02 · Công khai",
+      "kind": "contact",
+      "role": "PUBLIC",
+      "routes": [
+        "/contact"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "help",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Contact/Contact.js"
+      ],
+      "figma_node_id": "34:871",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=34-871",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-009",
+      "key": "login",
+      "title": "Đăng nhập",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "login",
+      "role": "PUBLIC",
+      "routes": [
+        "/login"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-015",
+      "next": "candidate-profile",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/login/Login.js"
+      ],
+      "figma_node_id": "36:4",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-010",
+      "key": "register-role",
+      "title": "Đăng ký · chọn loại tài khoản",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "register-role",
+      "role": "PUBLIC",
+      "routes": [
+        "/register"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-028",
+      "next": "register-candidate",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/login/Register.js"
+      ],
+      "figma_node_id": "36:54",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-54",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-011",
+      "key": "register-candidate",
+      "title": "Đăng ký ứng viên · thông tin cá nhân",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "register",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "register-account",
+      "sources": [
+        "frontend/src/container/login/Register.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:86",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-86",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-012",
+      "key": "register-company",
+      "title": "Đăng ký nhà tuyển dụng",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "register",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "register-account",
+      "sources": [
+        "frontend/src/container/login/Register.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:134",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-134",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-013",
+      "key": "register-account",
+      "title": "Đăng ký · thiết lập tài khoản",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "register-account",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "register-success",
+      "sources": [
+        "frontend/src/container/login/Register.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:185",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-185",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-014",
+      "key": "register-success",
+      "title": "Đăng ký thành công",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "success",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "login",
+      "message": "Tài khoản đã được tạo. Đăng nhập để bắt đầu sử dụng JobFind.",
+      "sources": [
+        "frontend/src/container/login/Register.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:235",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-235",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-015",
+      "key": "forgot",
+      "title": "Quên mật khẩu",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "forgot",
+      "role": "PUBLIC",
+      "routes": [
+        "/forget-password"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "forgot-result",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/login/ForgetPassword.js"
+      ],
+      "figma_node_id": "36:259",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-259",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-016",
+      "key": "forgot-result",
+      "title": "Yêu cầu đặt lại mật khẩu",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "success",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "login",
+      "message": "Yêu cầu của bạn đã được tiếp nhận. Kiểm tra email nếu thông tin khớp với tài khoản.",
+      "sources": [
+        "frontend/src/container/login/ForgetPassword.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:287",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-287",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-017",
+      "key": "social-onboarding",
+      "title": "Đăng ký liên kết · hoàn thiện thông tin",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "social-onboarding",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "candidate-profile",
+      "sources": [
+        "frontend/src/container/login/Register.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:311",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-311",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-018",
+      "key": "social-error",
+      "title": "Đăng nhập liên kết chưa hoàn tất",
+      "page": "03 · Đăng nhập & đăng ký",
+      "kind": "error",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "login",
+      "message": "Chưa hoàn tất đăng nhập. Bạn có thể thử lại hoặc dùng tài khoản JobFind.",
+      "sources": [
+        "frontend/src/container/login/Login.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:354",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-354",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-019",
+      "key": "candidate-profile",
+      "title": "Hồ sơ cá nhân",
+      "page": "04 · Hồ sơ ứng viên",
+      "kind": "candidate-profile",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/info"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-009",
+      "next": "candidate-settings",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/CandidateInfo.js"
+      ],
+      "figma_node_id": "36:379",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-379",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-020",
+      "key": "candidate-settings",
+      "title": "Cài đặt hồ sơ và thông báo",
+      "page": "04 · Hồ sơ ứng viên",
+      "kind": "candidate-settings",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/usersetting"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "candidate-profile",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/SettingUser.js"
+      ],
+      "figma_node_id": "36:543",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-543",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-021",
+      "key": "candidate-password",
+      "title": "Đổi mật khẩu · ứng viên",
+      "page": "04 · Hồ sơ ứng viên",
+      "kind": "password",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/changepassword"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "security",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/system/User/ChangePassword.js"
+      ],
+      "figma_node_id": "36:695",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-695",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-022",
+      "key": "saved",
+      "title": "Việc làm đã lưu",
+      "page": "04 · Hồ sơ ứng viên",
+      "kind": "job-list",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/saved-jobs"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "job-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/SavedJobs.js"
+      ],
+      "figma_node_id": "36:813",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-813",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-023",
+      "key": "followed",
+      "title": "Việc làm đang theo dõi",
+      "page": "04 · Hồ sơ ứng viên",
+      "kind": "job-list",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/followed-jobs"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "job-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/NotificationJobs.js"
+      ],
+      "figma_node_id": "36:1002",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1002",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-024",
+      "key": "recommended",
+      "title": "Việc làm được gợi ý",
+      "page": "04 · Hồ sơ ứng viên",
+      "kind": "job-list",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/recommended-jobs"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "job-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/NotificationJobs.js"
+      ],
+      "figma_node_id": "36:1189",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1189",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-025",
+      "key": "notifications",
+      "title": "Trung tâm thông báo",
+      "page": "04 · Hồ sơ ứng viên",
+      "kind": "notifications",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/notifications"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-032",
+      "next": "applications",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/CandidateNotifications.js"
+      ],
+      "figma_node_id": "36:1376",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1376",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-026",
+      "key": "profile-edit",
+      "title": "Chỉnh sửa hồ sơ cá nhân",
+      "page": "04 · Hồ sơ ứng viên",
+      "kind": "form",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Họ",
+          "Nguyễn"
+        ],
+        [
+          "Tên",
+          "Văn An"
+        ],
+        [
+          "Email",
+          "an@example.com"
+        ],
+        [
+          "Số điện thoại",
+          "0901234567"
+        ],
+        [
+          "Địa chỉ",
+          "Hồ Chí Minh"
+        ],
+        [
+          "Ngày sinh",
+          "15/08/2000"
+        ],
+        [
+          "Giới tính",
+          "Nam"
+        ]
+      ],
+      "next": "candidate-profile",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateInfo.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:1499",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1499",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-027",
+      "key": "ai-workspace",
+      "title": "CV và trợ lý AI",
+      "page": "05 · CV & trợ lý AI",
+      "kind": "ai-workspace",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/ai-cv"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "ai-create",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "figma_node_id": "36:1637",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1637",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-028",
+      "key": "ai-create",
+      "title": "Tạo CV AI · thông tin đầu vào",
+      "page": "05 · CV & trợ lý AI",
+      "kind": "ai-create",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "ai-pending",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:1794",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1794",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-029",
+      "key": "ai-pending",
+      "title": "CV AI · đang xử lý",
+      "page": "05 · CV & trợ lý AI",
+      "kind": "ai-pending",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "cv-editor",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:1939",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-1939",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-030",
+      "key": "cv-editor",
+      "title": "Chỉnh sửa CV đã lưu",
+      "page": "05 · CV & trợ lý AI",
+      "kind": "cv-editor",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "cv-preview",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:2057",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2057",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-031",
+      "key": "cv-preview",
+      "title": "Xem trước và xuất CV PDF",
+      "page": "05 · CV & trợ lý AI",
+      "kind": "cv-preview",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "ai-workspace",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:2292",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2292",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-032",
+      "key": "ai-match",
+      "title": "Phân tích mức phù hợp với việc làm",
+      "page": "05 · CV & trợ lý AI",
+      "kind": "ai-match",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "ai-match-result",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:2414",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2414",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-033",
+      "key": "ai-match-result",
+      "title": "Kết quả phân tích CV và công việc",
+      "page": "05 · CV & trợ lý AI",
+      "kind": "ai-match-result",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "job-detail",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:2534",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2534",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-034",
+      "key": "ai-cover",
+      "title": "Thư ứng tuyển AI · bản nháp chỉnh sửa",
+      "page": "05 · CV & trợ lý AI",
+      "kind": "ai-cover",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "apply-review",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js",
+        "frontend/src/components/modal/ApplicationAiHelper.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:2652",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2652",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-035",
+      "key": "applications",
+      "title": "Danh sách hồ sơ đã nộp",
+      "page": "06 · Ứng tuyển & hồ sơ đã nộp",
+      "kind": "applications",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/cv-post"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-018",
+      "next": "application-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/ManageCvCandidate.js"
+      ],
+      "figma_node_id": "36:2774",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2774",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-036",
+      "key": "application-document",
+      "title": "Tài liệu hồ sơ đã nộp",
+      "page": "06 · Ứng tuyển & hồ sơ đã nộp",
+      "kind": "cv-preview",
+      "role": "CANDIDATE",
+      "routes": [
+        "/candidate/cv-detail/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "applications",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/system/Cv/UserCv.js"
+      ],
+      "figma_node_id": "36:2943",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-2943",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-037",
+      "key": "apply-info",
+      "title": "Ứng tuyển · 1. Thông tin liên hệ",
+      "page": "06 · Ứng tuyển & hồ sơ đã nộp",
+      "kind": "apply-info",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "apply-cv",
+      "sources": [
+        "frontend/src/components/modal/SendCvModal.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:3065",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3065",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-038",
+      "key": "apply-cv",
+      "title": "Ứng tuyển · 2. Chọn CV",
+      "page": "06 · Ứng tuyển & hồ sơ đã nộp",
+      "kind": "apply-cv",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "apply-review",
+      "sources": [
+        "frontend/src/components/modal/SendCvModal.js",
+        "frontend/src/components/modal/PreparedCvPicker.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:3152",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3152",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-039",
+      "key": "apply-review",
+      "title": "Ứng tuyển · 3. Kiểm tra hồ sơ",
+      "page": "06 · Ứng tuyển & hồ sơ đã nộp",
+      "kind": "apply-review",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "apply-success",
+      "sources": [
+        "frontend/src/components/modal/SendCvModal.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:3236",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3236",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-040",
+      "key": "apply-success",
+      "title": "Ứng tuyển thành công",
+      "page": "06 · Ứng tuyển & hồ sơ đã nộp",
+      "kind": "success",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "applications",
+      "message": "Hồ sơ đã được tiếp nhận. Bạn có thể theo dõi tiến trình trong Hồ sơ đã nộp.",
+      "sources": [
+        "frontend/src/components/modal/SendCvModal.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:3322",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3322",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-041",
+      "key": "application-detail",
+      "title": "Chi tiết và lịch sử hồ sơ ứng tuyển",
+      "page": "06 · Ứng tuyển & hồ sơ đã nộp",
+      "kind": "application-detail",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "application-document",
+      "sources": [
+        "frontend/src/container/Candidate/ManageCvCandidate.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:3346",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3346",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-042",
+      "key": "apply-upload-error",
+      "title": "Ứng tuyển · tệp không hợp lệ",
+      "page": "06 · Ứng tuyển & hồ sơ đã nộp",
+      "kind": "apply-cv",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "apply-cv",
+      "variant": "error",
+      "sources": [
+        "frontend/src/components/modal/SendCvModal.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:3475",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3475",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-043",
+      "key": "company-create",
+      "title": "Tạo hồ sơ doanh nghiệp",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "company-form",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/add-company"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "company-pending",
+      "permissions": [
+        "CREATE_COMPANY"
+      ],
+      "sources": [
+        "frontend/src/container/system/Company/AddCompany.js"
+      ],
+      "figma_node_id": "36:3560",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3560",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-044",
+      "key": "company-edit",
+      "title": "Chỉnh sửa hồ sơ doanh nghiệp",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "company-form",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/edit-company"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-005",
+      "next": "posts",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_COMPANY"
+      ],
+      "sources": [
+        "frontend/src/container/system/Company/AddCompany.js"
+      ],
+      "figma_node_id": "36:3748",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3748",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-045",
+      "key": "company-pending",
+      "title": "Doanh nghiệp · chờ xét duyệt",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "company-pending",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "company-edit",
+      "sources": [
+        "frontend/src/auth/accessControl.js",
+        "frontend/src/container/system/Company/AddCompany.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:3936",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-3936",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-046",
+      "key": "posts",
+      "title": "Quản lý tin tuyển dụng",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "posts",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/list-post",
+        "/admin/list-post/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "post-create",
+      "permissions": [
+        "MANAGE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/ManagePost.js"
+      ],
+      "figma_node_id": "36:4075",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4075",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-047",
+      "key": "post-create",
+      "title": "Đăng tin · thông tin và tiêu chí",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "post-form",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/add-post"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-021",
+      "next": "post-content",
+      "permissions": [
+        "MANAGE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/AddPost.js"
+      ],
+      "figma_node_id": "36:4279",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4279",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-048",
+      "key": "post-edit",
+      "title": "Chỉnh sửa tin tuyển dụng",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "post-form",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/edit-post/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "edit",
+      "next": "post-content",
+      "permissions": [
+        "MANAGE_POSTS",
+        "MODERATE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/AddPost.js"
+      ],
+      "figma_node_id": "36:4480",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4480",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-049",
+      "key": "post-content",
+      "title": "Đăng tin · mô tả và quyền lợi",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "post-content",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "post-preview",
+      "sources": [
+        "frontend/src/container/system/Post/AddPost.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:4681",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4681",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-050",
+      "key": "post-preview",
+      "title": "Đăng tin · xem trước và gửi duyệt",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "post-preview",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "posts",
+      "sources": [
+        "frontend/src/container/system/Post/AddPost.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:4847",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-4847",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-051",
+      "key": "team",
+      "title": "Quản lý nhân sự tuyển dụng",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "team",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/list-employer"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "team-invite",
+      "permissions": [
+        "MANAGE_TEAM"
+      ],
+      "sources": [
+        "frontend/src/container/system/Company/ManageEmployer.js"
+      ],
+      "figma_node_id": "36:5035",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5035",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-052",
+      "key": "team-invite",
+      "title": "Thêm nhân viên bằng tài khoản đã có",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "team-invite",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/recruitment"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "team",
+      "permissions": [
+        "MANAGE_TEAM"
+      ],
+      "sources": [
+        "frontend/src/container/system/Company/Recruitment.js"
+      ],
+      "figma_node_id": "36:5194",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5194",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-053",
+      "key": "team-create",
+      "title": "Tạo tài khoản nhân viên",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "user-form",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Họ",
+          "Trần"
+        ],
+        [
+          "Tên",
+          "Minh Anh"
+        ],
+        [
+          "Email",
+          "minhanh@example.com"
+        ],
+        [
+          "Số điện thoại",
+          "0902345678"
+        ],
+        [
+          "Quyền",
+          "EMPLOYER"
+        ],
+        [
+          "Địa chỉ",
+          "Hồ Chí Minh"
+        ]
+      ],
+      "next": "team",
+      "sources": [
+        "frontend/src/container/system/User/AddUser.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:5343",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5343",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-054",
+      "key": "talent-search",
+      "title": "Tìm kiếm và lọc ứng viên",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "talent-search",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/list-candiate"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-012",
+      "next": "talent-detail",
+      "permissions": [
+        "MANAGE_CANDIDATES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Cv/FilterCv.js"
+      ],
+      "figma_node_id": "36:5501",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5501",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-055",
+      "key": "talent-detail",
+      "title": "Hồ sơ ứng viên trong kho",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "talent-detail",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/candiate/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "pipeline",
+      "permissions": [
+        "MANAGE_CANDIDATES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Cv/DetailFilterUser.js"
+      ],
+      "figma_node_id": "36:5699",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5699",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-056",
+      "key": "post-applications",
+      "title": "Hồ sơ ứng tuyển theo tin",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "post-applications",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/list-cv/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "pipeline",
+      "permissions": [
+        "MANAGE_CANDIDATES",
+        "MODERATE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Cv/ManageCv.js"
+      ],
+      "figma_node_id": "36:5855",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-5855",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-057",
+      "key": "post-notes",
+      "title": "Ghi chú tin tuyển dụng",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "post-notes",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/note/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "posts",
+      "permissions": [
+        "MANAGE_POSTS",
+        "MODERATE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/NotePost.js"
+      ],
+      "figma_node_id": "36:6013",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6013",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-058",
+      "key": "talent-document",
+      "title": "Xem CV ứng viên",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "cv-preview",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/user-cv/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "talent-detail",
+      "permissions": [
+        "MANAGE_CANDIDATES",
+        "MODERATE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Cv/UserCv.js"
+      ],
+      "figma_node_id": "36:6157",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6157",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-059",
+      "key": "employer-profile",
+      "title": "Thông tin tài khoản tuyển dụng",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "form",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/user-info"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Họ",
+          "Trần"
+        ],
+        [
+          "Tên",
+          "Minh Anh"
+        ],
+        [
+          "Email",
+          "minhanh@example.com"
+        ],
+        [
+          "Số điện thoại",
+          "0902345678"
+        ],
+        [
+          "Địa chỉ",
+          "Hồ Chí Minh"
+        ]
+      ],
+      "next": "security",
+      "permissions": [
+        "MANAGE_PROFILE"
+      ],
+      "sources": [
+        "frontend/src/container/system/User/UserInfo.js"
+      ],
+      "figma_node_id": "36:6300",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6300",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-060",
+      "key": "employer-password",
+      "title": "Đổi mật khẩu · nhà tuyển dụng",
+      "page": "07 · Không gian doanh nghiệp",
+      "kind": "password",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/changepassword"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "security",
+      "permissions": [
+        "MANAGE_PROFILE"
+      ],
+      "sources": [
+        "frontend/src/container/system/User/ChangePassword.js"
+      ],
+      "figma_node_id": "36:6449",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6449",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-061",
+      "key": "pipeline",
+      "title": "Pipeline · 6 giai đoạn tuyển dụng",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "pipeline",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/pipeline"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-025",
+      "next": "pipeline-detail",
+      "permissions": [
+        "MANAGE_CANDIDATES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Cv/KanbanBoard.js"
+      ],
+      "figma_node_id": "36:6589",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6589",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-062",
+      "key": "pipeline-detail",
+      "title": "Chi tiết ứng viên · ghi chú và đánh giá",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "pipeline-detail",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "interview-form",
+      "sources": [
+        "frontend/src/container/system/Cv/KanbanBoard.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:6805",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6805",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-063",
+      "key": "interview-form",
+      "title": "Soạn thư mời phỏng vấn",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "interview-form",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "interview-preview",
+      "sources": [
+        "frontend/src/container/system/Cv/InterviewInvitationForm.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:6991",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-6991",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-064",
+      "key": "interview-preview",
+      "title": "Xem trước thư mời phỏng vấn",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "mail-preview",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "interview",
+      "next": "mail-queued",
+      "sources": [
+        "frontend/src/container/system/Cv/InterviewInvitationForm.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:7185",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7185",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-065",
+      "key": "offer-form",
+      "title": "Soạn thư mời nhận việc",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "offer-form",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "offer-preview",
+      "sources": [
+        "frontend/src/container/system/Cv/OfferLetterForm.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:7340",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7340",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-066",
+      "key": "offer-preview",
+      "title": "Xem trước thư mời nhận việc",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "mail-preview",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "offer",
+      "next": "mail-queued",
+      "sources": [
+        "frontend/src/container/system/Cv/OfferLetterForm.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:7556",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7556",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-067",
+      "key": "mail-queued",
+      "title": "Thư tuyển dụng · đã vào hàng đợi",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "success",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "pipeline",
+      "message": "Thao tác đã được ghi nhận và thư đã vào hàng đợi. Trạng thái gửi sẽ được cập nhật khi có kết quả.",
+      "sources": [
+        "frontend/src/container/system/Cv/KanbanBoard.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:7711",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7711",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-068",
+      "key": "reject",
+      "title": "Từ chối hồ sơ · xem lại nội dung",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "rejection",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "pipeline",
+      "sources": [
+        "frontend/src/container/system/Cv/KanbanBoard.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:7744",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7744",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-069",
+      "key": "hire",
+      "title": "Xác nhận ứng viên đã nhận việc",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "hire",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "pipeline",
+      "sources": [
+        "frontend/src/container/system/Cv/KanbanBoard.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:7896",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-7896",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-070",
+      "key": "ai-screening",
+      "title": "Sàng lọc AI · đề xuất để HR kiểm tra",
+      "page": "08 · Pipeline & thư tuyển dụng",
+      "kind": "ai-screening",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "pipeline-detail",
+      "sources": [
+        "frontend/src/container/system/Cv/KanbanBoard.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:8053",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8053",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-071",
+      "key": "buy-post",
+      "title": "Mua gói đăng tin",
+      "page": "09 · Gói & giao dịch",
+      "kind": "buy-package",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/buy-post"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "post",
+      "next": "payment-success",
+      "permissions": [
+        "PURCHASE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/BuyPost.js"
+      ],
+      "figma_node_id": "36:8916",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8916",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-072",
+      "key": "buy-cv",
+      "title": "Mua lượt xem CV",
+      "page": "09 · Gói & giao dịch",
+      "kind": "buy-package",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/buy-cv"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "cv",
+      "next": "payment-cv-success",
+      "permissions": [
+        "PURCHASE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PackageCv/BuyCv.js"
+      ],
+      "figma_node_id": "36:9088",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9088",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-073",
+      "key": "payment-success",
+      "title": "Thanh toán gói đăng tin · thành công",
+      "page": "09 · Gói & giao dịch",
+      "kind": "payment-result",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/payment/success"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "posts",
+      "variant": "success",
+      "permissions": [
+        "PURCHASE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/BuySucces.js"
+      ],
+      "figma_node_id": "36:9260",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9260",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-074",
+      "key": "payment-cancel",
+      "title": "Thanh toán gói đăng tin · đã hủy",
+      "page": "09 · Gói & giao dịch",
+      "kind": "payment-result",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/payment/cancel"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "buy-post",
+      "variant": "cancel",
+      "permissions": [
+        "PURCHASE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PaymentCancelled.js"
+      ],
+      "figma_node_id": "36:9400",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9400",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-075",
+      "key": "payment-cv-success",
+      "title": "Thanh toán gói CV · thành công",
+      "page": "09 · Gói & giao dịch",
+      "kind": "payment-result",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/paymentCv/success"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "talent-search",
+      "variant": "success",
+      "permissions": [
+        "PURCHASE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PackageCv/BuySuccesCv.js"
+      ],
+      "figma_node_id": "36:9531",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9531",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-076",
+      "key": "payment-cv-cancel",
+      "title": "Thanh toán gói CV · đã hủy",
+      "page": "09 · Gói & giao dịch",
+      "kind": "payment-result",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/paymentCv/cancel"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "buy-cv",
+      "variant": "cancel",
+      "permissions": [
+        "PURCHASE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PaymentCancelled.js"
+      ],
+      "figma_node_id": "36:9671",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9671",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-077",
+      "key": "history-post",
+      "title": "Lịch sử mua gói đăng tin",
+      "page": "09 · Gói & giao dịch",
+      "kind": "history",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/history-post"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "post",
+      "next": "transaction-detail",
+      "permissions": [
+        "VIEW_TRANSACTIONS"
+      ],
+      "sources": [
+        "frontend/src/container/system/HistoryTrade/HistoryTradePost.js"
+      ],
+      "figma_node_id": "36:9802",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9802",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-078",
+      "key": "history-cv",
+      "title": "Lịch sử mua lượt xem CV",
+      "page": "09 · Gói & giao dịch",
+      "kind": "history",
+      "role": "COMPANY",
+      "routes": [
+        "/admin/history-cv"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "cv",
+      "next": "transaction-detail",
+      "permissions": [
+        "VIEW_TRANSACTIONS"
+      ],
+      "sources": [
+        "frontend/src/container/system/HistoryTrade/HistoryTradeCv.js"
+      ],
+      "figma_node_id": "36:9966",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-9966",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-079",
+      "key": "transaction-detail",
+      "title": "Chi tiết giao dịch và hạn mức",
+      "page": "09 · Gói & giao dịch",
+      "kind": "transaction-detail",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "history-post",
+      "sources": [
+        "frontend/src/container/system/HistoryTrade/HistoryTradePost.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:10130",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10130",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-080",
+      "key": "chat-list",
+      "title": "Tin nhắn · danh sách hội thoại",
+      "page": "10 · Chat tuyển dụng",
+      "kind": "chat-list",
+      "role": "CANDIDATE",
+      "routes": [
+        "/chat",
+        "/admin/chat"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "chat-thread",
+      "permissions": [
+        "USE_CHAT"
+      ],
+      "sources": [
+        "frontend/src/container/Chat/ChatPage.js"
+      ],
+      "figma_node_id": "36:8206",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8206",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-081",
+      "key": "chat-thread",
+      "title": "Tin nhắn · hội thoại đang mở",
+      "page": "10 · Chat tuyển dụng",
+      "kind": "chat-thread",
+      "role": "CANDIDATE",
+      "routes": [
+        "/chat/:partnerId",
+        "/admin/chat/:partnerId"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-031",
+      "next": "chat-pdf",
+      "permissions": [
+        "USE_CHAT"
+      ],
+      "sources": [
+        "frontend/src/container/Chat/ChatPage.js"
+      ],
+      "figma_node_id": "36:8328",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8328",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-082",
+      "key": "chat-pdf",
+      "title": "Tin nhắn · xem tài liệu PDF",
+      "page": "10 · Chat tuyển dụng",
+      "kind": "chat-pdf",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "chat-thread",
+      "sources": [
+        "frontend/src/container/Chat/ChatPage.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:8476",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8476",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-083",
+      "key": "chat-share-job",
+      "title": "Tin nhắn · chia sẻ việc làm",
+      "page": "10 · Chat tuyển dụng",
+      "kind": "chat-share-job",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "chat-thread",
+      "sources": [
+        "frontend/src/container/Chat/ChatPage.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:8604",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8604",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-084",
+      "key": "chat-reconnect",
+      "title": "Tin nhắn · kết nối lại và gửi thất bại",
+      "page": "10 · Chat tuyển dụng",
+      "kind": "chat-thread",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "error",
+      "next": "chat-thread",
+      "sources": [
+        "frontend/src/container/Chat/ChatPage.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:8758",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-8758",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-085",
+      "key": "help",
+      "title": "Hướng dẫn và câu hỏi thường gặp",
+      "page": "11 · Hỗ trợ người dùng",
+      "kind": "help",
+      "role": "PUBLIC",
+      "routes": [
+        "/support/help"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-widget",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "36:10290",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10290",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-086",
+      "key": "support-widget",
+      "title": "Trợ lý hỗ trợ · trò chuyện và gợi ý",
+      "page": "11 · Hỗ trợ người dùng",
+      "kind": "support-widget",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-handoff",
+      "sources": [
+        "frontend/src/components/support/SupportChat.jsx"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:10372",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10372",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-087",
+      "key": "support-history",
+      "title": "Trợ lý hỗ trợ · lịch sử hội thoại",
+      "page": "11 · Hỗ trợ người dùng",
+      "kind": "support-history",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-widget",
+      "sources": [
+        "frontend/src/components/support/SupportChat.jsx"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:10441",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10441",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-088",
+      "key": "support-handoff",
+      "title": "Chia sẻ hội thoại cho nhân viên",
+      "page": "11 · Hỗ trợ người dùng",
+      "kind": "support-handoff",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-chat",
+      "sources": [
+        "frontend/src/components/support/SupportChat.jsx"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:10570",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10570",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-089",
+      "key": "support-chat",
+      "title": "Trao đổi với nhân viên hỗ trợ",
+      "page": "11 · Hỗ trợ người dùng",
+      "kind": "chat-thread",
+      "role": "CANDIDATE",
+      "routes": [
+        "/support/chat",
+        "/support/chat/:partnerId"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-widget",
+      "permissions": [
+        "SUPPORT_USE"
+      ],
+      "sources": [
+        "frontend/src/container/Chat/ChatPage.js"
+      ],
+      "figma_node_id": "36:10691",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10691",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-090",
+      "key": "support-inbox",
+      "title": "Quản trị · yêu cầu hỗ trợ chatbot",
+      "page": "11 · Hỗ trợ người dùng",
+      "kind": "support-inbox",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/support"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-ticket",
+      "permissions": [
+        "SUPPORT_MANAGE"
+      ],
+      "sources": [
+        "frontend/src/components/support/SupportInbox.jsx"
+      ],
+      "figma_node_id": "36:10839",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-10839",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-091",
+      "key": "support-ticket",
+      "title": "Quản trị · xử lý yêu cầu hỗ trợ",
+      "page": "11 · Hỗ trợ người dùng",
+      "kind": "support-ticket",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-inbox",
+      "sources": [
+        "frontend/src/components/support/SupportInbox.jsx"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:11008",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11008",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-092",
+      "key": "admin-dashboard",
+      "title": "Tổng quan quản trị",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "admin-dashboard",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-002",
+      "next": "reports",
+      "permissions": [
+        "VIEW_ADMIN_HOME"
+      ],
+      "sources": [
+        "frontend/src/container/system/Home.js"
+      ],
+      "figma_node_id": "36:11166",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11166",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-093",
+      "key": "reports",
+      "title": "Báo cáo nền tảng",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "reports",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/reports"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "chart-post",
+      "permissions": [
+        "VIEW_PLATFORM_REPORTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Report/ReportDashboard.js"
+      ],
+      "figma_node_id": "36:11363",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11363",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-094",
+      "key": "chart-post",
+      "title": "Thống kê giao dịch gói đăng tin",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "chart",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/sum-by-year-post"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "post",
+      "next": "reports",
+      "permissions": [
+        "VIEW_PLATFORM_REPORTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Chart/ChartPost.js"
+      ],
+      "figma_node_id": "36:11545",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11545",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-095",
+      "key": "chart-cv",
+      "title": "Thống kê giao dịch gói CV",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "chart",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/sum-by-year-cv"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "cv",
+      "next": "reports",
+      "permissions": [
+        "VIEW_PLATFORM_REPORTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Chart/ChartCv.js"
+      ],
+      "figma_node_id": "36:11732",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11732",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-096",
+      "key": "users",
+      "title": "Quản lý người dùng",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "users",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-user"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-027",
+      "next": "user-create",
+      "permissions": [
+        "MANAGE_USERS"
+      ],
+      "sources": [
+        "frontend/src/container/system/User/ManageUser.js"
+      ],
+      "figma_node_id": "36:11919",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-11919",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-097",
+      "key": "user-create",
+      "title": "Thêm tài khoản người dùng",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "user-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/add-user"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Họ",
+          "Nguyễn"
+        ],
+        [
+          "Tên",
+          "Văn An"
+        ],
+        [
+          "Email",
+          "an@example.com"
+        ],
+        [
+          "Số điện thoại",
+          "0901234567"
+        ],
+        [
+          "Giới tính",
+          "Nam"
+        ],
+        [
+          "Ngày sinh",
+          "15/08/2000"
+        ],
+        [
+          "Địa chỉ",
+          "Hồ Chí Minh"
+        ],
+        [
+          "Quyền",
+          "CANDIDATE"
+        ]
+      ],
+      "next": "users",
+      "permissions": [
+        "MANAGE_TEAM",
+        "MANAGE_USERS"
+      ],
+      "sources": [
+        "frontend/src/container/system/User/AddUser.js"
+      ],
+      "figma_node_id": "36:12091",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12091",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-098",
+      "key": "user-edit",
+      "title": "Chỉnh sửa tài khoản người dùng",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "user-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-user/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Họ",
+          "Nguyễn"
+        ],
+        [
+          "Tên",
+          "Văn An"
+        ],
+        [
+          "Email",
+          "an@example.com"
+        ],
+        [
+          "Số điện thoại",
+          "0901234567"
+        ],
+        [
+          "Giới tính",
+          "Nam"
+        ],
+        [
+          "Địa chỉ",
+          "Hồ Chí Minh"
+        ],
+        [
+          "Quyền",
+          "CANDIDATE"
+        ]
+      ],
+      "variant": "edit",
+      "next": "users",
+      "permissions": [
+        "MANAGE_TEAM",
+        "MANAGE_USERS"
+      ],
+      "sources": [
+        "frontend/src/container/system/User/AddUser.js"
+      ],
+      "figma_node_id": "36:12250",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12250",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-099",
+      "key": "companies-review",
+      "title": "Quản lý và xét duyệt doanh nghiệp",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "companies-review",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-company-admin"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-037",
+      "next": "company-review",
+      "permissions": [
+        "MODERATE_COMPANIES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Company/ManageCompany.js"
+      ],
+      "figma_node_id": "36:12400",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12400",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-100",
+      "key": "company-review",
+      "title": "Chi tiết hồ sơ xác thực doanh nghiệp",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "company-review",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "companies-review",
+      "sources": [
+        "frontend/src/container/system/Company/ManageCompany.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:12561",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12561",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-101",
+      "key": "admin-company-edit",
+      "title": "Chỉnh sửa doanh nghiệp · quản trị",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "company-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-company-admin/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "edit",
+      "next": "companies-review",
+      "permissions": [
+        "MODERATE_COMPANIES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Company/AddCompany.js"
+      ],
+      "figma_node_id": "36:12723",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12723",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-102",
+      "key": "jobs-review",
+      "title": "Kiểm duyệt tin tuyển dụng",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "jobs-review",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-post-admin"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-011",
+      "next": "job-review",
+      "permissions": [
+        "MODERATE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/ManagePost.js"
+      ],
+      "figma_node_id": "36:12903",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-12903",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-103",
+      "key": "job-review",
+      "title": "Chi tiết tin · quyết định kiểm duyệt",
+      "page": "12 · Quản trị nền tảng",
+      "kind": "job-review",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "jobs-review",
+      "sources": [
+        "frontend/src/container/system/Post/ManagePost.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:13066",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13066",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-104",
+      "key": "list-job-type",
+      "title": "Danh mục · Ngành nghề",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-list",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-job-type"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-job-type",
+      "rows": [
+        [
+          "Công nghệ thông tin",
+          "IT"
+        ],
+        [
+          "Kinh doanh / Bán hàng",
+          "SALES"
+        ],
+        [
+          "Marketing",
+          "MARKETING"
+        ],
+        [
+          "Tài chính / Kế toán",
+          "FINANCE"
+        ]
+      ],
+      "code": "JOBTYPE",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobType/ManageJobType.js"
+      ],
+      "figma_node_id": "36:14696",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14696",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-105",
+      "key": "add-job-type",
+      "title": "Thêm ngành nghề",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/add-job-type"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên ngành nghề",
+          "Nhập ngành nghề"
+        ],
+        [
+          "Mã code",
+          "Tự sinh từ tên"
+        ],
+        [
+          "Ảnh ngành nghề",
+          "Tự sinh từ tên"
+        ]
+      ],
+      "next": "list-job-type",
+      "code": "JOBTYPE",
+      "variant": "add",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobType/AddJobType.js"
+      ],
+      "figma_node_id": "36:14856",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14856",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-106",
+      "key": "edit-job-type",
+      "title": "Chỉnh sửa ngành nghề",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-job-type/:code"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên ngành nghề",
+          "Công nghệ thông tin"
+        ],
+        [
+          "Mã code",
+          "IT"
+        ],
+        [
+          "Ảnh ngành nghề",
+          "IT"
+        ]
+      ],
+      "next": "list-job-type",
+      "code": "JOBTYPE",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobType/AddJobType.js"
+      ],
+      "figma_node_id": "36:14990",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14990",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-107",
+      "key": "list-job-skill",
+      "title": "Danh mục · Kỹ năng",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-list",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-job-skill"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-job-skill",
+      "rows": [
+        [
+          "React",
+          "Công nghệ thông tin"
+        ],
+        [
+          "JavaScript",
+          "Công nghệ thông tin"
+        ],
+        [
+          "Phân tích dữ liệu",
+          "Công nghệ thông tin"
+        ],
+        [
+          "Giao tiếp",
+          "Kinh doanh"
+        ]
+      ],
+      "code": "JOBSKILL",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobSkill/ManageJobSkill.js"
+      ],
+      "figma_node_id": "36:15124",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15124",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-108",
+      "key": "add-job-skill",
+      "title": "Thêm kỹ năng",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/add-job-skill"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên kỹ năng",
+          "Nhập kỹ năng"
+        ],
+        [
+          "Lĩnh vực",
+          "Nhập mã code"
+        ]
+      ],
+      "next": "list-job-skill",
+      "code": "JOBSKILL",
+      "variant": "add",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobSkill/AddJobSkill.js"
+      ],
+      "figma_node_id": "36:15284",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15284",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-109",
+      "key": "edit-job-skill",
+      "title": "Chỉnh sửa kỹ năng",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-job-skill/:code"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên kỹ năng",
+          "React"
+        ],
+        [
+          "Lĩnh vực",
+          "Công nghệ thông tin"
+        ]
+      ],
+      "next": "list-job-skill",
+      "code": "JOBSKILL",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobSkill/AddJobSkill.js"
+      ],
+      "figma_node_id": "36:15411",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15411",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-110",
+      "key": "list-job-level",
+      "title": "Danh mục · Cấp bậc",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-list",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-job-level"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-job-level",
+      "rows": [
+        [
+          "Nhân viên",
+          "JUNIOR"
+        ],
+        [
+          "Chuyên viên",
+          "SENIOR"
+        ],
+        [
+          "Trưởng nhóm",
+          "LEAD"
+        ],
+        [
+          "Quản lý",
+          "MANAGER"
+        ]
+      ],
+      "code": "JOBLEVEL",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobLevel/ManageJobLevel.js"
+      ],
+      "figma_node_id": "36:15538",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15538",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-111",
+      "key": "add-job-level",
+      "title": "Thêm cấp bậc",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/add-job-level"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên cấp bậc",
+          "Nhập cấp bậc"
+        ],
+        [
+          "Mã code",
+          "Nhập mã code"
+        ]
+      ],
+      "next": "list-job-level",
+      "code": "JOBLEVEL",
+      "variant": "add",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobLevel/AddJobLevel.js"
+      ],
+      "figma_node_id": "36:15698",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15698",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-112",
+      "key": "edit-job-level",
+      "title": "Chỉnh sửa cấp bậc",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-job-level/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên cấp bậc",
+          "Nhân viên"
+        ],
+        [
+          "Mã code",
+          "JUNIOR"
+        ]
+      ],
+      "next": "list-job-level",
+      "code": "JOBLEVEL",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobLevel/AddJobLevel.js"
+      ],
+      "figma_node_id": "36:15825",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15825",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-113",
+      "key": "list-work-type",
+      "title": "Danh mục · Hình thức làm việc",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-list",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-work-type"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-work-type",
+      "rows": [
+        [
+          "Toàn thời gian",
+          "FULLTIME"
+        ],
+        [
+          "Bán thời gian",
+          "PARTTIME"
+        ],
+        [
+          "Thực tập",
+          "INTERN"
+        ],
+        [
+          "Hợp đồng",
+          "CONTRACT"
+        ]
+      ],
+      "code": "WORKTYPE",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/WorkType/ManageWorkType.js"
+      ],
+      "figma_node_id": "36:15952",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-15952",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-114",
+      "key": "add-work-type",
+      "title": "Thêm hình thức làm việc",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/add-work-type"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên hình thức làm việc",
+          "Nhập hình thức làm việc"
+        ],
+        [
+          "Mã code",
+          "Nhập mã code"
+        ]
+      ],
+      "next": "list-work-type",
+      "code": "WORKTYPE",
+      "variant": "add",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/WorkType/AddWorkType.js"
+      ],
+      "figma_node_id": "36:16112",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16112",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-115",
+      "key": "edit-work-type",
+      "title": "Chỉnh sửa hình thức làm việc",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-work-type/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên hình thức làm việc",
+          "Toàn thời gian"
+        ],
+        [
+          "Mã code",
+          "FULLTIME"
+        ]
+      ],
+      "next": "list-work-type",
+      "code": "WORKTYPE",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/WorkType/AddWorkType.js"
+      ],
+      "figma_node_id": "36:16239",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16239",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-116",
+      "key": "list-salary-type",
+      "title": "Danh mục · Khoảng lương",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-list",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-salary-type"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-salary-type",
+      "rows": [
+        [
+          "10–15 triệu",
+          "SALARY10"
+        ],
+        [
+          "15–25 triệu",
+          "SALARY15"
+        ],
+        [
+          "25–40 triệu",
+          "SALARY25"
+        ],
+        [
+          "Thỏa thuận",
+          "NEGOTIATE"
+        ]
+      ],
+      "code": "SALARYTYPE",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/SalaryType/ManageSalaryType.js"
+      ],
+      "figma_node_id": "36:16366",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16366",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-117",
+      "key": "add-salary-type",
+      "title": "Thêm khoảng lương",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/add-salary-type"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên khoảng lương",
+          "Nhập khoảng lương"
+        ],
+        [
+          "Mã code",
+          "Nhập mã code"
+        ]
+      ],
+      "next": "list-salary-type",
+      "code": "SALARYTYPE",
+      "variant": "add",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/SalaryType/AddSalaryType.js"
+      ],
+      "figma_node_id": "36:16526",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16526",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-118",
+      "key": "edit-salary-type",
+      "title": "Chỉnh sửa khoảng lương",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-salary-type/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên khoảng lương",
+          "10–15 triệu"
+        ],
+        [
+          "Mã code",
+          "SALARY10"
+        ]
+      ],
+      "next": "list-salary-type",
+      "code": "SALARYTYPE",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/SalaryType/AddSalaryType.js"
+      ],
+      "figma_node_id": "36:16653",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16653",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-119",
+      "key": "list-exp-type",
+      "title": "Danh mục · Kinh nghiệm",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-list",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-exp-type"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-exp-type",
+      "rows": [
+        [
+          "Không yêu cầu",
+          "EXP0"
+        ],
+        [
+          "Dưới 1 năm",
+          "EXP1"
+        ],
+        [
+          "1–3 năm",
+          "EXP2"
+        ],
+        [
+          "3–5 năm",
+          "EXP3"
+        ]
+      ],
+      "code": "EXPTYPE",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/ExpType/ManageExpType.js"
+      ],
+      "figma_node_id": "36:16780",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16780",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-120",
+      "key": "add-exp-type",
+      "title": "Thêm kinh nghiệm",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/add-exp-type"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên khoảng kinh nghiệm",
+          "Nhập kinh nghiệm"
+        ],
+        [
+          "Mã code",
+          "Nhập mã code"
+        ]
+      ],
+      "next": "list-exp-type",
+      "code": "EXPTYPE",
+      "variant": "add",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/ExpType/AddExpType.js"
+      ],
+      "figma_node_id": "36:16940",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-16940",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-121",
+      "key": "edit-exp-type",
+      "title": "Chỉnh sửa kinh nghiệm",
+      "page": "13 · Dữ liệu danh mục",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-exp-type/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên khoảng kinh nghiệm",
+          "Không yêu cầu"
+        ],
+        [
+          "Mã code",
+          "EXP0"
+        ]
+      ],
+      "next": "list-exp-type",
+      "code": "EXPTYPE",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/ExpType/AddExpType.js"
+      ],
+      "figma_node_id": "36:17067",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17067",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-122",
+      "key": "list-package-post",
+      "title": "Quản lý gói đăng tin",
+      "page": "14 · Quản lý gói dịch vụ",
+      "kind": "package-list",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-package-post"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-package-post",
+      "rows": [
+        [
+          "Gói 10 tin",
+          "10 tin",
+          "20 USD",
+          "Thường"
+        ],
+        [
+          "Gói 30 tin",
+          "30 tin",
+          "50 USD",
+          "Thường"
+        ],
+        [
+          "Gói 10 tin nổi bật",
+          "10 tin",
+          "40 USD",
+          "Nổi bật"
+        ]
+      ],
+      "permissions": [
+        "MANAGE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PackagePost/ManagePackagePost.js"
+      ],
+      "figma_node_id": "36:13230",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13230",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-123",
+      "key": "add-package-post",
+      "title": "Thêm gói đăng tin",
+      "page": "14 · Quản lý gói dịch vụ",
+      "kind": "package-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/add-package-post"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên gói",
+          "Nhập tên gói"
+        ],
+        [
+          "Giá trị",
+          "Số tin / lượt CV"
+        ],
+        [
+          "Giá (USD)",
+          "0.00"
+        ],
+        [
+          "Loại bài viết",
+          "Thường / Nổi bật"
+        ]
+      ],
+      "next": "list-package-post",
+      "variant": "add",
+      "permissions": [
+        "MANAGE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PackagePost/AddPackagePost.js"
+      ],
+      "figma_node_id": "36:13386",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13386",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-124",
+      "key": "edit-package-post",
+      "title": "Chỉnh sửa gói đăng tin",
+      "page": "14 · Quản lý gói dịch vụ",
+      "kind": "package-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-package-post/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên gói",
+          "Gói 10 tin"
+        ],
+        [
+          "Giá trị",
+          "10 tin"
+        ],
+        [
+          "Giá (USD)",
+          "20 USD"
+        ],
+        [
+          "Loại bài viết",
+          "Thường"
+        ]
+      ],
+      "next": "list-package-post",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PackagePost/AddPackagePost.js"
+      ],
+      "figma_node_id": "36:13525",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13525",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-125",
+      "key": "list-package-cv",
+      "title": "Quản lý gói lượt xem CV",
+      "page": "14 · Quản lý gói dịch vụ",
+      "kind": "package-list",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/list-package-cv"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-package-cv",
+      "rows": [
+        [
+          "CV 20",
+          "20 lượt",
+          "10 USD",
+          "Đang bán"
+        ],
+        [
+          "CV 50",
+          "50 lượt",
+          "20 USD",
+          "Đang bán"
+        ],
+        [
+          "CV 100",
+          "100 lượt",
+          "35 USD",
+          "Đang bán"
+        ]
+      ],
+      "permissions": [
+        "MANAGE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PackageCv/ManagePackageCv.js"
+      ],
+      "figma_node_id": "36:13664",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13664",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-126",
+      "key": "add-package-cv",
+      "title": "Thêm gói lượt xem CV",
+      "page": "14 · Quản lý gói dịch vụ",
+      "kind": "package-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/add-package-cv"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên gói",
+          "Nhập tên gói"
+        ],
+        [
+          "Giá trị",
+          "Số tin / lượt CV"
+        ],
+        [
+          "Giá (USD)",
+          "0.00"
+        ]
+      ],
+      "next": "list-package-cv",
+      "variant": "add",
+      "permissions": [
+        "MANAGE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PackageCv/AddPackageCv.js"
+      ],
+      "figma_node_id": "36:13820",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13820",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-127",
+      "key": "edit-package-cv",
+      "title": "Chỉnh sửa gói lượt xem CV",
+      "page": "14 · Quản lý gói dịch vụ",
+      "kind": "package-form",
+      "role": "ADMIN",
+      "routes": [
+        "/admin/edit-package-cv/:id"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên gói",
+          "CV 20"
+        ],
+        [
+          "Giá trị",
+          "20 lượt"
+        ],
+        [
+          "Giá (USD)",
+          "10 USD"
+        ]
+      ],
+      "next": "list-package-cv",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PackageCv/AddPackageCv.js"
+      ],
+      "figma_node_id": "36:13955",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-13955",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-128",
+      "key": "security",
+      "title": "Bảo mật và tài khoản liên kết",
+      "page": "15 · Bảo mật tài khoản",
+      "kind": "security",
+      "role": "CANDIDATE",
+      "routes": [
+        "/account/security"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "security-sessions",
+      "permissions": [
+        "MANAGE_PROFILE"
+      ],
+      "sources": [],
+      "figma_node_id": "36:14091",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14091",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-129",
+      "key": "security-sessions",
+      "title": "Thiết bị và phiên đăng nhập",
+      "page": "15 · Bảo mật tài khoản",
+      "kind": "security-sessions",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "session-confirm",
+      "sources": [
+        "frontend/src/auth/SecuritySettings.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:14226",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14226",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-130",
+      "key": "security-history",
+      "title": "Lịch sử bảo mật",
+      "page": "15 · Bảo mật tài khoản",
+      "kind": "security-history",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "security",
+      "sources": [
+        "frontend/src/auth/SecuritySettings.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:14349",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14349",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-131",
+      "key": "link-confirm",
+      "title": "Liên kết tài khoản · xác minh mật khẩu",
+      "page": "15 · Bảo mật tài khoản",
+      "kind": "link-confirm",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "security",
+      "sources": [
+        "frontend/src/auth/SecuritySettings.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:14473",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14473",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-132",
+      "key": "session-confirm",
+      "title": "Đăng xuất phiên · xác nhận",
+      "page": "15 · Bảo mật tài khoản",
+      "kind": "session-confirm",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "security-sessions",
+      "sources": [
+        "frontend/src/auth/SecuritySettings.js"
+      ],
+      "permissions": [],
+      "figma_node_id": "36:14582",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-14582",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-133",
+      "key": "forbidden",
+      "title": "403 · quyền truy cập",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "error",
+      "role": "CANDIDATE",
+      "routes": [
+        "/forbidden"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "message": "Bạn chưa có quyền truy cập nội dung này. Chọn trang phù hợp với tài khoản của bạn.",
+      "next": "candidate-profile",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Forbidden/Forbidden.js"
+      ],
+      "figma_node_id": "36:17195",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17195",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-134",
+      "key": "not-found",
+      "title": "404 · không tìm thấy trang",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "error",
+      "role": "PUBLIC",
+      "routes": [
+        "*"
+      ],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "message": "Trang bạn tìm có thể đã thay đổi. Hãy quay lại trang chủ hoặc tìm việc làm mới.",
+      "next": "home",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/NotFound/NotFound.js"
+      ],
+      "figma_node_id": "36:17304",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17304",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-135",
+      "key": "search-empty",
+      "title": "Tìm việc · không có kết quả",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "empty",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "search",
+      "message": "Thử thay đổi từ khóa hoặc bớt bộ lọc để tìm thêm cơ hội.",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "36:17329",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17329",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-136",
+      "key": "search-loading",
+      "title": "Tìm việc · đang tải",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "loading",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "search",
+      "message": "Đang tìm các cơ hội phù hợp với bộ lọc của bạn.",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "36:17358",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17358",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-137",
+      "key": "search-error",
+      "title": "Tìm việc · lỗi kết nối",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "error",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "search",
+      "message": "Chưa tải được dữ liệu. Các bộ lọc của bạn được giữ lại để thử lại.",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "36:17386",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17386",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-138",
+      "key": "session-ended",
+      "title": "Phiên đăng nhập đã kết thúc",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "error",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "login",
+      "message": "Đăng nhập lại để tiếp tục. Thông tin chưa gửi cần được kiểm tra trước khi gửi lại.",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "36:17410",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17410",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-139",
+      "key": "delete-confirm",
+      "title": "Xóa dữ liệu · xác nhận",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "delete-confirm",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "list-job-type",
+      "message": "Kiểm tra ảnh hưởng trước khi xóa bản ghi này.",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "36:17434",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17434",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-140",
+      "key": "quota-empty",
+      "title": "Hạn mức đăng tin đã hết",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "quota",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "buy-post",
+      "message": "Bạn cần thêm lượt đăng tin trước khi gửi tin mới.",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "36:17567",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17567",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-141",
+      "key": "provider-error",
+      "title": "AI · chưa xử lý được yêu cầu",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "error",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "ai-create",
+      "message": "Yêu cầu chưa hoàn tất. Dữ liệu bạn nhập vẫn được giữ để kiểm tra và thử lại.",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "36:17702",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17702",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-142",
+      "key": "save-conflict",
+      "title": "Thay đổi chưa được lưu",
+      "page": "16 · Trạng thái & xác nhận",
+      "kind": "error",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "post-edit",
+      "message": "Kiểm tra dữ liệu mới nhất trước khi tiếp tục; tránh gửi lại khi chưa rõ kết quả thao tác.",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "36:17726",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17726",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-143",
+      "key": "calendar",
+      "title": "Lịch phỏng vấn tổng hợp",
+      "page": "21 · Chức năng đề xuất",
+      "kind": "calendar",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Đề xuất trang mới; source có thư mời phỏng vấn trong pipeline, chưa có route lịch tổng hợp",
+      "fields": [],
+      "next": "interview-form",
+      "ref": "JF-013",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "37:4",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=37-4",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-144",
+      "key": "subscriptions",
+      "title": "Gói định kỳ và hóa đơn",
+      "page": "21 · Chức năng đề xuất",
+      "kind": "subscription",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 1440,
+      "status": "Đề xuất; mua gói một lần có trong source, subscription định kỳ chưa có route/contract đầy đủ",
+      "fields": [],
+      "ref": "JF-003",
+      "next": "buy-post",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "37:219",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=37-219",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-145",
+      "key": "system-settings",
+      "title": "Cài đặt hệ thống",
+      "page": "21 · Chức năng đề xuất",
+      "kind": "system-settings",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 1440,
+      "status": "Đề xuất; chưa có route settings tổng quát",
+      "fields": [],
+      "ref": "JF-004",
+      "next": "admin-dashboard",
+      "permissions": [],
+      "sources": [],
+      "figma_node_id": "37:380",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=37-380",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-146",
+      "key": "m-home",
+      "title": "Trang chủ · cơ hội và nghề nghiệp · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "home",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-035",
+      "next": "search",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/home/home.js"
+      ],
+      "base_key": "home",
+      "device": "mobile",
+      "figma_node_id": "36:17859",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-17859",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-147",
+      "key": "m-search",
+      "title": "Tìm việc · kết quả và bộ lọc · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "search",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-036",
+      "next": "job-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/JobPage/JobPage.js"
+      ],
+      "base_key": "search",
+      "device": "mobile",
+      "figma_node_id": "36:18038",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18038",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-148",
+      "key": "m-job-detail",
+      "title": "Chi tiết việc làm · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "job-detail",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-010",
+      "next": "apply-info",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/JobDetail/JobDetail.js"
+      ],
+      "base_key": "job-detail",
+      "device": "mobile",
+      "figma_node_id": "36:18181",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18181",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-149",
+      "key": "m-external-job",
+      "title": "Việc làm từ nguồn bên ngoài · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "external-job",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "search",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/JobDetail/ExternalJobDetail.js"
+      ],
+      "base_key": "external-job",
+      "device": "mobile",
+      "figma_node_id": "36:18299",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18299",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-150",
+      "key": "m-companies",
+      "title": "Danh sách doanh nghiệp · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "companies",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-007",
+      "next": "company-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Company/ListCompany.js"
+      ],
+      "base_key": "companies",
+      "device": "mobile",
+      "figma_node_id": "36:18415",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18415",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-151",
+      "key": "m-company-detail",
+      "title": "Chi tiết doanh nghiệp và tin tuyển dụng · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "company-detail",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "job-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Company/DetailCompany.js"
+      ],
+      "base_key": "company-detail",
+      "device": "mobile",
+      "figma_node_id": "36:18492",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18492",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-152",
+      "key": "m-login",
+      "title": "Đăng nhập · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "login",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-015",
+      "next": "candidate-profile",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/login/Login.js"
+      ],
+      "base_key": "login",
+      "device": "mobile",
+      "figma_node_id": "36:18601",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18601",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-153",
+      "key": "m-register-role",
+      "title": "Đăng ký · chọn loại tài khoản · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "register-role",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-028",
+      "next": "register-candidate",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/login/Register.js"
+      ],
+      "base_key": "register-role",
+      "device": "mobile",
+      "figma_node_id": "36:18639",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18639",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-154",
+      "key": "m-register-candidate",
+      "title": "Đăng ký ứng viên · thông tin cá nhân · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "register",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "register-account",
+      "sources": [
+        "frontend/src/container/login/Register.js"
+      ],
+      "permissions": [],
+      "base_key": "register-candidate",
+      "device": "mobile",
+      "figma_node_id": "36:18661",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18661",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-155",
+      "key": "m-forgot",
+      "title": "Quên mật khẩu · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "forgot",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "forgot-result",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/login/ForgetPassword.js"
+      ],
+      "base_key": "forgot",
+      "device": "mobile",
+      "figma_node_id": "36:18699",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18699",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-156",
+      "key": "m-help",
+      "title": "Hướng dẫn và câu hỏi thường gặp · Mobile",
+      "page": "17 · Mobile công khai",
+      "kind": "help",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-widget",
+      "permissions": [],
+      "sources": [],
+      "base_key": "help",
+      "device": "mobile",
+      "figma_node_id": "36:18717",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18717",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-157",
+      "key": "m-candidate-profile",
+      "title": "Hồ sơ cá nhân · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "candidate-profile",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-009",
+      "next": "candidate-settings",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/CandidateInfo.js"
+      ],
+      "base_key": "candidate-profile",
+      "device": "mobile",
+      "figma_node_id": "36:18786",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18786",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-158",
+      "key": "m-saved",
+      "title": "Việc làm đã lưu · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "job-list",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "job-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/SavedJobs.js"
+      ],
+      "base_key": "saved",
+      "device": "mobile",
+      "figma_node_id": "36:18879",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-18879",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-159",
+      "key": "m-notifications",
+      "title": "Trung tâm thông báo · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "notifications",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-032",
+      "next": "applications",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/CandidateNotifications.js"
+      ],
+      "base_key": "notifications",
+      "device": "mobile",
+      "figma_node_id": "36:19008",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19008",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-160",
+      "key": "m-ai-workspace",
+      "title": "CV và trợ lý AI · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "ai-workspace",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "ai-create",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "base_key": "ai-workspace",
+      "device": "mobile",
+      "figma_node_id": "36:19069",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19069",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-161",
+      "key": "m-ai-create",
+      "title": "Tạo CV AI · thông tin đầu vào · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "ai-create",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "ai-pending",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "permissions": [],
+      "base_key": "ai-create",
+      "device": "mobile",
+      "figma_node_id": "36:19174",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19174",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-162",
+      "key": "m-cv-editor",
+      "title": "Chỉnh sửa CV đã lưu · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "cv-editor",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "cv-preview",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "permissions": [],
+      "base_key": "cv-editor",
+      "device": "mobile",
+      "figma_node_id": "36:19254",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19254",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-163",
+      "key": "m-ai-match-result",
+      "title": "Kết quả phân tích CV và công việc · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "ai-match-result",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "job-detail",
+      "sources": [
+        "frontend/src/container/Candidate/CandidateAi.js"
+      ],
+      "permissions": [],
+      "base_key": "ai-match-result",
+      "device": "mobile",
+      "figma_node_id": "36:19429",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19429",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-164",
+      "key": "m-applications",
+      "title": "Danh sách hồ sơ đã nộp · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "applications",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-018",
+      "next": "application-detail",
+      "permissions": [],
+      "sources": [
+        "frontend/src/container/Candidate/ManageCvCandidate.js"
+      ],
+      "base_key": "applications",
+      "device": "mobile",
+      "figma_node_id": "36:19485",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19485",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-165",
+      "key": "m-apply-info",
+      "title": "Ứng tuyển · 1. Thông tin liên hệ · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "apply-info",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "apply-cv",
+      "sources": [
+        "frontend/src/components/modal/SendCvModal.js"
+      ],
+      "permissions": [],
+      "base_key": "apply-info",
+      "device": "mobile",
+      "figma_node_id": "36:19621",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19621",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-166",
+      "key": "m-apply-cv",
+      "title": "Ứng tuyển · 2. Chọn CV · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "apply-cv",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "apply-review",
+      "sources": [
+        "frontend/src/components/modal/SendCvModal.js",
+        "frontend/src/components/modal/PreparedCvPicker.js"
+      ],
+      "permissions": [],
+      "base_key": "apply-cv",
+      "device": "mobile",
+      "figma_node_id": "36:19703",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19703",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-167",
+      "key": "m-apply-review",
+      "title": "Ứng tuyển · 3. Kiểm tra hồ sơ · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "apply-review",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "apply-success",
+      "sources": [
+        "frontend/src/components/modal/SendCvModal.js"
+      ],
+      "permissions": [],
+      "base_key": "apply-review",
+      "device": "mobile",
+      "figma_node_id": "36:19781",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19781",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-168",
+      "key": "m-apply-success",
+      "title": "Ứng tuyển thành công · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "success",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "applications",
+      "message": "Hồ sơ đã được tiếp nhận. Bạn có thể theo dõi tiến trình trong Hồ sơ đã nộp.",
+      "sources": [
+        "frontend/src/components/modal/SendCvModal.js"
+      ],
+      "permissions": [],
+      "base_key": "apply-success",
+      "device": "mobile",
+      "figma_node_id": "36:19861",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19861",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-169",
+      "key": "m-security",
+      "title": "Bảo mật và tài khoản liên kết · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "security",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "security-sessions",
+      "permissions": [
+        "MANAGE_PROFILE"
+      ],
+      "sources": [],
+      "base_key": "security",
+      "device": "mobile",
+      "figma_node_id": "36:19879",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19879",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-170",
+      "key": "m-chat-list",
+      "title": "Tin nhắn · danh sách hội thoại · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "chat-list",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "chat-thread",
+      "permissions": [
+        "USE_CHAT"
+      ],
+      "sources": [
+        "frontend/src/container/Chat/ChatPage.js"
+      ],
+      "base_key": "chat-list",
+      "device": "mobile",
+      "figma_node_id": "36:19952",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-19952",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-171",
+      "key": "m-chat-thread",
+      "title": "Tin nhắn · hội thoại đang mở · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "chat-thread",
+      "role": "CANDIDATE",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-031",
+      "next": "chat-pdf",
+      "permissions": [
+        "USE_CHAT"
+      ],
+      "sources": [
+        "frontend/src/container/Chat/ChatPage.js"
+      ],
+      "base_key": "chat-thread",
+      "device": "mobile",
+      "figma_node_id": "36:20003",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20003",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-172",
+      "key": "m-support-widget",
+      "title": "Trợ lý hỗ trợ · trò chuyện và gợi ý · Mobile",
+      "page": "18 · Mobile ứng viên",
+      "kind": "support-widget",
+      "role": "PUBLIC",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-handoff",
+      "sources": [
+        "frontend/src/components/support/SupportChat.jsx"
+      ],
+      "permissions": [],
+      "base_key": "support-widget",
+      "device": "mobile",
+      "figma_node_id": "36:20074",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20074",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-173",
+      "key": "m-posts",
+      "title": "Quản lý tin tuyển dụng · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "posts",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "post-create",
+      "permissions": [
+        "MANAGE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/ManagePost.js"
+      ],
+      "base_key": "posts",
+      "device": "mobile",
+      "figma_node_id": "36:20132",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20132",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-174",
+      "key": "m-post-create",
+      "title": "Đăng tin · thông tin và tiêu chí · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "post-form",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-021",
+      "next": "post-content",
+      "permissions": [
+        "MANAGE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/AddPost.js"
+      ],
+      "base_key": "post-create",
+      "device": "mobile",
+      "figma_node_id": "36:20287",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20287",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-175",
+      "key": "m-post-content",
+      "title": "Đăng tin · mô tả và quyền lợi · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "post-content",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "post-preview",
+      "sources": [
+        "frontend/src/container/system/Post/AddPost.js"
+      ],
+      "permissions": [],
+      "base_key": "post-content",
+      "device": "mobile",
+      "figma_node_id": "36:20416",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20416",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-176",
+      "key": "m-post-preview",
+      "title": "Đăng tin · xem trước và gửi duyệt · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "post-preview",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "posts",
+      "sources": [
+        "frontend/src/container/system/Post/AddPost.js"
+      ],
+      "permissions": [],
+      "base_key": "post-preview",
+      "device": "mobile",
+      "figma_node_id": "36:20504",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20504",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-177",
+      "key": "m-talent-search",
+      "title": "Tìm kiếm và lọc ứng viên · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "talent-search",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-012",
+      "next": "talent-detail",
+      "permissions": [
+        "MANAGE_CANDIDATES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Cv/FilterCv.js"
+      ],
+      "base_key": "talent-search",
+      "device": "mobile",
+      "figma_node_id": "36:20614",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20614",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-178",
+      "key": "m-pipeline",
+      "title": "Pipeline · 6 giai đoạn tuyển dụng · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "pipeline",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-025",
+      "next": "pipeline-detail",
+      "permissions": [
+        "MANAGE_CANDIDATES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Cv/KanbanBoard.js"
+      ],
+      "base_key": "pipeline",
+      "device": "mobile",
+      "figma_node_id": "36:20765",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20765",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-179",
+      "key": "m-pipeline-detail",
+      "title": "Chi tiết ứng viên · ghi chú và đánh giá · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "pipeline-detail",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "interview-form",
+      "sources": [
+        "frontend/src/container/system/Cv/KanbanBoard.js"
+      ],
+      "permissions": [],
+      "base_key": "pipeline-detail",
+      "device": "mobile",
+      "figma_node_id": "36:20841",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20841",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-180",
+      "key": "m-interview-form",
+      "title": "Soạn thư mời phỏng vấn · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "interview-form",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "interview-preview",
+      "sources": [
+        "frontend/src/container/system/Cv/InterviewInvitationForm.js"
+      ],
+      "permissions": [],
+      "base_key": "interview-form",
+      "device": "mobile",
+      "figma_node_id": "36:20949",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-20949",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-181",
+      "key": "m-offer-form",
+      "title": "Soạn thư mời nhận việc · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "offer-form",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "offer-preview",
+      "sources": [
+        "frontend/src/container/system/Cv/OfferLetterForm.js"
+      ],
+      "permissions": [],
+      "base_key": "offer-form",
+      "device": "mobile",
+      "figma_node_id": "36:21071",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21071",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-182",
+      "key": "m-buy-post",
+      "title": "Mua gói đăng tin · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "buy-package",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "variant": "post",
+      "next": "payment-success",
+      "permissions": [
+        "PURCHASE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/BuyPost.js"
+      ],
+      "base_key": "buy-post",
+      "device": "mobile",
+      "figma_node_id": "36:21216",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21216",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-183",
+      "key": "m-company-edit",
+      "title": "Chỉnh sửa hồ sơ doanh nghiệp · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "company-form",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-005",
+      "next": "posts",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_COMPANY"
+      ],
+      "sources": [
+        "frontend/src/container/system/Company/AddCompany.js"
+      ],
+      "base_key": "company-edit",
+      "device": "mobile",
+      "figma_node_id": "36:21310",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21310",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-184",
+      "key": "m-team",
+      "title": "Quản lý nhân sự tuyển dụng · Mobile",
+      "page": "19 · Mobile doanh nghiệp",
+      "kind": "team",
+      "role": "COMPANY",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "team-invite",
+      "permissions": [
+        "MANAGE_TEAM"
+      ],
+      "sources": [
+        "frontend/src/container/system/Company/ManageEmployer.js"
+      ],
+      "base_key": "team",
+      "device": "mobile",
+      "figma_node_id": "36:21423",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21423",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-185",
+      "key": "m-admin-dashboard",
+      "title": "Tổng quan quản trị · Mobile",
+      "page": "20 · Mobile quản trị",
+      "kind": "admin-dashboard",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-002",
+      "next": "reports",
+      "permissions": [
+        "VIEW_ADMIN_HOME"
+      ],
+      "sources": [
+        "frontend/src/container/system/Home.js"
+      ],
+      "base_key": "admin-dashboard",
+      "device": "mobile",
+      "figma_node_id": "36:21525",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21525",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-186",
+      "key": "m-users",
+      "title": "Quản lý người dùng · Mobile",
+      "page": "20 · Mobile quản trị",
+      "kind": "users",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-027",
+      "next": "user-create",
+      "permissions": [
+        "MANAGE_USERS"
+      ],
+      "sources": [
+        "frontend/src/container/system/User/ManageUser.js"
+      ],
+      "base_key": "users",
+      "device": "mobile",
+      "figma_node_id": "36:21635",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21635",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-187",
+      "key": "m-jobs-review",
+      "title": "Kiểm duyệt tin tuyển dụng · Mobile",
+      "page": "20 · Mobile quản trị",
+      "kind": "jobs-review",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "ref": "JF-011",
+      "next": "job-review",
+      "permissions": [
+        "MODERATE_POSTS"
+      ],
+      "sources": [
+        "frontend/src/container/system/Post/ManagePost.js"
+      ],
+      "base_key": "jobs-review",
+      "device": "mobile",
+      "figma_node_id": "36:21765",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21765",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-188",
+      "key": "m-company-review",
+      "title": "Chi tiết hồ sơ xác thực doanh nghiệp · Mobile",
+      "page": "20 · Mobile quản trị",
+      "kind": "company-review",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "companies-review",
+      "sources": [
+        "frontend/src/container/system/Company/ManageCompany.js"
+      ],
+      "permissions": [],
+      "base_key": "company-review",
+      "device": "mobile",
+      "figma_node_id": "36:21877",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21877",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-189",
+      "key": "m-list-job-type",
+      "title": "Danh mục · Ngành nghề · Mobile",
+      "page": "20 · Mobile quản trị",
+      "kind": "taxonomy-list",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-job-type",
+      "rows": [
+        [
+          "Công nghệ thông tin",
+          "IT"
+        ],
+        [
+          "Kinh doanh / Bán hàng",
+          "SALES"
+        ],
+        [
+          "Marketing",
+          "MARKETING"
+        ],
+        [
+          "Tài chính / Kế toán",
+          "FINANCE"
+        ]
+      ],
+      "code": "JOBTYPE",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobType/ManageJobType.js"
+      ],
+      "base_key": "list-job-type",
+      "device": "mobile",
+      "figma_node_id": "36:21969",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-21969",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-190",
+      "key": "m-edit-job-type",
+      "title": "Chỉnh sửa ngành nghề · Mobile",
+      "page": "20 · Mobile quản trị",
+      "kind": "taxonomy-form",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [
+        [
+          "Tên ngành nghề",
+          "Công nghệ thông tin"
+        ],
+        [
+          "Mã code",
+          "IT"
+        ],
+        [
+          "Ảnh ngành nghề",
+          "IT"
+        ]
+      ],
+      "next": "list-job-type",
+      "code": "JOBTYPE",
+      "variant": "edit",
+      "permissions": [
+        "MANAGE_REFERENCE_DATA"
+      ],
+      "sources": [
+        "frontend/src/container/system/JobType/AddJobType.js"
+      ],
+      "base_key": "edit-job-type",
+      "device": "mobile",
+      "figma_node_id": "36:22080",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-22080",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-191",
+      "key": "m-list-package-post",
+      "title": "Quản lý gói đăng tin · Mobile",
+      "page": "20 · Mobile quản trị",
+      "kind": "package-list",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "add-package-post",
+      "rows": [
+        [
+          "Gói 10 tin",
+          "10 tin",
+          "20 USD",
+          "Thường"
+        ],
+        [
+          "Gói 30 tin",
+          "30 tin",
+          "50 USD",
+          "Thường"
+        ],
+        [
+          "Gói 10 tin nổi bật",
+          "10 tin",
+          "40 USD",
+          "Nổi bật"
+        ]
+      ],
+      "permissions": [
+        "MANAGE_PACKAGES"
+      ],
+      "sources": [
+        "frontend/src/container/system/PackagePost/ManagePackagePost.js"
+      ],
+      "base_key": "list-package-post",
+      "device": "mobile",
+      "figma_node_id": "36:22144",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-22144",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    },
+    {
+      "id": "JF2-192",
+      "key": "m-support-ticket",
+      "title": "Quản trị · xử lý yêu cầu hỗ trợ · Mobile",
+      "page": "20 · Mobile quản trị",
+      "kind": "support-ticket",
+      "role": "ADMIN",
+      "routes": [],
+      "width": 390,
+      "status": "Thiết kế mục tiêu; chức năng đối chiếu source",
+      "fields": [],
+      "next": "support-inbox",
+      "sources": [
+        "frontend/src/components/support/SupportInbox.jsx"
+      ],
+      "permissions": [],
+      "base_key": "support-ticket",
+      "device": "mobile",
+      "figma_node_id": "36:22249",
+      "figma_url": "https://www.figma.com/design/aASrpnjI0sgztK3QB3fxtd?node-id=36-22249",
+      "status_note": "Supplementary Figma target screen/state; separate from exact Stitch reference and code/runtime status."
+    }
+  ]
+}

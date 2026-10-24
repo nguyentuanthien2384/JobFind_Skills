@@ -1,0 +1,11 @@
+[
+  {
+    "screen_id": "JF-012",
+    "feature_id": "candidate-search",
+    "owner": "jobfind-candidate-search",
+    "asset": "assets/stitch-reference/JF-012/screen.png",
+    "output": ".stitch/designs/kho_ng_vi_n_tuy_n_d_ng_vn/screen.png",
+    "sha256": "5e1d7766489718825490c07910a45caf344ccac3e921b8449b3f769fc3906e87",
+    "bytes": 462533
+  }
+]

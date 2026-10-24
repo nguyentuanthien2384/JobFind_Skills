@@ -1,0 +1,186 @@
+[
+  {
+    "id": "JF-005",
+    "folder": "company_profile_editor_vng_corporation",
+    "title": "Company Profile Editor - VNG Corporation",
+    "group": "Doanh nghiệp",
+    "route": "/admin/edit-company",
+    "component": "container/system/Company/AddCompany.js",
+    "api": "GET /api/get-detail-company-by-userId ; POST /api/create-new-company ; PUT /api/update-company",
+    "note": "Có route; COMPANY theo company state",
+    "width": 1600,
+    "height": 2758,
+    "html_sha256": "84bf629fa9be0f7cbc32f590ddd2bde7d2c83316c143df4fbeeed0607c702383",
+    "image_sha256": "93385013f5426332dc5c0bec75977cfc86f4876d0d1ea8de2d4a4737ab30786d",
+    "feature_id": "company-profile",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 2210,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1600,
+      "height": 2758
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/system/Company/AddCompany.js",
+      "frontend/src/service/userService.js",
+      "backend/src/services/companyService.js"
+    ],
+    "api_contracts": [
+      "GET /api/get-detail-company-by-userId",
+      "POST /api/create-new-company",
+      "PUT /api/update-company"
+    ],
+    "observations": {
+      "headings": [
+        "VNG Corporation",
+        "Hồ Sơ Công Ty",
+        "Thông tin cơ bản",
+        "Giới thiệu công ty",
+        "Văn hóa & Phúc lợi",
+        "Địa điểm",
+        "Mức độ hoàn thiện",
+        "Thống kê trang",
+        "Gói hiện tại"
+      ],
+      "labels": [
+        "Tên công ty",
+        "Website",
+        "Quy mô",
+        "Ngành",
+        "Năm thành lập",
+        "Mô tả ngắn"
+      ],
+      "controls": [
+        {
+          "type": "text"
+        },
+        {
+          "type": "url"
+        },
+        {},
+        {
+          "type": "text"
+        },
+        {
+          "type": "number"
+        },
+        {},
+        {
+          "placeholder": "Viết vài điều về VNG..."
+        },
+        {
+          "type": "text"
+        }
+      ],
+      "actions": [
+        "Trợ giúp trực tuyến north_east",
+        "visibility Preview",
+        "Save Changes",
+        "add_a_photo Thay đổi ảnh bìa",
+        "edit",
+        "format_bold",
+        "format_italic",
+        "format_underlined",
+        "format_list_bulleted",
+        "format_list_numbered",
+        "link",
+        "add Thêm quyền lợi",
+        "Gia hạn gói"
+      ],
+      "colors": {
+        "tertiary-fixed": "#FFDBCD",
+        "on-tertiary-fixed": "#360F00",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "inverse-surface": "#2D3133",
+        "outline-variant": "#C3C6D7",
+        "primary-fixed-dim": "#B4C5FF",
+        "surface-dim": "#D8DADC",
+        "primary": "#004AC6",
+        "surface-container-high": "#E6E8EA",
+        "on-secondary-fixed-variant": "#004C6E",
+        "on-error": "#FFFFFF",
+        "inverse-primary": "#B4C5FF",
+        "tertiary-container": "#BC4800",
+        "surface-tint": "#0053DB",
+        "on-primary-container": "#EEEFFF",
+        "on-secondary-container": "#004666",
+        "secondary-fixed": "#C9E6FF",
+        "on-tertiary-container": "#FFEDE6",
+        "on-background": "#191C1E",
+        "secondary-fixed-dim": "#89CEFF",
+        "tertiary": "#943700",
+        "outline": "#737686",
+        "tertiary-fixed-dim": "#FFB596",
+        "surface-bright": "#F7F9FB",
+        "inverse-on-surface": "#EFF1F3",
+        "surface-container": "#ECEEF0",
+        "background": "#F7F9FB",
+        "surface-container-lowest": "#FFFFFF",
+        "on-secondary-fixed": "#001E2F",
+        "on-secondary": "#FFFFFF",
+        "surface-variant": "#E0E3E5",
+        "surface": "#F7F9FB",
+        "on-surface": "#191C1E",
+        "error-container": "#FFDAD6",
+        "on-tertiary": "#FFFFFF",
+        "on-primary-fixed-variant": "#003EA8",
+        "surface-container-low": "#F2F4F6",
+        "primary-container": "#2563EB",
+        "on-error-container": "#93000A",
+        "primary-fixed": "#DBE1FF",
+        "on-primary": "#FFFFFF",
+        "on-surface-variant": "#434655",
+        "error": "#BA1A1A",
+        "on-primary-fixed": "#00174B",
+        "secondary-container": "#39B8FD",
+        "secondary": "#006591",
+        "surface-container-highest": "#E0E3E5"
+      },
+      "fonts": {
+        "headline": "Be Vietnam Pro",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCV1pxMDd0V0MdK1wn0wFWvg68uNMi-pwPN3QubLFe51Ws0mTZr1LGDhNkRegZ7utikxm60D4tlC7RHdOmfwSzvf5M5FjenALnGfkORt0O9LlNUJLpdD44n8TdHjyOkep9qGY4Qey-yh8t44dsKpWUO_jHXjBqr52497EoAtW8geBJbl60sk6jYo09Y4PJid0HidWliVpWa_H0yZIyc1Qc61iy53EYzE2zTUuCZS9uYmjN6kuBierAXN5DKnk_s0xMQfnAiGh6vHxHt",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCjBXfEb6TyqO5bTO1yl2nxy1oMX6DIqmC8f4EWQbSR8roQBstrKuqQlNCUnu2chJFX3pRIZ0BuvUSgRSL3J9y9wD3R1mxqT1afuswWPHMbfT8I-hFYZX0GwSoTqBwNbv3X1fte3TU-hG3qYkcv34xR3RDwFPWbRQcnZtFVtY2mEMMQsYma-Ag8jx0cYHaGLcsCTlHgo0zcbat1Xdo_9MGBq7vbjmKF-4WHzeBv-BNkrmN3h4dDRaUksrocz_IkNrH1vYIwUqHeqW0X",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDvYI_Aj1DjEB4ejLyAgD5CvZshlULQTD0t84WFK2h8VdwXJ5zQw-ciAWSlow9al8lHxKVOiNFcTmJigNQ7pcn66bdWoNVz37vaPMIKbs-hwFAKrXk6JaGG0B3q9MZxhCEV6HJNkJjJqi3ltkjrJtbwJ7kkqpgFjdU58aHWQkYPAFVsms8qBBp0LybT--dW1WLXVwYexQ_v4FMFxakjeMHHQJPvb7bnpCQHwx0CxIpuVQua5iTTgoyZ582JR_3u2urBpGZh01tHJqbl",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/company_profile_editor_vng_corporation/code.html",
+      "image": ".stitch/designs/company_profile_editor_vng_corporation/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-005.md",
+    "prompt": ".stitch/prompts/JF-005.md"
+  }
+]

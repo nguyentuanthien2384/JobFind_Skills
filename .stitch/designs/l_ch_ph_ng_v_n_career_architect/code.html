@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .custom-glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#495c95",
+                        "surface-container-highest": "#dae2fd",
+                        "tertiary": "#943700",
+                        "surface-container-high": "#e2e7ff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "surface-tint": "#0053db",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#dae2fd",
+                        "inverse-surface": "#283044",
+                        "surface": "#faf8ff",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#2563eb",
+                        "on-surface-variant": "#434655",
+                        "secondary-container": "#acbfff",
+                        "on-background": "#131b2e",
+                        "on-secondary-fixed": "#00174b",
+                        "surface-container": "#eaedff",
+                        "tertiary-container": "#bc4800",
+                        "primary-fixed": "#dbe1ff",
+                        "error": "#ba1a1a",
+                        "primary": "#004ac6",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "inverse-primary": "#b4c5ff",
+                        "secondary-fixed-dim": "#b4c5ff",
+                        "surface-bright": "#faf8ff",
+                        "on-tertiary-fixed": "#360f00",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#ffede6",
+                        "on-secondary-container": "#394c84",
+                        "on-primary-container": "#eeefff",
+                        "inverse-on-surface": "#eef0ff",
+                        "on-primary": "#ffffff",
+                        "outline-variant": "#c3c6d7",
+                        "on-secondary-fixed-variant": "#31447b",
+                        "secondary-fixed": "#dbe1ff",
+                        "surface-dim": "#d2d9f4",
+                        "on-surface": "#131b2e",
+                        "on-primary-fixed": "#00174b",
+                        "on-error-container": "#93000a",
+                        "background": "#faf8ff",
+                        "outline": "#737686",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f2f3ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased overflow-hidden">
+<!-- TopNavBar (Shared Component) -->
+<header class="w-full sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-sm dark:shadow-none flex justify-between items-center px-6 py-3 border-b border-slate-200/50 dark:border-slate-800/50 font-sans tracking-tight">
+<div class="flex items-center gap-4">
+<span class="text-xl font-bold text-slate-900 dark:text-slate-50">Tuyển Dụng VN</span>
+<div class="relative hidden md:block">
+<input class="bg-surface-container-low border-none rounded-xl pl-10 pr-4 py-1.5 text-sm w-64 focus:ring-2 focus:ring-primary" placeholder="Tìm kiếm..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors active:scale-95 duration-200 rounded-full">
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">notifications</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="Professional portrait of a hiring manager in a modern office, soft natural lighting, high resolution" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpJjFQvtnAQU-Cfgku3NxmIPkrft8poNbbk8KiIypcL0v7QPGi6DnzIi_REFaKhnobC_3hVJd1thdXudYTJMaZd9MeozOAhFA31AQ-u3JWrgD3xwYOWzUcuEUi01rBD3iEByHUvkaQg0eeHQmhCr6KmyHvje45CK9hnzQajaWW4POInaUHyt613JePpVSwbnhkYuwvPRy3K7iMxeutB3gNxbjPDr4Asn1UgBtiTyI3JMAWYDpcuSUPq7ixewMPwPMhPWEDePEmqS2D"/>
+</div>
+</div>
+</header>
+<div class="flex h-[calc(100vh-60px)]">
+<!-- SideNavBar (Shared Component) -->
+<aside class="h-screen w-64 bg-slate-50 dark:bg-slate-950 flex flex-col border-r border-slate-200/20 dark:border-slate-800/20 text-sm font-medium Inter">
+<div class="px-6 py-8">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 bg-primary-container rounded-xl flex items-center justify-center text-on-primary-container font-black text-lg">PB</div>
+<div>
+<h2 class="text-slate-900 font-black leading-tight">Precision Blueprint</h2>
+<p class="text-[10px] text-slate-500 uppercase tracking-widest">Tuyển Dụng VN</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold shadow-lg shadow-primary/20 hover:bg-primary-container transition-all flex items-center justify-center gap-2 mb-8 active:scale-95 duration-200">
+<span class="material-symbols-outlined text-sm">add</span>
+                    Lên lịch mới
+                </button>
+<nav class="space-y-1">
+<div class="cursor-pointer flex items-center gap-3 px-6 py-4 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">dashboard</span>
+                        Tổng quan
+                    </div>
+<div class="cursor-pointer flex items-center gap-3 px-6 py-4 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">work</span>
+                        Việc làm
+                    </div>
+<div class="cursor-pointer flex items-center gap-3 px-6 py-4 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">filter_alt</span>
+                        Phễu
+                    </div>
+<!-- ACTIVE TAB -->
+<div class="cursor-pointer flex items-center gap-3 px-6 py-4 text-blue-700 dark:text-blue-400 bg-blue-50/50 dark:bg-blue-900/20 font-bold border-r-4 border-blue-600 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">calendar_today</span>
+                        Lịch phỏng vấn
+                    </div>
+<div class="cursor-pointer flex items-center gap-3 px-6 py-4 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">settings</span>
+                        Cài đặt
+                    </div>
+</nav>
+</div>
+<div class="mt-auto px-6 py-8 border-t border-slate-200/20">
+<div class="cursor-pointer flex items-center gap-3 px-6 py-4 text-slate-600 dark:text-slate-400 hover:text-blue-600 hover:translate-x-1 transition-transform duration-200">
+<span class="material-symbols-outlined">help_outline</span>
+                    Hỗ trợ
+                </div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex overflow-hidden">
+<!-- Calendar Section -->
+<section class="flex-1 flex flex-col p-8 overflow-y-auto">
+<header class="flex justify-between items-end mb-8">
+<div>
+<h1 class="text-3xl font-bold tracking-tight text-on-surface">Tháng 10, 2023</h1>
+<p class="text-on-surface-variant font-medium">Bạn có 12 buổi phỏng vấn trong tuần này</p>
+</div>
+<div class="flex bg-surface-container-low p-1 rounded-xl">
+<button class="px-4 py-1.5 text-sm font-semibold rounded-lg bg-surface-container-lowest shadow-sm text-primary">Tháng</button>
+<button class="px-4 py-1.5 text-sm font-medium text-on-surface-variant hover:text-on-surface transition-colors">Tuần</button>
+</div>
+</header>
+<!-- Calendar Grid: Architectural Tonal Layout -->
+<div class="flex-1 bg-surface-container-low rounded-2xl overflow-hidden shadow-sm border border-outline-variant/10">
+<div class="grid grid-cols-7 border-b border-outline-variant/15">
+<div class="py-4 text-center text-xs font-bold uppercase tracking-widest text-outline">CN</div>
+<div class="py-4 text-center text-xs font-bold uppercase tracking-widest text-outline">T2</div>
+<div class="py-4 text-center text-xs font-bold uppercase tracking-widest text-outline">T3</div>
+<div class="py-4 text-center text-xs font-bold uppercase tracking-widest text-outline">T4</div>
+<div class="py-4 text-center text-xs font-bold uppercase tracking-widest text-outline">T5</div>
+<div class="py-4 text-center text-xs font-bold uppercase tracking-widest text-outline">T6</div>
+<div class="py-4 text-center text-xs font-bold uppercase tracking-widest text-outline">T7</div>
+</div>
+<div class="grid grid-cols-7 grid-rows-5 h-full">
+<!-- Simplified Calendar Rendering for Mockup -->
+<!-- Row 1 (Empty/Prev Month) -->
+<div class="p-2 border-r border-b border-outline-variant/15 opacity-30 bg-surface">
+<span class="text-sm font-medium p-2 block">27</span>
+</div>
+<div class="p-2 border-r border-b border-outline-variant/15 opacity-30 bg-surface">
+<span class="text-sm font-medium p-2 block">28</span>
+</div>
+<div class="p-2 border-r border-b border-outline-variant/15 opacity-30 bg-surface">
+<span class="text-sm font-medium p-2 block">29</span>
+</div>
+<div class="p-2 border-r border-b border-outline-variant/15 opacity-30 bg-surface">
+<span class="text-sm font-medium p-2 block">30</span>
+</div>
+<!-- Current Month -->
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block">1</span>
+</div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block">2</span>
+<!-- Event -->
+<div class="mt-1 p-2 bg-primary-container/10 border-l-4 border-primary rounded-r-lg">
+<p class="text-[10px] font-bold text-primary truncate leading-tight">Technical Interview: Lê Minh Tuấn</p>
+</div>
+</div>
+<div class="p-2 border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block text-primary">3</span>
+<div class="mt-1 p-2 bg-primary-container text-on-primary-container rounded-lg shadow-md active:scale-95 transition-transform cursor-pointer">
+<p class="text-[10px] font-bold truncate leading-tight">Interview with Trần Phương Anh (UI Designer)</p>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block">4</span>
+</div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block text-tertiary">5</span>
+<div class="mt-1 p-2 bg-tertiary-fixed text-on-tertiary-fixed-variant rounded-lg border-l-4 border-tertiary">
+<p class="text-[10px] font-bold truncate leading-tight">Drafting session</p>
+</div>
+</div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block">6</span>
+</div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block">7</span>
+</div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block">8</span>
+</div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block">9</span>
+<div class="mt-1 p-2 bg-secondary-container/20 border-l-4 border-secondary rounded-r-lg">
+<p class="text-[10px] font-bold text-on-secondary-container truncate leading-tight">Final Round: Nguyễn Thu Thảo</p>
+</div>
+</div>
+<div class="p-2 border-b border-outline-variant/15 bg-surface-container-lowest">
+<span class="text-sm font-bold p-2 block text-outline">10</span>
+</div>
+<!-- Rest of the grid (Filler) -->
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-b border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 border-r border-outline-variant/15 bg-surface-container-lowest"></div>
+<div class="p-2 bg-surface-container-lowest"></div>
+</div>
+</div>
+</section>
+<!-- Right Sidebar: Upcoming Agenda -->
+<aside class="w-80 bg-surface-container-lowest p-8 border-l border-outline-variant/15">
+<div class="flex items-center justify-between mb-8">
+<h2 class="text-xl font-bold tracking-tight text-on-surface">Upcoming Agenda</h2>
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors">more_horiz</span>
+</div>
+<div class="space-y-6">
+<div class="relative pl-6 pb-2 border-l-2 border-primary">
+<div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-primary ring-4 ring-primary/10"></div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">09:30 AM - NOW</span>
+<h3 class="text-base font-bold text-on-surface leading-tight">Trần Phương Anh</h3>
+<p class="text-sm text-on-surface-variant">Senior UI Designer</p>
+<div class="flex items-center gap-2 mt-2">
+<div class="flex -space-x-2">
+<img class="w-6 h-6 rounded-full border-2 border-white object-cover" data-alt="Portrait of a young professional woman, candidate for UI designer role, clean background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkrEvMFE8NYaHSLp0zXZDzfxdJ1Qf7GsBy6AHZCBbxXjnCZbemudxvS8p_FFYvUAnuVfVIMs2lWGr5kdZt3-4PrLuWIBEmpRuHzt92jLPj_H7KX8kOnsA6fCbD2ozuIxQLgs0rJt_UQiZx6NhV30_jmDNsT8rHzsTiYUfwLKiE7YkO-417O6OUu-7IEbTg_Rd9ZDo9w-194zlETVSp1TNnaTO6MwDExnwAkFNhaiw5wfFNHPya2suRJA9Tqsx4wVPXYXXlLNAd4QnM"/>
+<div class="w-6 h-6 rounded-full bg-slate-100 border-2 border-white flex items-center justify-center text-[8px] font-bold text-slate-500">+2</div>
+</div>
+<span class="text-xs text-outline">Meet Room A</span>
+</div>
+</div>
+</div>
+<div class="relative pl-6 pb-2 border-l-2 border-outline-variant/30">
+<div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-outline uppercase tracking-widest">11:00 AM</span>
+<h3 class="text-base font-bold text-on-surface leading-tight">Lê Minh Tuấn</h3>
+<p class="text-sm text-on-surface-variant">Frontend Developer</p>
+<span class="text-xs text-outline mt-2">Remote (Zoom)</span>
+</div>
+</div>
+<div class="relative pl-6 pb-2 border-l-2 border-outline-variant/30">
+<div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-outline-variant"></div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-outline uppercase tracking-widest">02:00 PM</span>
+<h3 class="text-base font-bold text-on-surface leading-tight">Nguyễn Thu Thảo</h3>
+<p class="text-sm text-on-surface-variant">Marketing Lead</p>
+<span class="text-xs text-outline mt-2">Meet Room B</span>
+</div>
+</div>
+<div class="relative pl-6 pb-2 border-l-2 border-tertiary/30">
+<div class="absolute -left-[5px] top-0 w-2 h-2 rounded-full bg-tertiary"></div>
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-tertiary uppercase tracking-widest">04:30 PM</span>
+<h3 class="text-base font-bold text-on-surface leading-tight">Drafting Session</h3>
+<p class="text-sm text-on-surface-variant">Q4 Hiring Strategy</p>
+</div>
+</div>
+</div>
+<div class="mt-12 p-6 bg-primary-container/5 rounded-2xl border border-primary/10">
+<h4 class="font-bold text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-base">info</span>
+                        Mẹo phỏng vấn
+                    </h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Đừng quên chuẩn bị các câu hỏi tình huống cho vị trí UI Designer để đánh giá tư duy giải quyết vấn đề của ứng viên.</p>
+</div>
+</aside>
+</main>
+</div>
+</body></html>

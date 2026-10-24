@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Danh mục nghề nghiệp
+  short_description: Danh mục nghề nghiệp cho dự án JobFind
+  default_prompt: Dùng $catalog-management hoàn thiện admin JobSkill và dropdown
+    đăng tin.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Gateway và sự kiện
+  short_description: Gateway và sự kiện cho dự án JobFind
+  default_prompt: Dùng $microservices kiểm tra pipeline sync sau khi ứng viên
+    nộp CV.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

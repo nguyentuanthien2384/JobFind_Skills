@@ -1,0 +1,20 @@
+[
+  {
+    "screen_id": "JF-001",
+    "feature_id": "master-layout",
+    "owner": "jobfind-workflow",
+    "asset": "assets/stitch-reference/JF-001/screen.png",
+    "output": ".stitch/designs/404_page_tuy_n_d_ng_vn/screen.png",
+    "sha256": "76ee0f0ac9b4bf871b7cdd7b87f55a463963b124bdb8ef04e5e2d0aa49e4ec11",
+    "bytes": 897512
+  },
+  {
+    "screen_id": "JF-032",
+    "feature_id": "master-layout",
+    "owner": "jobfind-workflow",
+    "asset": "assets/stitch-reference/JF-032/screen.png",
+    "output": ".stitch/designs/trang_404_kh_ng_t_m_th_y/screen.png",
+    "sha256": "a8edd445d8afdb2bb9063274d94db89090f9f602d6e587067c4f7c1aa9c7da4d",
+    "bytes": 479960
+  }
+]

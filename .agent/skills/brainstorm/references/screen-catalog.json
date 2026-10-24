@@ -1,0 +1,209 @@
+[
+  {
+    "id": "JF-035",
+    "folder": "tuy_n_d_ng_vn_homepage",
+    "title": "Tuyển Dụng VN - Homepage",
+    "group": "Khám phá",
+    "route": "/",
+    "component": "container/home/home.js",
+    "api": "GET /api/get-filter-post ; GET /api/get-list-company ; GET /api/search/jobs",
+    "note": "Có route; dữ liệu trong thiết kế là minh họa",
+    "width": 589,
+    "height": 1600,
+    "html_sha256": "cf4902828f647c31ad530fe4bb800f2d6c683b0f9dfe269d38686358bdb2c7e7",
+    "image_sha256": "ca631e65c5b5f68d66c3fed4d93e4dd2a92b2b8296ecf7cf1eaa3d323911a446",
+    "feature_id": "home",
+    "roles": [
+      "PUBLIC"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 3456,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 589,
+      "height": 1600
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/home/home.js",
+      "frontend/src/service/userService.js"
+    ],
+    "api_contracts": [
+      "GET /api/get-filter-post",
+      "GET /api/get-list-company",
+      "GET /api/search/jobs"
+    ],
+    "observations": {
+      "headings": [
+        "Tìm Công Việc Mơ Ước Của Bạn",
+        "Khám Phá Theo Ngành Nghề",
+        "Công Nghệ",
+        "Marketing",
+        "Thiết Kế",
+        "Tài Chính",
+        "Y Tế",
+        "Giáo Dục",
+        "Bán Lẻ",
+        "Xem Thêm",
+        "Việc Làm Nổi Bật",
+        "Senior UI/UX Designer",
+        "Senior Frontend Engineer (React)",
+        "Marketing Manager",
+        "Business Analyst",
+        "Top Công Ty Công Nghệ Hàng Đầu",
+        "Ứng Viên",
+        "Nhà Tuyển Dụng",
+        "Về Chúng Tôi"
+      ],
+      "labels": [],
+      "controls": [
+        {
+          "type": "text",
+          "placeholder": "Tên công việc, vị trí..."
+        },
+        {}
+      ],
+      "actions": [
+        "Sign In",
+        "Post Job",
+        "Tìm Kiếm",
+        "Xem tất cả ngành nghề arrow_forward",
+        "Nộp CV"
+      ],
+      "colors": {
+        "on-primary-fixed-variant": "#003EA8",
+        "secondary": "#006591",
+        "error": "#BA1A1A",
+        "on-primary-container": "#EEEFFF",
+        "surface-container-low": "#F2F4F6",
+        "inverse-primary": "#B4C5FF",
+        "secondary-fixed-dim": "#89CEFF",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "tertiary-fixed-dim": "#FFB596",
+        "on-tertiary": "#FFFFFF",
+        "surface-bright": "#F7F9FB",
+        "on-surface": "#191C1E",
+        "on-secondary": "#FFFFFF",
+        "on-error": "#FFFFFF",
+        "tertiary": "#943700",
+        "surface-dim": "#D8DADC",
+        "outline": "#737686",
+        "surface-container-high": "#E6E8EA",
+        "on-error-container": "#93000A",
+        "surface-container-highest": "#E0E3E5",
+        "tertiary-container": "#BC4800",
+        "primary-container": "#2563EB",
+        "surface-container-lowest": "#FFFFFF",
+        "surface-container": "#ECEEF0",
+        "on-surface-variant": "#434655",
+        "primary-fixed": "#DBE1FF",
+        "background": "#F7F9FB",
+        "surface-variant": "#E0E3E5",
+        "outline-variant": "#C3C6D7",
+        "on-tertiary-fixed": "#360F00",
+        "inverse-on-surface": "#EFF1F3",
+        "secondary-fixed": "#C9E6FF",
+        "on-primary": "#FFFFFF",
+        "surface-tint": "#0053DB",
+        "on-secondary-fixed-variant": "#004C6E",
+        "on-tertiary-container": "#FFEDE6",
+        "inverse-surface": "#2D3133",
+        "on-primary-fixed": "#00174B",
+        "error-container": "#FFDAD6",
+        "secondary-container": "#39B8FD",
+        "on-secondary-container": "#004666",
+        "primary-fixed-dim": "#B4C5FF",
+        "on-secondary-fixed": "#001E2F",
+        "on-background": "#191C1E",
+        "tertiary-fixed": "#FFDBCD",
+        "primary": "#004AC6",
+        "surface": "#F7F9FB"
+      },
+      "fonts": {
+        "headline": "Be Vietnam Pro",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "Company",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDahEaqKnAAXnWg0mH_pV8J6hSNdD2z190Nzjy24kSc4u8Q72b4CtVZFVpUZsKX3lFGez66VibLqpvC_anuhYHDzHGOd0xYmYvAGysn5U5B4tepDxu1CmF4nAbp2WgBWc2DXIWlCYQLgAHS8Nttx1ca9VRiK0v397Us1jfK5GgPzzsVbKiCECgLsTJH_JyUmc2lDn_ncnOZfwxPVeOA5gmruVY4LSQGCbqytgWcCCH17VWEu9TswiqUuMURPPp5V7gQGozOtgGKvdle",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Company",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuARkon-5p06VctFqxxjyScXIU5UU5dZVrjsPT3UUdL6NNnpRisKEO0mal08qjPLfvFb2guUZcjnn0inRPbaJAwlg9W2M2PXiPvBT_uHPnMLvN8ATPajhb8P-FcP4OB5NpdH8IAlBeqwAVjvXEe3LK_XQkm_uFZdRtRbq7r96yY8FVqDCXSeZldKiLT7A9eRNA_Rn7JGei9mgQ7JTXosQKj_B4CZnAJJDSw7r0LfGKUSrClpZHHQHEuPG-jIwwOLTTy57oLn1IFlNWNa",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Company",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBEvyaTsaXgVKh3j4Ct5r3PI09DUdNqbKgzwJObGDvN5V6xLuPAsaO0wyU8lKi2ZRPpgTod3f1ggDF-sSzkQ4xlfkJm8k9aTjAsCVaa3w01zrWBkPD4t6ZMONJ4IDJC2FotUL_0_JtUPCbzXIEMNkWsVW6llYbEmlizxAIO_iUvVzvYjdzMw8-rBt8nb2ig-UJQNul_rjmL4CjvBUwlei-LAkUgyXF3QF_pUBDtnIXHEzSbb13FoY8wSceOuf5ajnVsdjSiS_643CQR",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Company",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBlrKUvhXjn68DSuN_yIymOSrZTP4xjhamwUNnfZaXeU9AaTBDMb89hVzlUVG6CjOdHo4TPC3amtb42qvqIzRMv9eE_urJIgBcSJeXLqVOEpTh28ElSmqpCZX5Q2U-s6UrZTdpMsQWw_m8_cmCBRS7rzXAwPULXkQ38kIM5CelPOLXIq9zC-sHMspLw8G6nn1Koadp9t71-rI5Ogt5IIuPiQtDugmWcgJ445IFVVBKhKjqU2zEnQzP0dSCwmNJGCshNYEmBI5z9IcHK",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "FPT Software",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB_o2GZQ7X-NoaUpcO05lWP_ZNHKoCjZ7GqazI13EmtQcO7e70NTzuwfaOl6hn9xooR48n1dvLlkNP16tB7vBdfWmylf6EumB42OmFKFlieYpkz73kqET22Q2nHkDnwhwxIo5LLf1Vr1PeUyVgKcWuAmYMuaaBRldehK5w4yTx64qrHN6MVf0_SQaM2Bxld-xBcZw6R6Rl3hFcOXQMR_EdQwPDox-w_R-uJk-gy5OuDIbgpb5OfAe_03wmTuQFWvJDF383oTybQEAa8",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "VNG",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuChhwvB-AXTt4_M2jM3JEXRDnZIKziRXwJWC_4FxT7H-VOf4h9neS6XTPJrLPo4IkPHCBFlPmIudKuR21JUCAPAso5fadNwDar_RevS9w0ZVdbRjqmI51vmAUsVp91U56j2eMGWmu54KCAl7L6k6znRoc5yDlp_oh7XCyrpdy7V8EzrfhbDscVac_SDn9LDMcf11knx35ESdpoqZqGFmWeQjNLpBEAYFLx9IEPYHZ64qVMfjkyYKEqUvKIazHXEq4Hf_n7oWp59tqYa",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Momo",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCmNW-RGfvPJnimARpG-ZOqiXVtP4yroEub3Ae4MPra2zKpr0Eg4YDT-y_jYSqiLeBphxa9Co-UOHX5D-GZWAOUkB2morp7tlma03EE4bKEQq2UlCTdXHaQaHm1r_b09MPOOxG95Vcpit1E77Y_Wnc58hH4Ra_nKa5tib41LA5Vv3BVpvjCwa4z0tPkJVf2yAEHLOm9G8yrSOhWeZKkWs7Xy1PXZeCI9Ogh0ExbvM-t4RTA5_iHKq4JrlVC9UCKAfD9RWl9meSNLsJN",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Shopee",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBM5S3xN2oMAP20C_xHOOM-zUsUnw5kLDyVSWX7Bnvopxhoq3diTPmbcY-EBBYB7Jwgu2CI45suAUf4WvziMIsH7TEwracaw5VOaZfrGTpytmgevRVp3y6nbzrcTspnmk55d4FmBiuneIx-hIj56uk9Ygaguyp81GSZ6OzbfuW3r4uNFT64Rf8eJ1qBUi2MfHTc6q_PCJ8i5mgsC8_k6F1JlLyM8mhAyjcJup3y5Be7ib0uj1Yx5KJLoXdxo9P8DFWUv73eANIw9Yt8",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Grab",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCicXxLcMdgpnc9ILAw5hKRJZcchmV5Zg6P7-dCGTTfCrVDMtgOa5FJVtGf5nJp7lhvyw1l1ukFiNPFWN3tDWPmsZgvuyBl6qR6ilutTQU9pd8DsUCB_7CIGKkSS6hOyt8RHnKTCvSQlbOqqlfvbopVJWZaN2XtJUoV2yT70ebjRWBrpLfES6_-q1m_8ssCBLUuf-8Sf5FJUAsEIeiwjYxgCIEKxS38tToMuftoNbWxt9r0bzMJXPRz3WVTxwL0WTgQ9lEt8NgQi8Qw",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Viettel",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBr_W_eGVJeQcYNIzuN58LVmYmBEeGB2SwbAU1pjfwptCxR_A_fFza3rVkOnO2t38xkGkjrLPUtpvk_CZSHlZh2xPmuxaB7SruV7r7TFrzpm2oLKGa88KAFVyYogX8m7v-VSUYhC2WhYBOVJm5A_ss086sDksUhc5wOROqLnUaikBgDrCE4gUAVSRAXbP8zJ_hfoFWz1PCmBBmXInP1rqCbFpHcN6KuiaB-2qTTxSylruodOhBZrqY_wzakeHZlBQwQNLvC2J2qRFPa",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Tiki",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAwu5H6JZzprIpLPlS5j4oemaHZ_XsMKh1fy0r4puJMdYlEeLbjx6C-NPV5w98ntvv7v_qV7htlTWPhRLBvDXcSrDOc2WjFsENPNKOgbaf2c_m3NOOqhYGsYDU8_L-c2uVUK9ZLkrEdyUsOAhTV7BuE1ABIEXfmKXgQhCiZVDeTyBQaUXSbTqb9ZGcv4mZdupWHJaulgROVw5mhslOy-Be6sHe3ir3CTEO8m7L9D8RCAdRsulJpv8FllRM5DnSzAfXU0dP3DRw7khI7",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Base.vn",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBYUWDEfZ92QuVQ1YnK0e6LGCtHl406bx267HSyJcDvuGrqqktWJOuTphsgy0SvxInGLY1SGHXLe8-87h4A7aBKwbSvb3H4T6tvN2T3xsC3kVcHEWPfACng6GcBtP6qJiycoJnfmsLqwlzLHULK_EmazLG_YvdemIrTI1G7duwzTmsM6Oj5FfqkTBhDIjuVmaci6qVafBluMD6iSxf0KuzXpxxO2X32QQR8HxsUx86Sd4JPa7LF7spX65vNgyUVth_ezMYRFebGN5yg",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/tuy_n_d_ng_vn_homepage/code.html",
+      "image": ".stitch/designs/tuy_n_d_ng_vn_homepage/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-035.md",
+    "prompt": ".stitch/prompts/JF-035.md"
+  }
+]

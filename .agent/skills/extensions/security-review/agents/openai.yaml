@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Review bảo mật code
+  short_description: Review bảo mật code cho dự án JobFind
+  default_prompt: Dùng $security-review kiểm tra patch upload PDF cho chat.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

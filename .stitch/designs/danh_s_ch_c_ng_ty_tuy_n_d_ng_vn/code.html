@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#c9e6ff",
+                    "inverse-primary": "#b4c5ff",
+                    "error": "#ba1a1a",
+                    "outline": "#737686",
+                    "surface-container-low": "#f2f4f6",
+                    "tertiary": "#943700",
+                    "on-secondary-fixed": "#001e2f",
+                    "on-primary": "#ffffff",
+                    "secondary": "#006591",
+                    "primary-fixed": "#dbe1ff",
+                    "surface-tint": "#0053db",
+                    "primary": "#004ac6",
+                    "on-secondary-fixed-variant": "#004c6e",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-background": "#191c1e",
+                    "surface-bright": "#f7f9fb",
+                    "tertiary-container": "#bc4800",
+                    "on-error-container": "#93000a",
+                    "surface-container-high": "#e6e8ea",
+                    "surface-container-highest": "#e0e3e5",
+                    "error-container": "#ffdad6",
+                    "surface": "#f7f9fb",
+                    "on-tertiary-container": "#ffede6",
+                    "background": "#f7f9fb",
+                    "tertiary-fixed": "#ffdbcd",
+                    "on-surface": "#191c1e",
+                    "outline-variant": "#c3c6d7",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-primary-container": "#eeefff",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "surface-dim": "#d8dadc",
+                    "tertiary-fixed-dim": "#ffb596",
+                    "secondary-fixed-dim": "#89ceff",
+                    "on-primary-fixed": "#00174b",
+                    "surface-variant": "#e0e3e5",
+                    "primary-container": "#2563eb",
+                    "on-secondary-container": "#004666",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-surface-variant": "#434655",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#39b8fd",
+                    "on-tertiary-fixed": "#360f00",
+                    "on-tertiary-fixed-variant": "#7d2d00",
+                    "inverse-surface": "#2d3133"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Be Vietnam Pro"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-depth-layering {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+        .editorial-shadow {
+            shadow-[0px_20px_40px_rgba(0,74,198,0.06)];
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,74,198,0.06)]">
+<div class="flex justify-between items-center px-8 h-20 max-w-screen-2xl mx-auto font-headline tracking-tight">
+<div class="text-2xl font-bold tracking-tighter text-blue-700 dark:text-blue-400">Tuyển Dụng VN</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Jobs</a>
+<a class="text-blue-700 dark:text-blue-400 font-semibold border-b-2 border-blue-600 pb-1" href="#">Companies</a>
+<a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all duration-300 rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border border-outline-variant/15">
+<img class="w-full h-full object-cover" data-alt="Candidate Profile Avatar professional headshot of a recruitment specialist with soft office lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3m50eX8n8aVxjJ1o-F-BeMaLY7q7qgIz7zR1sgalHqRV5-s8FwYOGWtqh4jbFns1qKb_NAmiR8SNoCH8WMoh5a2YSBA6UouGlI9swdfeg_yyBtLs-yix8rjVXvMrTT7n9HXdWMUrQ5SOxwvnBlSjZKvYqIPnUmR1NUABV7YzqZSn3k3jjGSpQuR0UBNZuZkqEScsCLV_9QAre4OASqQNQJZFIO0XyK9diDGm7PoOk7ArxiK7kWEqCyUQMMiQx1XQyaJhn9ilB5wGk"/>
+</div>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative bg-primary pt-32 pb-40 overflow-hidden">
+<div class="absolute inset-0 bg-[linear-gradient(135deg,#004ac6,#0ea5e9)] opacity-90"></div>
+<div class="absolute inset-0 opacity-10" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBM7a8Ymv4-1ICIygQ1lGu5b8Ms7OkiE2tFIEe9l-VD59UyTf9d2ve2go96bKBa8z4VZwSCk5Zf0zjcSGovTwrl_EtoTZtozJg8zfuxZwn1IPf00l2iuAOjq_14Y35iHZ8t8ya4PHfgRZwLzocK_pbdMVwjLwx6p_LChVAPAGbtvU2XMA3jehNcHMhldbwALjPLjtjRErZnqUQUzTXumkbNJx84yXnB3lh6SNOpbCHukE6aXOsj_jTRNmgPqAvABf-NlJbKKuoH53tW');"></div>
+<div class="relative max-w-screen-xl mx-auto px-8 text-center">
+<h1 class="font-headline text-5xl md:text-6xl font-bold text-white tracking-tighter mb-8 leading-tight">
+                    Khám phá các doanh nghiệp<br/>hàng đầu
+                </h1>
+<div class="max-w-3xl mx-auto">
+<div class="relative group">
+<input class="w-full h-16 pl-14 pr-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 text-white placeholder-white/60 focus:bg-white focus:text-on-surface focus:outline-none transition-all duration-300 shadow-2xl" placeholder="Tìm kiếm công ty, ngành nghề..." type="text"/>
+<span class="material-symbols-outlined absolute left-5 top-1/2 -translate-y-1/2 text-white/70 group-focus-within:text-primary" data-icon="search">search</span>
+<button class="absolute right-3 top-1/2 -translate-y-1/2 bg-white text-primary px-6 py-2.5 rounded-lg font-semibold hover:bg-blue-50 transition-all active:scale-95">Tìm kiếm</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Content Grid -->
+<div class="max-w-[1280px] mx-auto px-8 -mt-20 relative z-10">
+<div class="flex flex-col md:flex-row gap-10">
+<!-- Sidebar Filters -->
+<aside class="w-full md:w-[280px] space-y-8">
+<div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_rgba(0,74,198,0.06)]">
+<h2 class="font-headline text-lg font-semibold mb-6">Bộ lọc tìm kiếm</h2>
+<!-- Ngành nghề -->
+<div class="mb-8">
+<label class="block font-label text-sm font-semibold text-outline mb-3">Ngành nghề</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline-variant/30 text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Công nghệ thông tin</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 rounded border-outline-variant/30 text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Tài chính &amp; Ngân hàng</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 rounded border-outline-variant/30 text-primary focus:ring-primary/20" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-primary transition-colors">Marketing / Sáng tạo</span>
+</label>
+</div>
+</div>
+<!-- Quy mô -->
+<div class="mb-8">
+<label class="block font-label text-sm font-semibold text-outline mb-3">Quy mô nhân sự</label>
+<select class="w-full h-12 bg-surface-container-low border-none rounded-lg px-4 text-on-surface-variant focus:ring-2 focus:ring-primary/40">
+<option>Tất cả quy mô</option>
+<option>10 - 50 nhân viên</option>
+<option>50 - 200 nhân viên</option>
+<option>200 - 1000 nhân viên</option>
+<option>1000+ nhân viên</option>
+</select>
+</div>
+<!-- Thành phố -->
+<div>
+<label class="block font-label text-sm font-semibold text-outline mb-3">Thành phố</label>
+<div class="flex flex-wrap gap-2">
+<button class="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">TP. Hồ Chí Minh</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-semibold hover:bg-primary/5 hover:text-primary transition-colors">Hà Nội</button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant text-xs font-semibold hover:bg-primary/5 hover:text-primary transition-colors">Đà Nẵng</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- Company Grid -->
+<div class="flex-1 space-y-12">
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
+<!-- Company Card 1 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_rgba(0,74,198,0.06)] hover:translate-y-[-4px] transition-all duration-300 relative overflow-hidden">
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 bg-surface-container-low rounded-lg p-2 flex items-center justify-center -mt-12 shadow-lg group-hover:shadow-primary/20 transition-all border border-white">
+<img class="w-full h-full object-contain rounded" data-alt="Modern tech company logo geometric abstract design in shades of royal blue and white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTl2mV6H3En-D23B49BRmUFsD8gA_N2mfmcZrFCRFQywP8Txacee0yN6KQSO5UO2at1cSwo_-kvkbTHzeIS7_cE5p12lSGxAi2NyMefCBtldgCuT9H5XDtIBcoZOhYFIbpeQtJNcVhEYl-hBMtS7SFkdtemVEite_Si3dgU_dx6HoWzUluCwcpyN4rURMz-OMssv_W40xiNAsDya8tReaVabAlXZx7jLCU92Z6YyL8HDXhWuBbE57nBNWf116LNehFtE92yk_CXv9b"/>
+</div>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.8</span>
+<span class="text-xs text-outline">(124 đánh giá)</span>
+</div>
+</div>
+<h3 class="font-headline text-xl font-bold mb-1 group-hover:text-primary transition-colors">FPT Software</h3>
+<div class="text-primary text-xs font-semibold tracking-wider uppercase mb-3">Công nghệ thông tin</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 line-clamp-2 italic">Dẫn đầu trong chuyển đổi số toàn cầu với mạng lưới chi nhánh tại hơn 26 quốc gia.</p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<span class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-bold hover:bg-primary-container transition-all cursor-pointer">
+                                    Xem 45 việc làm đang tuyển
+                                </span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Company Card 2 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_rgba(0,74,198,0.06)] hover:translate-y-[-4px] transition-all duration-300 relative overflow-hidden">
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 bg-surface-container-low rounded-lg p-2 flex items-center justify-center -mt-12 shadow-lg group-hover:shadow-primary/20 transition-all border border-white">
+<img class="w-full h-full object-contain rounded" data-alt="Corporate bank logo minimalist skyscraper icon in deep navy blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ7UBWJy7XSR6VD7DQVmJT2H7QCBV6bbmEe3yA-UPAP-qoO_CmIJwihqyeGz1hD4LvIUa-ciQCuhwTU0HLU3eUSrHif9It29qNezCRejoX6REChjmSWtejyb3I3Dl9jhRldXEBfEcBImUYgMnsKzGs1v1f0y2UKBfC6hDUB9TBZy3-Wj14v5_0iNKvF5i2aDroxuahvDJWWTaepVFEv7KP-CdPVC5ORuj4ByU0RjXMSknwCd1xfoKsSCijsnQzlTA7YA3_63cDJ7Qj"/>
+</div>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.6</span>
+<span class="text-xs text-outline">(89 đánh giá)</span>
+</div>
+</div>
+<h3 class="font-headline text-xl font-bold mb-1 group-hover:text-primary transition-colors">Vietcombank</h3>
+<div class="text-primary text-xs font-semibold tracking-wider uppercase mb-3">Tài chính &amp; Ngân hàng</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 line-clamp-2 italic">Môi trường làm việc chuyên nghiệp, kiến tạo giá trị bền vững cho sự nghiệp của bạn.</p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<span class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-bold hover:bg-primary-container transition-all cursor-pointer">
+                                    Xem 12 việc làm đang tuyển
+                                </span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Company Card 3 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_rgba(0,74,198,0.06)] hover:translate-y-[-4px] transition-all duration-300 relative overflow-hidden">
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 bg-surface-container-low rounded-lg p-2 flex items-center justify-center -mt-12 shadow-lg group-hover:shadow-primary/20 transition-all border border-white">
+<img class="w-full h-full object-contain rounded" data-alt="Modern creative agency logo vibrant splash of colors representing innovation and design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEPvC5TjBSGcvFd9K-0O9shuY_P3QcpLGQqm4fVHRIKwsf__98T8OktSJnLlMzphYSYWGlkreNaqyGEphl0VIcnCqzHXSp-sHyA6lM1sx-j7gSASFTAMf8JEQMsFcsp2P1jdqVdWuD8xP0eUZIhfoQ7dyGhBA6SD4svrksv7XuJRHVk4_o3hI6SJcUKfKztBkrzr--nd0rM9xEx-0yhGKj8Snv-RSOKVHl6PUpnur6s1yA8Iy6PQSb9tmprrR5HzWGqHXS4VES5eZE"/>
+</div>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.9</span>
+<span class="text-xs text-outline">(56 đánh giá)</span>
+</div>
+</div>
+<h3 class="font-headline text-xl font-bold mb-1 group-hover:text-primary transition-colors">VNG Corporation</h3>
+<div class="text-primary text-xs font-semibold tracking-wider uppercase mb-3">Giải trí &amp; Internet</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 line-clamp-2 italic">Kỳ lân công nghệ hàng đầu Việt Nam với sứ mệnh kiến tạo hệ sinh thái số phong phú.</p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<span class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-bold hover:bg-primary-container transition-all cursor-pointer">
+                                    Xem 38 việc làm đang tuyển
+                                </span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<!-- Company Card 4 -->
+<div class="group bg-surface-container-lowest p-8 rounded-xl shadow-[0px_20px_40px_rgba(0,74,198,0.06)] hover:translate-y-[-4px] transition-all duration-300 relative overflow-hidden">
+<div class="flex items-start justify-between mb-6">
+<div class="w-16 h-16 bg-surface-container-low rounded-lg p-2 flex items-center justify-center -mt-12 shadow-lg group-hover:shadow-primary/20 transition-all border border-white">
+<img class="w-full h-full object-contain rounded" data-alt="Elegant real estate developer logo bold typography with golden accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoDVP9UkI4AjE95tc2oorS3LFlk-lZ4ZucFdRnVz_jlHIoNA1brYDUzPN--mf_nBVS8FR5qUAx_YKyE07y2hoUUVztwuIrc8ElE5UPX5ixQIFsSyHEhAuGY-_ahJwZzjHFOWSv9jsopNjaAmHmLXgbVzWMNTsYcvFhhC0-WuO1oPL7-PurmO2UbHjn_v2e7UQ4yiE_7V3o2eXwUgbHAyHnnc4MA4zVPZS9lGMXQK3Ro38gqt5ZjcobuzzSflpqxYQoIbhlEpYsGT38"/>
+</div>
+<div class="flex items-center gap-1 text-amber-500">
+<span class="material-symbols-outlined" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-on-surface">4.5</span>
+<span class="text-xs text-outline">(210 đánh giá)</span>
+</div>
+</div>
+<h3 class="font-headline text-xl font-bold mb-1 group-hover:text-primary transition-colors">Vingroup</h3>
+<div class="text-primary text-xs font-semibold tracking-wider uppercase mb-3">Đa ngành</div>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6 line-clamp-2 italic">Kiến tạo cuộc sống tốt đẹp hơn cho người Việt thông qua những sản phẩm đẳng cấp quốc tế.</p>
+<div class="flex items-center justify-between pt-6 border-t border-outline-variant/15">
+<span class="inline-flex items-center px-4 py-2 rounded-full bg-primary text-white text-xs font-bold hover:bg-primary-container transition-all cursor-pointer">
+                                    Xem 15 việc làm đang tuyển
+                                </span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-center gap-2 pt-12 pb-20">
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-outline">
+<span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-bold">1</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors font-medium">2</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors font-medium">3</button>
+<span class="px-2 text-outline">...</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors font-medium">12</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-colors text-outline">
+<span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-20 mt-20 tonal-shift-bg border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between pt-12">
+<div class="mb-10 md:mb-0">
+<div class="font-headline font-bold text-slate-900 dark:text-white text-2xl mb-4">Tuyển Dụng VN</div>
+<p class="font-inter text-sm text-slate-500 dark:text-slate-400 max-w-xs">
+                    © 2024 Tuyển Dụng VN. The Career Architect. Sàn giao dịch việc làm chất lượng cao hàng đầu Việt Nam.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="space-y-4">
+<h4 class="font-headline text-on-surface font-bold text-sm tracking-widest uppercase">Platform</h4>
+<ul class="space-y-3 font-inter text-sm">
+<li><a class="text-slate-500 hover:text-blue-500 underline decoration-blue-500/30 underline-offset-4 transition-opacity" href="#">About Us</a></li>
+<li><a class="text-slate-500 hover:text-blue-500 underline decoration-blue-500/30 underline-offset-4 transition-opacity" href="#">Browse Jobs</a></li>
+<li><a class="text-slate-500 hover:text-blue-500 underline decoration-blue-500/30 underline-offset-4 transition-opacity" href="#">Pricing</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-on-surface font-bold text-sm tracking-widest uppercase">Legal</h4>
+<ul class="space-y-3 font-inter text-sm">
+<li><a class="text-slate-500 hover:text-blue-500 underline decoration-blue-500/30 underline-offset-4 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-blue-500 underline decoration-blue-500/30 underline-offset-4 transition-opacity" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-blue-500 underline decoration-blue-500/30 underline-offset-4 transition-opacity" href="#">Cookies</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-on-surface font-bold text-sm tracking-widest uppercase">Support</h4>
+<ul class="space-y-3 font-inter text-sm">
+<li><a class="text-slate-500 hover:text-blue-500 underline decoration-blue-500/30 underline-offset-4 transition-opacity" href="#">Contact</a></li>
+<li><a class="text-slate-500 hover:text-blue-500 underline decoration-blue-500/30 underline-offset-4 transition-opacity" href="#">Help Center</a></li>
+<li><a class="text-slate-500 hover:text-blue-500 underline decoration-blue-500/30 underline-offset-4 transition-opacity" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline text-on-surface font-bold text-sm tracking-widest uppercase">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-slate-500 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

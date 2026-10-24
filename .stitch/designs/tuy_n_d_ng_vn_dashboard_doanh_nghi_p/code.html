@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tuyển Dụng VN - Employer Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-variant": "#e0e3e5",
+                        "primary-container": "#2563eb",
+                        "on-secondary-fixed-variant": "#004c6e",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#39b8fd",
+                        "on-primary-container": "#eeefff",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-container-high": "#e6e8ea",
+                        "error-container": "#ffdad6",
+                        "secondary-fixed": "#c9e6ff",
+                        "primary": "#004ac6",
+                        "inverse-on-surface": "#eff1f3",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#c3c6d7",
+                        "surface": "#f7f9fb",
+                        "on-secondary-fixed": "#001e2f",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "primary-fixed": "#dbe1ff",
+                        "on-surface-variant": "#434655",
+                        "on-secondary-container": "#004666",
+                        "secondary": "#006591",
+                        "surface-tint": "#0053db",
+                        "secondary-fixed-dim": "#89ceff",
+                        "tertiary-container": "#bc4800",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#737686",
+                        "inverse-primary": "#b4c5ff",
+                        "surface-dim": "#d8dadc",
+                        "on-primary-fixed": "#00174b",
+                        "on-background": "#191c1e",
+                        "inverse-surface": "#2d3133",
+                        "surface-container-low": "#f2f4f6",
+                        "background": "#f7f9fb",
+                        "tertiary-fixed": "#ffdbcd",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container": "#eceef0",
+                        "tertiary": "#943700",
+                        "surface-bright": "#f7f9fb",
+                        "on-tertiary-container": "#ffede6",
+                        "on-surface": "#191c1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        h1, h2, h3, .font-headline {
+            font-family: 'Be Vietnam Pro', sans-serif;
+        }
+        .premium-gradient {
+            background: linear-gradient(135deg, #2563eb, #0ea5e9);
+        }
+        .sidebar-active {
+            color: #004ac6;
+            font-weight: 700;
+            border-right: 4px solid #2563eb;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- SideNavBar (Shared Component) -->
+<aside class="fixed left-0 top-0 h-screen w-64 border-r-0 bg-slate-50 flex flex-col py-8 px-6 z-50">
+<div class="mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg overflow-hidden bg-primary flex items-center justify-center">
+<img alt="VNG Corporation Logo" class="w-full h-full object-cover" data-alt="professional company logo with minimalist geometric shapes in deep blue and white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCalG9epZm_Gq3OorYms_8rSTYFxpLvjWeMmQkr22oiPahB2Z68leSAnzX9zj5EQEqwnuc3QfdMndANp45tbncxEVeyuZePKGzEJ6JG-LsMH32-6JTqFZxI6236kda7ekFFHo6E9d4WiK3pmcYyZwU9GdFvfTVraHq3W4QXCKr3aqClMFFazSCx3ZhLcsfE8Un12zUffvtxrP0cZRxiZkegfxIe1zgSNB1K9T0mg8m93-L33bvyvW2Y1sTE9eO4Aqf4V6IufUZo9d6"/>
+</div>
+<div>
+<h2 class="text-lg font-black text-blue-800 tracking-tighter">VNG Corporation</h2>
+<span class="text-[10px] px-2 py-0.5 rounded-full bg-primary-container text-white font-bold uppercase tracking-widest">Premium Plan</span>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-2">
+<!-- Active Tab: Tổng quan -->
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg transition-colors sidebar-active hover:bg-blue-50" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-be-vietnam-pro tracking-tight text-sm font-semibold">Tổng quan</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg transition-colors text-slate-500 hover:text-blue-600 hover:bg-blue-50" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span class="font-be-vietnam-pro tracking-tight text-sm font-semibold">Quản Lý Tin</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg transition-colors text-slate-500 hover:text-blue-600 hover:bg-blue-50" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-be-vietnam-pro tracking-tight text-sm font-semibold">Ứng Viên</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg transition-colors text-slate-500 hover:text-blue-600 hover:bg-blue-50" href="#">
+<span class="material-symbols-outlined" data-icon="filter_alt">filter_alt</span>
+<span class="font-be-vietnam-pro tracking-tight text-sm font-semibold">Phễu Tuyển Dụng</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg transition-colors text-slate-500 hover:text-blue-600 hover:bg-blue-50" href="#">
+<span class="material-symbols-outlined" data-icon="domain">domain</span>
+<span class="font-be-vietnam-pro tracking-tight text-sm font-semibold">Hồ Sơ Công Ty</span>
+</a>
+<a class="flex items-center gap-4 py-3 px-4 rounded-lg transition-colors text-slate-500 hover:text-blue-600 hover:bg-blue-50" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-be-vietnam-pro tracking-tight text-sm font-semibold">Cài Đặt</span>
+</a>
+</nav>
+<div class="mt-auto">
+<button class="w-full premium-gradient text-white py-3 rounded-xl font-bold text-sm shadow-lg shadow-blue-500/20 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined text-sm" data-icon="add_circle">add_circle</span>
+                Đăng Tin Mới
+            </button>
+</div>
+</aside>
+<!-- Main Dashboard Area -->
+<main class="ml-64 min-h-screen">
+<!-- TopNavBar (Shared Component) -->
+<header class="sticky top-0 z-40 w-full glass-header flex justify-between items-center h-20 px-8">
+<div class="flex flex-col">
+<h1 class="text-xl font-bold tracking-tight text-on-surface">Xin chào, Nguyễn HR! 👋</h1>
+<p class="text-xs text-slate-500 font-medium">Thứ Tư, ngày 24 tháng 5, 2024</p>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 transition-colors relative">
+<span class="material-symbols-outlined text-slate-600" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined text-slate-600" data-icon="chat_bubble">chat_bubble</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-slate-200"></div>
+<div class="flex items-center gap-3 cursor-pointer group">
+<img alt="User Profile Avatar" class="w-10 h-10 rounded-full border-2 border-white shadow-sm object-cover" data-alt="professional headshot of a smiling asian male HR manager in business casual attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChLiQb9HMvA3F-wLXB6UZGAYCuW4qZJ2Ud8T4mvcoVE3ptaEX7aGuJ01n6_IpGOKkHwmOzwxy2-FOedd3Lhx20LPztuJOtd7MvHjjNnXbH9iSkpx8MMe0TSIK04rdEEOxM20Fwpik27EDY5haV4Uj9ce12DT2WZZ_-EAzZmCYyMDki84dn5fTcMbgtfUBhqFIK9rinnkWaPFxHFLuEfSx1GMqUzwpygdSf-sLWv6dhE_FAZPYteE5au8PtZl-bVsf89-XOhyPkv5GU"/>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary transition-colors" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-8 space-y-10">
+<!-- KPI Row -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- KPI Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm shadow-blue-900/5 hover:translate-y-[-4px] transition-transform duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+</div>
+<span class="text-emerald-500 text-xs font-bold flex items-center">
+                            +2 <span class="material-symbols-outlined text-xs ml-0.5" data-icon="trending_up">trending_up</span>
+</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Tin Đang Hoạt Động</p>
+<h3 class="text-3xl font-bold mt-1">12</h3>
+</div>
+<!-- KPI Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm shadow-blue-900/5 hover:translate-y-[-4px] transition-transform duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-purple-50 text-purple-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</div>
+<span class="text-emerald-500 text-xs font-bold flex items-center">
+                            +45 <span class="material-symbols-outlined text-xs ml-0.5" data-icon="trending_up">trending_up</span>
+</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Tổng Ứng Viên</p>
+<h3 class="text-3xl font-bold mt-1">347</h3>
+</div>
+<!-- KPI Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm shadow-blue-900/5 hover:translate-y-[-4px] transition-transform duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-amber-50 text-amber-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="event_available">event_available</span>
+</div>
+</div>
+<p class="text-slate-500 text-sm font-medium">Phỏng Vấn Hôm Nay</p>
+<h3 class="text-3xl font-bold mt-1">5</h3>
+</div>
+<!-- KPI Card 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-sm shadow-blue-900/5 hover:translate-y-[-4px] transition-transform duration-300">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
+<span class="material-symbols-outlined" data-icon="speed">speed</span>
+</div>
+</div>
+<p class="text-slate-500 text-sm font-medium">Tỷ Lệ Phản Hồi</p>
+<h3 class="text-3xl font-bold mt-1">78%</h3>
+</div>
+</section>
+<!-- Table Section: Active Jobs -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm shadow-blue-900/5 overflow-hidden">
+<div class="p-6 border-b border-slate-50 flex justify-between items-center">
+<h2 class="text-xl font-bold text-on-surface">Tin Tuyển Dụng Đang Hoạt Động</h2>
+<button class="text-primary text-sm font-bold hover:underline">Xem tất cả</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-slate-500 text-xs font-bold uppercase tracking-wider">
+<th class="px-6 py-4">Vị Trí</th>
+<th class="px-6 py-4 text-center">Ứng Viên</th>
+<th class="px-6 py-4">Hạn Nộp</th>
+<th class="px-6 py-4">Trạng Thái</th>
+<th class="px-6 py-4 text-right">Hành Động</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50">
+<tr class="hover:bg-blue-50/30 transition-colors">
+<td class="px-6 py-4">
+<div class="font-bold text-slate-800">Senior UI/UX Designer</div>
+<div class="text-xs text-slate-500 mt-0.5">Product Team • Full-time</div>
+</td>
+<td class="px-6 py-4 text-center font-semibold">42</td>
+<td class="px-6 py-4 text-sm text-slate-600">15/06/2024</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-[11px] font-bold rounded-full uppercase">Active</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<tr class="hover:bg-blue-50/30 transition-colors">
+<td class="px-6 py-4">
+<div class="font-bold text-slate-800">Backend Engineer (Golang)</div>
+<div class="text-xs text-slate-500 mt-0.5">Technical Team • Remote</div>
+</td>
+<td class="px-6 py-4 text-center font-semibold">18</td>
+<td class="px-6 py-4 text-sm text-slate-600">20/06/2024</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-[11px] font-bold rounded-full uppercase">Active</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<tr class="hover:bg-blue-50/30 transition-colors">
+<td class="px-6 py-4">
+<div class="font-bold text-slate-800">Marketing Manager</div>
+<div class="text-xs text-slate-500 mt-0.5">Growth • Full-time</div>
+</td>
+<td class="px-6 py-4 text-center font-semibold">56</td>
+<td class="px-6 py-4 text-sm text-slate-600">01/06/2024</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-amber-100 text-amber-700 text-[11px] font-bold rounded-full uppercase">Expiring Soon</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<tr class="hover:bg-blue-50/30 transition-colors">
+<td class="px-6 py-4">
+<div class="font-bold text-slate-800">HR Generalist</div>
+<div class="text-xs text-slate-500 mt-0.5">HR Dept • Full-time</div>
+</td>
+<td class="px-6 py-4 text-center font-semibold">24</td>
+<td class="px-6 py-4 text-sm text-slate-600">12/07/2024</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-emerald-100 text-emerald-700 text-[11px] font-bold rounded-full uppercase">Active</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+<tr class="hover:bg-blue-50/30 transition-colors">
+<td class="px-6 py-4">
+<div class="font-bold text-slate-800">Data Analyst</div>
+<div class="text-xs text-slate-500 mt-0.5">Analytics • Contract</div>
+</td>
+<td class="px-6 py-4 text-center font-semibold">9</td>
+<td class="px-6 py-4 text-sm text-slate-600">30/05/2024</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-rose-100 text-rose-700 text-[11px] font-bold rounded-full uppercase">Pending</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors" data-icon="more_vert">more_vert</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Bottom Two Columns Section -->
+<div class="grid grid-cols-1 lg:grid-cols-10 gap-8">
+<!-- Left Column: New Candidates (60%) -->
+<section class="lg:col-span-6 bg-surface-container-lowest rounded-xl shadow-sm shadow-blue-900/5 p-6">
+<div class="flex justify-between items-center mb-6">
+<h2 class="text-xl font-bold text-on-surface">Ứng Viên Mới Nhất</h2>
+<button class="text-slate-400 hover:text-slate-600">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+<div class="space-y-4">
+<!-- Candidate 1 -->
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+<img alt="Candidate Avatar" class="w-12 h-12 rounded-lg object-cover" data-alt="close-up portrait of a young professional woman with glasses and confident expression, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3_dZkO1ONsQJ9E3M29YIHXYOJ7hxvv6PPWEr773r6tM7xMXiXSG2ZQ8GbquNx0O9ne7KuOfVxtZy8-fsTpOZ58-9vLGbVoURiVLoe7NefExY2XsuOl0cPUj8MgJ1lDLzypmkTlGYVEQrqxE0sFkhW_e_N5LKfETDs6JbiKOInkJXkKWu48sllQl-uAODNlOpuy9_Oh-irfF4dN8bIqF-e4Sh4ZFp_6H1FAmXBQJr99HhTSi0EdTjyVJLBECA6iTbhra13qMOxZP7f"/>
+<div class="flex-1">
+<h4 class="font-bold text-slate-800">Trần Phương Anh</h4>
+<p class="text-xs text-slate-500">Apply for Senior UI/UX Designer</p>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-md uppercase block mb-1">Mới</span>
+<p class="text-[10px] text-slate-400 font-medium">2 giờ trước</p>
+</div>
+</div>
+<!-- Candidate 2 -->
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+<img alt="Candidate Avatar" class="w-12 h-12 rounded-lg object-cover" data-alt="portrait of a young man in a collared shirt, clean background, modern professional headshot style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrhhTOjpEEHfz188mia3TZRAvYaarTIvnp5Ksxm1Fy227wDOX18CY-1dIRzMzNJt1YrhTZaVREgic7jfh2KLJwaHfyXqValEmtYoHRkgqWaNg6p8SG84spLODhd79Ak_6j9eTmPJK1UzT5qT09oBCr01WRGsLGIApPZeL8dQEsWJpF-Xix2RkS0tpi1Ls8G8_7Bp12iV3zOVf8qaYx2pHeyTEMEXfSdEsyZPzTXvsnt7EhAOUsSKTZoebTS5D9WSsWJt5mllfGG7ej"/>
+<div class="flex-1">
+<h4 class="font-bold text-slate-800">Lê Minh Tuấn</h4>
+<p class="text-xs text-slate-500">Apply for Backend Engineer</p>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 bg-amber-50 text-amber-700 text-[10px] font-bold rounded-md uppercase block mb-1">Xem xét</span>
+<p class="text-[10px] text-slate-400 font-medium">5 giờ trước</p>
+</div>
+</div>
+<!-- Candidate 3 -->
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+<img alt="Candidate Avatar" class="w-12 h-12 rounded-lg object-cover" data-alt="professional woman in business attire, warm and approachable smile, corporate headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDU-nqhBnk2Gyf8naYy8ONIq4q7XxVy-QWG4V1FCGjdkCUL02xkbY-Zi5j_S_Uqz-l_M-T9zbYg6gqpP7Ek4YTU7qQkZzczCX-AnbCCxiVWz1afeuhdLB6PiNPArJhjM-In3epK7nYjNxbUI51NR8EBQMZlo1qxvSgx95qbNuiTe_FbzjJCwpHa08h938T3gX_uFO365sxSV-7ShctnYQ1tP_4A_M-1X7b9UiC3PhQDluoQ3w9VwWLlw_dAj5ZAtetPRSt5eiWpvvYi"/>
+<div class="flex-1">
+<h4 class="font-bold text-slate-800">Nguyễn Thu Thảo</h4>
+<p class="text-xs text-slate-500">Apply for Marketing Manager</p>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 bg-emerald-50 text-emerald-700 text-[10px] font-bold rounded-md uppercase block mb-1">Phỏng vấn</span>
+<p class="text-[10px] text-slate-400 font-medium">1 ngày trước</p>
+</div>
+</div>
+<!-- Candidate 4 -->
+<div class="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100">
+<img alt="Candidate Avatar" class="w-12 h-12 rounded-lg object-cover" data-alt="young male designer with creative style, neutral background, studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8hUiM3WHkFZ4DvrCgXIQHnrIU5T15m44Hjj3qZNiZumDzhoNSjYo-M1zgxM5TYHBMrX668CuJejEuJx8Nta3TnXbV0oU4O6lK_Uymh3AIGT2_ZbiOmoTxX8tqm78QKMW_jhthQc1ChwKo9hAwStElD13w3OxZ4--9w00FZgf7fH_sdDqny_rC2VbOm9nHDgPw-yaraPreTIA-8Cwd_8iR6366ZCsySB84bbi2AR9HyEg3nGe93Q9w2DEf4hwAmGoBlRAkIs_bG-VX"/>
+<div class="flex-1">
+<h4 class="font-bold text-slate-800">Phạm Hoàng Nam</h4>
+<p class="text-xs text-slate-500">Apply for Data Analyst</p>
+</div>
+<div class="text-right">
+<span class="px-2 py-0.5 bg-blue-50 text-blue-700 text-[10px] font-bold rounded-md uppercase block mb-1">Mới</span>
+<p class="text-[10px] text-slate-400 font-medium">1 ngày trước</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Right Column: Recruitment Funnel (40%) -->
+<section class="lg:col-span-4 bg-surface-container-lowest rounded-xl shadow-sm shadow-blue-900/5 p-6">
+<h2 class="text-xl font-bold text-on-surface mb-6">Phễu Tuyển Dụng</h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Funnel Item 1 -->
+<div class="bg-blue-50/50 p-4 rounded-xl border border-blue-100/50">
+<p class="text-slate-500 text-xs font-bold uppercase mb-2">Mới</p>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-black text-blue-700">24</span>
+<span class="text-[10px] text-blue-500 font-medium">hồ sơ</span>
+</div>
+</div>
+<!-- Funnel Item 2 -->
+<div class="bg-amber-50/50 p-4 rounded-xl border border-amber-100/50">
+<p class="text-slate-500 text-xs font-bold uppercase mb-2">Xem Xét</p>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-black text-amber-700">12</span>
+<span class="text-[10px] text-amber-500 font-medium">tiềm năng</span>
+</div>
+</div>
+<!-- Funnel Item 3 -->
+<div class="bg-emerald-50/50 p-4 rounded-xl border border-emerald-100/50">
+<p class="text-slate-500 text-xs font-bold uppercase mb-2">Phỏng Vấn</p>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-black text-emerald-700">07</span>
+<span class="text-[10px] text-emerald-500 font-medium">đang hẹn</span>
+</div>
+</div>
+<!-- Funnel Item 4 -->
+<div class="bg-purple-50/50 p-4 rounded-xl border border-purple-100/50">
+<p class="text-slate-500 text-xs font-bold uppercase mb-2">Đề Nghị</p>
+<div class="flex items-baseline gap-2">
+<span class="text-2xl font-black text-purple-700">03</span>
+<span class="text-[10px] text-purple-500 font-medium">ký kết</span>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<div class="flex justify-between items-center mb-3">
+<span class="text-sm font-bold text-slate-700">Hiệu suất tuyển dụng</span>
+<span class="text-sm font-black text-primary">85%</span>
+</div>
+<div class="w-full h-2 bg-slate-100 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%] rounded-full"></div>
+</div>
+<p class="text-[11px] text-slate-400 mt-2 italic text-center">Tăng 12% so với tháng trước</p>
+</div>
+</section>
+</div>
+<!-- Quick Actions Footer -->
+<section class="flex flex-wrap gap-4 items-center pt-6 border-t border-slate-200">
+<span class="text-sm font-bold text-slate-500 mr-2">Thao tác nhanh:</span>
+<button class="px-5 py-2.5 bg-white border border-slate-200 rounded-lg text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-primary/30 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="search">search</span>
+                    Xem tất cả ứng viên
+                </button>
+<button class="px-5 py-2.5 bg-white border border-slate-200 rounded-lg text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-primary/30 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="calendar_month">calendar_month</span>
+                    Lịch phỏng vấn
+                </button>
+<button class="px-5 py-2.5 bg-white border border-slate-200 rounded-lg text-sm font-bold text-slate-700 hover:bg-slate-50 hover:border-primary/30 transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-lg" data-icon="bar_chart">bar_chart</span>
+                    Báo cáo tháng
+                </button>
+</section>
+</div>
+</main>
+</body></html>

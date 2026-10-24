@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Nối UI với API
+  short_description: Nối UI với API cho dự án JobFind
+  default_prompt: Dùng $integrate-api nối JF-018 với my-applications và legacy
+    CV theo mode hiện tại.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

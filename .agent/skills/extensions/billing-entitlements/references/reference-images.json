@@ -1,0 +1,20 @@
+[
+  {
+    "screen_id": "JF-003",
+    "feature_id": "billing-packages",
+    "owner": "jobfind-billing-entitlements",
+    "asset": "assets/stitch-reference/JF-003/screen.png",
+    "output": ".stitch/designs/billing_subscriptions/screen.png",
+    "sha256": "9c017051d1e3e733136da790e563ef74ed0b7167064472e8d2f8d49d0564f01c",
+    "bytes": 343783
+  },
+  {
+    "screen_id": "JF-026",
+    "feature_id": "admin-packages",
+    "owner": "jobfind-billing-entitlements",
+    "asset": "assets/stitch-reference/JF-026/screen.png",
+    "output": ".stitch/designs/qu_n_l_g_i_d_ch_v/screen.png",
+    "sha256": "accffff8d3aea2584fb09eff9ff7d6dcf7f46a3d3dd09639fcaa4292f91cbf91",
+    "bytes": 325124
+  }
+]

@@ -1,0 +1,339 @@
+{
+  "format": 3,
+  "purpose": "Original native images distributed to relevant skills; exporter assembles all 37 under .stitch/designs.",
+  "images": [
+    {
+      "screen_id": "JF-001",
+      "feature_id": "master-layout",
+      "owner": "jobfind-workflow",
+      "asset": "assets/stitch-reference/JF-001/screen.png",
+      "output": ".stitch/designs/404_page_tuy_n_d_ng_vn/screen.png",
+      "sha256": "76ee0f0ac9b4bf871b7cdd7b87f55a463963b124bdb8ef04e5e2d0aa49e4ec11",
+      "bytes": 897512
+    },
+    {
+      "screen_id": "JF-002",
+      "feature_id": "admin-overview",
+      "owner": "jobfind-admin-moderation",
+      "asset": "assets/stitch-reference/JF-002/screen.png",
+      "output": ".stitch/designs/admin_dashboard_overview/screen.png",
+      "sha256": "52076b9512811388c2dff975b8c18303cc4347b65d1dd546b812cbe019102beb",
+      "bytes": 434895
+    },
+    {
+      "screen_id": "JF-003",
+      "feature_id": "billing-packages",
+      "owner": "jobfind-billing-entitlements",
+      "asset": "assets/stitch-reference/JF-003/screen.png",
+      "output": ".stitch/designs/billing_subscriptions/screen.png",
+      "sha256": "9c017051d1e3e733136da790e563ef74ed0b7167064472e8d2f8d49d0564f01c",
+      "bytes": 343783
+    },
+    {
+      "screen_id": "JF-004",
+      "feature_id": "system-proposals",
+      "owner": "jobfind-admin-moderation",
+      "asset": "assets/stitch-reference/JF-004/screen.png",
+      "output": ".stitch/designs/c_i_t_h_th_ng_admin_panel/screen.png",
+      "sha256": "d13adf937a848f6aa238aa827e8b886b53d9e4de625411e8dd8b4e5fda235fe0",
+      "bytes": 315825
+    },
+    {
+      "screen_id": "JF-005",
+      "feature_id": "company-profile",
+      "owner": "jobfind-company-management",
+      "asset": "assets/stitch-reference/JF-005/screen.png",
+      "output": ".stitch/designs/company_profile_editor_vng_corporation/screen.png",
+      "sha256": "93385013f5426332dc5c0bec75977cfc86f4876d0d1ea8de2d4a4737ab30786d",
+      "bytes": 1258832
+    },
+    {
+      "screen_id": "JF-006",
+      "feature_id": "companies",
+      "owner": "jobfind-company-management",
+      "asset": "assets/stitch-reference/JF-006/screen.png",
+      "output": ".stitch/designs/danh_m_c_c_ng_ty/screen.png",
+      "sha256": "cdf95ef605693efc0e7f3f52cc52a85137b49793e9dc2f7b419b40ce7bdbbe01",
+      "bytes": 421147
+    },
+    {
+      "screen_id": "JF-007",
+      "feature_id": "companies",
+      "owner": "jobfind-company-management",
+      "asset": "assets/stitch-reference/JF-007/screen.png",
+      "output": ".stitch/designs/danh_s_ch_c_ng_ty_tuy_n_d_ng_vn/screen.png",
+      "sha256": "e9958081d871163b5018e1d745d10cc4c6d57e03e16bd1c81ba5a4b54949747f",
+      "bytes": 435876
+    },
+    {
+      "screen_id": "JF-008",
+      "feature_id": "admin-companies",
+      "owner": "jobfind-admin-moderation",
+      "asset": "assets/stitch-reference/JF-008/screen.png",
+      "output": ".stitch/designs/duy_t_h_s_c_ng_ty/screen.png",
+      "sha256": "0dbc2b3cafd938d400daf06f37d42d48735c9889a4944a58dd7ed3fde3f5136b",
+      "bytes": 374554
+    },
+    {
+      "screen_id": "JF-009",
+      "feature_id": "candidate-profile",
+      "owner": "jobfind-candidate-profile",
+      "asset": "assets/stitch-reference/JF-009/screen.png",
+      "output": ".stitch/designs/h_s_c_a_t_i_tuy_n_d_ng_vn/screen.png",
+      "sha256": "8384ed5344b1c4fc8f65a560cb3238c240c4e2f650a0c3c8ece0351709398614",
+      "bytes": 458308
+    },
+    {
+      "screen_id": "JF-010",
+      "feature_id": "job-detail",
+      "owner": "jobfind-job-search",
+      "asset": "assets/stitch-reference/JF-010/screen.png",
+      "output": ".stitch/designs/job_detail_senior_frontend_developer/screen.png",
+      "sha256": "09fb22003da595aa42154ca6bc3d8516095b2d657f06ccfd667daf0ea2c83ab1",
+      "bytes": 343440
+    },
+    {
+      "screen_id": "JF-011",
+      "feature_id": "admin-jobs",
+      "owner": "jobfind-admin-moderation",
+      "asset": "assets/stitch-reference/JF-011/screen.png",
+      "output": ".stitch/designs/job_moderation_admin_panel/screen.png",
+      "sha256": "0dfc136c60a954d5e3ebe1315e53ee7bbca00230778421fe166b797955f4c559",
+      "bytes": 324763
+    },
+    {
+      "screen_id": "JF-012",
+      "feature_id": "candidate-search",
+      "owner": "jobfind-candidate-search",
+      "asset": "assets/stitch-reference/JF-012/screen.png",
+      "output": ".stitch/designs/kho_ng_vi_n_tuy_n_d_ng_vn/screen.png",
+      "sha256": "5e1d7766489718825490c07910a45caf344ccac3e921b8449b3f769fc3906e87",
+      "bytes": 462533
+    },
+    {
+      "screen_id": "JF-013",
+      "feature_id": "interviews-offers",
+      "owner": "jobfind-recruitment",
+      "asset": "assets/stitch-reference/JF-013/screen.png",
+      "output": ".stitch/designs/l_ch_ph_ng_v_n_agenda/screen.png",
+      "sha256": "d3170786a1851750047943063835c4a49327a5d14c42424d040d55f5e8bf7864",
+      "bytes": 240422
+    },
+    {
+      "screen_id": "JF-014",
+      "feature_id": "interviews-offers",
+      "owner": "jobfind-recruitment",
+      "asset": "assets/stitch-reference/JF-014/screen.png",
+      "output": ".stitch/designs/l_ch_ph_ng_v_n_career_architect/screen.png",
+      "sha256": "ffadee70dc13a88242c730f78216e21d2dfed1d904e9cd3228606d0cc1978b15",
+      "bytes": 190232
+    },
+    {
+      "screen_id": "JF-015",
+      "feature_id": "auth-login",
+      "owner": "jobfind-auth-security",
+      "asset": "assets/stitch-reference/JF-015/screen.png",
+      "output": ".stitch/designs/login_premium_desktop/screen.png",
+      "sha256": "29b5d344e8fcc3cd52689a5cda1647cd06f0cd6ea60bbb8d57cc473399d15068",
+      "bytes": 646747
+    },
+    {
+      "screen_id": "JF-016",
+      "feature_id": "auth-login",
+      "owner": "jobfind-auth-security",
+      "asset": "assets/stitch-reference/JF-016/screen.png",
+      "output": ".stitch/designs/login_tuy_n_d_ng_vn_1/screen.png",
+      "sha256": "3b9fb380fb7e3ea6ad165de16a0de54ce3e71cc15134c5aa0eed63a9923d882a",
+      "bytes": 918650
+    },
+    {
+      "screen_id": "JF-017",
+      "feature_id": "auth-login",
+      "owner": "jobfind-auth-security",
+      "asset": "assets/stitch-reference/JF-017/screen.png",
+      "output": ".stitch/designs/login_tuy_n_d_ng_vn_2/screen.png",
+      "sha256": "792274ec91dfbebb0ba9ac05fdbe7669be04dbe257c5a729b2aadc6bde67432b",
+      "bytes": 284438
+    },
+    {
+      "screen_id": "JF-018",
+      "feature_id": "applications",
+      "owner": "jobfind-recruitment",
+      "asset": "assets/stitch-reference/JF-018/screen.png",
+      "output": ".stitch/designs/n_ng_tuy_n_c_a_t_i_tuy_n_d_ng_vn/screen.png",
+      "sha256": "174d66740bcf8d04fd1d46f60bd9c89dc0323f2f6a6070c97bf54e503ea6fc96",
+      "bytes": 287196
+    },
+    {
+      "screen_id": "JF-019",
+      "feature_id": "auth-register",
+      "owner": "jobfind-auth-security",
+      "asset": "assets/stitch-reference/JF-019/screen.png",
+      "output": ".stitch/designs/ng_k_ch_n_vai_tr/screen.png",
+      "sha256": "8df19a12fa95534eba90f776b7d6909a6c052e74c46e94a1d9ad2a8cfd5ca7ec",
+      "bytes": 360054
+    },
+    {
+      "screen_id": "JF-020",
+      "feature_id": "auth-register",
+      "owner": "jobfind-auth-security",
+      "asset": "assets/stitch-reference/JF-020/screen.png",
+      "output": ".stitch/designs/ng_k_tuy_n_d_ng_vn/screen.png",
+      "sha256": "5c7c879a0dfcd52966f26541f64b759203dee90a0e0be0a8b689ff375f92a651",
+      "bytes": 143577
+    },
+    {
+      "screen_id": "JF-021",
+      "feature_id": "job-posting",
+      "owner": "jobfind-job-management",
+      "asset": "assets/stitch-reference/JF-021/screen.png",
+      "output": ".stitch/designs/ng_tin_tuy_n_d_ng_b_c_1/screen.png",
+      "sha256": "566392bb9141418ae07e1fa2f75f3381a98f6e318750202d47e0267e73357b29",
+      "bytes": 263746
+    },
+    {
+      "screen_id": "JF-022",
+      "feature_id": "applications",
+      "owner": "jobfind-recruitment",
+      "asset": "assets/stitch-reference/JF-022/screen.png",
+      "output": ".stitch/designs/ng_tuy_n_b_c_1_th_ng_tin_c_nh_n/screen.png",
+      "sha256": "2e4e1eaaac0d14dc206029d3ebd6e24e640368bcd7cef3d6c37b44143cb30a5f",
+      "bytes": 205745
+    },
+    {
+      "screen_id": "JF-023",
+      "feature_id": "applications",
+      "owner": "jobfind-recruitment",
+      "asset": "assets/stitch-reference/JF-023/screen.png",
+      "output": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer/screen.png",
+      "sha256": "fa72e4475da841dd5ada8c770f73ec11b18d425568d42422ac5dce4353e111f8",
+      "bytes": 310367
+    },
+    {
+      "screen_id": "JF-024",
+      "feature_id": "applications",
+      "owner": "jobfind-recruitment",
+      "asset": "assets/stitch-reference/JF-024/screen.png",
+      "output": ".stitch/designs/ng_tuy_n_senior_ui_ux_designer_desktop/screen.png",
+      "sha256": "2f053ec41d0b316d185944e6f86241aaf9793ed482e1d857faefe937cdb19516",
+      "bytes": 278307
+    },
+    {
+      "screen_id": "JF-025",
+      "feature_id": "pipeline",
+      "owner": "jobfind-recruitment",
+      "asset": "assets/stitch-reference/JF-025/screen.png",
+      "output": ".stitch/designs/ph_u_tuy_n_d_ng_senior_frontend_developer/screen.png",
+      "sha256": "8746dbb9294309a211deb6c081ffcc830218ef7b789807ff020179a54a8bd15f",
+      "bytes": 251173
+    },
+    {
+      "screen_id": "JF-026",
+      "feature_id": "admin-packages",
+      "owner": "jobfind-billing-entitlements",
+      "asset": "assets/stitch-reference/JF-026/screen.png",
+      "output": ".stitch/designs/qu_n_l_g_i_d_ch_v/screen.png",
+      "sha256": "accffff8d3aea2584fb09eff9ff7d6dcf7f46a3d3dd09639fcaa4292f91cbf91",
+      "bytes": 325124
+    },
+    {
+      "screen_id": "JF-027",
+      "feature_id": "admin-users",
+      "owner": "jobfind-admin-moderation",
+      "asset": "assets/stitch-reference/JF-027/screen.png",
+      "output": ".stitch/designs/qu_n_l_ng_i_d_ng_admin_panel/screen.png",
+      "sha256": "c123b219af084c7d70b64fa22f0c927010c61fc208a0e23c54870194498ca447",
+      "bytes": 326908
+    },
+    {
+      "screen_id": "JF-028",
+      "feature_id": "auth-register",
+      "owner": "jobfind-auth-security",
+      "asset": "assets/stitch-reference/JF-028/screen.png",
+      "output": ".stitch/designs/registration_premium_desktop/screen.png",
+      "sha256": "fb12f2d57cad2ed0bbef45bf3c12e66edc88ac786a1ee130209f26b3cf4fff8f",
+      "bytes": 181540
+    },
+    {
+      "screen_id": "JF-029",
+      "feature_id": "admin-reports-audit",
+      "owner": "jobfind-admin-moderation",
+      "asset": "assets/stitch-reference/JF-029/screen.png",
+      "output": ".stitch/designs/revenue_analytics_dashboard/screen.png",
+      "sha256": "b8542304f2b096558a43a073ff8a92df17cd91ce4d1fa96fb9f97b5216161aaf",
+      "bytes": 286046
+    },
+    {
+      "screen_id": "JF-030",
+      "feature_id": "chat",
+      "owner": "jobfind-realtime",
+      "asset": "assets/stitch-reference/JF-030/screen.png",
+      "output": ".stitch/designs/tin_nh_n_tuy_n_d_ng/screen.png",
+      "sha256": "3b478c2e3e7601049d7cc8c4a84546d97cd24f8042396857f993fb6da448b2d2",
+      "bytes": 325300
+    },
+    {
+      "screen_id": "JF-031",
+      "feature_id": "chat",
+      "owner": "jobfind-realtime",
+      "asset": "assets/stitch-reference/JF-031/screen.png",
+      "output": ".stitch/designs/tr_chuy_n_tin_nh_n/screen.png",
+      "sha256": "84d2b2be65e13dd4745cb706c717a2df8324b5347580198f834c938747145d4b",
+      "bytes": 315489
+    },
+    {
+      "screen_id": "JF-032",
+      "feature_id": "master-layout",
+      "owner": "jobfind-workflow",
+      "asset": "assets/stitch-reference/JF-032/screen.png",
+      "output": ".stitch/designs/trang_404_kh_ng_t_m_th_y/screen.png",
+      "sha256": "a8edd445d8afdb2bb9063274d94db89090f9f602d6e587067c4f7c1aa9c7da4d",
+      "bytes": 479960
+    },
+    {
+      "screen_id": "JF-033",
+      "feature_id": "notifications",
+      "owner": "jobfind-notifications",
+      "asset": "assets/stitch-reference/JF-033/screen.png",
+      "output": ".stitch/designs/trung_t_m_th_ng_b_o_tuy_n_d_ng_vn/screen.png",
+      "sha256": "bba7fd7ab73f8dd77c5011a6b039648d7109dd3c7f7528d35f07fbc0bab27179",
+      "bytes": 338370
+    },
+    {
+      "screen_id": "JF-034",
+      "feature_id": "employer-dashboard",
+      "owner": "jobfind-company-management",
+      "asset": "assets/stitch-reference/JF-034/screen.png",
+      "output": ".stitch/designs/tuy_n_d_ng_vn_dashboard_doanh_nghi_p/screen.png",
+      "sha256": "b55afeec2d8abf0708c50414d1fb46d5be08d507d47d2d8bade52ce98bc4f9f4",
+      "bytes": 298922
+    },
+    {
+      "screen_id": "JF-035",
+      "feature_id": "home",
+      "owner": "jobfind-job-search",
+      "asset": "assets/stitch-reference/JF-035/screen.png",
+      "output": ".stitch/designs/tuy_n_d_ng_vn_homepage/screen.png",
+      "sha256": "ca631e65c5b5f68d66c3fed4d93e4dd2a92b2b8296ecf7cf1eaa3d323911a446",
+      "bytes": 307079
+    },
+    {
+      "screen_id": "JF-036",
+      "feature_id": "job-search",
+      "owner": "jobfind-job-search",
+      "asset": "assets/stitch-reference/JF-036/screen.png",
+      "output": ".stitch/designs/tuy_n_d_ng_vn_search_results/screen.png",
+      "sha256": "1f519dfe18449b30acc609fc9b4e77af2b4162f02651cfc3a0c9aee63d834e69",
+      "bytes": 225935
+    },
+    {
+      "screen_id": "JF-037",
+      "feature_id": "admin-companies",
+      "owner": "jobfind-admin-moderation",
+      "asset": "assets/stitch-reference/JF-037/screen.png",
+      "output": ".stitch/designs/x_c_th_c_doanh_nghi_p_admin/screen.png",
+      "sha256": "ff262edc63441f2b08edfa8cc7094d4400061eb09eecf153300eb312b42b0016",
+      "bytes": 486781
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Vẽ và code theo backlog
+  short_description: Vẽ và code theo backlog cho dự án JobFind
+  default_prompt: Dùng $stitch-loop vẽ bổ sung các màn ứng viên còn thiếu
+    theo route coverage.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

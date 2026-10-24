@@ -1,0 +1,181 @@
+[
+  {
+    "id": "JF-011",
+    "folder": "job_moderation_admin_panel",
+    "title": "Job Moderation - Admin Panel",
+    "group": "Quản trị",
+    "route": "/admin/list-post-admin",
+    "component": "container/system/Post/ManagePost.js",
+    "api": "GET /api/get-all-post-admin ; PUT /api/accept-post ; PUT /api/ban-post ; PUT /api/active-post",
+    "note": "Có route; MODERATE_POSTS",
+    "width": 1600,
+    "height": 1280,
+    "html_sha256": "c4fa77a282cd0794799a6645c9b043fcc89dbc2ac9dfee61e01315a59d7fd73a",
+    "image_sha256": "0dfc136c60a954d5e3ebe1315e53ee7bbca00230778421fe166b797955f4c559",
+    "feature_id": "admin-jobs",
+    "roles": [
+      "ADMIN"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1024,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1600,
+      "height": 1280
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/system/Post/ManagePost.js",
+      "backend/src/routes/web.js"
+    ],
+    "api_contracts": [
+      "GET /api/get-all-post-admin",
+      "PUT /api/accept-post",
+      "PUT /api/ban-post",
+      "PUT /api/active-post"
+    ],
+    "observations": {
+      "headings": [
+        "Tuyển Dụng VN",
+        "Duyệt Tin Tuyển Dụng",
+        "Digital Marketing Executive",
+        "Mô tả công việc",
+        "Thông tin nhà tuyển dụng"
+      ],
+      "labels": [],
+      "controls": [
+        {
+          "type": "text",
+          "placeholder": "Tìm kiếm tin, công ty..."
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        }
+      ],
+      "actions": [
+        "filter_list Lọc",
+        "notifications",
+        "help",
+        "Tất Cả (47)",
+        "Chờ Duyệt 12",
+        "Đã Duyệt 28",
+        "Từ Chối 4",
+        "Bị Báo Cáo 3",
+        "visibility",
+        "check",
+        "close",
+        "chevron_left",
+        "chevron_right",
+        "Xem toàn bộ JD",
+        "done_all Duyệt Tin Ngay",
+        "block Từ Chối",
+        "edit Yêu cầu sửa",
+        "check_circle Duyệt 3 tin đã chọn",
+        "delete_sweep Từ chối tất cả"
+      ],
+      "colors": {
+        "on-error": "#FFFFFF",
+        "secondary-container": "#39B8FD",
+        "primary-fixed-dim": "#B4C5FF",
+        "on-primary-container": "#EEEFFF",
+        "on-tertiary-fixed": "#002113",
+        "primary": "#004AC6",
+        "outline-variant": "#C3C6D7",
+        "on-secondary-fixed": "#001E2F",
+        "surface-variant": "#E0E3E5",
+        "secondary-fixed-dim": "#89CEFF",
+        "on-tertiary": "#FFFFFF",
+        "error-container": "#FFDAD6",
+        "surface-dim": "#D8DADC",
+        "on-tertiary-container": "#BDFFDB",
+        "on-secondary": "#FFFFFF",
+        "surface-tint": "#0053DB",
+        "on-primary": "#FFFFFF",
+        "on-tertiary-fixed-variant": "#005236",
+        "surface-container-low": "#F2F4F6",
+        "surface-container-high": "#E6E8EA",
+        "inverse-surface": "#2D3133",
+        "background": "#F7F9FB",
+        "tertiary-fixed": "#6FFBBE",
+        "on-secondary-container": "#004666",
+        "surface-container-highest": "#E0E3E5",
+        "tertiary-fixed-dim": "#4EDEA3",
+        "on-surface-variant": "#434655",
+        "on-primary-fixed": "#00174B",
+        "secondary-fixed": "#C9E6FF",
+        "surface-container": "#ECEEF0",
+        "primary-fixed": "#DBE1FF",
+        "surface": "#F7F9FB",
+        "surface-container-lowest": "#FFFFFF",
+        "primary-container": "#2563EB",
+        "error": "#BA1A1A",
+        "inverse-on-surface": "#EFF1F3",
+        "outline": "#737686",
+        "inverse-primary": "#B4C5FF",
+        "on-secondary-fixed-variant": "#004C6E",
+        "tertiary": "#006242",
+        "on-primary-fixed-variant": "#003EA8",
+        "surface-bright": "#F7F9FB",
+        "tertiary-container": "#007D55",
+        "secondary": "#006591",
+        "on-error-container": "#93000A",
+        "on-surface": "#191C1E",
+        "on-background": "#191C1E"
+      },
+      "fonts": {
+        "headline": "Be Vietnam Pro",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "Admin Logo",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuC2r2YNedUHpkWnuX7VNNrh3eE__Im6qFDoeS_A2Eu8mB7h_Sy-K8nUlfBv-pKWN-bV3SAE08vQkQkhw4X6qKm6ty3tQsK_BPPT1CsVvN2lxd2c1y0hryq9BuabQMX2jne51qkBA_IrjKQTT5tCQvEXkHH5f6z43x50DaFKRvfPV4XL_Ivcx0BzymDV5iEw8gItz5LpMjCgtk_dyQrpHTdF3bbdLOJlj-Nk3Qpxdz5XZdsYNVS0RJEygSrshRbYpjQzbdnUS1UBtwMV",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/job_moderation_admin_panel/code.html",
+      "image": ".stitch/designs/job_moderation_admin_panel/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-011.md",
+    "prompt": ".stitch/prompts/JF-011.md"
+  }
+]

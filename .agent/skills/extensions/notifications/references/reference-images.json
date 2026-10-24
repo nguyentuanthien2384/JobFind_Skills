@@ -1,0 +1,11 @@
+[
+  {
+    "screen_id": "JF-033",
+    "feature_id": "notifications",
+    "owner": "jobfind-notifications",
+    "asset": "assets/stitch-reference/JF-033/screen.png",
+    "output": ".stitch/designs/trung_t_m_th_ng_b_o_tuy_n_d_ng_vn/screen.png",
+    "sha256": "bba7fd7ab73f8dd77c5011a6b039648d7109dd3c7f7528d35f07fbc0bab27179",
+    "bytes": 338370
+  }
+]

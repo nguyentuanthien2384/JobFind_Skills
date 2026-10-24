@@ -1,0 +1,756 @@
+[
+  {
+    "path": "/account/security",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "security"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "home"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/about",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "about"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/contact",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "contact"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/job",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "search"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/company",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "companies"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/detail-company/:id",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "company-detail"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/external-job/:id",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "external-job"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/detail-job/:id",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "job-detail"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/chat",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "chat-list"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/chat/:partnerId",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "chat-thread"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/login",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "login"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/register",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "register-role"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/forget-password",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "forgot"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/*",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "posts",
+      "admin-dashboard"
+    ],
+    "note": "Shell và fallback theo role/permission; không phải một trang nội dung riêng"
+  },
+  {
+    "path": "/candidate/*",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "candidate-profile"
+    ],
+    "note": "Shell và fallback về /candidate/info"
+  },
+  {
+    "path": "/forbidden",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "forbidden"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/support/chat",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "support-chat"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/support/chat/:partnerId",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "support-chat"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/support/help",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "help"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "*",
+    "declaration_source": "frontend/src/App.js",
+    "screens": [
+      "not-found"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/notifications",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "notifications"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/ai-cv",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "ai-workspace"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/followed-jobs",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "followed"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/recommended-jobs",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "recommended"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/info",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "candidate-profile"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/usersetting",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "candidate-settings"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/changepassword",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "candidate-password"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/cv-post",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "applications"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/saved-jobs",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "saved"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/cv-detail/:id",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "application-document"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/candidate/*",
+    "declaration_source": "frontend/src/container/Candidate/HomeCandidate.js",
+    "screens": [
+      "candidate-profile"
+    ],
+    "note": "Shell và fallback về /candidate/info"
+  },
+  {
+    "path": "/admin/",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "admin-dashboard"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/chat",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "chat-list"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/support",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "support-inbox"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/chat/:partnerId",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "chat-thread"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-user",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "users"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/pipeline",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "pipeline"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/reports",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "reports"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-user",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "user-create"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-user/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "user-edit"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-job-type",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "add-job-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-job-type",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "list-job-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-job-type/:code",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "edit-job-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-job-skill",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "add-job-skill"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-job-skill",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "list-job-skill"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-job-skill/:code",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "edit-job-skill"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-job-level",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "add-job-level"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-job-level",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "list-job-level"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-job-level/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "edit-job-level"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-work-type",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "add-work-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-work-type",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "list-work-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-work-type/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "edit-work-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-salary-type",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "add-salary-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-salary-type",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "list-salary-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-salary-type/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "edit-salary-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-exp-type",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "add-exp-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-exp-type",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "list-exp-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-exp-type/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "edit-exp-type"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-package-post",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "add-package-post"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-package-post",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "list-package-post"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-package-post/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "edit-package-post"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-package-cv",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "add-package-cv"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-package-cv",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "list-package-cv"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-package-cv/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "edit-package-cv"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-company",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "company-create"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-company",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "company-edit"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-company-admin/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "admin-company-edit"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/recruitment",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "team-invite"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-employer",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "team"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/add-post",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "post-create"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/edit-post/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "post-edit"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-post",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "posts"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-post/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "posts"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/buy-post",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "buy-post"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/payment/success",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "payment-success"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/payment/cancel",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "payment-cancel"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/buy-cv",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "buy-cv"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/paymentCv/success",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "payment-cv-success"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/paymentCv/cancel",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "payment-cv-cancel"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-post-admin",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "jobs-review"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-cv/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "post-applications"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-candiate",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "talent-search"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/candiate/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "talent-detail"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/note/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "post-notes"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/user-cv/:id",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "talent-document"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/changepassword",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "employer-password"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/user-info",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "employer-profile"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/list-company-admin",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "companies-review"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/history-post",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "history-post"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/history-cv",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "history-cv"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/sum-by-year-post",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "chart-post"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/sum-by-year-cv",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "chart-cv"
+    ],
+    "note": "Màn chính hoặc biến thể cùng chức năng"
+  },
+  {
+    "path": "/admin/*",
+    "declaration_source": "frontend/src/container/system/HomeAdmin.js",
+    "screens": [
+      "posts",
+      "admin-dashboard"
+    ],
+    "note": "Shell và fallback theo role/permission; không phải một trang nội dung riêng"
+  }
+]

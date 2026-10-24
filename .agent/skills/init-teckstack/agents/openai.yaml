@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Thiết lập môi trường
+  short_description: Thiết lập môi trường cho dự án JobFind
+  default_prompt: Dùng $init-techstack kiểm tra source JobFind trước khi code.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

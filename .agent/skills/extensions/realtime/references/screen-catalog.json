@@ -1,0 +1,370 @@
+[
+  {
+    "id": "JF-030",
+    "folder": "tin_nh_n_tuy_n_d_ng",
+    "title": "Tin nhắn tuyển dụng",
+    "group": "Tin nhắn",
+    "route": "/chat/:partnerId; /admin/chat/:partnerId",
+    "component": "container/Chat/ChatPage.js",
+    "api": "GET /api/get-list-chat-conversation ; GET /api/get-chat-conversation ; POST /api/send-chat-message ; POST /api/chat-attachments ; GET /api/chat-attachments/:id ; GET /api/chat-jobs",
+    "note": "Có route; recruitment chat khác support",
+    "width": 1600,
+    "height": 1280,
+    "html_sha256": "af5c4a3a3fa63206740df64d7ba1e3e6e433fe88d527cab9f05beff905e2f136",
+    "image_sha256": "3b478c2e3e7601049d7cc8c4a84546d97cd24f8042396857f993fb6da448b2d2",
+    "feature_id": "chat",
+    "roles": [
+      "CANDIDATE",
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1024,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1600,
+      "height": 1280
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/Chat/ChatPage.js",
+      "frontend/src/service/chatMediaService.js",
+      "backend/src/routes/web.js"
+    ],
+    "api_contracts": [
+      "GET /api/get-list-chat-conversation",
+      "GET /api/get-chat-conversation",
+      "POST /api/send-chat-message",
+      "POST /api/chat-attachments",
+      "GET /api/chat-attachments/:id",
+      "GET /api/chat-jobs"
+    ],
+    "observations": {
+      "headings": [
+        "Recruit Pro",
+        "Nguyễn Văn A",
+        "Lê Minh Tâm",
+        "Phạm Hoàng Nam",
+        "lightbulb RECRUITER NOTES"
+      ],
+      "labels": [],
+      "controls": [
+        {
+          "type": "text",
+          "placeholder": "Tìm kiếm hội thoại"
+        },
+        {
+          "type": "text",
+          "placeholder": "Nhập tin nhắn..."
+        }
+      ],
+      "actions": [
+        "add New Message",
+        "notifications",
+        "help",
+        "account_circle",
+        "videocam",
+        "call",
+        "more_vert",
+        "add_circle",
+        "mood",
+        "attach_file",
+        "send",
+        "person Xem hồ sơ chi tiết",
+        "picture_as_pdf Tải CV (PDF)",
+        "rate_review Đánh giá nội bộ"
+      ],
+      "colors": {
+        "primary-fixed": "#DBE1FF",
+        "inverse-surface": "#2D3133",
+        "on-tertiary-container": "#FFEDE6",
+        "tertiary-fixed": "#FFDBCD",
+        "surface-container": "#ECEEF0",
+        "on-surface": "#191C1E",
+        "on-primary-fixed-variant": "#003EA8",
+        "secondary-container": "#39B8FD",
+        "surface-container-low": "#F2F4F6",
+        "secondary": "#006591",
+        "on-primary-container": "#EEEFFF",
+        "surface-tint": "#0053DB",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "primary-fixed-dim": "#B4C5FF",
+        "on-tertiary": "#FFFFFF",
+        "surface-container-high": "#E6E8EA",
+        "on-tertiary-fixed": "#360F00",
+        "surface": "#F7F9FB",
+        "tertiary-container": "#BC4800",
+        "surface-dim": "#D8DADC",
+        "surface-container-lowest": "#FFFFFF",
+        "outline-variant": "#C3C6D7",
+        "on-secondary-fixed-variant": "#004C6E",
+        "on-error": "#FFFFFF",
+        "background": "#F7F9FB",
+        "surface-container-highest": "#E0E3E5",
+        "on-secondary-container": "#004666",
+        "surface-bright": "#F7F9FB",
+        "primary-container": "#2563EB",
+        "secondary-fixed": "#C9E6FF",
+        "primary": "#004AC6",
+        "on-primary": "#FFFFFF",
+        "on-secondary": "#FFFFFF",
+        "on-error-container": "#93000A",
+        "error-container": "#FFDAD6",
+        "outline": "#737686",
+        "inverse-primary": "#B4C5FF",
+        "inverse-on-surface": "#EFF1F3",
+        "error": "#BA1A1A",
+        "secondary-fixed-dim": "#89CEFF",
+        "on-surface-variant": "#434655",
+        "tertiary-fixed-dim": "#FFB596",
+        "surface-variant": "#E0E3E5",
+        "tertiary": "#943700",
+        "on-primary-fixed": "#00174B",
+        "on-secondary-fixed": "#001E2F",
+        "on-background": "#191C1E"
+      },
+      "fonts": {},
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "Employer Profile Avatar",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmH8dGqeiKUWjLByciOLlWoQPS4jJekYnG266EjdBmT_IJcxF31WjmPbmnT6ypsdh70OcO01GHN8EqSs7Oe6NfaZ_DqHr8gIjuxIY6yq2m5G8rBckIWKJf-Gei8HaVhY5FqnYp7kpY5fMBeR-rjCS0ukb1noi7Qu1X79SpWEKvKCzsdC_oyIoRcn5ZkCSLy2YyhpHXYFEL7X7baqdmKiSJvAmfRwWAtZKzzBz-MkHYNi1Ot2DDJRj1i2oBu_ycD9L7I-duaON2--5X",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Nguyễn Văn A",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDTU1KbRQ-xw00qv_OwH2ToEuCQ5I2wohtzyO61zzfKncuyLFFWiAS3TcQErGueRjRCwaPRONz6EXdqf676kQxYsvUcAuEPaAhu-H2BUWHFu_A-ETELNtKLYe_C282_ghphRNM501Ye4TmA60Z3PEHOLCsXXLQ8Kw3N83q_BBnSdnmlzPypvXGfA4WhlfRmIidAqiMKcHKClCQDJv8k-68B06QXE9IQExmpAku1LOWqpobyxo6S1TTuTIY6qmoSdLVOJUayGPpa_f6P",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Lê Minh Tâm",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDrZND4xzd7wdbA6VavdAMVc8eRXv-raQB0HQSElqIDe_fnLtfzsnlYk5lxooaBl_hYvsjuSSDWieBtx00zXIA70_zZMEoIHAuh11-lRqdpJlXpk48uaDW0wzpVRRz0U3jkPGKjBnst5MLIaTGdUI5kyfply0KxiQxDUEKvVjP3XVtkZB54pKf8RaUEwvL9uNMOrWBVyq134hD85nm0gLwjcLDZnC4VN27n3kr7VuyhQgQo0N7w0Cv8SxbyyIBk8R-aUhOkhW7GY-Gn",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Phạm Hoàng Nam",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBARc9FhEQ2lwTuE6ju195aWASKrIY9waryHo6m0NfRbSwLs-1GbhQyLuUgzZbxZxFvA5fN9BA5UXusnY7JVZ-F_lwuk67AsVShDKq0jbXXAgp--dmhZBIyLlg12ldh6SmUMPI9QnV92Rye81LwXQgbFP3zXwMB0X7Y9577YqYWH4k6zYq7cBs_MVUQfDYjNA4MMsPke6b8rOd-0q3AX5DbzGFKwWbW77vAL_ebw_Vp6FLTgRAsQq_32_ZcDGDG-BGoaEGkg4ez5IAM",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Nguyễn Văn A",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCk_CPV89AqTnLMxUXnj0FxGhLE7UJxj2BTs6AUOwiK4UX6mnvUuNAAy0ET-dTuQmu9Adyd26b9lojvj-Wv_AZH3rCtZsWNzblhWPVmhhjRJ8fcvPpripeNQYYXBAIAP7Lge-I5YHUClEes7va4pzibUteDSvPY5G-pwJDRoOlE3FlkbjwK2zxCGLwPbZTxdhe6VWhTph9tI68Hk377Kb83RM_mm8m2PH1FwkidK_DJfgu1CEYjIGgsfQj7pk_G2RI4ZFq0ozfhpx4i",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Nguyễn Văn A",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBWR6aqli3Q-V1PTmHOsgVYW1KrtX1xWkLNtgZnMRw1XaRbxPuq8IuKhE3hbj6I9-2QJKiAL_gbxIWEVp8iPvfCfbh9KG2YLpfjimJNXaLkWTvG4ycgXKYw4dsxPMAKhi57qabB4sysl9MMB2webtwwV2yXBFL1_p9JFfEWUTaBFTcKag83TzYMScazyjM6H-mAPTNMVlRU-i13Hb-nALAT3qDBNqRI8CvK1FFz6G_hyAw89ePe9k4eY-ebQ97FEGghrGFc7DKxEfxN",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Profile photo",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAc7URDuhilYDXzuHbqUgRDhr08cvq-UhEYFaNTxqqtCdPlU-h2HqRin371qXv_cVgpSEXgabZUONgX1fT4R-O5r1BI6IQbvEnOyMeP1Xs_1jhprvRRqvfP1KTyZKJSWdH-ph1wX_u3TtBkUWOsPWpwTdoex-SiwWBvO2R2EUEQ7lRY4ZxNwP2Az2LiZnTNqq1dRIHk-FaZG-6Ddstah49vsjdFYDgsG1zDqlxQhTmUR093Y_Jj1hifx78-8p49ILrJXVMsBpB6Yp5Q",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/tin_nh_n_tuy_n_d_ng/code.html",
+      "image": ".stitch/designs/tin_nh_n_tuy_n_d_ng/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-030.md",
+    "prompt": ".stitch/prompts/JF-030.md"
+  },
+  {
+    "id": "JF-031",
+    "folder": "tr_chuy_n_tin_nh_n",
+    "title": "Trò chuyện & Tin nhắn",
+    "group": "Tin nhắn",
+    "route": "/chat/:partnerId; /admin/chat/:partnerId",
+    "component": "container/Chat/ChatPage.js",
+    "api": "GET /api/get-list-chat-conversation ; GET /api/get-chat-conversation ; POST /api/send-chat-message ; POST /api/chat-attachments ; GET /api/chat-attachments/:id ; GET /api/chat-jobs",
+    "note": "Có route; clientMessageId, PDF private",
+    "width": 1600,
+    "height": 1280,
+    "html_sha256": "c6e67bfd5bdc018e14c504c07cf987c92624aca376830eb64d9b1750ad7536df",
+    "image_sha256": "84d2b2be65e13dd4745cb706c717a2df8324b5347580198f834c938747145d4b",
+    "feature_id": "chat",
+    "roles": [
+      "CANDIDATE",
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1024,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1600,
+      "height": 1280
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/Chat/ChatPage.js",
+      "frontend/src/service/chatMediaService.js",
+      "backend/src/routes/web.js"
+    ],
+    "api_contracts": [
+      "GET /api/get-list-chat-conversation",
+      "GET /api/get-chat-conversation",
+      "POST /api/send-chat-message",
+      "POST /api/chat-attachments",
+      "GET /api/chat-attachments/:id",
+      "GET /api/chat-jobs"
+    ],
+    "observations": {
+      "headings": [
+        "TalentArch",
+        "RECENT CONVERSATIONS",
+        "Nguyễn Văn An",
+        "Lê Minh Tâm",
+        "Phạm Hoàng Nam",
+        "RECRUITMENT PIPELINE",
+        "DETAILS"
+      ],
+      "labels": [],
+      "controls": [
+        {
+          "type": "text",
+          "placeholder": "Search conversations..."
+        },
+        {
+          "placeholder": "Write a message to Nguyễn Văn An..."
+        }
+      ],
+      "actions": [
+        "search New Search",
+        "filter_list",
+        "Compose",
+        "call",
+        "videocam",
+        "more_horiz",
+        "add_circle",
+        "sentiment_satisfied",
+        "attach_file",
+        "send",
+        "description View Resume",
+        "event_available Schedule Next Round"
+      ],
+      "colors": {
+        "primary-fixed-dim": "#C7D3FF",
+        "error": "#9F403D",
+        "inverse-primary": "#618BFF",
+        "surface-container": "#E5EEFF",
+        "error-dim": "#4E0309",
+        "primary": "#0053DB",
+        "surface-container-low": "#EFF4FF",
+        "secondary-dim": "#535356",
+        "on-secondary": "#FAF8FC",
+        "on-error-container": "#752121",
+        "on-tertiary-fixed": "#3C3650",
+        "background": "#F8F9FF",
+        "on-tertiary-fixed-variant": "#59526E",
+        "on-background": "#00345E",
+        "on-surface-variant": "#26619D",
+        "primary-fixed": "#DBE1FF",
+        "secondary-fixed-dim": "#D5D3D8",
+        "on-primary-container": "#0048BF",
+        "primary-container": "#DBE1FF",
+        "on-primary": "#F8F7FF",
+        "secondary-fixed": "#E4E2E6",
+        "tertiary-fixed": "#DFD5F7",
+        "on-primary-fixed": "#003798",
+        "surface-container-highest": "#D2E4FF",
+        "on-error": "#FFF7F6",
+        "on-tertiary-container": "#4F4964",
+        "on-primary-fixed-variant": "#0050D4",
+        "outline": "#477DBB",
+        "on-surface": "#00345E",
+        "tertiary-fixed-dim": "#D0C7E8",
+        "outline-variant": "#81B5F6",
+        "inverse-surface": "#000F21",
+        "primary-dim": "#0048C1",
+        "surface-tint": "#0053DB",
+        "surface-container-lowest": "#FFFFFF",
+        "on-secondary-container": "#515155",
+        "surface-container-high": "#DCE9FF",
+        "on-tertiary": "#FDF7FF",
+        "secondary": "#5F5F62",
+        "tertiary-container": "#DFD5F7",
+        "inverse-on-surface": "#8E9EB7",
+        "error-container": "#FE8983",
+        "on-secondary-fixed-variant": "#5B5B5F",
+        "tertiary": "#625B77",
+        "surface-variant": "#D2E4FF",
+        "surface-bright": "#F8F9FF",
+        "secondary-container": "#E4E2E6",
+        "surface": "#F8F9FF",
+        "surface-dim": "#C4DCFF",
+        "tertiary-dim": "#564F6B",
+        "on-secondary-fixed": "#3F3F43"
+      },
+      "fonts": {
+        "headline": "Inter",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuCoV99yiTT_BhtdIMWxlzoF0aeTyhLwLYyAsJ342bPJfu9NFkRaej0Onzeplyi16kuK3qIUoIVXOPolBCWgpcu2p-PbIG2hSV1uFl9JP8V4m4eZPm0HBsNFUPZzi2yNlj8oTab64Twk-5LVOzB56ONInxYr50VAjOYYKiwveIS7hI5icvZ54gsp8alaJgz6kFCjvLystXpb9yKBHCFYmX7LInCbcpETdEI69rxXKQmu16CE1bFFS4VffuOY0T725oAegX8K0wv7pz04",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB4tsV4vBAzgZtXfLytrn6PeERZSBtkuR0VUJ5aJihjhce51bUaPuF6sjeaghoHE6GTrsLfSqA-FcoVU9Hg38o9Z1ZAmxg7jhCuWPLTTx7KQzhMQ-BpXyrs5rRHzaON3wKe8UJCkRg7IFHZ2eeiv95c_qD3ybp3zJeWNqJVMa5yLE_seYi5L-Nh5fnqe_S3tkHKZyvt5zCVmUGSbpXYVcPP_LsDWcvQ6fGrQxs-foV0Hqsq4MG0le_ZM4RWwp58OWx2J3yXAzYiCv6x",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDLPRSD49bgWZezTCiBetPiBXs2KCR5lcXmSsk-jZXKpSNJMilrEoa09TIR605zKHZy5q8AOhub5LCxuQzn3MjPfkkoK3dN9v7ufYZChv18XJ75gQAiTL-i819lqpdyE76HpP7lUtOZs_H3HDwu4cpJFzA_8KpmnAwsUap5ra2vVKQ69otY3AZfRq7bWLhtED53tEfszPjJtoHpai90WWa8HI1vV58EfMGXtnlebDTjRydd9blVviKVUS904WGWsaIWVGYb-WmfuPUp",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuAGENSh_ZLYQ2IhtN2QMKmxDKDsf5bMTZSftq03ghp_vr5Y3I1DZD379Qml5wQM3d_RwwmzkB9SrdoUlXTcwSbo5ZNIgYUTFLNqEaESrDMjts0UUBbLDtz2wrEf1h-1-ZvHS6sCHhZ9mM7-G3SO2a4csjsEdd8ZRaEfO7UO8Irdlc9qtl64jLWGYECIcKrQ0vLhlZ2C_aGVLwabFMCjszHPviilJV98vP1-68g82zp0olBaTp1qBbm48To5Wno2goQdRmneqUQLoT4G",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBnyeLLYx8p8LSSSJ6lUsi9i73pBxDqar9jilCliY7hl74n_3MkLF_FcuKQoXsldxDKmddvQQknIbS6vERKTXYEi5w7X1e0zB9NgZgX83rKvnG6I4Y6vmUxlSECtgCRLcSEjZx-UdLB9FFMg2EvyIYmDExZxrjJarEeMupVRBRFIT4-eALL2t4NCON9iC7IHgJvDI0mwwsyhg1lWzlNRoqXpI1QGukqLbqAmWf6Y8grlZSfpNnsUQ31ESm1S2EOmUf82lG1Tpd9eJ07",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDmgU9KaUkwtQzPdW_PGwBuYIrzpBcUrVeslizytHKwbOMWgGFCBn8QUlPKQ1Qw7bowWmVo-OfUekCSupgejNn6J2TObyY23G_1b9hF-yvXjLl0waSum88MoVtnM4UB-UYxv-sYx2pj6yMQ9A3sPcB3ZCCDGQ3isVR12tB-glHNgXvsf2Ou4t38ldx_5c50HmOadF-EpoESwaus6dlaE1diXw3KOsMIwMnraS8WkGOQ4Ybr97PZDMoWsorGp6OphDzc5GkTngNBqnrN",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/tr_chuy_n_tin_nh_n/code.html",
+      "image": ".stitch/designs/tr_chuy_n_tin_nh_n/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-031.md",
+    "prompt": ".stitch/prompts/JF-031.md"
+  }
+]

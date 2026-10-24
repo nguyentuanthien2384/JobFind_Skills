@@ -1,0 +1,342 @@
+{
+  "format": 3,
+  "snapshot": "2026-10-05",
+  "skills": [
+    {
+      "chatgpt_name": "jobfind-workflow",
+      "local_name": "workflow",
+      "project_path": ".agent/skills/extensions/workflow",
+      "title": "Điều phối dự án",
+      "lane": "extension",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-brainstorm",
+      "local_name": "brainstorm",
+      "project_path": ".agent/skills/brainstorm",
+      "title": "Phân tích ý tưởng",
+      "lane": "core",
+      "feature_id": "home"
+    },
+    {
+      "chatgpt_name": "jobfind-plan",
+      "local_name": "system-planner",
+      "project_path": ".agent/skills/system-planner",
+      "title": "Lập kế hoạch nhiều lớp",
+      "lane": "core",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-code-db",
+      "local_name": "code-db",
+      "project_path": ".agent/skills/code-db",
+      "title": "Database và migration",
+      "lane": "core",
+      "feature_id": "pipeline"
+    },
+    {
+      "chatgpt_name": "jobfind-code-api",
+      "local_name": "code-api",
+      "project_path": ".agent/skills/code-api",
+      "title": "Code REST API",
+      "lane": "core",
+      "feature_id": "job-posting"
+    },
+    {
+      "chatgpt_name": "jobfind-code-ui",
+      "local_name": "code-ui",
+      "project_path": ".agent/skills/code-ui",
+      "title": "Code giao diện",
+      "lane": "core",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-integrate-api",
+      "local_name": "integrate-api",
+      "project_path": ".agent/skills/integrate-api",
+      "title": "Nối UI với API",
+      "lane": "core",
+      "feature_id": "job-search"
+    },
+    {
+      "chatgpt_name": "jobfind-save-context",
+      "local_name": "save-context",
+      "project_path": ".agent/skills/save-context",
+      "title": "Lưu và tiếp tục phiên",
+      "lane": "core",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-auth-security",
+      "local_name": "auth-security",
+      "project_path": ".agent/skills/extensions/auth-security",
+      "title": "Xác thực và quyền",
+      "lane": "domain",
+      "feature_id": "auth-login"
+    },
+    {
+      "chatgpt_name": "jobfind-recruitment",
+      "local_name": "recruitment",
+      "project_path": ".agent/skills/extensions/recruitment",
+      "title": "Luồng tuyển dụng",
+      "lane": "domain",
+      "feature_id": "pipeline"
+    },
+    {
+      "chatgpt_name": "jobfind-realtime",
+      "local_name": "realtime",
+      "project_path": ".agent/skills/extensions/realtime",
+      "title": "Chat tuyển dụng",
+      "lane": "domain",
+      "feature_id": "chat"
+    },
+    {
+      "chatgpt_name": "jobfind-ai-services",
+      "local_name": "ai-services",
+      "project_path": ".agent/skills/extensions/ai-services",
+      "title": "AI CV và trợ lý",
+      "lane": "domain",
+      "feature_id": "candidate-cv-ai"
+    },
+    {
+      "chatgpt_name": "jobfind-microservices",
+      "local_name": "microservices",
+      "project_path": ".agent/skills/extensions/microservices",
+      "title": "Gateway và sự kiện",
+      "lane": "domain",
+      "feature_id": "pipeline"
+    },
+    {
+      "chatgpt_name": "jobfind-test-release",
+      "local_name": "test-release",
+      "project_path": ".agent/skills/extensions/test-release",
+      "title": "Kiểm thử và nghiệm thu",
+      "lane": "extension",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-init-techstack",
+      "local_name": "init-techstack",
+      "project_path": ".agent/skills/init-teckstack",
+      "title": "Thiết lập môi trường",
+      "lane": "core",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-archive-memory",
+      "local_name": "archive-memory",
+      "project_path": ".agent/skills/archive-memory",
+      "title": "Lưu trữ lịch sử",
+      "lane": "core",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-design-system",
+      "local_name": "design-system",
+      "project_path": ".agent/skills/extensions/design-system",
+      "title": "Design system từ mẫu",
+      "lane": "design",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-enhance-prompt",
+      "local_name": "enhance-prompt",
+      "project_path": ".agent/skills/extensions/enhance-prompt",
+      "title": "Viết prompt thiết kế",
+      "lane": "design",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-stitch-design",
+      "local_name": "stitch-design",
+      "project_path": ".agent/skills/extensions/stitch-design",
+      "title": "Vẽ và sửa màn Stitch",
+      "lane": "design",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-stitch-loop",
+      "local_name": "stitch-loop",
+      "project_path": ".agent/skills/extensions/stitch-loop",
+      "title": "Vẽ và code theo backlog",
+      "lane": "design",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-figma-handoff",
+      "local_name": "figma-handoff",
+      "project_path": ".agent/skills/extensions/figma-handoff",
+      "title": "Figma và bàn giao code",
+      "lane": "design",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-react-components",
+      "local_name": "react-components",
+      "project_path": ".agent/skills/extensions/react-components",
+      "title": "Stitch sang React components",
+      "lane": "design",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-responsive-accessibility",
+      "local_name": "responsive-accessibility",
+      "project_path": ".agent/skills/extensions/responsive-accessibility",
+      "title": "Responsive và khả năng truy cập",
+      "lane": "design",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-coding-standards",
+      "local_name": "coding-standards",
+      "project_path": ".agent/skills/extensions/coding-standards",
+      "title": "Quy chuẩn JavaScript",
+      "lane": "extension",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-api-design",
+      "local_name": "api-design",
+      "project_path": ".agent/skills/extensions/api-design",
+      "title": "Thiết kế hợp đồng API",
+      "lane": "extension",
+      "feature_id": "job-posting"
+    },
+    {
+      "chatgpt_name": "jobfind-backend-patterns",
+      "local_name": "backend-patterns",
+      "project_path": ".agent/skills/extensions/backend-patterns",
+      "title": "Mẫu backend JobFind",
+      "lane": "extension",
+      "feature_id": "pipeline"
+    },
+    {
+      "chatgpt_name": "jobfind-frontend-patterns",
+      "local_name": "frontend-patterns",
+      "project_path": ".agent/skills/extensions/frontend-patterns",
+      "title": "Mẫu React và state",
+      "lane": "extension",
+      "feature_id": "job-search"
+    },
+    {
+      "chatgpt_name": "jobfind-frontend-design",
+      "local_name": "frontend-design",
+      "project_path": ".agent/skills/extensions/frontend-design",
+      "title": "Chất lượng thị giác",
+      "lane": "extension",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-security-review",
+      "local_name": "security-review",
+      "project_path": ".agent/skills/extensions/security-review",
+      "title": "Review bảo mật code",
+      "lane": "extension",
+      "feature_id": "auth-recovery-security"
+    },
+    {
+      "chatgpt_name": "jobfind-frontend-build",
+      "local_name": "frontend-build",
+      "project_path": ".agent/skills/extensions/frontend-build",
+      "title": "CRA build và hiệu năng",
+      "lane": "extension",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-frontend-slides",
+      "local_name": "frontend-slides",
+      "project_path": ".agent/skills/extensions/frontend-slides",
+      "title": "Trình bày và demo dự án",
+      "lane": "extension",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-shadcn-ui",
+      "local_name": "shadcn-ui",
+      "project_path": ".agent/skills/extensions/shadcn-ui",
+      "title": "Đánh giá component tùy chọn",
+      "lane": "extension",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-motion-demo",
+      "local_name": "motion-demo",
+      "project_path": ".agent/skills/extensions/motion-demo",
+      "title": "Motion và video demo",
+      "lane": "extension",
+      "feature_id": "master-layout"
+    },
+    {
+      "chatgpt_name": "jobfind-candidate-profile",
+      "local_name": "candidate-profile",
+      "project_path": ".agent/skills/extensions/candidate-profile",
+      "title": "Hồ sơ và CV ứng viên",
+      "lane": "domain",
+      "feature_id": "candidate-profile"
+    },
+    {
+      "chatgpt_name": "jobfind-company-management",
+      "local_name": "company-management",
+      "project_path": ".agent/skills/extensions/company-management",
+      "title": "Công ty và nhân sự",
+      "lane": "domain",
+      "feature_id": "company-profile"
+    },
+    {
+      "chatgpt_name": "jobfind-job-search",
+      "local_name": "job-search",
+      "project_path": ".agent/skills/extensions/job-search",
+      "title": "Tìm việc và khám phá",
+      "lane": "domain",
+      "feature_id": "job-search"
+    },
+    {
+      "chatgpt_name": "jobfind-admin-moderation",
+      "local_name": "admin-moderation",
+      "project_path": ".agent/skills/extensions/admin-moderation",
+      "title": "Quản trị và duyệt nội dung",
+      "lane": "domain",
+      "feature_id": "admin-jobs"
+    },
+    {
+      "chatgpt_name": "jobfind-billing-entitlements",
+      "local_name": "billing-entitlements",
+      "project_path": ".agent/skills/extensions/billing-entitlements",
+      "title": "Gói dịch vụ và quota",
+      "lane": "domain",
+      "feature_id": "billing-packages"
+    },
+    {
+      "chatgpt_name": "jobfind-notifications",
+      "local_name": "notifications",
+      "project_path": ".agent/skills/extensions/notifications",
+      "title": "Thông báo và push",
+      "lane": "domain",
+      "feature_id": "notifications"
+    },
+    {
+      "chatgpt_name": "jobfind-job-management",
+      "local_name": "job-management",
+      "project_path": ".agent/skills/extensions/job-management",
+      "title": "Quản lý tin tuyển dụng",
+      "lane": "domain",
+      "feature_id": "job-posting"
+    },
+    {
+      "chatgpt_name": "jobfind-candidate-search",
+      "local_name": "candidate-search",
+      "project_path": ".agent/skills/extensions/candidate-search",
+      "title": "Tìm và mở hồ sơ ứng viên",
+      "lane": "domain",
+      "feature_id": "candidate-search"
+    },
+    {
+      "chatgpt_name": "jobfind-catalog-management",
+      "local_name": "catalog-management",
+      "project_path": ".agent/skills/extensions/catalog-management",
+      "title": "Danh mục nghề nghiệp",
+      "lane": "domain",
+      "feature_id": "recruitment-catalogs"
+    }
+  ]
+}

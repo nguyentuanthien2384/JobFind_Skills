@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Database và migration
+  short_description: Database và migration cho dự án JobFind
+  default_prompt: Dùng $code-db thêm index phù hợp cho truy vấn Kanban theo
+    công ty và job.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

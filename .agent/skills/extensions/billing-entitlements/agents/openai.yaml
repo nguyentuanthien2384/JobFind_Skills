@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Gói dịch vụ và quota
+  short_description: Gói dịch vụ và quota cho dự án JobFind
+  default_prompt: Dùng $billing-entitlements sửa quota khi repost duplicate.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

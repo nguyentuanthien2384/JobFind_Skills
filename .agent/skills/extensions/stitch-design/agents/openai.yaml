@@ -1,0 +1,14 @@
+interface:
+  display_name: JobFind · Vẽ và sửa màn Stitch
+  short_description: Vẽ và sửa màn Stitch cho dự án JobFind
+  default_prompt: Dùng $stitch-design vẽ thêm mobile tìm việc trong project
+    JobFind hiện có.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

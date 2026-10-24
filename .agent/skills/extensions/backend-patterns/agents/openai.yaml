@@ -1,0 +1,13 @@
+interface:
+  display_name: JobFind · Mẫu backend JobFind
+  short_description: Mẫu backend JobFind cho dự án JobFind
+  default_prompt: Dùng $backend-patterns review transaction khi gửi offer.
+  icon_small: assets/icon.svg
+  icon_large: assets/icon.svg
+policy:
+  products:
+  - chatgpt
+  - codex
+  - api
+  - atlas
+  allow_implicit_invocation: true

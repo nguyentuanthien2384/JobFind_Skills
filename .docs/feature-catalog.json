@@ -1,0 +1,1769 @@
+[
+  {
+    "id": "master-layout",
+    "title": "Shell, navigation và layout chung",
+    "roles": [
+      "PUBLIC",
+      "CANDIDATE",
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "screens": [],
+    "sources": [
+      "frontend/src/App.js",
+      "frontend/src/container/system/HomeAdmin.js",
+      "frontend/src/container/Candidate/HomeCandidate.js",
+      "frontend/src/auth/RouteGuard.js",
+      "frontend/src/auth/accessControl.js"
+    ],
+    "apis": [
+      "GET /api/auth/me"
+    ],
+    "rules": [
+      "Menu xuất hiện theo permission và company state, không chỉ role.",
+      "Đọc guard ở router cha; permission list rỗng từ parser không chứng minh public.",
+      "Giữ chat, support, candidate và admin shells theo router thật."
+    ],
+    "layout": [
+      "Public header/footer và search entry",
+      "Candidate sidebar/profile/notification",
+      "Company/Employer sidebar theo membership và readiness",
+      "Admin navigation và data-dense workspace",
+      "Mobile drawer, breadcrumb và page header"
+    ],
+    "actions": [
+      "Đi đến đúng route qua menu",
+      "Giữ back/forward và deep-link",
+      "Đăng nhập/đăng xuất cập nhật shell"
+    ],
+    "cases": [
+      "anonymous deep-link protected",
+      "company pending state",
+      "employer chưa có công ty",
+      "role đổi giữa hai tab",
+      "long breadcrumb/mobile overflow"
+    ],
+    "case_expectations": {
+      "anonymous deep-link protected": "Guest vào protected deep-link: yêu cầu auth, giữ intent hợp lệ; không render dữ liệu riêng.",
+      "company pending state": "S1/CS1 chưa đủ: menu/readiness và API guard đồng nhất; không cho mutation tuyển dụng.",
+      "employer chưa có công ty": "EMPLOYER chưa có company: vào onboarding được phép, không gọi dashboard tenant rỗng.",
+      "role đổi giữa hai tab": "Session/role đổi: shell cập nhật, cancel requests cũ, không giữ private state của actor trước.",
+      "long breadcrumb/mobile overflow": "Tên dài/mobile: breadcrumb wrap, drawer điều hướng được bằng bàn phím; không tràn ngang toàn trang."
+    }
+  },
+  {
+    "id": "home",
+    "title": "Trang chủ và khám phá việc làm",
+    "roles": [
+      "PUBLIC"
+    ],
+    "screens": [
+      "JF-035"
+    ],
+    "sources": [
+      "frontend/src/container/home/home.js",
+      "frontend/src/service/userService.js"
+    ],
+    "apis": [
+      "GET /api/get-filter-post",
+      "GET /api/get-list-company",
+      "GET /api/search/jobs"
+    ],
+    "rules": [
+      "Homepage dùng dữ liệu công khai, stats trong Stitch là fixture.",
+      "Search điều hướng /job với query được adapter hỗ trợ.",
+      "Không đổi legacy/search mode để khớp bản mẫu."
+    ],
+    "layout": [
+      "Header với nav và auth CTA",
+      "Hero và keyword/location search",
+      "Nhóm ngành, việc nổi bật và công ty",
+      "Nội dung giá trị/CTA theo reference",
+      "Footer theo HTML gốc"
+    ],
+    "actions": [
+      "Tìm việc",
+      "Mở job detail",
+      "Mở công ty",
+      "Đăng ký/đăng nhập"
+    ],
+    "cases": [
+      "API danh sách rỗng",
+      "ảnh/logo lỗi",
+      "search input dài",
+      "guest CTA ứng tuyển",
+      "mobile hero/search stacking"
+    ],
+    "case_expectations": {
+      "API danh sách rỗng": "API trả []: hiện empty/khám phá thay thế, không tạo số việc/công ty từ fixture.",
+      "ảnh/logo lỗi": "Ảnh/logo fail: fallback giữ kích thước card, alt/label còn đọc được.",
+      "search input dài": "Keyword dài: trim/validate theo adapter, giữ query và không phá layout/search CTA.",
+      "guest CTA ứng tuyển": "Guest muốn apply: auth/application intent theo source, không nộp CV anonymous.",
+      "mobile hero/search stacking": "390/360px: hero/search/nav reflow, input và CTA còn dùng được, không crop text."
+    }
+  },
+  {
+    "id": "job-search",
+    "title": "Kết quả tìm việc và bộ lọc",
+    "roles": [
+      "PUBLIC",
+      "CANDIDATE"
+    ],
+    "screens": [
+      "JF-036"
+    ],
+    "sources": [
+      "frontend/src/container/JobPage/JobPage.js",
+      "frontend/src/service/aiSearchService.js",
+      "microservices/shared/contracts/operations.js"
+    ],
+    "apis": [
+      "GET /api/get-filter-post",
+      "GET /api/search/jobs",
+      "GET /api/search/facets",
+      "GET /api/search/suggest"
+    ],
+    "rules": [
+      "Filters dùng codes/schemas source và pagination có bounds.",
+      "URL lưu filter, back/forward phải hồi phục kết quả.",
+      "Response trễ không ghi đè query mới; debounce theo hook/lodash đã có."
+    ],
+    "layout": [
+      "Header",
+      "Title/result count và sort",
+      "Sidebar filter hoặc mobile filter drawer",
+      "Job cards/list với salary/company/location",
+      "Pagination và empty/error state"
+    ],
+    "actions": [
+      "Đổi keyword/filter/sort",
+      "Chuyển trang",
+      "Mở chi tiết/lưu job",
+      "Clear filters"
+    ],
+    "cases": [
+      "zero results",
+      "network timeout/object error",
+      "đổi query nhanh",
+      "page ngoài range",
+      "back/forward",
+      "mode legacy/search"
+    ],
+    "case_expectations": {
+      "zero results": "Không kết quả: hiện count 0, empty state và clear filters; không còn cards của query cũ.",
+      "network timeout/object error": "Timeout/object errCode lỗi: hiện error/retry read có chủ đích, giữ keyword/filters.",
+      "đổi query nhanh": "Request A về sau B: chỉ B cập nhật danh sách/count/pagination; cancel/unmount không set state.",
+      "page ngoài range": "Page vượt bounds: điều chỉnh/reset theo contract, không tạo vòng fetch vô hạn.",
+      "back/forward": "Back/forward: phục hồi query/filter/sort/page từ URL và đúng kết quả.",
+      "mode legacy/search": "Legacy/search mode: đúng endpoint/DTO/codes theo cờ đang có, không bật cờ chỉ để hợp ảnh."
+    }
+  },
+  {
+    "id": "job-detail",
+    "title": "Chi tiết và external job",
+    "roles": [
+      "PUBLIC",
+      "CANDIDATE"
+    ],
+    "screens": [
+      "JF-010",
+      "JF-022",
+      "JF-023",
+      "JF-024"
+    ],
+    "sources": [
+      "frontend/src/container/JobDetail/JobDetail.js",
+      "frontend/src/components/modal/SendCvModal.js",
+      "frontend/src/auth/applicationIntent.js",
+      "frontend/src/service/cvService.js",
+      "backend/src/utils/legacyApplication.js"
+    ],
+    "apis": [
+      "GET /api/get-detail-post-by-id",
+      "GET /api/jobs/:id",
+      "POST /api/create-new-cv"
+    ],
+    "rules": [
+      "Ứng tuyển là modal trên /detail-job/:id; /apply chưa là route hiện hữu.",
+      "Giữ job state/public visibility và company validity.",
+      "Guest lưu apply intent qua auth theo source.",
+      "External job route/provenance không đồng nhất với job local.",
+      "Apply validation/draft/session/PDF giới hạn theo applications feature; fixtures 10MB/DOCX/portfolio trong ảnh không là contract đang có."
+    ],
+    "layout": [
+      "Job/company summary",
+      "Salary/location/type metadata",
+      "Description, requirements và benefits",
+      "Recruiter/company sidebar",
+      "Apply/save/share CTA",
+      "Related jobs và application modal"
+    ],
+    "actions": [
+      "Mở/nộp modal CV",
+      "Lưu job",
+      "Mở company",
+      "Trở lại kết quả tìm"
+    ],
+    "cases": [
+      "job không tồn tại/không public",
+      "guest login intent",
+      "đã ứng tuyển",
+      "PDF lỗi",
+      "expired job",
+      "external link"
+    ],
+    "case_expectations": {
+      "job không tồn tại/không public": "404/không public: thông báo phù hợp, không lộ nội dung/CV và chặn apply.",
+      "guest login intent": "Guest: giữ job intent qua login/signup; quay về đúng job đang mở.",
+      "đã ứng tuyển": "Duplicate application: hiển thị đã ứng tuyển, không tạo CV/outbox thứ hai.",
+      "PDF lỗi": "File sai/giới hạn: chặn ở UI PDF≤2MiB theo source; ghi riêng server-validation gap.",
+      "expired job": "Job hết hạn: CTA unavailable, server từ chối; không báo success dù client state cũ.",
+      "external link": "External job: dùng provenance/link thật, không gửi application nội bộ cho ID external."
+    }
+  },
+  {
+    "id": "companies",
+    "title": "Danh sách và chi tiết công ty",
+    "roles": [
+      "PUBLIC",
+      "CANDIDATE"
+    ],
+    "screens": [
+      "JF-006",
+      "JF-007"
+    ],
+    "sources": [
+      "frontend/src/container/Company/ListCompany.js",
+      "frontend/src/service/userService.js",
+      "backend/src/services/companyService.js"
+    ],
+    "apis": [
+      "GET /api/get-list-company",
+      "GET /api/get-detail-company-by-id",
+      "GET /api/get-review-by-company",
+      "POST /api/toggle-follow-company"
+    ],
+    "rules": [
+      "JF-006 và JF-007 là 2 biến thể cùng /company.",
+      "Public company không lộ verification documents.",
+      "Follow/review chỉ khi quyền social hợp lệ; giữ company state."
+    ],
+    "layout": [
+      "Company directory hero/search",
+      "Industry/location/size filters",
+      "Card hoặc list variant",
+      "Pagination/result count",
+      "Featured company section",
+      "Company detail jobs/reviews khi chọn"
+    ],
+    "actions": [
+      "Tìm/lọc/sort công ty",
+      "Mở /detail-company/:id",
+      "Theo dõi công ty",
+      "Review theo actor hợp lệ"
+    ],
+    "cases": [
+      "public/private separation",
+      "company banned/pending",
+      "guest follow",
+      "zero companies",
+      "logo lỗi",
+      "paging"
+    ],
+    "case_expectations": {
+      "public/private separation": "Public company detail không trả/license documents/private PII trong dữ liệu hoặc preview.",
+      "company banned/pending": "Banned/pending company: public visibility và CTA theo server; không coi là active fixture.",
+      "guest follow": "Guest follow: yêu cầu quyền/auth, không cập nhật count như thao tác thành công.",
+      "zero companies": "Danh sách []: empty state, filters vẫn chỉnh được, count 0.",
+      "logo lỗi": "Logo lỗi: fallback/alt, card ổn định.",
+      "paging": "Paging/filter: reset page khi đổi filter và giữ source response shape/count."
+    }
+  },
+  {
+    "id": "auth-login",
+    "title": "Đăng nhập và social SSO",
+    "roles": [
+      "PUBLIC"
+    ],
+    "screens": [
+      "JF-015",
+      "JF-016",
+      "JF-017"
+    ],
+    "sources": [
+      "frontend/src/container/login/Login.js",
+      "frontend/src/auth/authClient.js",
+      "frontend/src/auth/SocialButtons.js",
+      "backend/src/controllers/authController.js"
+    ],
+    "apis": [
+      "POST /api/auth/login",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/:provider/start",
+      "POST /api/auth/refresh"
+    ],
+    "rules": [
+      "Google/GitHub/Auth0 hiển thị theo providers readiness; LinkedIn trong mẫu chỉ là fixture.",
+      "Giữ token_user marker, access token memory, refresh cookie HttpOnly.",
+      "SSO direct và Auth0 connections là luồng riêng; giữ state/nonce/PKCE."
+    ],
+    "layout": [
+      "Premium hoặc regular reference variant",
+      "Brand/visual panel theo đúng ảnh",
+      "Email/password với labels/errors",
+      "Forgot password",
+      "Provider buttons có unavailable state",
+      "Signup link và apply-intent redirect"
+    ],
+    "actions": [
+      "Đăng nhập password",
+      "Bắt đầu SSO",
+      "Mở recovery/signup",
+      "Quay lại job đã định ứng tuyển"
+    ],
+    "cases": [
+      "invalid credentials",
+      "provider unavailable",
+      "pending SSO signup",
+      "callback lỗi/state mismatch",
+      "session refresh",
+      "mobile form"
+    ],
+    "case_expectations": {
+      "invalid credentials": "Credentials sai: lỗi rõ nhưng không tiết lộ secret, giữ input thích hợp và chặn submit lặp.",
+      "provider unavailable": "Provider not ready: nút unavailable/readiness; không khởi chạy SSO giả.",
+      "pending SSO signup": "Pending social signup: chuyển onboarding đúng pending session, không tự gộp identity theo email.",
+      "callback lỗi/state mismatch": "State/nonce/callback lỗi: reject liên kết/đăng nhập, có retry theo source không bỏ validation.",
+      "session refresh": "Refresh: access token memory/cookie đúng; GET retry một lần, writes không tự replay.",
+      "mobile form": "Mobile: labels/errors/focus/keyboard không bị che; đúng native login variant."
+    }
+  },
+  {
+    "id": "auth-register",
+    "title": "Chọn vai trò và đăng ký",
+    "roles": [
+      "PUBLIC"
+    ],
+    "screens": [
+      "JF-019",
+      "JF-020",
+      "JF-028"
+    ],
+    "sources": [
+      "frontend/src/container/login/Register.js",
+      "frontend/src/auth/passwordPolicy.js",
+      "backend/src/controllers/userController.js"
+    ],
+    "apis": [
+      "POST /api/create-new-user",
+      "GET /api/auth/providers",
+      "GET /api/auth/sso/signup",
+      "POST /api/auth/sso/signup"
+    ],
+    "rules": [
+      "Signup chọn CANDIDATE hoặc EMPLOYER; không cho user tự đăng ký ADMIN/COMPANY.",
+      "Giữ form 2 bước hiện có và validation server.",
+      "SSO profile chưa hoàn tất phải vào onboarding đúng, không tự gộp account theo email."
+    ],
+    "layout": [
+      "Role chooser JF-019",
+      "Personal/company-related input theo role hợp lệ",
+      "Credential step với validation",
+      "Provider signup và pending profile",
+      "Terms/link nội dung theo app source"
+    ],
+    "actions": [
+      "Chọn role",
+      "Tiếp tục/back bước",
+      "Submit signup",
+      "Hoàn tất SSO onboarding"
+    ],
+    "cases": [
+      "duplicate identity/contact",
+      "password policy",
+      "invalid role payload",
+      "input giữ khi lỗi",
+      "SSO pending",
+      "mobile signup"
+    ],
+    "case_expectations": {
+      "duplicate identity/contact": "Duplicate identity/contact: server lỗi hợp lệ, không tạo account/identity trùng.",
+      "password policy": "Password thiếu policy: field errors theo passwordPolicy/server, không log password.",
+      "invalid role payload": "Payload role ADMIN/COMPANY: server reject; UI chỉ CANDIDATE/EMPLOYER.",
+      "input giữ khi lỗi": "API lỗi: giữ draft không chứa secret trong docs, submit có thể chủ đích thử lại.",
+      "SSO pending": "SSO pending: hoàn tất profile bằng contract hiện có; không nhập lại identity tùy ý.",
+      "mobile signup": "390px signup: role/form/CTA đọc được, focus và validation có label."
+    }
+  },
+  {
+    "id": "auth-recovery-security",
+    "title": "Khôi phục và bảo mật tài khoản",
+    "roles": [
+      "PUBLIC",
+      "CANDIDATE",
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "screens": [],
+    "sources": [
+      "frontend/src/auth/SecuritySettings.js",
+      "frontend/src/auth/authClient.js",
+      "backend/src/controllers/authController.js",
+      "backend/src/services/authSessionService.js"
+    ],
+    "apis": [
+      "POST /api/request-reset-password-otp",
+      "POST /api/changepasswordbyPhone",
+      "GET /api/auth/security",
+      "GET /api/auth/security/events",
+      "DELETE /api/auth/sessions/:familyId",
+      "POST /api/auth/identities/:identityId/unlink"
+    ],
+    "rules": [
+      "OTP/secret không lưu vào docs/logs.",
+      "Recovery không tiết lộ account không cần thiết; giữ rate limits/server validation.",
+      "Session revoke/link/unlink thuộc actor hiện tại và cookie-origin checks."
+    ],
+    "layout": [
+      "Recovery phone/OTP/password steps theo source",
+      "Security summary",
+      "Session list với revoke action",
+      "Linked provider list",
+      "Security event history"
+    ],
+    "actions": [
+      "Yêu cầu/verify OTP",
+      "Đổi mật khẩu",
+      "Thu hồi phiên",
+      "Unlink identity có điều kiện"
+    ],
+    "cases": [
+      "OTP sai/hết hạn/thử nhiều",
+      "session khác owner",
+      "provider cuối cùng",
+      "many tabs",
+      "temporary IdP failure"
+    ],
+    "case_expectations": {
+      "OTP sai/hết hạn/thử nhiều": "OTP sai/hết hạn/thử nhiều: reject/rate-limit theo server, không lưu OTP ở log/docs.",
+      "session khác owner": "Revoke session không thuộc actor: từ chối, session người khác không đổi.",
+      "provider cuối cùng": "Unlink identity cuối cùng: kiểm tra điều kiện server, không khóa user mất phương thức đăng nhập.",
+      "many tabs": "Nhiều tab: revoke/logout lan truyền; không tiếp tục API dưới session cũ.",
+      "temporary IdP failure": "IdP unavailable: giữ trạng thái/lỗi thật, không báo linked/login success."
+    }
+  },
+  {
+    "id": "candidate-profile",
+    "title": "Hồ sơ cá nhân ứng viên",
+    "roles": [
+      "CANDIDATE"
+    ],
+    "screens": [
+      "JF-009"
+    ],
+    "sources": [
+      "frontend/src/container/Candidate/CandidateInfo.js",
+      "frontend/src/service/aiSearchService.js",
+      "backend/src/controllers/userController.js",
+      "frontend/src/service/userService.js"
+    ],
+    "apis": [
+      "PUT /api/update-user",
+      "GET /api/profile",
+      "PUT /api/profile",
+      "PUT /api/setDataUserSetting"
+    ],
+    "rules": [
+      "Legacy user profile và identity profile cần adapter đúng mode.",
+      "Completion score nếu chưa có backend phải được ghi là derived UI/fixture.",
+      "Chỉ cập nhật fields whitelist và ownership từ session."
+    ],
+    "layout": [
+      "Header và candidate navigation",
+      "Avatar/profile completion",
+      "Personal/contact info",
+      "Education/experience/skills theo fields thật",
+      "Preferences/CV section",
+      "Save và validation feedback"
+    ],
+    "actions": [
+      "Edit/save profile",
+      "Đổi avatar/CV theo cơ chế source",
+      "Mở CV workspace",
+      "Cập nhật preferences"
+    ],
+    "cases": [
+      "missing optional fields",
+      "invalid phone/link",
+      "save error preserves draft",
+      "actor khác",
+      "long Vietnamese name",
+      "mobile"
+    ],
+    "case_expectations": {
+      "missing optional fields": "Optional null/absent: hiển thị placeholder an toàn, không overwrite bằng giá trị fixture.",
+      "invalid phone/link": "Phone/link sai: validation whitelist/source; feedback theo field, giữ draft.",
+      "save error preserves draft": "Save lỗi: dữ liệu nhập giữ nguyên, không hiển thị saved/completion giả.",
+      "actor khác": "Actor khác: server enforce ownership, không sửa profile bằng userId body.",
+      "long Vietnamese name": "Tên tiếng Việt dài: wrap đúng, Unicode không cắt sai và không overflow.",
+      "mobile": "Mobile: sections/labels/save/focus đọc và sử dụng được."
+    }
+  },
+  {
+    "id": "candidate-cv-ai",
+    "title": "CV đã chuẩn bị và AI CV",
+    "roles": [
+      "CANDIDATE"
+    ],
+    "screens": [],
+    "sources": [
+      "frontend/src/service/aiSearchService.js",
+      "microservices/shared/contracts/operations.js",
+      "microservices/identity-service/package.json",
+      "frontend/src/service/candidateWorkspace.js",
+      "frontend/src/service/preparedCvPdf.js",
+      "frontend/src/components/modal/PreparedCvPicker.js"
+    ],
+    "apis": [
+      "GET /api/profile/cvs",
+      "POST /api/profile/cvs",
+      "POST /api/profile/cvs/import",
+      "PUT /api/profile/cvs/:cvId",
+      "DELETE /api/profile/cvs/:cvId",
+      "POST /api/ai/parse-resume",
+      "POST /api/ai/generate-cv",
+      "GET /api/ai/tasks/:taskId"
+    ],
+    "rules": [
+      "Prepared CV MongoDB khác snapshot CV nộp legacy.",
+      "202 nghĩa là accepted task, không phải đã có kết quả AI.",
+      "Xử lý provider unavailable/error và output validation; giữ private files."
+    ],
+    "layout": [
+      "CV workspace list",
+      "Upload/import form",
+      "PDF preview/details",
+      "AI edit/result panel",
+      "Pending/failure state",
+      "CV picker trong apply modal"
+    ],
+    "actions": [
+      "Tạo/import/edit/delete CV thuộc mình",
+      "Bắt đầu task AI",
+      "Preview/select CV",
+      "Retry có chủ đích"
+    ],
+    "cases": [
+      "empty CVs",
+      "invalid/oversize PDF",
+      "task pending/failed",
+      "stale polling",
+      "owner mismatch",
+      "duplicate task key"
+    ],
+    "case_expectations": {
+      "empty CVs": "CV list rỗng: cho tạo/import hợp lệ, picker không giả có CV đã chọn.",
+      "invalid/oversize PDF": "PDF sai/quá lớn: validate theo đúng import/prepared/apply contract; không lẫn giới hạn các luồng.",
+      "task pending/failed": "Task accepted/pending: chưa coi completed; failed terminal hiện lỗi/provider readiness.",
+      "stale polling": "Polling cũ/unmount: không ghi đè task mới, timer/request dừng phù hợp.",
+      "owner mismatch": "CV owner khác: read/update/delete bị từ chối, không lộ private PDF.",
+      "duplicate task key": "Cùng task idempotency key khi contract hỗ trợ: giữ một kết quả; khác intent dùng key mới."
+    }
+  },
+  {
+    "id": "applications",
+    "title": "Ứng tuyển và theo dõi đơn",
+    "roles": [
+      "CANDIDATE"
+    ],
+    "screens": [
+      "JF-018",
+      "JF-022",
+      "JF-023",
+      "JF-024"
+    ],
+    "sources": [
+      "frontend/src/components/modal/SendCvModal.js",
+      "frontend/src/components/modal/PreparedCvPicker.js",
+      "frontend/src/container/Candidate/ManageCvCandidate.js",
+      "frontend/src/service/applicationService.js",
+      "frontend/src/service/cvService.js",
+      "frontend/src/service/userService.js",
+      "frontend/src/service/aiSearchService.js",
+      "frontend/src/service/preparedCvPdf.js",
+      "backend/src/controllers/cvController.js",
+      "backend/src/utils/legacyApplication.js"
+    ],
+    "apis": [
+      "POST /api/create-new-cv",
+      "GET /api/get-all-cv-by-userId",
+      "GET /api/my-applications",
+      "GET /api/get-detail-user-by-id",
+      "GET /api/profile/cvs"
+    ],
+    "rules": [
+      "Apply wizard là trình bày mở rộng của modal; giữ data contract đã có.",
+      "application.id dùng endpoints application, legacy_cv_id nối CV cũ.",
+      "Lịch/offer/progress lấy trạng thái thật theo flag; không tạo thao tác rút đơn nếu source chưa hỗ trợ.",
+      "Submit thực tế: cvService.createNewCv → POST /api/create-new-cv; payload userId, postId, file, description. Backend lấy actor userId từ session; description 1–255 ký tự.",
+      "Apply UI PDF-only ≤2MiB; desktop reference ghi PDF 10MB/mobile PDF-DOCX10MB. Giữ ảnh exact để tham khảo, ghi validation difference khi code; backend utils/legacyApplication chưa enforce PDF MIME/size ở submit nên là server-validation gap.",
+      "Portfolio URL chưa có trong payload/model; wizard 3 bước là UI extension. Mobile JF-023 Continue chỉ chuyển bước, không submit thẳng; desktop JF-024 CTA cần giữ intent review/submit rõ.",
+      "GET /api/my-applications không trả interview/offer snapshot; candidate không được gọi GET /api/applications/:id vì manage permission. Candidate detail/calendar/offer read view cần contract mới, không dùng notes nội bộ recruiter."
+    ],
+    "layout": [
+      "Personal step",
+      "Upload/select prepared CV",
+      "Cover/intro và review",
+      "Submitting/result feedback",
+      "My applications list, filter và progress",
+      "Interview/offer detail theo dữ liệu thật"
+    ],
+    "actions": [
+      "Nộp CV",
+      "Theo dõi trạng thái",
+      "Mở PDF/phỏng vấn/offer",
+      "Filter/paging đơn của mình"
+    ],
+    "cases": [
+      "duplicate apply",
+      "job bị đóng",
+      "no prepared CV",
+      "invalid PDF",
+      "legacy/progress mode",
+      "empty applications",
+      "write 401"
+    ],
+    "case_expectations": {
+      "duplicate apply": "Duplicate: errCode5/409, hiển thị đã nộp và link lịch sử; không tạo CV/outbox thứ hai.",
+      "job bị đóng": "Job đóng: errCode4/409; job hidden/notfound errCode3/404, giữ draft và không báo đã nộp.",
+      "no prepared CV": "No prepared CV/flag off: empty/not-ready; chỉ cho chọn nguồn CV đã có và reviewed đúng.",
+      "invalid PDF": "Apply UI: chỉ PDF hợp lệ≤2MiB, %PDF signature/data URL; giới hạn server chưa enforce phải ghi gap.",
+      "legacy/progress mode": "Legacy/progress mode: ID cvId/application.id/legacy_cv_id nối đúng; candidate không gọi recruiter detail API.",
+      "empty applications": "Không đơn: empty state, count 0; không hiển thị snapshot lịch/offer chưa có trong my-applications.",
+      "write 401": "Write 401/session changed: không replay POST, giữ/chốt draft theo session; kết quả chưa rõ thì kiểm lịch sử trước gửi lại."
+    }
+  },
+  {
+    "id": "saved-jobs-follow",
+    "title": "Việc đã lưu và công ty theo dõi",
+    "roles": [
+      "CANDIDATE"
+    ],
+    "screens": [],
+    "sources": [
+      "frontend/src/service/userService.js",
+      "backend/src/routes/web.js",
+      "backend/src/services/followCompanyService.js"
+    ],
+    "apis": [
+      "POST /api/toggle-favorite-post",
+      "GET /api/get-favorite-post-by-user",
+      "POST /api/toggle-follow-company",
+      "GET /api/get-followed-company-by-user"
+    ],
+    "rules": [
+      "Social permissions từ session và ownership từ server.",
+      "Toggle state cần rollback nếu API lỗi; không coi fixture favorite là trạng thái thật.",
+      "Job/company không còn public phải xử lý có thông báo phù hợp."
+    ],
+    "layout": [
+      "Saved jobs list",
+      "Followed companies list",
+      "Empty/recommendation state",
+      "Filter và navigation đến detail"
+    ],
+    "actions": [
+      "Save/unsave",
+      "Follow/unfollow",
+      "Mở job/company"
+    ],
+    "cases": [
+      "guest denied",
+      "duplicate click",
+      "API error rollback",
+      "deleted target",
+      "session change",
+      "empty lists"
+    ],
+    "case_expectations": {
+      "guest denied": "Guest/role thiếu social permission: từ chối; không optimistic như success.",
+      "duplicate click": "Double click: khóa/dedupe thao tác đang chờ, state cuối theo server.",
+      "API error rollback": "API lỗi: rollback optimistic favorite/follow, giữ thông báo có thể retry chủ đích.",
+      "deleted target": "Target bị xóa/ẩn: trạng thái unavailable, không mở dữ liệu riêng hoặc crash.",
+      "session change": "Session đổi: clear/refresh danh sách và chặn response actor cũ.",
+      "empty lists": "List rỗng: empty CTA hợp lệ, count 0."
+    }
+  },
+  {
+    "id": "notifications",
+    "title": "Trung tâm thông báo",
+    "roles": [
+      "CANDIDATE",
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-033"
+    ],
+    "sources": [
+      "frontend/src/container/Candidate/CandidateNotifications.js",
+      "frontend/src/service/notificationJobsService.js",
+      "backend/src/routes/web.js",
+      "microservices/notification-service/package.json"
+    ],
+    "apis": [
+      "GET /api/get-notification-by-user",
+      "GET /api/get-notification-jobs",
+      "POST /api/mark-read-notification",
+      "GET /api/push/config",
+      "POST /api/push/subscription",
+      "DELETE /api/push/subscription"
+    ],
+    "rules": [
+      "Destination phải theo quyền của actor và route thật.",
+      "Unread dedupe theo notification ID; mark-read kiểm tra owner.",
+      "Preferences trong thiết kế cần đối chiếu fields source; queued không là delivered."
+    ],
+    "layout": [
+      "Tabs all/unread/type",
+      "Date-grouped notification rows",
+      "Unread badges và actions",
+      "Preferences chỉ phần source hỗ trợ",
+      "Empty/error/loading"
+    ],
+    "actions": [
+      "Mở thông báo",
+      "Đánh dấu đọc",
+      "Chuyển tab/paging",
+      "Opt-in push theo UI action"
+    ],
+    "cases": [
+      "wrong-role destination",
+      "duplicate event",
+      "deleted application/job",
+      "zero unread",
+      "push permission denied",
+      "mark-read error"
+    ],
+    "case_expectations": {
+      "wrong-role destination": "Destination thuộc role khác: không điều hướng vào dữ liệu forbidden, dùng target hợp lệ hoặc unavailable.",
+      "duplicate event": "Event lặp: dedupe ID, unread không tăng hai lần.",
+      "deleted application/job": "Target bị xóa: mở thông báo có fallback, không gọi write hay lộ resource khác.",
+      "zero unread": "Unread 0: badge/tab/count đồng nhất, không hiện fixture unread.",
+      "push permission denied": "Push denied: app vẫn chạy, trạng thái permission thật và không tự prompt lặp.",
+      "mark-read error": "Mark-read lỗi: server owner guard, UI rollback/feedback; không giảm count giả."
+    }
+  },
+  {
+    "id": "chat",
+    "title": "Tin nhắn tuyển dụng",
+    "roles": [
+      "CANDIDATE",
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-030",
+      "JF-031"
+    ],
+    "sources": [
+      "frontend/src/container/Chat/ChatPage.js",
+      "frontend/src/service/chatMediaService.js",
+      "backend/src/routes/web.js"
+    ],
+    "apis": [
+      "GET /api/get-list-chat-conversation",
+      "GET /api/get-chat-conversation",
+      "POST /api/send-chat-message",
+      "POST /api/chat-attachments",
+      "GET /api/chat-attachments/:id",
+      "GET /api/chat-jobs"
+    ],
+    "rules": [
+      "Giữ chat tuyển dụng khác support assistant.",
+      "REST/Socket/optimistic merge theo ID và clientMessageId.",
+      "Attachments private chỉ participant có quyền tải; request/trust/session được kiểm tra server."
+    ],
+    "layout": [
+      "Conversation sidebar",
+      "Message thread và delivery states",
+      "Composer/files/shared-job picker",
+      "Candidate/job context panel theo reference",
+      "Mobile conversation/thread views"
+    ],
+    "actions": [
+      "Chọn hội thoại",
+      "Gửi text/PDF/job card",
+      "Retry failed message",
+      "Reconnect/load missing messages"
+    ],
+    "cases": [
+      "out-of-order ack",
+      "duplicate socket event",
+      "reconnect",
+      "wrong participant",
+      "expired session",
+      "file preview error"
+    ],
+    "case_expectations": {
+      "out-of-order ack": "Ack/socket đến lệch thứ tự: merge ID/clientMessageId một message, delivery state không lùi sai.",
+      "duplicate socket event": "Socket event lặp: dedupe, unread đúng, không render duplicate.",
+      "reconnect": "Reconnect: fetch khoảng thiếu và merge, không mất/nhân message hoặc tự gửi lại nội dung.",
+      "wrong participant": "Wrong participant: REST/socket/PDF download đều enforce membership.",
+      "expired session": "Session hết: ngắt/reauth đúng, không gửi message dưới actor cũ.",
+      "file preview error": "Preview lỗi: fallback download được phép/lỗi rõ, private media không có URL public giả."
+    }
+  },
+  {
+    "id": "support-assistant",
+    "title": "Trợ lý hỗ trợ và handoff",
+    "roles": [
+      "PUBLIC",
+      "CANDIDATE",
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "screens": [],
+    "sources": [
+      "frontend/src/container/Chat/ChatPage.js",
+      "microservices/support-chat-service/package.json",
+      "microservices/shared/contracts/operations.js"
+    ],
+    "apis": [
+      "POST /api/support/turn",
+      "GET /api/support/knowledge",
+      "GET /api/support/conversations",
+      "POST /api/support/conversations/:id/handoff",
+      "GET /api/support/handoffs"
+    ],
+    "rules": [
+      "Public/private tools có boundary, ownership và session scope riêng.",
+      "Handoff management chỉ role được SUPPORT_MANAGE.",
+      "Retrieved content không có quyền yêu cầu agent gửi thư hoặc quyết định tuyển dụng."
+    ],
+    "layout": [
+      "Support entry/help",
+      "Assistant thread với evidence",
+      "Pending/failure/tool status",
+      "Handoff ticket và staff queue",
+      "Feedback"
+    ],
+    "actions": [
+      "Hỏi public knowledge",
+      "Xem private context được phép",
+      "Gửi handoff có chủ đích",
+      "Staff claim/resolve"
+    ],
+    "cases": [
+      "tool private unauthenticated",
+      "provider unavailable",
+      "stream interrupted",
+      "handoff forbidden",
+      "prompt injection",
+      "conversation ownership"
+    ],
+    "case_expectations": {
+      "tool private unauthenticated": "Private tool anonymous: deny trước đọc dữ liệu; public knowledge vẫn theo contract được phép.",
+      "provider unavailable": "Provider unavailable: error/readiness thật, không bịa câu trả lời hoặc completed task.",
+      "stream interrupted": "Stream đứt: trạng thái partial/error rõ; không nhân conversation/side effects khi retry.",
+      "handoff forbidden": "Handoff actor không SUPPORT_MANAGE: không mở/resolve staff queue.",
+      "prompt injection": "Retrieved prompt injection: coi là data, không cấp quyền/gửi thư/quyết định tuyển dụng.",
+      "conversation ownership": "Conversation khác owner: từ chối private context/media, không chỉ lọc bằng UI."
+    }
+  },
+  {
+    "id": "company-profile",
+    "title": "Chỉnh sửa hồ sơ doanh nghiệp",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER"
+    ],
+    "screens": [
+      "JF-005"
+    ],
+    "sources": [
+      "frontend/src/container/system/Company/AddCompany.js",
+      "frontend/src/service/userService.js",
+      "backend/src/services/companyService.js"
+    ],
+    "apis": [
+      "GET /api/get-detail-company-by-userId",
+      "POST /api/create-new-company",
+      "PUT /api/update-company"
+    ],
+    "rules": [
+      "EMPLOYER không có company chỉ vào onboarding theo CREATE_COMPANY.",
+      "Pending company navigation khác active S1/CS1.",
+      "Verification/license documents không public theo preview."
+    ],
+    "layout": [
+      "Company shell",
+      "Cover/logo upload",
+      "Basic info, introduction/benefits",
+      "Locations theo field hiện có",
+      "Completion/save/preview",
+      "Pending verification status"
+    ],
+    "actions": [
+      "Create/edit company",
+      "Save draft/form",
+      "Preview public profile"
+    ],
+    "cases": [
+      "owner mismatch",
+      "pending/rejected/ban state",
+      "invalid media/link",
+      "save failure",
+      "missing company",
+      "private document preview"
+    ],
+    "case_expectations": {
+      "owner mismatch": "Company owner/member sai: server deny update/read private docs.",
+      "pending/rejected/ban state": "Pending/rejected/banned: readiness/nav/CTA theo server, không tự set S1/CS1.",
+      "invalid media/link": "Media/link sai: validation source, form giữ draft; không render unsafe URL.",
+      "save failure": "Save lỗi: giữ field/preview state đúng, không báo published.",
+      "missing company": "Chưa company: onboarding CREATE_COMPANY đúng, không dùng companyId fixture.",
+      "private document preview": "Public preview không chứa private verification/license document."
+    }
+  },
+  {
+    "id": "company-team",
+    "title": "Nhân sự và tuyển dụng theo tenant",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER"
+    ],
+    "screens": [],
+    "sources": [
+      "frontend/src/container/system/Company/ManageEmployer.js",
+      "backend/src/services/companyService.js",
+      "backend/src/routes/web.js"
+    ],
+    "apis": [
+      "GET /api/get-all-user-by-companyId",
+      "PUT /api/add-user-company",
+      "PUT /api/quit-company"
+    ],
+    "rules": [
+      "COMPANY_TEAM_MANAGE và ownership ở server; actor/tenant không lấy theo body.",
+      "EMPLOYER chỉ các quyền company membership đang cho phép.",
+      "Tách quit/self-exit với loại member/team mutation."
+    ],
+    "layout": [
+      "Team list",
+      "Invite/add member form theo source",
+      "Member/role details",
+      "Empty/pending/forbidden states"
+    ],
+    "actions": [
+      "Xem team",
+      "Thêm employer",
+      "Rời công ty theo quyền"
+    ],
+    "cases": [
+      "cross-company target",
+      "duplicate membership",
+      "invalid member",
+      "self-exit consequences",
+      "company pending",
+      "role guard"
+    ],
+    "case_expectations": {
+      "cross-company target": "Company A thêm/xóa member B: deny, tenant lấy từ actor đã xác thực.",
+      "duplicate membership": "Duplicate membership: lỗi/kết quả ổn định, không nhân member.",
+      "invalid member": "User/member sai: server validation, không sửa tenant tùy ý.",
+      "self-exit consequences": "Self-exit: xử lý session/nav/company state hậu thay đổi theo source, không giữ quyền cũ.",
+      "company pending": "Pending company: role/readiness guard giữ nguyên ở UI/server.",
+      "role guard": "EMPLOYER thiếu team-manage: không thấy/hit được mutation COMPANY team."
+    }
+  },
+  {
+    "id": "employer-dashboard",
+    "title": "Dashboard doanh nghiệp",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER"
+    ],
+    "screens": [
+      "JF-034"
+    ],
+    "sources": [
+      "frontend/src/container/system/Home.js",
+      "frontend/src/container/system/Dashboard/CompanyDashboard.js",
+      "frontend/src/container/system/adminNavigation.js"
+    ],
+    "apis": [
+      "GET /api/get-list-post-admin",
+      "GET /api/get-statistical-post",
+      "GET /api/get-statistical-cv"
+    ],
+    "rules": [
+      "Cùng /admin/ với platform admin nhưng component/data theo actor.",
+      "Stats giới hạn company scope; không gọi platform revenue reports từ doanh nghiệp.",
+      "Số fixture không được hiển thị như data thật."
+    ],
+    "layout": [
+      "Company sidebar/header",
+      "Recruitment metric cards",
+      "Jobs/application attention tables",
+      "Company-specific chart",
+      "Quick actions và readiness"
+    ],
+    "actions": [
+      "Đi quản lý tin/pipeline",
+      "Xem ứng viên",
+      "Mua gói theo quyền",
+      "Mở attention target"
+    ],
+    "cases": [
+      "company unverified/no membership",
+      "zero activity",
+      "report API error",
+      "employer permission subset",
+      "mobile cards"
+    ],
+    "case_expectations": {
+      "company unverified/no membership": "No membership/unverified: onboarding/readiness đúng, không gọi platform reports.",
+      "zero activity": "Zero activity: metrics 0 và empty tables/chart, không dùng fixture stats.",
+      "report API error": "Một report fail: block/error phần liên quan, không làm metric giả.",
+      "employer permission subset": "Employer permissions subset: nav/CTA/server guard đúng, không lấy role COMPANY làm mặc định.",
+      "mobile cards": "Mobile metrics/cards/table reflow, target và text không tràn."
+    }
+  },
+  {
+    "id": "job-posting",
+    "title": "Đăng và quản lý tin",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER",
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-021"
+    ],
+    "sources": [
+      "frontend/src/container/system/Post/AddPost.js",
+      "frontend/src/service/jobPostingService.js",
+      "backend/src/routes/web.js",
+      "microservices/shared/contracts/operations.js"
+    ],
+    "apis": [
+      "POST /api/create-new-post",
+      "POST /api/create-reup-post",
+      "PUT /api/update-post",
+      "POST /api/jobs",
+      "PUT /api/jobs/:id",
+      "POST /api/jobs/:id/repost",
+      "GET /api/jobs/manage"
+    ],
+    "rules": [
+      "Giữ JOB_MANAGE/owner/company state và quota server.",
+      "Wizard sử dụng một contract field set, không thêm endpoint từng bước.",
+      "Create/repost idempotency giữ một key cho một thao tác; source flags quyết định mode."
+    ],
+    "layout": [
+      "Header/stepper",
+      "Title/category/location/basic fields",
+      "Description/requirements/benefits",
+      "Salary/experience/work type",
+      "Preview/quota feedback",
+      "Validation và submitting state"
+    ],
+    "actions": [
+      "Tạo/sửa/repost tin",
+      "Preview",
+      "Quản lý/filter tin"
+    ],
+    "cases": [
+      "invalid catalog code",
+      "quota 0",
+      "duplicate repost",
+      "job outside tenant",
+      "core vs legacy",
+      "write refresh failure"
+    ],
+    "case_expectations": {
+      "invalid catalog code": "Catalog code sai: server/schema reject, input code/label không đổi key.",
+      "quota 0": "Quota 0: server reject write, UI entitlement feedback; không trừ quota âm.",
+      "duplicate repost": "Duplicate repost: giữ intent key khi contract hỗ trợ, một job/quota/event cho cùng intent.",
+      "job outside tenant": "Job tenant khác: deny edit/repost/manage, actor/tenant không tin payload.",
+      "core vs legacy": "Core/legacy flag: giữ adapter/contract/envelope tương ứng; không tự switch.",
+      "write refresh failure": "Write refresh failure: draft giữ, không tự replay create/repost; kiểm kết quả chưa rõ trước retry."
+    }
+  },
+  {
+    "id": "candidate-search",
+    "title": "Kho ứng viên và mở CV",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER"
+    ],
+    "screens": [
+      "JF-012"
+    ],
+    "sources": [
+      "frontend/src/container/system/Cv/FilterCv.js",
+      "frontend/src/service/cvService.js",
+      "backend/src/services/candidateSearchService.js"
+    ],
+    "apis": [
+      "GET /api/fillter-cv-by-selection",
+      "GET /api/candidate-search-jobs",
+      "GET /api/check-see-candiate",
+      "GET /api/talent-pool",
+      "POST /api/talent-pool"
+    ],
+    "rules": [
+      "Giữ route /admin/list-candiate và endpoint spelling đang dùng.",
+      "Không lộ private PII trước unlock; server kiểm tra entitlement.",
+      "Candidate/profile/CV/application ID cần mapping đúng khi mở detail."
+    ],
+    "layout": [
+      "Keyword/job selection và advanced filters",
+      "Quota/unlock status",
+      "Candidate cards/table",
+      "Detail/PDF drawer",
+      "Talent pool action",
+      "Paging/empty/error"
+    ],
+    "actions": [
+      "Tìm/lọc/chuyển page",
+      "Mở/unlock CV",
+      "Lưu talent pool",
+      "Mở recruitment profile"
+    ],
+    "cases": [
+      "no quota/expired package",
+      "duplicate unlock",
+      "cross-tenant",
+      "stale filters",
+      "no candidates",
+      "private PDF forbidden"
+    ],
+    "case_expectations": {
+      "no quota/expired package": "No quota/expired: server unlock enforce entitlement; không trả private CV trước quyền.",
+      "duplicate unlock": "Unlock lặp: không trừ quota hai lần khi source contract có idempotency/ownership.",
+      "cross-tenant": "Cross-tenant: không đọc/unlock pipeline/CV thuộc job khác trái quyền.",
+      "stale filters": "Filters đổi nhanh: response cũ không overwrite mới, page reset đúng.",
+      "no candidates": "No candidates: empty/filter feedback, không hiện fixtures như data thật.",
+      "private PDF forbidden": "PDF không được phép: 401/403/readiness thật, không tạo public media URL."
+    }
+  },
+  {
+    "id": "pipeline",
+    "title": "Kanban, đánh giá và AI tuyển dụng",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER"
+    ],
+    "screens": [
+      "JF-025"
+    ],
+    "sources": [
+      "frontend/src/container/system/Cv/KanbanBoard.js",
+      "frontend/src/service/applicationService.js",
+      "microservices/application-service/src/libs/db.js",
+      "microservices/application-service/src/controllers/applicationController.js"
+    ],
+    "apis": [
+      "GET /api/applications/stages",
+      "GET /api/applications/board",
+      "PATCH /api/applications/:id/stage",
+      "PATCH /api/applications/:id/rating",
+      "POST /api/applications/:id/notes"
+    ],
+    "rules": [
+      "Dùng 6 stage keys source thay vì labels tiếng Anh mẫu.",
+      "application.id khác legacy_cv_id; mỗi action dùng đúng ID.",
+      "Stage history/notes/rating/outbox cần tenant và transaction; AI chỉ hỗ trợ review."
+    ],
+    "layout": [
+      "Recruiter shell/job selector",
+      "6 Kanban columns",
+      "Candidate cards với state thật",
+      "Detail drawer/rating/notes/history",
+      "Actions phỏng vấn/offer",
+      "AI screening panel và readiness"
+    ],
+    "actions": [
+      "Move stage",
+      "Mở candidate detail",
+      "Rate/note",
+      "Yêu cầu screening",
+      "Mở interview/decision form"
+    ],
+    "cases": [
+      "unauthorized job",
+      "stale optimistic update",
+      "duplicate move",
+      "AI failure",
+      "CV mapping mismatch",
+      "keyboard/mobile drag alternative"
+    ],
+    "case_expectations": {
+      "unauthorized job": "Job unauthorized: read/move/rating/note đều tenant guarded.",
+      "stale optimistic update": "Optimistic move lỗi/stale: reconcile/rollback với server, không để card ở stage giả.",
+      "duplicate move": "Duplicate move: event/outbox/state ổn định theo contract thật; không giả có idempotency nếu không hỗ trợ.",
+      "AI failure": "AI unavailable/failed: giữ manual review, chưa coi output là quyết định tuyển dụng.",
+      "CV mapping mismatch": "CV ID mapping: dùng application.id cho modern actions, legacy_cv_id cho PDF cũ; không trộn _id Mongo.",
+      "keyboard/mobile drag alternative": "Keyboard/mobile: có thao tác move stage thay drag, focus/error feedback còn dùng được."
+    }
+  },
+  {
+    "id": "interviews-offers",
+    "title": "Phỏng vấn và thư mời",
+    "roles": [
+      "COMPANY",
+      "EMPLOYER",
+      "CANDIDATE"
+    ],
+    "screens": [
+      "JF-013",
+      "JF-014"
+    ],
+    "sources": [
+      "frontend/src/container/system/Cv/InterviewInvitationForm.js",
+      "frontend/src/container/system/Cv/OfferLetterForm.js",
+      "microservices/shared/contracts/interviewSchema.js",
+      "microservices/shared/contracts/offerSchema.js",
+      "frontend/src/service/applicationService.js",
+      "microservices/application-service/src/app.js",
+      "microservices/application-service/src/controllers/applicationController.js",
+      "microservices/application-service/src/libs/interview.js",
+      "microservices/application-service/src/libs/db.js"
+    ],
+    "apis": [
+      "POST /api/applications/:id/interview-invitation",
+      "POST /api/applications/:id/decision-notification",
+      "GET /api/my-applications"
+    ],
+    "rules": [
+      "Forms thư phỏng vấn/offer có trong pipeline; calendar tổng hợp độc lập là proposal.",
+      "Asia/Ho_Chi_Minh và +07:00 theo validator hiện hành.",
+      "Meeting URL/location/contact/deadline phải theo schema; event queued không chứng minh email delivered.",
+      "application_events.decision_snapshot.interview ở PostgreSQL là snapshot lời mời; calendar latest-invitation là một MVP proposal, chưa có multi-round/cancel/RSVP persistence được chứng minh.",
+      "confirmBy phải > now và ≤ interview start; bằng giờ bắt đầu hợp lệ. Duration tùy chọn 15–480 phút; timezone Asia/Ho_Chi_Minh/+07:00, logistics theo onsite/online/phone.",
+      "Company/employer calendar cần frontend candidate-manage và API application:manage với S1/CS1/tenant. Candidate không dùng recruiter API: my-applications chỉ có stage/times, không interview snapshot; candidate read view cần plan mới.",
+      "Invitation write hiện không có idempotency contract; khóa UI không bảo đảm exactly-once. Giữ timeout uncertain/no-auto-replay, plan idempotency khi cần. emailQueued không chứng minh delivered."
+    ],
+    "layout": [
+      "Calendar/agenda proposal theo JF-013/014",
+      "Interview form source",
+      "Offer/decision form source",
+      "Delivery status/history",
+      "Candidate interview/offer read view"
+    ],
+    "actions": [
+      "Lên lịch/gửi thư theo scope được giao",
+      "Preview nội dung",
+      "Xem decision/interview snapshot"
+    ],
+    "cases": [
+      "deadline trước start",
+      "invalid URL/contact/time zone",
+      "wrong application owner",
+      "email failure/replay",
+      "calendar API chưa có"
+    ],
+    "case_expectations": {
+      "deadline trước start": "confirmBy > now và ≤ start: hợp lệ; confirmBy=start hợp lệ. Quá khứ hoặc sau start bị validator từ chối.",
+      "invalid URL/contact/time zone": "Asia/Ho_Chi_Minh/+07, future start; online cần http(s) URL, onsite location, phone contact; duration nếu có 15–480.",
+      "wrong application owner": "Application/job khác tenant: server deny; candidate không dùng manage endpoint/calendar recruiter.",
+      "email failure/replay": "emailQueued chỉ xếp hàng; timeout/refresh không gửi lại tự động. Chưa có idempotency cho invitation thì ghi rõ gap.",
+      "calendar API chưa có": "Global calendar không có API hiện hữu; prototype ghi PROPOSAL. Khi bổ sung, latest invitation trước date filtering; không tự tạo lịch từ stage phong_van."
+    }
+  },
+  {
+    "id": "billing-packages",
+    "title": "Mua gói và lịch sử giao dịch",
+    "roles": [
+      "COMPANY",
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-003"
+    ],
+    "sources": [
+      "frontend/src/container/system/Post/BuyPost.js",
+      "frontend/src/container/system/PackageCv/BuyCv.js",
+      "backend/src/services/packageCvService.js",
+      "backend/src/routes/web.js"
+    ],
+    "apis": [
+      "GET /api/get-payment-link",
+      "POST /api/payment-success",
+      "GET /api/get-payment-cv-link",
+      "POST /api/payment-cv-success",
+      "GET /api/get-history-trade-post",
+      "GET /api/get-history-trade-cv"
+    ],
+    "rules": [
+      "Post/CV packages và histories là dữ liệu tách biệt.",
+      "Payment success cần xác minh server và idempotency callback; return URL chưa đủ.",
+      "Recurring/auto-renew trong JF-003 chưa có đầy đủ route/contract; ghi proposal."
+    ],
+    "layout": [
+      "Package catalog và active entitlement",
+      "Post/CV quota summaries",
+      "Payment pending/success/cancel/failure",
+      "Transaction histories",
+      "Recurring section chỉ nếu triển khai proposal"
+    ],
+    "actions": [
+      "Chọn gói",
+      "Mở luồng thanh toán",
+      "Xem lịch sử",
+      "Đi sử dụng quota"
+    ],
+    "cases": [
+      "duplicate payment callback",
+      "cancel/error",
+      "inactive package",
+      "price tampering",
+      "quota expired",
+      "recurring unsupported"
+    ],
+    "case_expectations": {
+      "duplicate payment callback": "Callback trùng: một purchase/entitlement theo xác minh/idempotency server, không cộng quota hai lần.",
+      "cancel/error": "Cancel/failure/pending: không cấp quota hoặc báo paid trước xác minh thật.",
+      "inactive package": "Gói inactive: server reject purchase theo catalog hiện tại.",
+      "price tampering": "Client sửa giá/quota: server dùng price/package trusted, không cấp quyền từ body.",
+      "quota expired": "Quota hết/hết hạn: server enforce sử dụng; UI phản ánh đúng post/CV entitlement.",
+      "recurring unsupported": "Recurring control chưa contract: ghi proposal/disabled; không bịa saved card/auto-renew/trial."
+    }
+  },
+  {
+    "id": "admin-overview",
+    "title": "Tổng quan quản trị",
+    "roles": [
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-002"
+    ],
+    "sources": [
+      "frontend/src/container/system/Dashboard/AdminDashboard.js",
+      "frontend/src/service/adminReportService.js",
+      "microservices/shared/contracts/operations.js"
+    ],
+    "apis": [
+      "GET /api/admin/reports/overview",
+      "GET /api/admin/reports/timeseries",
+      "GET /api/admin/reports/distribution",
+      "GET /api/admin/reports/activity"
+    ],
+    "rules": [
+      "ADMIN platform data khác company dashboard cùng route /admin/.",
+      "Modern admin endpoints có /api/admin prefix.",
+      "Stats/chart không dùng fixture khi user yêu cầu tích hợp thật."
+    ],
+    "layout": [
+      "Admin sidebar/header",
+      "Platform metric cards",
+      "Revenue/user charts",
+      "Pending moderation table",
+      "Activity list và quick actions"
+    ],
+    "actions": [
+      "Đổi period",
+      "Mở target moderation",
+      "Mở reports",
+      "Export chỉ khi source hỗ trợ"
+    ],
+    "cases": [
+      "non-admin forbidden",
+      "empty range",
+      "partial report error",
+      "time zone bounds",
+      "fixture/live separation"
+    ],
+    "case_expectations": {
+      "non-admin forbidden": "Non-admin: platform overview/API 403, không thay tenant để xem report.",
+      "empty range": "Range rỗng: totals 0/empty chart theo source, không fallback số mẫu.",
+      "partial report error": "Một endpoint lỗi: feedback riêng phần dữ liệu, không báo dashboard toàn bộ ready.",
+      "time zone bounds": "Date bounds/timezone: request window hợp lệ, labels và tổng cùng kỳ.",
+      "fixture/live separation": "Fixture chỉ design; live render phải dùng report response và ghi rõ thiếu dữ liệu."
+    }
+  },
+  {
+    "id": "admin-users",
+    "title": "Quản lý người dùng",
+    "roles": [
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-027"
+    ],
+    "sources": [
+      "frontend/src/container/system/User/ManageUser.js",
+      "backend/src/controllers/userController.js",
+      "backend/src/routes/web.js"
+    ],
+    "apis": [
+      "GET /api/get-all-user",
+      "POST /api/ban-user",
+      "POST /api/unban-user"
+    ],
+    "rules": [
+      "Server kiểm tra administration permission; không tin role/userId client cho actor.",
+      "Status/action dùng source, không duyệt users chỉ bằng checkbox local.",
+      "Giữ payload không có password/secrets."
+    ],
+    "layout": [
+      "Search/filter/status summary",
+      "Users table",
+      "Details/actions",
+      "Confirm/error/loading",
+      "Pagination"
+    ],
+    "actions": [
+      "Search/paging",
+      "Ban/unban theo quyền",
+      "Mở user detail"
+    ],
+    "cases": [
+      "forbidden actor",
+      "duplicate mutation",
+      "wrong target",
+      "paging after update",
+      "password in response",
+      "long name/email"
+    ],
+    "case_expectations": {
+      "forbidden actor": "Actor không administration: server deny list/ban/unban.",
+      "duplicate mutation": "Mutation lặp: state cuối đúng, UI chặn double-submit; không tạo log/side effect ngoài contract.",
+      "wrong target": "Target sai/đã đổi: server validation, không mutate user từ row stale.",
+      "paging after update": "Update/filter đổi: refetch/reset page hợp lý, count/rows không lệch.",
+      "password in response": "Payload phản hồi/log không có password/hash/token/session secrets.",
+      "long name/email": "Tên/email dài: wrap/truncate với nhãn đọc được, table không phá layout."
+    }
+  },
+  {
+    "id": "admin-jobs",
+    "title": "Kiểm duyệt tin tuyển dụng",
+    "roles": [
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-011"
+    ],
+    "sources": [
+      "frontend/src/container/system/Post/ManagePost.js",
+      "backend/src/routes/web.js"
+    ],
+    "apis": [
+      "GET /api/get-all-post-admin",
+      "PUT /api/accept-post",
+      "PUT /api/ban-post",
+      "PUT /api/active-post"
+    ],
+    "rules": [
+      "Quyền MODERATE_POSTS ở UI và ADMINISTRATION/backend equivalent cần đối chiếu.",
+      "Approved/ban/public state cập nhật server và projection đúng owner.",
+      "Lý do moderation theo source contract, không bịa field ghi được."
+    ],
+    "layout": [
+      "Tabs/filter/moderation counts",
+      "Pending job table",
+      "Detail/review panel",
+      "Approve/ban/restore controls",
+      "Confirm và pending/error states"
+    ],
+    "actions": [
+      "Xem nội dung",
+      "Duyệt/ban/active",
+      "Refresh table"
+    ],
+    "cases": [
+      "company actor forbidden",
+      "stale job state",
+      "duplicate review",
+      "search projection lag",
+      "validation/error"
+    ],
+    "case_expectations": {
+      "company actor forbidden": "COMPANY/EMPLOYER không platform moderator: tenant job-manage không cấp moderation admin.",
+      "stale job state": "Job state đã đổi: refresh/feedback, không báo approved từ optimistic row.",
+      "duplicate review": "Review submit lặp: khóa submit, state/outbox ổn định theo source.",
+      "search projection lag": "Projection lag: source truth/result rõ, search chưa sync không báo immediate visibility giả.",
+      "validation/error": "Validation/5xx: giữ selection/form khi phù hợp, action không success khi errCode lỗi."
+    }
+  },
+  {
+    "id": "admin-companies",
+    "title": "Duyệt và xác thực doanh nghiệp",
+    "roles": [
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-008",
+      "JF-037"
+    ],
+    "sources": [
+      "frontend/src/container/system/Company/ManageCompany.js",
+      "backend/src/services/companyService.js",
+      "backend/src/routes/web.js"
+    ],
+    "apis": [
+      "GET /api/get-all-company",
+      "PUT /api/accecpt-company",
+      "PUT /api/ban-company",
+      "PUT /api/unban-company"
+    ],
+    "rules": [
+      "Giữ spelling accecpt-company từ source.",
+      "Censor CS1 và status S1 không đồng nghĩa chỉ một boolean verified.",
+      "Giấy phép/xác minh private: chỉ role/owner được phép."
+    ],
+    "layout": [
+      "Verification summary/queue",
+      "Company table",
+      "Document/review side panel",
+      "Approve/reject theo actions source",
+      "Pending/empty/error feedback"
+    ],
+    "actions": [
+      "Chọn company",
+      "Đọc hồ sơ",
+      "Approve/ban/unban",
+      "Refresh queue"
+    ],
+    "cases": [
+      "private doc access",
+      "stale row selected",
+      "pending/ban combinations",
+      "cross-role",
+      "duplicate approval"
+    ],
+    "case_expectations": {
+      "private doc access": "Verification doc: chỉ actor được phép, không public preview/cache link.",
+      "stale row selected": "Stale selection: xác minh target/current state trước action; refresh row sau response.",
+      "pending/ban combinations": "Pending/ban combinations: statusCode/censorCode xử lý riêng, không một boolean Approved.",
+      "cross-role": "Role không admin: company edit permission không cấp approve/ban platform.",
+      "duplicate approval": "Double approval: một intent/side effect theo contract; feedback/disabled submit đúng."
+    }
+  },
+  {
+    "id": "admin-packages",
+    "title": "Quản lý gói đăng tin và CV",
+    "roles": [
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-026"
+    ],
+    "sources": [
+      "frontend/src/container/system/PackagePost/ManagePackagePost.js",
+      "frontend/src/container/system/PackageCv/ManagePackageCv.js",
+      "backend/src/routes/web.js"
+    ],
+    "apis": [
+      "GET /api/get-all-package",
+      "POST /api/create-package-post",
+      "PUT /api/update-package-post",
+      "PUT /api/set-active-package-post",
+      "GET /api/get-all-package-cv",
+      "POST /api/create-package-cv",
+      "PUT /api/update-package-cv"
+    ],
+    "rules": [
+      "Hai catalogs post/CV, model/type/quota/price distinct.",
+      "Không biến UI combined table thành một backend package model duy nhất.",
+      "Admin changes không viết lại entitlement đã mua ngoài policy source."
+    ],
+    "layout": [
+      "Type tabs",
+      "Package table/cards",
+      "Create/edit form",
+      "Active state controls",
+      "Validation/confirm"
+    ],
+    "actions": [
+      "Create/edit package",
+      "Activate/deactivate",
+      "View catalog/paging"
+    ],
+    "cases": [
+      "invalid amount/quota",
+      "wrong type",
+      "forbidden company actor",
+      "existing entitlement compatibility",
+      "duplicate submit"
+    ],
+    "case_expectations": {
+      "invalid amount/quota": "Amount/quota sai: schema/server reject, không lưu giá/giới hạn không hợp lệ.",
+      "wrong type": "Post/CV type: đúng model/endpoint/catalog, không áp quota của loại khác.",
+      "forbidden company actor": "Company actor: chỉ purchase theo quyền, không create/update catalog admin.",
+      "existing entitlement compatibility": "Đổi catalog: entitlement/history đã mua giữ đúng semantics source; migration nếu đổi field được plan.",
+      "duplicate submit": "Double submit: một catalog mutation intent; lỗi giữ form, không success giả."
+    }
+  },
+  {
+    "id": "admin-reports-audit",
+    "title": "Báo cáo và audit",
+    "roles": [
+      "ADMIN"
+    ],
+    "screens": [
+      "JF-029"
+    ],
+    "sources": [
+      "frontend/src/container/system/Report/ReportDashboard.js",
+      "frontend/src/service/adminReportService.js",
+      "microservices/shared/contracts/operations.js"
+    ],
+    "apis": [
+      "GET /api/admin/reports/overview",
+      "GET /api/admin/reports/timeseries",
+      "GET /api/admin/reports/funnel",
+      "GET /api/admin/audit",
+      "GET /api/get-sum-by-year-post",
+      "GET /api/get-sum-by-year-cv"
+    ],
+    "rules": [
+      "Tenant platform reports chỉ ADMIN và permissions đúng.",
+      "Thời gian, totals và filters lấy server/derived dữ liệu thật; chart fixture chỉ design.",
+      "Audit redacts PII/secrets, query có pagination/bounds."
+    ],
+    "layout": [
+      "Financial header/date range",
+      "Revenue metrics/chart",
+      "Package distribution",
+      "Transactions table",
+      "Audit/activity drilldown",
+      "Export control theo source"
+    ],
+    "actions": [
+      "Filter range",
+      "View report/audit target",
+      "Export nếu implemented"
+    ],
+    "cases": [
+      "no data range",
+      "report source unavailable",
+      "range timezone",
+      "forbidden company",
+      "large pagination",
+      "audit redaction"
+    ],
+    "case_expectations": {
+      "no data range": "Range không data: totals/count/empty state nhất quán, không dùng fixture.",
+      "report source unavailable": "Report dependency thiếu: readiness/error/skipped rõ, không live claim.",
+      "range timezone": "Timezone/date bounds: đúng inclusive/exclusive contract và thống nhất chart/table.",
+      "forbidden company": "Company actor không lấy platform revenue/audit bằng đổi companyId.",
+      "large pagination": "Large pagination: bounded limit, count đúng, không dump toàn bộ audit.",
+      "audit redaction": "Audit redaction: không ghi/hiển thị credential/CV/PII vượt phạm vi; actor/resource đủ trace."
+    }
+  },
+  {
+    "id": "recruitment-catalogs",
+    "title": "Danh mục nghề nghiệp và kỹ năng",
+    "roles": [
+      "ADMIN"
+    ],
+    "screens": [],
+    "sources": [
+      "frontend/src/container/system/JobSkill/ManageJobSkill.js",
+      "frontend/src/container/system/JobType/ManageJobType.js",
+      "frontend/src/container/system/useCatalogList.js",
+      "microservices/shared/recruitmentCatalog.cjs"
+    ],
+    "apis": [
+      "GET /api/get-list-allcode",
+      "POST /api/create-new-all-code",
+      "PUT /api/update-all-code",
+      "DELETE /api/delete-all-code",
+      "GET /api/get-list-skill",
+      "POST /api/create-new-skill",
+      "PUT /api/update-skill"
+    ],
+    "rules": [
+      "Codes/type/job skill relations theo source; labels không thay key.",
+      "Xóa/update phải giữ referenced jobs/profiles và unique constraints hiện hành.",
+      "Catalog consumer dropdowns/search facets cần tương thích cả legacy/modern."
+    ],
+    "layout": [
+      "Catalog type navigation",
+      "List/search/paging",
+      "Add/edit form",
+      "Active/referenced states",
+      "Delete confirmation/error"
+    ],
+    "actions": [
+      "CRUD taxonomy/skills",
+      "Search/paging",
+      "Use codes in job/profile/filter forms"
+    ],
+    "cases": [
+      "duplicate code",
+      "referenced delete",
+      "role forbidden",
+      "stale dropdown",
+      "pagination reset",
+      "invalid type"
+    ],
+    "case_expectations": {
+      "duplicate code": "Code trùng: unique/validation đúng, label không là key thay thế.",
+      "referenced delete": "Delete referenced: xử lý integrity theo source; nếu thiếu protection ghi gap, không coi hard-delete an toàn.",
+      "role forbidden": "Non-admin: CRUD catalog forbidden dù có quyền job-manage.",
+      "stale dropdown": "Dropdown stale: refresh/source codes hợp lệ, field invalid có feedback.",
+      "pagination reset": "Filter/type đổi: reset page, count/rows cùng query.",
+      "invalid type": "Type không hỗ trợ: server validation, không trộn jobType/skill/location keys."
+    }
+  },
+  {
+    "id": "system-proposals",
+    "title": "Màn tổng hợp chưa có đầy đủ source",
+    "roles": [
+      "ADMIN",
+      "COMPANY"
+    ],
+    "screens": [
+      "JF-004",
+      "JF-013",
+      "JF-014",
+      "JF-003"
+    ],
+    "sources": [
+      "frontend/src/container/system/HomeAdmin.js",
+      "microservices/shared/contracts/operations.js"
+    ],
+    "apis": [],
+    "rules": [
+      "System settings tổng quát chưa có /admin/settings.",
+      "Calendar tổng hợp không đồng nhất với interview-invitation endpoint.",
+      "Recurring subscriptions không đồng nhất mua gói post/CV.",
+      "Lập owner/schema/API/role/route plan trước implementation; UI offline vẫn có thể vẽ tiếp và ghi proposal."
+    ],
+    "layout": [
+      "System settings sections theo JF-004",
+      "Calendar/agenda theo JF-013/014",
+      "Recurring plans theo JF-003",
+      "Unavailable/proposal UI state"
+    ],
+    "actions": [
+      "Lập kế hoạch feature mới",
+      "Vẽ prototype có nhãn",
+      "Triển khai sau khi scope/dependencies xác định"
+    ],
+    "cases": [
+      "route/API absent",
+      "permission design chưa quyết định",
+      "prototype-only actions",
+      "no live claims",
+      "migration implications"
+    ],
+    "case_expectations": {
+      "route/API absent": "Không route/API: thiết kế/plan vẫn được tạo, runtime action phải labeled unavailable/PROPOSAL.",
+      "permission design chưa quyết định": "Chưa permission: plan actor/owner/audit trước implementation, không mặc định ADMIN đủ mọi write.",
+      "prototype-only actions": "Prototype CTA: ghi interaction target dự kiến, không claim nghiệp vụ đã chạy.",
+      "no live claims": "Link/screenshot chỉ design evidence; code/test chưa có vẫn pending/NOT_RUN.",
+      "migration implications": "Schema/owner mới: plan migration/backfill/transaction/rollback trước code, không suy schema từ hình."
+    }
+  }
+]

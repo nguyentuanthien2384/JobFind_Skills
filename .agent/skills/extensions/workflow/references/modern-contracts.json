@@ -1,0 +1,6297 @@
+{
+  "source": "microservices/shared/contracts/operations.js",
+  "operations": [
+    {
+      "id": "supportTurn",
+      "service": "support",
+      "method": "post",
+      "path": "/support/turn",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "body": "SupportTurn",
+      "stream": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/turn"
+    },
+    {
+      "id": "supportKnowledge",
+      "service": "support",
+      "method": "get",
+      "path": "/support/knowledge",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/knowledge"
+    },
+    {
+      "id": "supportList",
+      "service": "support",
+      "method": "get",
+      "path": "/support/conversations",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/conversations"
+    },
+    {
+      "id": "supportGet",
+      "service": "support",
+      "method": "get",
+      "path": "/support/conversations/:id",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/conversations/:id"
+    },
+    {
+      "id": "supportDelete",
+      "service": "support",
+      "method": "delete",
+      "path": "/support/conversations/:id",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Ack",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/conversations/:id"
+    },
+    {
+      "id": "supportFeedback",
+      "service": "support",
+      "method": "post",
+      "path": "/support/conversations/:id/messages/:messageId/feedback",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "messageId": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "id",
+          "messageId"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Ack",
+      "status": 200,
+      "body": "SupportFeedback",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/conversations/:id/messages/:messageId/feedback"
+    },
+    {
+      "id": "supportHandoff",
+      "service": "support",
+      "method": "post",
+      "path": "/support/conversations/:id/handoff",
+      "permission": "support:chat:use",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "body": "SupportHandoff",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/conversations/:id/handoff"
+    },
+    {
+      "id": "supportPrivate",
+      "service": "support",
+      "method": "get",
+      "path": "/support/private/:name",
+      "permission": "support:chat:use",
+      "params": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "enum": [
+              "getMyProfileSummary",
+              "getMyApplications",
+              "getMySavedJobs",
+              "getMyCompanyJobs",
+              "getSubscriptionStatus"
+            ]
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/private/:name"
+    },
+    {
+      "id": "supportQueue",
+      "service": "support",
+      "method": "get",
+      "path": "/support/handoffs",
+      "permission": "support:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/handoffs"
+    },
+    {
+      "id": "supportTicket",
+      "service": "support",
+      "method": "get",
+      "path": "/support/handoffs/:id",
+      "permission": "support:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/handoffs/:id"
+    },
+    {
+      "id": "supportClaim",
+      "service": "support",
+      "method": "post",
+      "path": "/support/handoffs/:id/claim",
+      "permission": "support:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "body": "Empty",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/handoffs/:id/claim"
+    },
+    {
+      "id": "supportResolve",
+      "service": "support",
+      "method": "post",
+      "path": "/support/handoffs/:id/resolve",
+      "permission": "support:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "body": "Empty",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/support/handoffs/:id/resolve"
+    },
+    {
+      "id": "jobCreate",
+      "service": "jobs",
+      "method": "post",
+      "path": "/jobs",
+      "permission": "job:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Job",
+      "status": 201,
+      "body": "JobCreate",
+      "idempotency": true,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/jobs"
+    },
+    {
+      "id": "jobRepost",
+      "service": "jobs",
+      "method": "post",
+      "path": "/jobs/:id/repost",
+      "permission": "job:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Job",
+      "status": 201,
+      "body": "JobRepost",
+      "idempotency": true,
+      "idempotencyRequired": true,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [
+          "idempotency-key"
+        ],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/jobs/:id/repost"
+    },
+    {
+      "id": "jobUpdate",
+      "service": "jobs",
+      "method": "put",
+      "path": "/jobs/:id",
+      "permission": "job:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Job",
+      "status": 200,
+      "body": "JobUpdate",
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/jobs/:id"
+    },
+    {
+      "id": "jobDelete",
+      "service": "jobs",
+      "method": "delete",
+      "path": "/jobs/:id",
+      "permission": "job:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Ack",
+      "status": 200,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/jobs/:id"
+    },
+    {
+      "id": "jobManageList",
+      "service": "jobs",
+      "method": "get",
+      "path": "/jobs/manage",
+      "permission": "job:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]*$",
+            "maxLength": 2,
+            "format": "jobfind-uint-50"
+          },
+          "offset": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 7,
+            "format": "jobfind-uint-1000000"
+          },
+          "search": {
+            "type": "string",
+            "maxLength": 255
+          },
+          "statusCode": {
+            "type": "string",
+            "enum": [
+              "",
+              "PS1",
+              "PS2",
+              "PS3",
+              "PS4"
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "ManagedJobRow",
+      "status": 200,
+      "list": true,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/jobs/manage"
+    },
+    {
+      "id": "jobReviewGet",
+      "service": "jobs",
+      "method": "get",
+      "path": "/jobs/:id/review",
+      "permission": "job:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]*$",
+            "maxLength": 2,
+            "format": "jobfind-uint-50"
+          },
+          "offset": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 7,
+            "format": "jobfind-uint-1000000"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "JobReview",
+      "status": 200,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/jobs/:id/review"
+    },
+    {
+      "id": "jobGet",
+      "service": "jobs",
+      "method": "get",
+      "path": "/jobs/:id",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Job",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/jobs/:id"
+    },
+    {
+      "id": "jobManageGet",
+      "service": "jobs",
+      "method": "get",
+      "path": "/jobs/:id/manage",
+      "permission": "job:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "ManagedJob",
+      "status": 200,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/jobs/:id/manage"
+    },
+    {
+      "id": "aiParseResume",
+      "service": "jobs",
+      "method": "post",
+      "path": "/ai/parse-resume",
+      "permission": "ai:candidate:use",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "AcceptedTask",
+      "status": 202,
+      "body": "ParseResume",
+      "idempotency": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/parse-resume"
+    },
+    {
+      "id": "aiGenerateCv",
+      "service": "jobs",
+      "method": "post",
+      "path": "/ai/generate-cv",
+      "permission": "ai:candidate:use",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "AcceptedTask",
+      "status": 202,
+      "body": "GenerateCv",
+      "idempotency": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/generate-cv"
+    },
+    {
+      "id": "aiMatchCv",
+      "service": "jobs",
+      "method": "post",
+      "path": "/ai/match-cv",
+      "permission": [
+        "ai:candidate:use",
+        "ai:recruiter:use"
+      ],
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "AcceptedTask",
+      "status": 202,
+      "body": "MatchCv",
+      "idempotency": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/match-cv"
+    },
+    {
+      "id": "aiCoverLetter",
+      "service": "jobs",
+      "method": "post",
+      "path": "/ai/cover-letter",
+      "permission": "ai:candidate:use",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "AcceptedTask",
+      "status": 202,
+      "body": "CoverLetter",
+      "idempotency": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/cover-letter"
+    },
+    {
+      "id": "aiApplicationIntro",
+      "service": "jobs",
+      "method": "post",
+      "path": "/ai/application-intro",
+      "permission": "ai:candidate:use",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "AcceptedTask",
+      "status": 202,
+      "body": "ApplicationIntro",
+      "idempotency": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/application-intro"
+    },
+    {
+      "id": "aiCandidateMessage",
+      "service": "jobs",
+      "method": "post",
+      "path": "/ai/candidate-message",
+      "permission": "ai:recruiter:use",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "AcceptedTask",
+      "status": 202,
+      "body": "CandidateMessage",
+      "idempotency": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/candidate-message"
+    },
+    {
+      "id": "aiChatAssist",
+      "service": "jobs",
+      "method": "post",
+      "path": "/ai/chat-assist",
+      "permission": [
+        "ai:candidate:use",
+        "ai:recruiter:use"
+      ],
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "AcceptedTask",
+      "status": 202,
+      "body": "ChatAssist",
+      "idempotency": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/chat-assist"
+    },
+    {
+      "id": "aiScreenApplication",
+      "service": "jobs",
+      "method": "post",
+      "path": "/ai/screen-application",
+      "permission": "ai:recruiter:use",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "AcceptedTask",
+      "status": 202,
+      "body": "ScreenApplication",
+      "idempotency": true,
+      "headers": {
+        "type": "object",
+        "properties": {
+          "idempotency-key": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          }
+        },
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/screen-application"
+    },
+    {
+      "id": "aiJobScreenings",
+      "service": "jobs",
+      "method": "get",
+      "path": "/ai/jobs/:id/screenings",
+      "permission": "ai:recruiter:use",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/jobs/:id/screenings"
+    },
+    {
+      "id": "aiTaskGet",
+      "service": "jobs",
+      "method": "get",
+      "path": "/ai/tasks/:taskId",
+      "permission": [
+        "ai:candidate:use",
+        "ai:recruiter:use"
+      ],
+      "params": {
+        "type": "object",
+        "properties": {
+          "taskId": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          }
+        },
+        "required": [
+          "taskId"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Task",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/ai/tasks/:taskId"
+    },
+    {
+      "id": "jobIndexList",
+      "service": "jobs",
+      "method": "get",
+      "path": "/internal/jobs",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Job",
+      "status": 200,
+      "internal": true,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/internal/jobs"
+    },
+    {
+      "id": "jobIndexGet",
+      "service": "jobs",
+      "method": "get",
+      "path": "/internal/jobs/:id",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Job",
+      "status": 200,
+      "internal": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/internal/jobs/:id"
+    },
+    {
+      "id": "profileGet",
+      "service": "identity",
+      "method": "get",
+      "path": "/profile",
+      "permission": "profile:self",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Profile",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/profile"
+    },
+    {
+      "id": "profileUpdate",
+      "service": "identity",
+      "method": "put",
+      "path": "/profile",
+      "permission": "profile:self",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Profile",
+      "status": 200,
+      "body": "ProfileUpdate",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/profile"
+    },
+    {
+      "id": "cvList",
+      "service": "identity",
+      "method": "get",
+      "path": "/profile/cvs",
+      "permission": "cv:self:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Cv",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/profile/cvs"
+    },
+    {
+      "id": "cvCreate",
+      "service": "identity",
+      "method": "post",
+      "path": "/profile/cvs",
+      "permission": "cv:self:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Cv",
+      "status": 201,
+      "body": "CvCreate",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/profile/cvs"
+    },
+    {
+      "id": "cvUpdate",
+      "service": "identity",
+      "method": "put",
+      "path": "/profile/cvs/:cvId",
+      "permission": "cv:self:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "cvId": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+          }
+        },
+        "required": [
+          "cvId"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Cv",
+      "status": 200,
+      "body": "CvUpdate",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/profile/cvs/:cvId"
+    },
+    {
+      "id": "cvDelete",
+      "service": "identity",
+      "method": "delete",
+      "path": "/profile/cvs/:cvId",
+      "permission": "cv:self:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "cvId": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+          }
+        },
+        "required": [
+          "cvId"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Ack",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/profile/cvs/:cvId"
+    },
+    {
+      "id": "cvImport",
+      "service": "identity",
+      "method": "post",
+      "path": "/profile/cvs/import",
+      "permission": "cv:self:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Cv",
+      "status": 201,
+      "body": "CvImport",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/profile/cvs/import"
+    },
+    {
+      "id": "searchJobs",
+      "service": "search",
+      "method": "get",
+      "path": "/search/jobs",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "categoryJobCode": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "addressCode": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "salaryJobCode": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 64
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 64,
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "maxItems": 20,
+                "minItems": 1
+              }
+            ]
+          },
+          "categoryJoblevelCode": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 64
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 64,
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "maxItems": 20,
+                "minItems": 1
+              }
+            ]
+          },
+          "categoryWorktypeCode": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 64
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 64,
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "maxItems": 20,
+                "minItems": 1
+              }
+            ]
+          },
+          "experienceJobCode": {
+            "anyOf": [
+              {
+                "type": "string",
+                "maxLength": 64
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "maxLength": 64,
+                  "minLength": 1,
+                  "pattern": "\\S"
+                },
+                "maxItems": 20,
+                "minItems": 1
+              }
+            ]
+          },
+          "isHot": {
+            "type": "string",
+            "enum": [
+              "1",
+              "0",
+              "true",
+              "false",
+              ""
+            ]
+          },
+          "sort": {
+            "type": "string",
+            "enum": [
+              "newest",
+              "relevance"
+            ]
+          },
+          "limit": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 3,
+            "format": "jobfind-uint-100"
+          },
+          "offset": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 5,
+            "format": "jobfind-uint-10000"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "searchWindow": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/search/jobs"
+    },
+    {
+      "id": "searchSuggest",
+      "service": "search",
+      "method": "get",
+      "path": "/search/suggest",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "maxLength": 500
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/search/suggest"
+    },
+    {
+      "id": "searchFacets",
+      "service": "search",
+      "method": "get",
+      "path": "/search/facets",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/search/facets"
+    },
+    {
+      "id": "searchRelated",
+      "service": "search",
+      "method": "get",
+      "path": "/search/related/:id",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "limit": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 2,
+            "format": "jobfind-uint-20"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/search/related/:id"
+    },
+    {
+      "id": "searchReindex",
+      "service": "search",
+      "method": "post",
+      "path": "/internal/reindex",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "internal": true,
+      "body": "Empty",
+      "bodyOptional": true,
+      "rawResponse": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/internal/reindex"
+    },
+    {
+      "id": "applicationStages",
+      "service": "applications",
+      "method": "get",
+      "path": "/applications/stages",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications/stages"
+    },
+    {
+      "id": "applicationBoard",
+      "service": "applications",
+      "method": "get",
+      "path": "/applications/board",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "jobId": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications/board"
+    },
+    {
+      "id": "applicationFunnel",
+      "service": "applications",
+      "method": "get",
+      "path": "/applications/funnel",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "jobId": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications/funnel"
+    },
+    {
+      "id": "applicationList",
+      "service": "applications",
+      "method": "get",
+      "path": "/applications",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "jobId": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          },
+          "stage": {
+            "type": "string",
+            "enum": [
+              "moi_ung_tuyen",
+              "dang_xem_xet",
+              "phong_van",
+              "de_nghi",
+              "nhan_viec",
+              "tu_choi"
+            ]
+          },
+          "minRating": {
+            "type": "string",
+            "pattern": "^[1-5]$"
+          },
+          "q": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "limit": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 3,
+            "format": "jobfind-uint-100"
+          },
+          "offset": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 7,
+            "format": "jobfind-uint-1000000"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Application",
+      "status": 200,
+      "list": true,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications"
+    },
+    {
+      "id": "applicationGet",
+      "service": "applications",
+      "method": "get",
+      "path": "/applications/:id",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Application",
+      "status": 200,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications/:id"
+    },
+    {
+      "id": "applicationMove",
+      "service": "applications",
+      "method": "patch",
+      "path": "/applications/:id/stage",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Application",
+      "status": 200,
+      "body": "MoveStage",
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications/:id/stage"
+    },
+    {
+      "id": "applicationDecision",
+      "service": "applications",
+      "method": "post",
+      "path": "/applications/:id/decision-notification",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Application",
+      "status": 200,
+      "body": "Decision",
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications/:id/decision-notification"
+    },
+    {
+      "id": "applicationInterview",
+      "service": "applications",
+      "method": "post",
+      "path": "/applications/:id/interview-invitation",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Application",
+      "status": 200,
+      "body": "InterviewInvitation",
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications/:id/interview-invitation"
+    },
+    {
+      "id": "applicationRating",
+      "service": "applications",
+      "method": "patch",
+      "path": "/applications/:id/rating",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Application",
+      "status": 200,
+      "body": "Rating",
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications/:id/rating"
+    },
+    {
+      "id": "applicationNote",
+      "service": "applications",
+      "method": "post",
+      "path": "/applications/:id/notes",
+      "permission": "application:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 201,
+      "body": "Note",
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/applications/:id/notes"
+    },
+    {
+      "id": "myApplications",
+      "service": "applications",
+      "method": "get",
+      "path": "/my-applications",
+      "permission": "application:self:read",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/my-applications"
+    },
+    {
+      "id": "talentList",
+      "service": "applications",
+      "method": "get",
+      "path": "/talent-pool",
+      "permission": "talent-pool:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "type": "string",
+            "maxLength": 500
+          },
+          "tag": {
+            "type": "string",
+            "maxLength": 100
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/talent-pool"
+    },
+    {
+      "id": "talentSave",
+      "service": "applications",
+      "method": "post",
+      "path": "/talent-pool",
+      "permission": "talent-pool:manage",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 201,
+      "body": "TalentSave",
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/talent-pool"
+    },
+    {
+      "id": "talentDelete",
+      "service": "applications",
+      "method": "delete",
+      "path": "/talent-pool/:candidateId",
+      "permission": "talent-pool:manage",
+      "params": {
+        "type": "object",
+        "properties": {
+          "candidateId": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          }
+        },
+        "required": [
+          "candidateId"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Ack",
+      "status": 200,
+      "companyRequired": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/talent-pool/:candidateId"
+    },
+    {
+      "id": "applicationSync",
+      "service": "applications",
+      "method": "post",
+      "path": "/internal/sync",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "internal": true,
+      "body": "Empty",
+      "bodyOptional": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/internal/sync"
+    },
+    {
+      "id": "reportOverview",
+      "service": "admin",
+      "method": "get",
+      "path": "/reports/overview",
+      "permission": "admin:read",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          },
+          "toDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/reports/overview"
+    },
+    {
+      "id": "reportTimeseries",
+      "service": "admin",
+      "method": "get",
+      "path": "/reports/timeseries",
+      "permission": "admin:read",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          },
+          "toDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/reports/timeseries"
+    },
+    {
+      "id": "reportDistribution",
+      "service": "admin",
+      "method": "get",
+      "path": "/reports/distribution",
+      "permission": "admin:read",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/reports/distribution"
+    },
+    {
+      "id": "reportFunnel",
+      "service": "admin",
+      "method": "get",
+      "path": "/reports/funnel",
+      "permission": "admin:read",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/reports/funnel"
+    },
+    {
+      "id": "reportActivity",
+      "service": "admin",
+      "method": "get",
+      "path": "/reports/activity",
+      "permission": "admin:read",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          },
+          "toDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/reports/activity"
+    },
+    {
+      "id": "auditList",
+      "service": "admin",
+      "method": "get",
+      "path": "/audit",
+      "permission": "admin:read",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "type": "string",
+            "enum": [
+              "event",
+              "action"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 200
+          },
+          "actorId": {
+            "type": "string",
+            "pattern": "^[1-9][0-9]{0,15}$",
+            "format": "jobfind-id"
+          },
+          "targetType": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "targetId": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          },
+          "correlationId": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+          },
+          "eventId": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          },
+          "fromDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          },
+          "toDate": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "string",
+                "format": "date-time"
+              }
+            ]
+          },
+          "limit": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 3,
+            "format": "jobfind-uint-200"
+          },
+          "offset": {
+            "type": "string",
+            "pattern": "^(0|[1-9][0-9]*)$",
+            "maxLength": 7,
+            "format": "jobfind-uint-1000000"
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/audit"
+    },
+    {
+      "id": "auditTarget",
+      "service": "admin",
+      "method": "get",
+      "path": "/audit/target/:type/:id",
+      "permission": "admin:read",
+      "params": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "maxLength": 64,
+            "pattern": "^[A-Za-z0-9_-]+$"
+          },
+          "id": {
+            "type": "string",
+            "maxLength": 128,
+            "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+          }
+        },
+        "required": [
+          "type",
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/audit/target/:type/:id"
+    },
+    {
+      "id": "masterList",
+      "service": "admin",
+      "method": "get",
+      "path": "/master-data",
+      "permission": "admin:read",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "maxLength": 64
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "list": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/master-data"
+    },
+    {
+      "id": "masterSave",
+      "service": "admin",
+      "method": "post",
+      "path": "/master-data",
+      "permission": "admin:write",
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "body": "TagSave",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/master-data"
+    },
+    {
+      "id": "masterDelete",
+      "service": "admin",
+      "method": "delete",
+      "path": "/master-data/:id",
+      "permission": "admin:write",
+      "params": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-fA-F0-9]{24}$"
+          }
+        },
+        "required": [
+          "id"
+        ],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Ack",
+      "status": 200,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/master-data/:id"
+    },
+    {
+      "id": "auditIngest",
+      "service": "admin",
+      "method": "post",
+      "path": "/internal/audit-action",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Ack",
+      "status": 200,
+      "internal": true,
+      "body": "AuditAction",
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/internal/audit-action"
+    },
+    {
+      "id": "aliasMap",
+      "service": "admin",
+      "method": "get",
+      "path": "/internal/alias-map",
+      "permission": null,
+      "params": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "query": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "response": "Record",
+      "status": 200,
+      "internal": true,
+      "headers": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": true
+      },
+      "publicPath": "/api/admin/internal/alias-map"
+    }
+  ],
+  "schemas": {
+    "SupportTurn": {
+      "type": "object",
+      "properties": {
+        "requestId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "text": {
+          "type": "string",
+          "maxLength": 1400,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "conversationId": {
+          "type": "string",
+          "format": "uuid"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "replaceFrom": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "parentId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "uuid"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "requestId",
+        "text"
+      ],
+      "additionalProperties": false
+    },
+    "SupportHandoff": {
+      "type": "object",
+      "properties": {
+        "consent": {
+          "const": true
+        }
+      },
+      "required": [
+        "consent"
+      ],
+      "additionalProperties": false
+    },
+    "SupportFeedback": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "enum": [
+            "up",
+            "down",
+            null
+          ]
+        }
+      },
+      "required": [
+        "value"
+      ],
+      "additionalProperties": false
+    },
+    "Empty": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "ManagedJobsQuery": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$",
+          "maxLength": 2,
+          "format": "jobfind-uint-50"
+        },
+        "offset": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 7,
+          "format": "jobfind-uint-1000000"
+        },
+        "search": {
+          "type": "string",
+          "maxLength": 255
+        },
+        "statusCode": {
+          "type": "string",
+          "enum": [
+            "",
+            "PS1",
+            "PS2",
+            "PS3",
+            "PS4"
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "JobReviewQuery": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*$",
+          "maxLength": 2,
+          "format": "jobfind-uint-50"
+        },
+        "offset": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 7,
+          "format": "jobfind-uint-1000000"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "JobRepost": {
+      "type": "object",
+      "properties": {
+        "expectedRevision": {
+          "type": "string",
+          "pattern": "^jv1-[a-f0-9]{64}$",
+          "minLength": 68,
+          "maxLength": 68
+        },
+        "timeEnd": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8640000000000000
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        }
+      },
+      "required": [
+        "timeEnd"
+      ],
+      "additionalProperties": false
+    },
+    "JobCreate": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "descriptionHTML": {
+          "type": "string",
+          "maxLength": 200000,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "descriptionMarkdown": {
+          "type": "string",
+          "maxLength": 200000
+        },
+        "categoryJobCode": {
+          "type": "string",
+          "maxLength": 64,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "addressCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "salaryJobCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "amount": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100000
+            },
+            {
+              "type": "string",
+              "pattern": "^(100000|[1-9][0-9]{0,4})$"
+            }
+          ]
+        },
+        "categoryJoblevelCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "categoryWorktypeCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "experienceJobCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "genderPostCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "timeEnd": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8640000000000000
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "isHot": {
+          "anyOf": [
+            {
+              "type": "boolean"
+            },
+            {
+              "type": "integer",
+              "enum": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "name",
+        "descriptionHTML",
+        "categoryJobCode"
+      ],
+      "additionalProperties": false
+    },
+    "JobUpdate": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 255,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "descriptionHTML": {
+          "type": "string",
+          "maxLength": 200000,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "descriptionMarkdown": {
+          "type": "string",
+          "maxLength": 200000
+        },
+        "categoryJobCode": {
+          "type": "string",
+          "maxLength": 64,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "addressCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "salaryJobCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "amount": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100000
+            },
+            {
+              "type": "string",
+              "pattern": "^(100000|[1-9][0-9]{0,4})$"
+            }
+          ]
+        },
+        "categoryJoblevelCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "categoryWorktypeCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "experienceJobCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "genderPostCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "expectedRevision": {
+          "type": "string",
+          "pattern": "^jv1-[a-f0-9]{64}$",
+          "minLength": 68,
+          "maxLength": 68
+        },
+        "timeEnd": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8640000000000000
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "minProperties": 1
+    },
+    "ParseResume": {
+      "type": "object",
+      "properties": {
+        "fileBase64": {
+          "type": "string",
+          "maxLength": 8388608,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "fileName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "fileBase64"
+      ],
+      "additionalProperties": false
+    },
+    "GenerateCv": {
+      "type": "object",
+      "properties": {
+        "sourceText": {
+          "type": "string",
+          "maxLength": 20000,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "jobId": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "vi",
+            "en"
+          ]
+        }
+      },
+      "required": [
+        "sourceText",
+        "language"
+      ],
+      "additionalProperties": false
+    },
+    "MatchCv": {
+      "type": "object",
+      "properties": {
+        "resumeText": {
+          "type": "string",
+          "maxLength": 10000,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "fileBase64": {
+          "type": "string",
+          "maxLength": 8388608,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "fileName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "jobId": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        }
+      },
+      "required": [
+        "jobId"
+      ],
+      "additionalProperties": false,
+      "oneOf": [
+        {
+          "required": [
+            "resumeText"
+          ],
+          "properties": {
+            "resumeText": {},
+            "fileBase64": false,
+            "fileName": false
+          }
+        },
+        {
+          "required": [
+            "fileBase64"
+          ],
+          "properties": {
+            "fileBase64": {},
+            "resumeText": false
+          }
+        }
+      ]
+    },
+    "CoverLetter": {
+      "type": "object",
+      "properties": {
+        "resumeText": {
+          "type": "string",
+          "maxLength": 500000,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "jobId": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "language": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 32
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "resumeText",
+        "jobId"
+      ],
+      "additionalProperties": false
+    },
+    "ApplicationIntro": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "fileBase64": {
+          "type": "string",
+          "maxLength": 8388608,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "vi",
+            "en"
+          ]
+        }
+      },
+      "required": [
+        "jobId",
+        "fileBase64"
+      ],
+      "additionalProperties": false
+    },
+    "CandidateMessage": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "emailType": {
+          "type": "string",
+          "enum": [
+            "interview",
+            "offer",
+            "rejection"
+          ]
+        },
+        "candidateName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "recruiterNotes": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 2000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "interviewed": {
+          "type": "boolean"
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "vi",
+            "en"
+          ]
+        }
+      },
+      "required": [
+        "jobId",
+        "emailType"
+      ],
+      "additionalProperties": false
+    },
+    "ChatAssist": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": [
+            "suggest",
+            "polish"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "enum": [
+            "vi",
+            "en"
+          ]
+        },
+        "draft": {
+          "type": "string",
+          "maxLength": 2000,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "messages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "from": {
+                "type": "string",
+                "enum": [
+                  "me",
+                  "partner"
+                ]
+              },
+              "text": {
+                "type": "string",
+                "maxLength": 2000,
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "from",
+              "text"
+            ],
+            "additionalProperties": false
+          },
+          "maxItems": 20
+        }
+      },
+      "required": [
+        "mode"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "suggest"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "messages"
+            ],
+            "properties": {
+              "messages": {
+                "type": "array",
+                "minItems": 1
+              },
+              "draft": false
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "polish"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "draft"
+            ]
+          }
+        }
+      ]
+    },
+    "ScreenApplication": {
+      "type": "object",
+      "properties": {
+        "cvId": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        }
+      },
+      "required": [
+        "cvId"
+      ],
+      "additionalProperties": false
+    },
+    "ProfileUpdate": {
+      "type": "object",
+      "properties": {
+        "headline": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "about": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 20000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 100
+        },
+        "email": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 320
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "firstName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "lastName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "phonenumber": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "jobPreference": {
+          "type": "object",
+          "properties": {
+            "categoryJobCode": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 64
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "addressCode": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 64
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "salaryJobCode": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 64
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "experienceJobCode": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 64
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "isFindJob": {
+              "type": "boolean"
+            },
+            "isTakeMail": {
+              "type": "boolean"
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "minProperties": 1
+    },
+    "CvCreate": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "template": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fullName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "email": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 320
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "phone": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "address": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "summary": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 20000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 100
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 100
+        },
+        "experiences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "company": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "position": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "description": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 10000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "maxItems": 100
+        },
+        "educations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "school": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "major": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "degree": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "year": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "maxItems": 100
+        },
+        "parsedFrom": {
+          "type": "object",
+          "properties": {
+            "fileName": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 255
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "parsedAt": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "format": "date"
+                },
+                {
+                  "type": "string",
+                  "format": "date-time"
+                }
+              ]
+            },
+            "raw": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 255
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "template": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 100
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "fullName": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 255
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "email": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 320
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "phone": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 100
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "address": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 1000
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "summary": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "maxLength": 20000
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "skills": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxLength": 255,
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "maxItems": 100
+                },
+                "languages": {
+                  "type": "array",
+                  "items": {
+                    "type": "string",
+                    "maxLength": 255,
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  },
+                  "maxItems": 100
+                },
+                "experiences": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "company": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 255
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "position": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 255
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "duration": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 255
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "description": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 10000
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 100
+                },
+                "educations": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "school": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 255
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "major": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 255
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "degree": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 255
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      },
+                      "year": {
+                        "anyOf": [
+                          {
+                            "type": "string",
+                            "maxLength": 100
+                          },
+                          {
+                            "type": "null"
+                          }
+                        ]
+                      }
+                    },
+                    "required": [],
+                    "additionalProperties": false
+                  },
+                  "maxItems": 100
+                },
+                "yearsOfExperience": {
+                  "anyOf": [
+                    {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 100
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                }
+              },
+              "required": [],
+              "additionalProperties": false
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "CvUpdate": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "template": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fullName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "email": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 320
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "phone": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "address": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "summary": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 20000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 100
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 100
+        },
+        "experiences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "company": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "position": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "description": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 10000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "maxItems": 100
+        },
+        "educations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "school": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "major": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "degree": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "year": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "maxItems": 100
+        }
+      },
+      "required": [],
+      "additionalProperties": false,
+      "minProperties": 1
+    },
+    "CvImport": {
+      "type": "object",
+      "properties": {
+        "parsed": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 255
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "template": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 100
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "fullName": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 255
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "email": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 320
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "phone": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 100
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "address": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 1000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "summary": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "maxLength": 20000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "skills": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 255,
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "maxItems": 100
+            },
+            "languages": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 255,
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "maxItems": 100
+            },
+            "experiences": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "company": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 255
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "position": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 255
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "duration": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 255
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "description": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 10000
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              },
+              "maxItems": 100
+            },
+            "educations": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "school": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 255
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "major": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 255
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "degree": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 255
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  },
+                  "year": {
+                    "anyOf": [
+                      {
+                        "type": "string",
+                        "maxLength": 100
+                      },
+                      {
+                        "type": "null"
+                      }
+                    ]
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              },
+              "maxItems": 100
+            },
+            "yearsOfExperience": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        },
+        "fileName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "parsed"
+      ],
+      "additionalProperties": false
+    },
+    "MoveStage": {
+      "type": "object",
+      "properties": {
+        "stage": {
+          "type": "string",
+          "enum": [
+            "moi_ung_tuyen",
+            "dang_xem_xet",
+            "phong_van",
+            "de_nghi",
+            "nhan_viec",
+            "tu_choi"
+          ]
+        },
+        "reason": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 5000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "stage"
+      ],
+      "additionalProperties": false
+    },
+    "Decision": {
+      "type": "object",
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "rejected"
+          ]
+        },
+        "message": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 3000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "offer": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "companyName": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "startDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "startTime": {
+              "type": "string",
+              "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]$"
+            },
+            "timeZone": {
+              "const": "Asia/Ho_Chi_Minh"
+            },
+            "responseDeadline": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T(?:[01][0-9]|2[0-3]):[0-5][0-9]$"
+            },
+            "workMode": {
+              "enum": [
+                "onsite",
+                "remote",
+                "hybrid"
+              ]
+            },
+            "location": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "meetingUrl": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "contactName": {
+              "type": "string",
+              "maxLength": 150,
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "contactEmail": {
+              "type": "string",
+              "maxLength": 254,
+              "minLength": 1,
+              "pattern": "\\S",
+              "format": "email"
+            },
+            "contactPhone": {
+              "type": "string",
+              "maxLength": 50
+            },
+            "workSchedule": {
+              "type": "string",
+              "maxLength": 500
+            },
+            "salary": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "probation": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "benefits": {
+              "type": "string",
+              "maxLength": 3000
+            },
+            "requiredDocuments": {
+              "type": "string",
+              "maxLength": 3000
+            },
+            "onboardingInstructions": {
+              "type": "string",
+              "maxLength": 3000
+            }
+          },
+          "required": [
+            "companyName",
+            "startDate",
+            "startTime",
+            "timeZone",
+            "responseDeadline",
+            "workMode",
+            "contactName",
+            "contactEmail"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "workMode": {
+                    "enum": [
+                      "onsite",
+                      "hybrid"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "location"
+                ],
+                "properties": {
+                  "location": {
+                    "type": "string",
+                    "maxLength": 1000,
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "workMode": {
+                    "const": "remote"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "meetingUrl"
+                ],
+                "properties": {
+                  "meetingUrl": {
+                    "type": "string",
+                    "maxLength": 2000,
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "interviewed": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "decision"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "decision": {
+                "const": "accepted"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "offer"
+            ],
+            "properties": {
+              "offer": {}
+            }
+          }
+        }
+      ]
+    },
+    "InterviewInvitation": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 3000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "interview": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "companyName": {
+              "type": "string",
+              "maxLength": 255,
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "interviewDate": {
+              "type": "string",
+              "format": "date"
+            },
+            "interviewTime": {
+              "type": "string",
+              "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]$"
+            },
+            "durationMinutes": {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{1,2}$"
+            },
+            "timeZone": {
+              "const": "Asia/Ho_Chi_Minh"
+            },
+            "interviewMode": {
+              "enum": [
+                "onsite",
+                "online",
+                "phone"
+              ]
+            },
+            "location": {
+              "type": "string",
+              "maxLength": 1000
+            },
+            "meetingUrl": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "round": {
+              "type": "string",
+              "maxLength": 150
+            },
+            "interviewers": {
+              "type": "string",
+              "maxLength": 500
+            },
+            "preparation": {
+              "type": "string",
+              "maxLength": 3000
+            },
+            "contactName": {
+              "type": "string",
+              "maxLength": 150,
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            "contactEmail": {
+              "type": "string",
+              "maxLength": 254,
+              "minLength": 1,
+              "pattern": "\\S",
+              "format": "email"
+            },
+            "contactPhone": {
+              "type": "string",
+              "maxLength": 50
+            },
+            "confirmBy": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}T(?:[01][0-9]|2[0-3]):[0-5][0-9]$"
+            }
+          },
+          "required": [
+            "companyName",
+            "interviewDate",
+            "interviewTime",
+            "timeZone",
+            "interviewMode",
+            "contactName",
+            "contactEmail"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "interviewMode": {
+                    "const": "onsite"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "location"
+                ],
+                "properties": {
+                  "location": {
+                    "type": "string",
+                    "maxLength": 1000,
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "interviewMode": {
+                    "const": "online"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "meetingUrl"
+                ],
+                "properties": {
+                  "meetingUrl": {
+                    "type": "string",
+                    "maxLength": 2000,
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  }
+                }
+              }
+            },
+            {
+              "if": {
+                "properties": {
+                  "interviewMode": {
+                    "const": "phone"
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "contactPhone"
+                ],
+                "properties": {
+                  "contactPhone": {
+                    "type": "string",
+                    "maxLength": 50,
+                    "minLength": 1,
+                    "pattern": "\\S"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "required": [
+        "interview"
+      ],
+      "additionalProperties": false
+    },
+    "Rating": {
+      "type": "object",
+      "properties": {
+        "rating": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-5]$"
+            }
+          ]
+        }
+      },
+      "required": [
+        "rating"
+      ],
+      "additionalProperties": false
+    },
+    "Note": {
+      "type": "object",
+      "properties": {
+        "body": {
+          "type": "string",
+          "maxLength": 5000,
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "body"
+      ],
+      "additionalProperties": false
+    },
+    "TalentSave": {
+      "type": "object",
+      "properties": {
+        "candidateId": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "candidateName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 100,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 50
+        },
+        "note": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 5000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "candidateId"
+      ],
+      "additionalProperties": false
+    },
+    "TagSave": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "maxLength": 64,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "code": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64,
+              "minLength": 1,
+              "pattern": "\\S"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 100
+        },
+        "group": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "weight": {
+          "type": "number",
+          "minimum": -1000000,
+          "maximum": 1000000
+        },
+        "isActive": {
+          "type": "boolean"
+        },
+        "description": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 10000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false
+    },
+    "AuditAction": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "POST",
+            "PUT",
+            "PATCH",
+            "DELETE"
+          ]
+        },
+        "route": {
+          "type": "string",
+          "maxLength": 2048,
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "actorId": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                },
+                {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{0,15}$",
+                  "format": "jobfind-id"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "actorRole": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 32
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "companyId": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                },
+                {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{0,15}$",
+                  "format": "jobfind-id"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "targetType": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "targetId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "status": {
+          "type": "integer",
+          "minimum": 100,
+          "maximum": 599
+        },
+        "durationMs": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 86400000
+        },
+        "ip": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "correlationId": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 128,
+              "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "method",
+        "route",
+        "status",
+        "durationMs"
+      ],
+      "additionalProperties": false
+    },
+    "SearchQuery": {
+      "type": "object",
+      "properties": {
+        "q": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "categoryJobCode": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "addressCode": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "salaryJobCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "maxItems": 20,
+              "minItems": 1
+            }
+          ]
+        },
+        "categoryJoblevelCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "maxItems": 20,
+              "minItems": 1
+            }
+          ]
+        },
+        "categoryWorktypeCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "maxItems": 20,
+              "minItems": 1
+            }
+          ]
+        },
+        "experienceJobCode": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 64
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "maxLength": 64,
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "maxItems": 20,
+              "minItems": 1
+            }
+          ]
+        },
+        "isHot": {
+          "type": "string",
+          "enum": [
+            "1",
+            "0",
+            "true",
+            "false",
+            ""
+          ]
+        },
+        "sort": {
+          "type": "string",
+          "enum": [
+            "newest",
+            "relevance"
+          ]
+        },
+        "limit": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 3,
+          "format": "jobfind-uint-100"
+        },
+        "offset": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 5,
+          "format": "jobfind-uint-10000"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "ApplicationQuery": {
+      "type": "object",
+      "properties": {
+        "jobId": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{0,15}$",
+          "format": "jobfind-id"
+        },
+        "stage": {
+          "type": "string",
+          "enum": [
+            "moi_ung_tuyen",
+            "dang_xem_xet",
+            "phong_van",
+            "de_nghi",
+            "nhan_viec",
+            "tu_choi"
+          ]
+        },
+        "minRating": {
+          "type": "string",
+          "pattern": "^[1-5]$"
+        },
+        "q": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "limit": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 3,
+          "format": "jobfind-uint-100"
+        },
+        "offset": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 7,
+          "format": "jobfind-uint-1000000"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "AuditQuery": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "event",
+            "action"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 200
+        },
+        "actorId": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]{0,15}$",
+          "format": "jobfind-id"
+        },
+        "targetType": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "targetId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "correlationId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "eventId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "fromDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "toDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "limit": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 3,
+          "format": "jobfind-uint-200"
+        },
+        "offset": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)$",
+          "maxLength": 7,
+          "format": "jobfind-uint-1000000"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "RangeQuery": {
+      "type": "object",
+      "properties": {
+        "fromDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "toDate": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "Error": {
+      "type": "object",
+      "properties": {
+        "errCode": {
+          "type": "integer"
+        },
+        "errMessage": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "requestId": {
+          "type": "string",
+          "maxLength": 128,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$"
+        },
+        "conflict": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "errCode"
+      ],
+      "additionalProperties": true
+    },
+    "Ack": {
+      "type": "object",
+      "properties": {
+        "errCode": {
+          "const": 0
+        },
+        "errMessage": {
+          "type": "string",
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "errCode"
+      ],
+      "additionalProperties": true
+    },
+    "AcceptedTask": {
+      "type": "object",
+      "properties": {
+        "errCode": {
+          "const": 0
+        },
+        "taskId": {
+          "type": "string",
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "errMessage": {
+          "type": "string",
+          "maxLength": 1000
+        }
+      },
+      "required": [
+        "errCode",
+        "taskId"
+      ],
+      "additionalProperties": false
+    },
+    "Task": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "maxLength": 64,
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9._:/-]{0,127}$"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "parse_resume",
+            "generate_cv",
+            "match_cv",
+            "cover_letter",
+            "write_assist"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": [
+            "pending",
+            "done",
+            "failed"
+          ]
+        },
+        "result": {},
+        "error": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 20000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "createdAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "updatedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "status",
+        "result",
+        "error",
+        "createdAt",
+        "updatedAt"
+      ],
+      "additionalProperties": false
+    },
+    "Job": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "name": {
+          "type": "string",
+          "maxLength": 255
+        },
+        "descriptionHTML": {
+          "type": "string",
+          "maxLength": 200000
+        },
+        "statusCode": {
+          "type": "string",
+          "enum": [
+            "PS1",
+            "PS2",
+            "PS3",
+            "PS4"
+          ]
+        },
+        "userId": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                },
+                {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{0,15}$",
+                  "format": "jobfind-id"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "companyId": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                },
+                {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{0,15}$",
+                  "format": "jobfind-id"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "companyName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "editRevision": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^jv1-[a-f0-9]{64}$",
+              "minLength": 68,
+              "maxLength": 68
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "statusCode"
+      ],
+      "additionalProperties": true
+    },
+    "Cv": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "template": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "fullName": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 255
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "email": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 320
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "phone": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 100
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "address": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 1000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "summary": {
+          "anyOf": [
+            {
+              "type": "string",
+              "maxLength": 20000
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "skills": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 100
+        },
+        "languages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 255,
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "maxItems": 100
+        },
+        "experiences": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "company": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "position": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "from": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "to": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "description": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 10000
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "maxItems": 100
+        },
+        "educations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "school": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "major": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "degree": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 255
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "year": {
+                "anyOf": [
+                  {
+                    "type": "string",
+                    "maxLength": 100
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "maxItems": 100
+        },
+        "_id": {
+          "type": "string",
+          "pattern": "^[a-fA-F0-9]{24}$"
+        },
+        "createdAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        },
+        "updatedAt": {
+          "anyOf": [
+            {
+              "type": "string",
+              "format": "date"
+            },
+            {
+              "type": "string",
+              "format": "date-time"
+            }
+          ]
+        }
+      },
+      "required": [
+        "_id"
+      ],
+      "additionalProperties": true
+    },
+    "Profile": {
+      "type": "object",
+      "properties": {
+        "legacyUserId": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "roleCode": {
+          "type": "string",
+          "maxLength": 32
+        },
+        "companyId": {
+          "anyOf": [
+            {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                },
+                {
+                  "type": "string",
+                  "pattern": "^[1-9][0-9]{0,15}$",
+                  "format": "jobfind-id"
+                }
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "cvs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Cv"
+          }
+        }
+      },
+      "required": [
+        "legacyUserId"
+      ],
+      "additionalProperties": true
+    },
+    "Application": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "job_id": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "candidate_id": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "company_id": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 9007199254740991
+            },
+            {
+              "type": "string",
+              "pattern": "^[1-9][0-9]{0,15}$",
+              "format": "jobfind-id"
+            }
+          ]
+        },
+        "stage": {
+          "type": "string",
+          "enum": [
+            "moi_ung_tuyen",
+            "dang_xem_xet",
+            "phong_van",
+            "de_nghi",
+            "nhan_viec",
+            "tu_choi"
+          ]
+        },
+        "rating": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 5
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "stage"
+      ],
+      "additionalProperties": true
+    },
+    "Record": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  }
+}

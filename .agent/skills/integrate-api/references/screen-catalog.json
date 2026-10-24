@@ -1,0 +1,216 @@
+[
+  {
+    "id": "JF-036",
+    "folder": "tuy_n_d_ng_vn_search_results",
+    "title": "Tuyển Dụng VN - Search Results",
+    "group": "Khám phá",
+    "route": "/job",
+    "component": "container/JobPage/JobPage.js",
+    "api": "GET /api/get-filter-post ; GET /api/search/jobs ; GET /api/search/facets ; GET /api/search/suggest",
+    "note": "Có route; URL filter/history, không tự đổi mode",
+    "width": 1053,
+    "height": 1600,
+    "html_sha256": "153421448493202c653f1cee5da45b75781b7149ca22ecf1d234ffcfcd375540",
+    "image_sha256": "1f519dfe18449b30acc609fc9b4e77af2b4162f02651cfc3a0c9aee63d834e69",
+    "feature_id": "job-search",
+    "roles": [
+      "PUBLIC",
+      "CANDIDATE"
+    ],
+    "stitch_project_url": "https://stitch.withgoogle.com/projects/4225480897019041322",
+    "stitch_screen_id": null,
+    "canvas": {
+      "width": 1280,
+      "height": 1944,
+      "device": "DESKTOP"
+    },
+    "raster": {
+      "width": 1053,
+      "height": 1600
+    },
+    "design_status": "reference-complete",
+    "code_status": "source-mapped-not-verified-against-design",
+    "route_status": "source-mapped",
+    "sources": [
+      "frontend/src/container/JobPage/JobPage.js",
+      "frontend/src/service/aiSearchService.js",
+      "microservices/shared/contracts/operations.js"
+    ],
+    "api_contracts": [
+      "GET /api/get-filter-post",
+      "GET /api/search/jobs",
+      "GET /api/search/facets",
+      "GET /api/search/suggest"
+    ],
+    "observations": {
+      "headings": [
+        "Lọc kết quả",
+        "Mức lương (triệu)",
+        "Loại hình",
+        "Kinh nghiệm",
+        "Lĩnh vực",
+        "React Developer tại Hà Nội",
+        "Senior React Developer (Next.js & TypeScript)",
+        "Frontend Engineer - ReactJS/Redux",
+        "React Developer (Mid-level)",
+        "React & Native Developer",
+        "Khám phá",
+        "Pháp lý",
+        "Doanh nghiệp"
+      ],
+      "labels": [
+        "Toàn thời gian",
+        "Bán thời gian",
+        "Freelance",
+        "1-3 năm",
+        "3-5 năm",
+        "Trên 5 năm",
+        "Công nghệ",
+        "Tài chính"
+      ],
+      "controls": [
+        {
+          "type": "text",
+          "placeholder": "Tìm kiếm công việc..."
+        },
+        {
+          "type": "text",
+          "placeholder": "Tên công việc, vị trí..."
+        },
+        {},
+        {},
+        {
+          "type": "range"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {
+          "type": "checkbox"
+        },
+        {}
+      ],
+      "actions": [
+        "Đăng tin tuyển dụng",
+        "Tìm Kiếm",
+        "Xóa tất cả",
+        "view_list",
+        "grid_view",
+        "Nộp CV",
+        "Lưu",
+        "chevron_left",
+        "1",
+        "2",
+        "3",
+        "62",
+        "chevron_right"
+      ],
+      "colors": {
+        "inverse-primary": "#B4C5FF",
+        "tertiary-container": "#BC4800",
+        "tertiary-fixed": "#FFDBCD",
+        "surface-container-highest": "#E0E3E5",
+        "inverse-on-surface": "#EFF1F3",
+        "inverse-surface": "#2D3133",
+        "surface-container": "#ECEEF0",
+        "surface-variant": "#E0E3E5",
+        "surface-container-high": "#E6E8EA",
+        "primary-container": "#2563EB",
+        "on-tertiary-container": "#FFEDE6",
+        "on-error": "#FFFFFF",
+        "primary": "#004AC6",
+        "on-primary-container": "#EEEFFF",
+        "on-tertiary-fixed": "#360F00",
+        "on-secondary": "#FFFFFF",
+        "on-primary": "#FFFFFF",
+        "tertiary": "#943700",
+        "secondary": "#006591",
+        "on-surface-variant": "#434655",
+        "surface-container-lowest": "#FFFFFF",
+        "surface": "#F7F9FB",
+        "background": "#F7F9FB",
+        "on-tertiary-fixed-variant": "#7D2D00",
+        "surface-dim": "#D8DADC",
+        "primary-fixed": "#DBE1FF",
+        "on-tertiary": "#FFFFFF",
+        "on-surface": "#191C1E",
+        "tertiary-fixed-dim": "#FFB596",
+        "surface-bright": "#F7F9FB",
+        "on-error-container": "#93000A",
+        "on-primary-fixed-variant": "#003EA8",
+        "on-secondary-container": "#004666",
+        "on-secondary-fixed": "#001E2F",
+        "secondary-fixed": "#C9E6FF",
+        "secondary-fixed-dim": "#89CEFF",
+        "primary-fixed-dim": "#B4C5FF",
+        "on-primary-fixed": "#00174B",
+        "outline-variant": "#C3C6D7",
+        "surface-tint": "#0053DB",
+        "outline": "#737686",
+        "error-container": "#FFDAD6",
+        "error": "#BA1A1A",
+        "surface-container-low": "#F2F4F6",
+        "on-secondary-fixed-variant": "#004C6E",
+        "secondary-container": "#39B8FD",
+        "on-background": "#191C1E"
+      },
+      "fonts": {
+        "headline": "Be Vietnam Pro",
+        "body": "Inter",
+        "label": "Inter"
+      },
+      "radii": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "images": [
+        {
+          "alt": "Ảnh đại diện người dùng",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuB15D_IGu_YDOxSLo6Qu3M48VJRehhqOuVX6-Zn4hiQtuW32Vc4Ufl5PeBObCrSeFvRo3ZkV4pfyni7DAMBswHLEhxtOXslTNA-15_9D70amDASqlMBMWPuexT3nRPPznIByqmcH6ERwaOaybva3YD3oka8rAc_RLvoV67QB7C085UUlWyzozmZBmogr_MRFkdzoSj2B1XtvhQ3_9yXvo6yNyTnxj3K9EQEVtxd5rKaHdTiQ-O-QPTihKv-vFMQTvheuZ9deRKhZUhA",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Company Logo",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuDIwd4-T7YKTnpQ2HIo2WLWsPba_y9VW4bPN85KLAwvZ5jZFrZDYs-Wg8Z-2svjKvEq1VKWwr1Bn6ZmvLf4QV_mSFuX1B9kJopb4EsOPkNmq6LKIdT2Zcz3S4uwNEVTHnERriMiFl1KsoxCZANeIzZusJ6KSVgsjzlcBAZkA2yPf4fvItxL0HwMzoifiV4nR-b1L525Pvc7TtY-1tB41mLPtgxYrlV-XgBvfH78VVNZoHZJkDfXzF4sVIR0AtmiQMkJiaz_H9g7M2EB",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Company Logo",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBLc-VFVKW6ux3RHcdqs6ulK-Ke6vwQfYAptaKxH-gIXN48mkozVe5IZmMx81etrP4L3jBdUqqRfMXijrWxl9l12MH1VgDyVXDLrJaW3pEylmwHGhvAYgEYDZKIAjWumTp9e5_EXKUSCdnvRS3oYMlcINXg7F9Q4pxb0r1Ypt6S54rEmgcxK6O2-JoEu0vyGHowWvxnicVH-IRd6BOJyBtTjakOzfB6Mvv0CMUgXOiYDhXQKGnr5Bt3PaPeVLDyH-QsH-4WMpC9Gtfo",
+          "availability": "reference URL; verify license/availability before production reuse"
+        },
+        {
+          "alt": "Company Logo",
+          "src": "https://lh3.googleusercontent.com/aida-public/AB6AXuBgw1dDXsdYjpwQeXvLiViDc4NPYx3l2pm8mfa6AbhPO3Q-eBXs2Mavb3qlOKcWVENKigaOAMWld1KeujxvZYArkqzZnArVOrekSROEdPxgymKtFLttxa4zCzV0Yi3QygZlRNNm6Us222-zH-7vhNfbO9eM3thsfGrRhiXMvn3fVxL7dvW4CN6kqabl8bCwZ1D-vGUlshHrnfCW94NpXR_3aoY-DLGPHWc5kS77AJikTeQFW7VrERZd1HdvcWvW0OZxl6weNEq6VIIh",
+          "availability": "reference URL; verify license/availability before production reuse"
+        }
+      ]
+    },
+    "assets": {
+      "html": ".stitch/designs/tuy_n_d_ng_vn_search_results/code.html",
+      "image": ".stitch/designs/tuy_n_d_ng_vn_search_results/screen.png"
+    },
+    "doc": ".docs/ui-mockups/screens/JF-036.md",
+    "prompt": ".stitch/prompts/JF-036.md"
+  }
+]

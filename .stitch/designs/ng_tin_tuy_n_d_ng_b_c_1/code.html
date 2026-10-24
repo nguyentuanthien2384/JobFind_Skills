@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Post New Job | Tuyển Dụng VN</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#7d2d00",
+                        "secondary": "#006591",
+                        "on-background": "#191c1e",
+                        "tertiary": "#943700",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#434655",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed-dim": "#ffb596",
+                        "primary": "#004ac6",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#001e2f",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#0053db",
+                        "tertiary-container": "#bc4800",
+                        "secondary-container": "#39b8fd",
+                        "background": "#f7f9fb",
+                        "primary-fixed": "#dbe1ff",
+                        "on-secondary-container": "#004666",
+                        "outline-variant": "#c3c6d7",
+                        "surface-variant": "#e0e3e5",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#191c1e",
+                        "secondary-fixed": "#c9e6ff",
+                        "inverse-on-surface": "#eff1f3",
+                        "outline": "#737686",
+                        "surface-container": "#eceef0",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#eeefff",
+                        "secondary-fixed-dim": "#89ceff",
+                        "on-tertiary-container": "#ffede6",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "on-secondary-fixed-variant": "#004c6e",
+                        "surface-dim": "#d8dadc",
+                        "surface-bright": "#f7f9fb",
+                        "inverse-primary": "#b4c5ff",
+                        "surface": "#f7f9fb",
+                        "surface-container-highest": "#e0e3e5",
+                        "surface-container-low": "#f2f4f6",
+                        "on-primary-fixed": "#00174b",
+                        "primary-container": "#2563eb",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdbcd",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#360f00",
+                        "surface-container-high": "#e6e8ea"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Be Vietnam Pro"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .headline { font-family: 'Be Vietnam Pro', sans-serif; letter-spacing: -0.02em; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .btn-primary-gradient { background: linear-gradient(135deg, #2563EB, #0EA5E9); }
+        .glass-header { backdrop-filter: blur(24px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar Anchor -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-slate-50 flex flex-col p-6 space-y-4 z-50 overflow-y-auto">
+<div class="mb-8">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-white font-black text-xl">V</div>
+<div>
+<h2 class="text-lg font-bold tracking-tighter text-slate-900">VNG Corporation</h2>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-secondary-container/20 text-secondary uppercase tracking-wider">Premium Employer</span>
+</div>
+</div>
+</div>
+<nav class="space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 transition-colors duration-200 rounded-lg font-['Be_Vietnam_Pro'] tracking-tight font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>Tổng quan</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 bg-white text-blue-700 rounded-lg shadow-sm font-['Be_Vietnam_Pro'] tracking-tight font-bold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="work">work</span>
+<span>Manage Jobs</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 transition-colors duration-200 rounded-lg font-['Be_Vietnam_Pro'] tracking-tight font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span>Candidates</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-200 transition-colors duration-200 rounded-lg font-['Be_Vietnam_Pro'] tracking-tight font-semibold text-sm" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span>Cài đặt</span>
+</a>
+</nav>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="ml-64 min-h-screen flex flex-col">
+<!-- TopAppBar Anchor -->
+<header class="fixed top-0 right-0 w-[calc(100%-16rem)] z-40 bg-white/80 backdrop-blur-xl shadow-[0px_20px_40px_rgba(0,74,198,0.06)] flex justify-between items-center px-10 py-4">
+<div class="flex items-center gap-2 text-sm font-medium">
+<span class="text-slate-400">Trang chủ</span>
+<span class="material-symbols-outlined text-slate-300 text-sm">chevron_right</span>
+<span class="text-slate-400">Quản lý tin</span>
+<span class="material-symbols-outlined text-slate-300 text-sm">chevron_right</span>
+<span class="text-blue-600 font-bold">Đăng tin mới</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="relative">
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-blue-600 transition-all">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full border-2 border-white"></span>
+</div>
+<span class="material-symbols-outlined text-slate-500 cursor-pointer hover:text-blue-600 transition-all">help_outline</span>
+<div class="flex items-center gap-3 pl-4 border-l border-slate-100">
+<div class="text-right">
+<p class="text-xs font-bold text-slate-900 leading-none">Admin VNG</p>
+<p class="text-[10px] text-slate-400">Recruitment Lead</p>
+</div>
+<img alt="User Avatar" class="w-10 h-10 rounded-full object-cover border-2 border-primary-fixed" data-alt="professional portrait of a confident male executive in a sharp business suit with soft office background lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0w5SWCcJoUJjNfON780zjExXb_-EvkQr5Cq8TTXVCWs-LTfVx5Rfns3JDECQWQy6q8MDuJLkTNnk8sVnMihXVjtRI_J-Vb3MkdGGquy87SImmABAdKgWkYs2RI2u3Jz7Q6BkE_AWyY4aC0pAmNNY0rXCYPdeWmHds-uubFkLhrDtKDtVSnJQ8C0Dr4xVzi2iFIhUgr1rD407--6ZwcDRk-q5XWTLnLN7MpHPi69vHLYavsn9W3kaG0NQrq2xq9-Po5v39blxpRvtc"/>
+</div>
+</div>
+</header>
+<!-- Page Canvas -->
+<main class="mt-24 px-10 pb-20 max-w-5xl mx-auto w-full">
+<!-- Page Header -->
+<div class="mb-10">
+<h1 class="text-4xl font-extrabold text-slate-900 mb-2">Đăng Tin Tuyển Dụng</h1>
+<p class="text-slate-500 font-medium">Hoàn thành 4 bước để tiếp cận những ứng viên tài năng nhất.</p>
+</div>
+<!-- Step Progress Bar -->
+<div class="mb-12">
+<div class="flex items-center justify-between relative">
+<!-- Progress Line Background -->
+<div class="absolute top-5 left-0 w-full h-[2px] bg-slate-200 -z-10"></div>
+<!-- Active Progress Line -->
+<div class="absolute top-5 left-0 w-1/4 h-[2px] bg-primary-container -z-10"></div>
+<!-- Steps -->
+<div class="flex flex-col items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container text-white flex items-center justify-center font-bold shadow-lg shadow-blue-200">1</div>
+<span class="text-sm font-bold text-primary-container">Thông Tin Cơ Bản</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white border-2 border-slate-200 text-slate-400 flex items-center justify-center font-bold">2</div>
+<span class="text-sm font-medium text-slate-400">Mô Tả Công Việc</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white border-2 border-slate-200 text-slate-400 flex items-center justify-center font-bold">3</div>
+<span class="text-sm font-medium text-slate-400">Yêu Cầu &amp; Quyền Lợi</span>
+</div>
+<div class="flex flex-col items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white border-2 border-slate-200 text-slate-400 flex items-center justify-center font-bold">4</div>
+<span class="text-sm font-medium text-slate-400">Xem Trước &amp; Đăng</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+<!-- Main Form Section -->
+<div class="lg:col-span-2">
+<div class="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_20px_40px_rgba(0,74,198,0.06)] overflow-hidden relative">
+<!-- Blue Accent Strip -->
+<div class="absolute top-0 left-0 w-full h-1 bg-primary-container"></div>
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-xl font-bold text-slate-900 flex items-center gap-2">
+<span class="w-1.5 h-6 bg-primary rounded-full"></span>
+                                Thông Tin Cơ Bản
+                            </h3>
+<span class="text-xs text-slate-400">* Trường bắt buộc</span>
+</div>
+<form class="space-y-6">
+<!-- Row 1: Position Name -->
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Tên vị trí*</label>
+<input class="w-full px-5 h-14 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-slate-900 font-medium transition-all outline-none" placeholder="Ví dụ: Senior Frontend Developer" type="text" value="Senior Frontend Developer"/>
+</div>
+<!-- Row 2: Category & Level -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Ngành nghề*</label>
+<select class="w-full px-5 h-14 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-slate-900 font-medium transition-all outline-none appearance-none">
+<option>Công nghệ thông tin</option>
+<option>Marketing</option>
+<option>Thiết kế</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Cấp bậc*</label>
+<select class="w-full px-5 h-14 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-slate-900 font-medium transition-all outline-none appearance-none">
+<option selected="">Senior</option>
+<option>Junior</option>
+<option>Middle</option>
+<option>Lead/Manager</option>
+</select>
+</div>
+</div>
+<!-- Row 3: Job Type & Quantity -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2">
+<label class="block text-sm font-semibold text-slate-700 mb-2">Loại công việc*</label>
+<div class="flex flex-wrap gap-2">
+<label class="cursor-pointer">
+<input checked="" class="hidden peer" name="job_type" type="radio"/>
+<span class="px-4 py-3 rounded-lg bg-surface-container-low text-slate-600 font-medium peer-checked:bg-primary-container peer-checked:text-white transition-all inline-block text-sm border-2 border-transparent peer-checked:border-primary">Toàn thời gian</span>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="job_type" type="radio"/>
+<span class="px-4 py-3 rounded-lg bg-surface-container-low text-slate-600 font-medium peer-checked:bg-primary-container peer-checked:text-white transition-all inline-block text-sm border-2 border-transparent peer-checked:border-primary">Bán thời gian</span>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="job_type" type="radio"/>
+<span class="px-4 py-3 rounded-lg bg-surface-container-low text-slate-600 font-medium peer-checked:bg-primary-container peer-checked:text-white transition-all inline-block text-sm border-2 border-transparent peer-checked:border-primary">Remote</span>
+</label>
+<label class="cursor-pointer">
+<input class="hidden peer" name="job_type" type="radio"/>
+<span class="px-4 py-3 rounded-lg bg-surface-container-low text-slate-600 font-medium peer-checked:bg-primary-container peer-checked:text-white transition-all inline-block text-sm border-2 border-transparent peer-checked:border-primary">Hợp đồng</span>
+</label>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Số lượng*</label>
+<input class="w-full px-5 h-14 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-slate-900 font-medium transition-all outline-none" type="number" value="2"/>
+</div>
+</div>
+<!-- Row 4: Location -->
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Địa điểm làm việc*</label>
+<div class="w-full min-h-[56px] px-4 py-2 bg-surface-container-low rounded-lg flex flex-wrap gap-2 items-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary-container text-white text-xs font-bold rounded-lg">
+                                        TP.HCM
+                                        <span class="material-symbols-outlined text-xs cursor-pointer">close</span>
+</span>
+<input class="bg-transparent border-0 focus:ring-0 text-sm font-medium text-slate-600 grow" placeholder="Thêm địa điểm..." type="text"/>
+</div>
+</div>
+<!-- Row 5: Salary Range -->
+<div class="space-y-3">
+<label class="block text-sm font-semibold text-slate-700 mb-2">Mức lương*</label>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative">
+<input class="w-full pl-5 pr-14 h-14 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-slate-900 font-medium transition-all outline-none" placeholder="Mức lương từ" type="text"/>
+<span class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-sm">VND</span>
+</div>
+<div class="relative">
+<input class="w-full pl-5 pr-14 h-14 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-slate-900 font-medium transition-all outline-none" placeholder="Đến" type="text"/>
+<span class="absolute right-5 top-1/2 -translate-y-1/2 text-slate-400 font-bold text-sm">VND</span>
+</div>
+</div>
+<label class="flex items-center gap-3 cursor-pointer group">
+<div class="relative flex items-center">
+<input class="w-5 h-5 border-2 border-slate-300 rounded text-primary focus:ring-primary-container transition-all" type="checkbox"/>
+</div>
+<span class="text-sm font-medium text-slate-600 group-hover:text-primary transition-colors">Thỏa thuận</span>
+</label>
+</div>
+<!-- Row 6: Deadline & Experience -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Hạn nộp hồ sơ*</label>
+<div class="relative">
+<input class="w-full px-5 h-14 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-slate-900 font-medium transition-all outline-none" type="date"/>
+</div>
+</div>
+<div>
+<label class="block text-sm font-semibold text-slate-700 mb-2">Kinh nghiệm*</label>
+<select class="w-full px-5 h-14 bg-surface-container-low border-0 rounded-lg focus:ring-2 focus:ring-primary/40 text-slate-900 font-medium transition-all outline-none appearance-none">
+<option>3 - 5 năm</option>
+<option>1 - 3 năm</option>
+<option>Trên 5 năm</option>
+<option>Không yêu cầu</option>
+</select>
+</div>
+</div>
+</form>
+</div>
+</div>
+<!-- Sticky Sidebar Section -->
+<div class="lg:sticky lg:top-24 space-y-6">
+<!-- Tip Card -->
+<div class="bg-blue-50/80 border border-blue-100 rounded-xl p-6 relative overflow-hidden">
+<div class="flex gap-4 relative z-10">
+<div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-blue-600" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<div>
+<h4 class="font-bold text-blue-900 mb-1">Mẹo nhỏ cho bạn</h4>
+<p class="text-sm text-blue-800/80 leading-relaxed">
+                                    Chức danh rõ ràng giúp tăng <strong class="text-blue-700">40% lượt xem</strong> từ những ứng viên phù hợp nhất.
+                                </p>
+</div>
+</div>
+<!-- Background decoration -->
+<div class="absolute -bottom-4 -right-4 w-20 h-20 bg-blue-200/20 rounded-full blur-2xl"></div>
+</div>
+<!-- Summary Preview -->
+<div class="bg-surface-container-low rounded-xl p-6 border border-slate-100">
+<h4 class="font-bold text-slate-900 mb-4 text-sm uppercase tracking-wider">Xem trước thẻ tin</h4>
+<div class="bg-white rounded-lg p-4 shadow-sm">
+<div class="flex gap-3 mb-3">
+<div class="w-10 h-10 bg-slate-100 rounded flex items-center justify-center font-bold text-slate-400">V</div>
+<div>
+<div class="h-4 w-32 bg-slate-100 rounded mb-2"></div>
+<div class="h-3 w-20 bg-slate-50 rounded"></div>
+</div>
+</div>
+<div class="space-y-2">
+<div class="h-2 w-full bg-slate-50 rounded"></div>
+<div class="h-2 w-2/3 bg-slate-50 rounded"></div>
+</div>
+</div>
+<p class="mt-4 text-xs text-slate-400 italic text-center">Các thông tin sẽ hiển thị sau khi hoàn tất các bước mô tả công việc.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Actions -->
+<div class="mt-12 pt-8 border-t border-slate-100 flex items-center justify-between">
+<button class="px-8 py-3.5 rounded-lg font-bold text-slate-600 border-2 border-slate-200 hover:bg-slate-100 hover:border-slate-300 transition-all flex items-center gap-2">
+                    Lưu Nháp
+                </button>
+<button class="btn-primary-gradient px-10 py-3.5 rounded-lg font-bold text-white shadow-lg shadow-blue-300 hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2">
+                    Tiếp Theo
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</main>
+</div>
+</body></html>
