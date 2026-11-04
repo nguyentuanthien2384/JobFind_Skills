@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Application Tracker (Pizza-Tracker Cho CV) & SLA Phản Hồi - JobFind</title>
+    <!-- Phông chữ chuẩn JobFind: Be Vietnam Pro & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#F7F9FB",
+                        "on-surface": "#191C1E",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container-low": "#F2F4F6",
+                        "surface-container": "#ECEEF0",
+                        "surface-container-high": "#E6E8EA",
+                        "surface-container-highest": "#E0E3E5",
+                        "on-surface-variant": "#434655",
+                        outline: "#737686",
+                        "outline-variant": "#C3C6D7",
+                        primary: "#004AC6",
+                        "primary-container": "#2563EB",
+                        "on-primary": "#FFFFFF",
+                        "on-primary-container": "#EEEFFF",
+                        secondary: "#006591",
+                        "secondary-container": "#39B8FD",
+                        emerald: {
+                            500: "#10B981",
+                            600: "#059669",
+                            700: "#047857"
+                        },
+                        amber: {
+                            500: "#F59E0B",
+                            600: "#D97706"
+                        }
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Be Vietnam Pro", "sans-serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(16px);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 74, 198, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+        /* Pizza Tracker Line Connectors */
+        .step-line-active {
+            background: linear-gradient(90deg, #10B981 0%, #004AC6 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- TopNavBar chuẩn JobFind -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+        <div class="flex items-center justify-between px-6 py-3.5 max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-8">
+                <a href="../tuy_n_d_ng_vn_homepage/code.html" class="text-2xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-sky-500 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl text-primary font-bold">work</span>
+                    JobFind
+                </a>
+                <nav class="hidden md:flex items-center gap-6 font-headline text-sm font-medium">
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../tuy_n_d_ng_vn_search_results/code.html">Tìm việc làm</a>
+                    <a class="text-blue-700 font-semibold border-b-2 border-blue-600 pb-1" href="../don_ung_tuyen_pizza_tracker_sla_realtime/code.html">Đơn ứng tuyển của tôi</a>
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../h_s_c_a_t_i_tuy_n_d_ng_vn/code.html">Hồ sơ & CV</a>
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../l_ch_ph_ng_v_n_agenda/code.html">Lịch phỏng vấn</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- Push Notification status indicator -->
+                <div class="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-semibold border border-emerald-200">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                    <span>Realtime Presence: Đang kết nối</span>
+                </div>
+                <button class="relative p-2 rounded-full hover:bg-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+                    <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+                <div class="flex items-center gap-3 pl-3 border-l border-outline-variant/30">
+                    <img class="w-9 h-9 rounded-full border border-primary/20 object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar"/>
+                    <div class="hidden sm:block text-left">
+                        <div class="text-xs font-bold leading-tight">Nguyễn Văn Bình</div>
+                        <div class="text-[11px] text-on-surface-variant">Ứng viên tìm việc</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-20 max-w-7xl mx-auto px-4 sm:px-6">
+        <!-- Title & Anti-Ghosting Mission Statement -->
+        <div class="py-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold border border-blue-200 mb-2">
+                    <span class="material-symbols-outlined text-sm text-blue-600">verified</span>
+                    CAM KẾT MINH BẠCH & CHỐNG "GHOSTING" ỨNG VIÊN
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-headline font-bold text-slate-900">Tiến Trình Ứng Tuyển Thời Gian Thực</h1>
+                <p class="text-xs sm:text-sm text-on-surface-variant max-w-2xl mt-1">
+                    Không còn trạng thái nộp CV xong bặt vô âm tín. Bạn luôn biết chính xác hồ sơ đang ở đâu trong từng giây, thời gian nhà tuyển dụng mở xem và phản hồi có tính xây dựng từ AI.
+                </p>
+            </div>
+            <!-- Filter Tabs -->
+            <div class="flex items-center gap-2 p-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-semibold">
+                <button class="px-3.5 py-1.5 rounded-lg bg-white text-primary shadow-sm">Đang diễn ra (3)</button>
+                <button class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900">Phỏng vấn (1)</button>
+                <button class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900">Đã hoàn thành</button>
+            </div>
+        </div>
+
+        <!-- Featured Application Card with PIZZA TRACKER -->
+        <div class="bg-white rounded-2xl border border-slate-200 card-shadow overflow-hidden mb-8">
+            <!-- Header of Application -->
+            <div class="p-6 bg-slate-50 border-b border-slate-200 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                <div class="flex items-start gap-4">
+                    <img class="w-14 h-14 rounded-xl border border-slate-200 bg-white p-2 object-contain" src="https://vng.com.vn/wp-content/themes/vng/assets/images/logo.png" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=80&auto=format&fit=crop&q=80'" alt="VNG Logo"/>
+                    <div>
+                        <div class="flex flex-wrap items-center gap-2 mb-1">
+                            <h2 class="text-lg font-headline font-bold text-slate-900">Senior Frontend Developer (React & TypeScript)</h2>
+                            <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-100 text-blue-800">Toàn thời gian</span>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-3 text-xs text-slate-600">
+                            <span class="font-semibold text-slate-800">VNG Corporation</span>
+                            <span>•</span>
+                            <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">location_on</span> Quận 7, TP.HCM</span>
+                            <span>•</span>
+                            <span class="flex items-center gap-1 text-emerald-700 font-bold"><span class="material-symbols-outlined text-xs">payments</span> 25 - 40 Triệu</span>
+                            <span>•</span>
+                            <span class="text-slate-400">Nộp ngày: 02/11/2026 (2 ngày trước)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Employer Response SLA Badge -->
+                <div class="flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-2 bg-emerald-50/80 p-3.5 rounded-xl border border-emerald-200">
+                    <div class="flex items-center gap-1.5 text-xs font-bold text-emerald-800">
+                        <span class="material-symbols-outlined text-emerald-600 text-base">bolt</span>
+                        CHỈ SỐ PHẢN HỒI (EMPLOYER SLA)
+                    </div>
+                    <div class="text-xs text-emerald-900">
+                        Công ty phản hồi <strong class="text-emerald-700">94% hồ sơ trong 48 giờ</strong>
+                    </div>
+                    <div class="text-[11px] text-emerald-700 font-medium">
+                        Cam kết phản hồi trước: <strong>Hôm nay, 17:00</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PIZZA TRACKER (VISUAL PROGRESS FLOW) -->
+            <div class="p-6 sm:p-8 border-b border-slate-100">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="font-headline font-bold text-sm text-slate-900 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">fastfood</span>
+                        Tiến Trình Hồ Sơ Trực Quan (Pizza-Tracker Cho CV)
+                    </h3>
+                    <div class="flex items-center gap-2 text-xs font-semibold text-blue-700 bg-blue-50 px-3 py-1 rounded-full border border-blue-200 animate-pulse">
+                        <span class="w-2 h-2 rounded-full bg-blue-600"></span>
+                        HR ĐANG MỞ XEM HỒ SƠ (CANDIDATE VIEW)
+                    </div>
+                </div>
+
+                <!-- Tracker Steps (5 Stages) -->
+                <div class="relative">
+                    <!-- Progress Bar Behind Steps -->
+                    <div class="hidden md:block absolute top-1/2 left-8 right-8 -translate-y-1/2 h-1.5 bg-slate-200 z-0">
+                        <div class="h-full bg-gradient-to-r from-emerald-500 via-emerald-500 to-blue-600 transition-all duration-500" style="width: 58%"></div>
+                    </div>
+
+                    <!-- Steps Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-2 relative z-10">
+                        <!-- Step 1: Đã nộp hồ sơ -->
+                        <div class="flex md:flex-col items-center md:text-center gap-3 md:gap-2">
+                            <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-sm shadow-md ring-4 ring-emerald-100">
+                                <span class="material-symbols-outlined text-lg">check</span>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-slate-900">1. Đã Nộp CV</div>
+                                <div class="text-[11px] text-slate-500">02/11 • 09:15</div>
+                                <span class="text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">Hoàn tất</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: AI Đã Phân Tích -->
+                        <div class="flex md:flex-col items-center md:text-center gap-3 md:gap-2">
+                            <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold text-sm shadow-md ring-4 ring-emerald-100">
+                                <span class="material-symbols-outlined text-lg">check</span>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-slate-900">2. AI Đã Phân Tích</div>
+                                <div class="text-[11px] text-slate-500">02/11 • 09:16</div>
+                                <span class="text-[10px] font-semibold text-emerald-600 bg-emerald-50 px-1.5 py-0.5 rounded">Match 92%</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: HR Đang Mở Xem (CURRENT ACTIVE STEP) -->
+                        <div class="flex md:flex-col items-center md:text-center gap-3 md:gap-2">
+                            <div class="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold text-sm shadow-lg ring-4 ring-blue-100 animate-bounce">
+                                <span class="material-symbols-outlined text-lg">visibility</span>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-blue-700">3. HR Đang Mở Xem</div>
+                                <div class="text-[11px] text-blue-600 font-semibold">Hôm nay • 08:35</div>
+                                <span class="text-[10px] font-bold text-white bg-blue-600 px-2 py-0.5 rounded-full animate-pulse">Đang xem</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Ghi chú đánh giá (note) -->
+                        <div class="flex md:flex-col items-center md:text-center gap-3 md:gap-2 opacity-60">
+                            <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm">
+                                <span class="material-symbols-outlined text-lg">rate_review</span>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-slate-800">4. Đánh Giá & Ghi Chú</div>
+                                <div class="text-[11px] text-slate-400">Dự kiến trong 2h tới</div>
+                                <span class="text-[10px] font-medium text-slate-500">Chờ kết quả</span>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Lịch Phỏng Vấn / Phản Hồi -->
+                        <div class="flex md:flex-col items-center md:text-center gap-3 md:gap-2 opacity-60">
+                            <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-sm">
+                                <span class="material-symbols-outlined text-lg">event_available</span>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-slate-800">5. Đặt Lịch / Phản Hồi</div>
+                                <div class="text-[11px] text-slate-400">Cam kết trước 17:00</div>
+                                <span class="text-[10px] font-medium text-slate-500">Chặng cuối</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Realtime Presence Notification Box -->
+                <div class="mt-8 p-4 rounded-xl bg-blue-50/70 border border-blue-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center">
+                            <span class="material-symbols-outlined text-sm">timer</span>
+                        </div>
+                        <div class="text-xs">
+                            <span class="font-bold text-slate-900">Thông báo thời gian thực (webPushDelivery):</span>
+                            <span class="text-slate-600"> HR Mai Trang (Talent Acquisition Lead - VNG) vừa mở xem hồ sơ của bạn lúc <strong>08:35</strong>. Thời gian xem trung bình: <strong>3 phút 42 giây</strong>.</span>
+                        </div>
+                    </div>
+                    <div class="shrink-0 flex items-center gap-2">
+                        <a href="../tr_chuy_n_tin_nh_n/code.html" class="px-3 py-1.5 rounded-lg bg-white border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-50 transition flex items-center gap-1 shadow-sm">
+                            <span class="material-symbols-outlined text-xs">chat</span>
+                            Nhắn tin với HR
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Breakdown & Action Buttons -->
+            <div class="p-6 bg-white flex flex-wrap items-center justify-between gap-4">
+                <div class="flex flex-wrap items-center gap-4 text-xs text-slate-600">
+                    <span class="flex items-center gap-1">
+                        <span class="material-symbols-outlined text-xs text-emerald-600">verified</span>
+                        Micro-Assessment: <strong>100/100 Điểm</strong>
+                    </span>
+                    <span class="flex items-center gap-1">
+                        <span class="material-symbols-outlined text-xs text-blue-600">folder_open</span>
+                        CV đã nộp: <strong class="text-primary hover:underline cursor-pointer">BinhNguyen_SeniorFrontend.pdf</strong>
+                    </span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="toggleMockInterviewPreview()" class="px-4 py-2 rounded-xl bg-emerald-600 text-white text-xs font-headline font-bold hover:bg-emerald-700 transition flex items-center gap-1.5 shadow-sm">
+                        <span class="material-symbols-outlined text-sm">psychology</span>
+                        Luyện Phỏng Vấn Trước Với AI
+                    </button>
+                    <button onclick="openRejectionDemoModal()" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-50 transition flex items-center gap-1">
+                        <span class="material-symbols-outlined text-xs">help_outline</span>
+                        Mô phỏng Constructive AI Rejection
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Another Application Card (Demonstrating Constructive AI Rejection in Action) -->
+        <div class="bg-white rounded-2xl border border-slate-200 card-shadow overflow-hidden">
+            <div class="p-6 bg-slate-50 border-b border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                    <img class="w-12 h-12 rounded-xl border border-slate-200 bg-white p-2 object-contain" src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=80&auto=format&fit=crop&q=80" alt="Company Logo"/>
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <h2 class="text-base font-headline font-bold text-slate-900">Lead Fullstack Architect (Node & React)</h2>
+                            <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-amber-100 text-amber-800">Chưa phù hợp lần này</span>
+                        </div>
+                        <div class="text-xs text-slate-500">Shopee Vietnam • Nộp ngày: 28/10/2026</div>
+                    </div>
+                </div>
+                <span class="text-xs font-bold text-slate-600 bg-slate-200 px-3 py-1 rounded-full">
+                    Đã hoàn tất đánh giá
+                </span>
+            </div>
+
+            <!-- Constructive AI Rejection Content -->
+            <div class="p-6 bg-gradient-to-br from-amber-50/50 to-orange-50/30 border-l-4 border-amber-500">
+                <div class="flex items-start gap-3.5 mb-4">
+                    <div class="w-9 h-9 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center shrink-0">
+                        <span class="material-symbols-outlined text-lg">smart_toy</span>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <h4 class="font-headline font-bold text-sm text-slate-900">Thư Phản Hồi Xây Dựng Từ AI (Constructive AI Rejection)</h4>
+                            <span class="text-[10px] font-bold text-amber-800 bg-amber-100 px-2 py-0.5 rounded">Tự động chuyển hóa từ ghi chú nội bộ HR</span>
+                        </div>
+                        <p class="text-xs text-slate-700 leading-relaxed mt-1">
+                            Chào bạn Bình, đội ngũ kỹ thuật Shopee rất ấn tượng với nền tảng React & TypeScript vững chắc cũng như thành tích GitHub của bạn. Tuy nhiên, vị trí <em>Lead Fullstack Architect</em> lần này đòi hỏi chuyên sâu về <strong>Kubernetes Cluster</strong> và <strong>Kiến trúc Distributed Database</strong> với quy mô hàng triệu TPS mà hồ sơ hiện tại chưa thể hiện đủ.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Skill Gaps Identified -->
+                <div class="bg-white p-4 rounded-xl border border-amber-200 text-xs mb-4">
+                    <div class="font-bold text-slate-800 mb-2 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-xs text-amber-600">construction</span>
+                        Gợi ý kỹ năng cần bồi dưỡng để ứng tuyển các vị trí Architect tương lai:
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-md bg-red-50 text-red-700 border border-red-200 font-mono font-medium">Thiếu: Kubernetes CKA</span>
+                        <span class="px-2.5 py-1 rounded-md bg-red-50 text-red-700 border border-red-200 font-mono font-medium">Thiếu: Distributed Caching (Redis Cluster)</span>
+                    </div>
+                </div>
+
+                <!-- AI Recommendations for Lower/Mid-level Roles -->
+                <div class="border-t border-amber-200/60 pt-4">
+                    <div class="text-xs font-bold text-slate-900 mb-3 flex items-center justify-between">
+                        <span class="flex items-center gap-1 text-primary">
+                            <span class="material-symbols-outlined text-sm">recommend</span>
+                            GỢI Ý 2 VỊ TRÍ PHÙ HỢP 100% VỚI NĂNG LỰC HIỆN TẠI TRÊN SÀN:
+                        </span>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center justify-between">
+                            <div>
+                                <div class="font-headline font-bold text-xs text-slate-900 hover:text-primary cursor-pointer">Senior Frontend Engineer</div>
+                                <div class="text-[11px] text-slate-500">Shopee Pay • 30 - 45 Triệu • Khớp 96%</div>
+                            </div>
+                            <a href="../job_detail_senior_frontend_developer/code.html" class="px-3 py-1 rounded-lg bg-primary text-white text-[11px] font-bold hover:bg-blue-700 transition">Ứng tuyển</a>
+                        </div>
+                        <div class="p-3 bg-white rounded-xl border border-slate-200 flex items-center justify-between">
+                            <div>
+                                <div class="font-headline font-bold text-xs text-slate-900 hover:text-primary cursor-pointer">Frontend Technical Lead</div>
+                                <div class="text-[11px] text-slate-500">Tiki Now • 35 - 50 Triệu • Khớp 92%</div>
+                            </div>
+                            <a href="../job_detail_senior_frontend_developer/code.html" class="px-3 py-1 rounded-lg bg-primary text-white text-[11px] font-bold hover:bg-blue-700 transition">Ứng tuyển</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Mock Rejection Explanation -->
+    <div id="demoModal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 card-shadow">
+            <h3 class="font-headline font-bold text-base text-slate-900 mb-2 flex items-center gap-2">
+                <span class="material-symbols-outlined text-amber-500">auto_fix_high</span>
+                Cơ chế Constructive AI Rejection hoạt động thế nào?
+            </h3>
+            <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                Thay vì gửi những bức email từ chối mẫu vô cảm <em>"Rất tiếc hồ sơ chưa phù hợp"</em>, hệ thống tận dụng các ghi chú nội bộ của HR trong bảng <code class="bg-slate-100 px-1 py-0.5 rounded text-primary">note</code>. AI Model sẽ tự động lọc bỏ các thông tin nhạy cảm, viết lại thành bức thư chân thành, phân tích khoảng cách kỹ năng và đề xuất các vị trí cấp độ phù hợp trên JobFind để ứng viên không bao giờ bị bỏ rơi.
+            </p>
+            <div class="flex justify-end">
+                <button onclick="openRejectionDemoModal()" class="px-4 py-2 rounded-xl bg-slate-900 text-white text-xs font-bold hover:bg-slate-800 transition">
+                    Đã hiểu
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openRejectionDemoModal() {
+            const m = document.getElementById('demoModal');
+            m.classList.toggle('opacity-0');
+            m.classList.toggle('pointer-events-none');
+        }
+        function toggleMockInterviewPreview() {
+            window.location.href = '../luyen_phong_van_ai_mock_interview_jd/code.html';
+        }
+    </script>
+</body>
+</html>

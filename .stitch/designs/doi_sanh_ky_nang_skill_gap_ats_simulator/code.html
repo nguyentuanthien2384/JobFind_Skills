@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Biểu Đồ Khoảng Cách Kỹ Năng & ATS Simulator - JobFind</title>
+    <!-- Phông chữ chuẩn JobFind: Be Vietnam Pro & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#F7F9FB",
+                        "on-surface": "#191C1E",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container-low": "#F2F4F6",
+                        "surface-container": "#ECEEF0",
+                        "surface-container-high": "#E6E8EA",
+                        "surface-container-highest": "#E0E3E5",
+                        "on-surface-variant": "#434655",
+                        outline: "#737686",
+                        "outline-variant": "#C3C6D7",
+                        primary: "#004AC6",
+                        "primary-container": "#2563EB",
+                        "on-primary": "#FFFFFF",
+                        "on-primary-container": "#EEEFFF",
+                        secondary: "#006591",
+                        "secondary-container": "#39B8FD",
+                        emerald: {
+                            500: "#10B981",
+                            600: "#059669",
+                            700: "#047857"
+                        },
+                        amber: {
+                            500: "#F59E0B",
+                            600: "#D97706"
+                        }
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Be Vietnam Pro", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        mono: ["JetBrains Mono", "monospace"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(16px);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 74, 198, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+        <div class="flex items-center justify-between px-6 py-3 max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-3">
+                <a href="../job_detail_senior_frontend_developer/code.html" class="flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-primary">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span>
+                    Quay lại JD Senior Frontend Developer
+                </a>
+                <span class="text-slate-300">|</span>
+                <span class="font-headline font-bold text-sm text-slate-900">
+                    Đối Sánh Kỹ Năng Trước Khi Nộp CV (Pre-Apply Skill Gap & ATS Simulator)
+                </span>
+            </div>
+            <div class="flex items-center gap-3">
+                <a href="../ung_tuyen_micro_assessment_test_nang_luc/code.html" class="px-4 py-2 rounded-xl bg-primary text-white font-headline text-xs font-bold hover:bg-blue-700 transition flex items-center gap-1.5 shadow-sm">
+                    <span>Tiếp tục nộp CV</span>
+                    <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-20 max-w-5xl mx-auto px-4 sm:px-6">
+        <!-- Breadcrumb & Status -->
+        <div class="py-4 flex flex-wrap items-center justify-between gap-4">
+            <div>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-bold border border-blue-200 mb-2">
+                    <span class="material-symbols-outlined text-sm text-blue-600">tune</span>
+                    BỘ MÔ PHỎNG QUÉT LỌC ATS & KIỂM TRA ĐỘ KHỚP HỒ SƠ
+                </div>
+                <h1 class="text-2xl font-headline font-bold text-slate-900">Kiểm Tra Khả Năng Vượt Qua Vòng Quét CV Tự Động</h1>
+                <p class="text-xs text-on-surface-variant max-w-2xl mt-1">
+                    Hệ thống tự động so khớp các kỹ năng đã xác thực trong hồ sơ của bạn với hơn 30 từ khóa trọng yếu trong JD của VNG Corporation.
+                </p>
+            </div>
+            <!-- Overall ATS Score Badge -->
+            <div class="flex items-center gap-4 bg-white p-4 rounded-2xl border border-slate-200 card-shadow">
+                <div class="w-14 h-14 rounded-full bg-emerald-50 border-4 border-emerald-500 flex items-center justify-center font-headline font-bold text-lg text-emerald-700">
+                    86%
+                </div>
+                <div>
+                    <div class="text-[11px] text-slate-400 uppercase font-bold tracking-wider">Độ Tương Thích ATS</div>
+                    <div class="text-sm font-bold text-slate-900">Xác Suất Qua Vòng: <span class="text-emerald-600">RẤT CAO</span></div>
+                    <div class="text-[11px] text-emerald-700 font-medium">Khớp 12 / 14 Kỹ năng cốt lõi</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 Columns Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 mt-4">
+            <!-- Left 7 Cols: Skill Gap Visual Comparison -->
+            <div class="md:col-span-7 space-y-6">
+                <!-- Matched Skills Card -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+                        <h2 class="font-headline font-bold text-sm text-slate-900 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-emerald-600 text-base">check_circle</span>
+                            Kỹ Năng Đã Khớp Hoàn Toàn (Matched Skills)
+                        </h2>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800">
+                            10 Kỹ năng
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-3 rounded-xl bg-emerald-50/50 border border-emerald-200 flex items-center justify-between text-xs">
+                            <div>
+                                <span class="font-bold text-slate-900">React 18 & Hook Architecture</span>
+                                <div class="text-[11px] text-emerald-700">Đã xác thực qua 14 GitHub repos • Đạt điểm tối đa</div>
+                            </div>
+                            <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-bold font-mono text-[10px]">100% Khớp</span>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-emerald-50/50 border border-emerald-200 flex items-center justify-between text-xs">
+                            <div>
+                                <span class="font-bold text-slate-900">TypeScript (Strict Typings & Generics)</span>
+                                <div class="text-[11px] text-emerald-700">Đã xác thực 89k LOC • Đạt tiêu chuẩn Senior</div>
+                            </div>
+                            <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-bold font-mono text-[10px]">100% Khớp</span>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-emerald-50/50 border border-emerald-200 flex items-center justify-between text-xs">
+                            <div>
+                                <span class="font-bold text-slate-900">Tailwind CSS & Responsive UI Design</span>
+                                <div class="text-[11px] text-emerald-700">Đạt chứng chỉ dự án Design System</div>
+                            </div>
+                            <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-bold font-mono text-[10px]">100% Khớp</span>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-emerald-50/50 border border-emerald-200 flex items-center justify-between text-xs">
+                            <div>
+                                <span class="font-bold text-slate-900">RESTful API & Axios Interceptors</span>
+                                <div class="text-[11px] text-emerald-700">Kinh nghiệm 4 năm tích hợp Backend Node/Java</div>
+                            </div>
+                            <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-bold font-mono text-[10px]">95% Khớp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Missing / Low-Match Skills (Skill Gap) -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+                        <h2 class="font-headline font-bold text-sm text-slate-900 flex items-center gap-2">
+                            <span class="material-symbols-outlined text-amber-500 text-base">warning</span>
+                            Kỹ Năng Còn Thiếu Trong CV (Skill Gaps)
+                        </h2>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">
+                            2 Kỹ năng cần bổ sung
+                        </span>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="p-3.5 rounded-xl bg-amber-50/60 border border-amber-300 text-xs">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="font-bold text-slate-900">Kiểm thử tự động (Unit Test với Jest / Vitest)</span>
+                                <span class="text-amber-800 font-bold bg-amber-200 px-2 py-0.5 rounded text-[10px]">Từ khóa thiếu trong CV</span>
+                            </div>
+                            <p class="text-slate-600 text-[11px] leading-relaxed mb-2">
+                                JD yêu cầu kinh nghiệm viết Unit Test cho frontend components. CV của bạn chưa nhắc đến từ khóa này trong phần mô tả dự án.
+                            </p>
+                            <div class="p-2 rounded-lg bg-white border border-amber-200 text-[11px] text-slate-700">
+                                <strong>Gợi ý từ AI:</strong> Bổ sung câu: <em>"Đã viết hơn 80+ unit tests với Jest & React Testing Library, đạt 85% code coverage."</em> vào dự án gần nhất.
+                            </div>
+                        </div>
+
+                        <div class="p-3.5 rounded-xl bg-amber-50/60 border border-amber-300 text-xs">
+                            <div class="flex items-center justify-between mb-1">
+                                <span class="font-bold text-slate-900">Tối ưu hiệu năng Web Vitals (LCP, FID, CLS)</span>
+                                <span class="text-amber-800 font-bold bg-amber-200 px-2 py-0.5 rounded text-[10px]">Từ khóa thiếu trong CV</span>
+                            </div>
+                            <p class="text-slate-600 text-[11px] leading-relaxed mb-2">
+                                VNG chú trọng Core Web Vitals cho ứng dụng web triệu người dùng.
+                            </p>
+                            <div class="p-2 rounded-lg bg-white border border-amber-200 text-[11px] text-slate-700">
+                                <strong>Gợi ý từ AI:</strong> Thêm từ khóa: <em>"Tối ưu Core Web Vitals đạt 95+ điểm Google Lighthouse."</em>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right 5 Cols: AI ATS Simulator & One-Click CV Optimization -->
+            <div class="md:col-span-5 space-y-6">
+                <!-- Optimization CTA Card -->
+                <div class="bg-gradient-to-br from-blue-900 to-indigo-950 rounded-2xl p-6 text-white card-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-white/10 text-amber-300 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-2xl">auto_fix_high</span>
+                        </div>
+                        <div>
+                            <h3 class="font-headline font-bold text-base">Tối Ưu Hóa CV Bằng AI</h3>
+                            <p class="text-xs text-blue-200">Tăng tỷ lệ qua vòng quét lên 98%</p>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                        Hệ thống có thể tự động tích hợp 2 từ khóa còn thiếu vào đúng ngữ cảnh dự án trong file CV của bạn mà vẫn giữ tính trung thực 100%.
+                    </p>
+
+                    <div class="space-y-2">
+                        <button onclick="applyAIOptimization()" class="w-full py-2.5 px-4 rounded-xl bg-emerald-500 text-white font-headline text-xs font-bold hover:bg-emerald-600 transition flex items-center justify-center gap-2 shadow-sm">
+                            <span class="material-symbols-outlined text-sm">magic_button</span>
+                            Tự Động Bổ Sung Từ Khóa Vào CV
+                        </button>
+                        <a href="../h_s_c_a_t_i_tuy_n_d_ng_vn/code.html" class="w-full py-2 px-4 rounded-xl bg-white/10 text-white text-xs font-semibold hover:bg-white/20 transition flex items-center justify-center gap-1.5 border border-white/20">
+                            <span class="material-symbols-outlined text-sm">edit</span>
+                            Tự chỉnh sửa CV thủ công
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ATS Scanner Engine Detail -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow text-xs">
+                    <h3 class="font-headline font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-slate-700 text-base">saved_search</span>
+                        Mô Phỏng Bộ Quét ATS Tập Đoàn
+                    </h3>
+                    <ul class="space-y-3 text-slate-600">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-emerald-600 text-sm mt-0.5">check</span>
+                            <span>Định dạng tệp: <strong>PDF chuẩn cấu trúc text (Không bị lỗi ảnh hóa)</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-emerald-600 text-sm mt-0.5">check</span>
+                            <span>Phân bổ số năm kinh nghiệm: <strong>4 năm (Yêu cầu JD: ≥ 3 năm)</strong>.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-emerald-600 text-sm mt-0.5">check</span>
+                            <span>Cấp bậc học vấn & Chuyên ngành: <strong>Đại học CNTT (Hợp lệ)</strong>.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function applyAIOptimization() {
+            alert("Đã cập nhật tự động 2 từ khóa Jest và Core Web Vitals vào bản sao CV nộp cho VNG Corporation! Tỷ lệ khớp hiện tại là 98%. Bạn có thể bấm 'Tiếp tục nộp CV' để sang bước làm Micro-Assessment.");
+        }
+    </script>
+</body>
+</html>

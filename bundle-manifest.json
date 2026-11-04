@@ -3676,8 +3676,8 @@
     },
     {
       "path": ".docs/CONTEXT.md",
-      "bytes": 3087,
-      "sha256": "74b4a39e2e8e8a141c08cec3e5341602774e470e15fab8f515ebddafecb48c6f"
+      "bytes": 5127,
+      "sha256": "66a955b98a0644bdcf1b29dfa5729370581d45e79ee55ffad436e94b06e68a64"
     },
     {
       "path": ".docs/DESIGN_GAPS.md",
@@ -3686,8 +3686,8 @@
     },
     {
       "path": ".docs/FEATURES_DONE.md",
-      "bytes": 3789,
-      "sha256": "c6eb1cb664d9325080e01821ad29b6050b04723e7d0eba675ff9ae47979d4647"
+      "bytes": 4217,
+      "sha256": "d475160be52e0cb50e38e004655da092a20465bf8882523cc86c4fbb53c0a67b"
     },
     {
       "path": ".docs/INDEX.md",
@@ -4715,6 +4715,41 @@
       "sha256": "f53ace4c7b2dbdebd7efc8df7a11ae3e38b4129d9d093426501fe27576862858"
     },
     {
+      "path": ".docs/ui-mockups/screens/EXT-JF-006-VERIFIED-REVIEWS.md",
+      "bytes": 1951,
+      "sha256": "5e914b91ac0d59d97a80d05d67513328417a87dffb60907ddff4b82926e7ddd5"
+    },
+    {
+      "path": ".docs/ui-mockups/screens/EXT-JF-009-PROOF-OF-SKILL.md",
+      "bytes": 1888,
+      "sha256": "9c0b94952634410346bdb40d2a8c75e8e0e6df7b73100991b680bd3450bd227a"
+    },
+    {
+      "path": ".docs/ui-mockups/screens/EXT-JF-010-SKILL-GAP-ATS.md",
+      "bytes": 1517,
+      "sha256": "f8d99a532090a4bf3e6da16ca83a8a45adcd3b0ab8db665fe601e99b4c44a7fb"
+    },
+    {
+      "path": ".docs/ui-mockups/screens/EXT-JF-012-REVERSE-RECRUITING.md",
+      "bytes": 2093,
+      "sha256": "0ae71729d4826a29ac363ff704c275f93a30e9a9d135a6a2fedf378ab9ff89e5"
+    },
+    {
+      "path": ".docs/ui-mockups/screens/EXT-JF-014-AI-MOCK-INTERVIEW.md",
+      "bytes": 1765,
+      "sha256": "785de3b429c586f26a376d97e1148b5077e3ccffee070df0f635682664af9998"
+    },
+    {
+      "path": ".docs/ui-mockups/screens/EXT-JF-018-PIZZA-TRACKER.md",
+      "bytes": 1834,
+      "sha256": "e21e9f30d6736816824f1d3443213d6371fd8f93f3190d55cc44a4da5bbca880"
+    },
+    {
+      "path": ".docs/ui-mockups/screens/EXT-JF-024-MICRO-ASSESSMENT.md",
+      "bytes": 1743,
+      "sha256": "e9a30f55c7663766f49c4bc2c23f630bb8d355e82ce0d47113586862780ab772"
+    },
+    {
       "path": ".docs/ui-mockups/screens/JF-001.md",
       "bytes": 5279,
       "sha256": "96ec450fa2c451c20bde3ead29ca091912cadcd1f83feb2a1c2309d1c5d583c5"
@@ -4921,8 +4956,8 @@
     },
     {
       "path": ".stitch/backlog.json",
-      "bytes": 145729,
-      "sha256": "ff39cf20cd622cd44816aacadedb7b13eda2cc01bd53b7aa9ef6e9a4cde0e926"
+      "bytes": 156696,
+      "sha256": "c2871aa03c2f23c6cc1837368cd0524d3ecffd42f0d3d1e797a6bfbb645a1bab"
     },
     {
       "path": ".stitch/designs/404_page_tuy_n_d_ng_vn/code.html",
@@ -4975,6 +5010,11 @@
       "sha256": "93385013f5426332dc5c0bec75977cfc86f4876d0d1ea8de2d4a4737ab30786d"
     },
     {
+      "path": ".stitch/designs/danh_gia_cong_ty_xac_thuc_verified_reviews/code.html",
+      "bytes": 25979,
+      "sha256": "58fcada0d7761956c8e4685af960851a3105500d0255eda5e8ff7789d189e672"
+    },
+    {
       "path": ".stitch/designs/danh_m_c_c_ng_ty/code.html",
       "bytes": 24745,
       "sha256": "43c55a3599fde003acabdc492327fba465175d505dbd0d0556c6b43dfbf3bbad"
@@ -4995,6 +5035,16 @@
       "sha256": "e9958081d871163b5018e1d745d10cc4c6d57e03e16bd1c81ba5a4b54949747f"
     },
     {
+      "path": ".stitch/designs/doi_sanh_ky_nang_skill_gap_ats_simulator/code.html",
+      "bytes": 17399,
+      "sha256": "d945621ec01cc0bea9596e46c15ca87100221000544b8ea755e5895fe962dee3"
+    },
+    {
+      "path": ".stitch/designs/don_ung_tuyen_pizza_tracker_sla_realtime/code.html",
+      "bytes": 27934,
+      "sha256": "5d48240c088299ee90a07a69ab3e7589bbe425aef4c7a5e05411a01d53daebca"
+    },
+    {
       "path": ".stitch/designs/duy_t_h_s_c_ng_ty/code.html",
       "bytes": 18588,
       "sha256": "c6abd59dd6ede7d00cd746cdc6d5ef1388931eda26e545bcb8b6b4201e012d4b"
@@ -5013,6 +5063,11 @@
       "path": ".stitch/designs/h_s_c_a_t_i_tuy_n_d_ng_vn/screen.png",
       "bytes": 458308,
       "sha256": "8384ed5344b1c4fc8f65a560cb3238c240c4e2f650a0c3c8ece0351709398614"
+    },
+    {
+      "path": ".stitch/designs/ho_so_xac_thuc_nang_luc_github_proof_of_skill/code.html",
+      "bytes": 40722,
+      "sha256": "3619e44f5f01ef6206cd7e696d75b5680131125172307e91a9346a9a313014f8"
     },
     {
       "path": ".stitch/designs/job_detail_senior_frontend_developer/code.html",
@@ -5093,6 +5148,11 @@
       "path": ".stitch/designs/login_tuy_n_d_ng_vn_2/screen.png",
       "bytes": 284438,
       "sha256": "792274ec91dfbebb0ba9ac05fdbe7669be04dbe257c5a729b2aadc6bde67432b"
+    },
+    {
+      "path": ".stitch/designs/luyen_phong_van_ai_mock_interview_jd/code.html",
+      "bytes": 24927,
+      "sha256": "a2a5e6bb49e66a32f910ecf5eebdf86b0429e5bd52ab9cdc2e75420b2225036f"
     },
     {
       "path": ".stitch/designs/n_ng_tuy_n_c_a_t_i_tuy_n_d_ng_vn/code.html",
@@ -5285,6 +5345,16 @@
       "sha256": "1f519dfe18449b30acc609fc9b4e77af2b4162f02651cfc3a0c9aee63d834e69"
     },
     {
+      "path": ".stitch/designs/tuyen_dung_dao_chieu_blind_profile_bidding/code.html",
+      "bytes": 28123,
+      "sha256": "f17f66964c44415ab2c05e41005e66903c84a9a3a8a2924120be906c71f509de"
+    },
+    {
+      "path": ".stitch/designs/ung_tuyen_micro_assessment_test_nang_luc/code.html",
+      "bytes": 21016,
+      "sha256": "22895b092537605d32dbc0cfbc51d23b1828ef04a593d728dfe1ed913b01c5bc"
+    },
+    {
       "path": ".stitch/designs/x_c_th_c_doanh_nghi_p_admin/code.html",
       "bytes": 23481,
       "sha256": "5d8a19d4ce9d22531a80ed5aa3051bbb4a8d9281d611e02eff2ff43f4938d982"
@@ -5296,13 +5366,48 @@
     },
     {
       "path": ".stitch/metadata.json",
-      "bytes": 23208,
-      "sha256": "0e4851c5aa6f58d807de2af857963cf1d228d2030bd76caba1892b98276a3ecb"
+      "bytes": 29484,
+      "sha256": "323a581784f6017321a19bf08a4a8738513bdf995bc191a9e87219b5139fb6d9"
     },
     {
       "path": ".stitch/next-prompt.md",
       "bytes": 1348,
       "sha256": "696ea8edf1e81eb01a96febcaa2b43e6463fab4ea1b1f2885bd143de65851340"
+    },
+    {
+      "path": ".stitch/prompts/EXT-JF-006-VERIFIED-REVIEWS.md",
+      "bytes": 2097,
+      "sha256": "3fab031cc7a477bd28c91230ff449c20c3c452f4387e43646e0264bcf515aded"
+    },
+    {
+      "path": ".stitch/prompts/EXT-JF-009-PROOF-OF-SKILL.md",
+      "bytes": 3062,
+      "sha256": "ed7df7c04ba46565259565b563a7589521ca1f56eacca1cab4c22e42a1b107f7"
+    },
+    {
+      "path": ".stitch/prompts/EXT-JF-010-SKILL-GAP-ATS.md",
+      "bytes": 1559,
+      "sha256": "39effa91f822a20b1d777ca1b4d2e6e79b6013806e31d936689434554fae370b"
+    },
+    {
+      "path": ".stitch/prompts/EXT-JF-012-REVERSE-RECRUITING.md",
+      "bytes": 2055,
+      "sha256": "103fce21372bd8894ee11f5fda9297d22a46c9da0d7e70076b222a0d76d88f46"
+    },
+    {
+      "path": ".stitch/prompts/EXT-JF-014-AI-MOCK-INTERVIEW.md",
+      "bytes": 1806,
+      "sha256": "2124f818216ad292094ad7fb7a8b05e462cc513e713342eb8fc2e52325750818"
+    },
+    {
+      "path": ".stitch/prompts/EXT-JF-018-PIZZA-TRACKER.md",
+      "bytes": 2274,
+      "sha256": "4482d1d63f3e4eb14eb676bcbcea9c3995b2b96353bb211a08bf08c73d822936"
+    },
+    {
+      "path": ".stitch/prompts/EXT-JF-024-MICRO-ASSESSMENT.md",
+      "bytes": 2249,
+      "sha256": "9bae3a0c0ab940e54243cb8b95d12fddafda61ea0788eec3fe5087e6bf48599f"
     },
     {
       "path": ".stitch/prompts/JF-001.md",

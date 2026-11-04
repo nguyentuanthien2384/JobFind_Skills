@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Tuyển Dụng Đảo Chiều (Reverse Recruiting) & Hồ Sơ Ẩn Danh (Blind Profile) - JobFind</title>
+    <!-- Phông chữ chuẩn JobFind: Be Vietnam Pro & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#F7F9FB",
+                        "on-surface": "#191C1E",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container-low": "#F2F4F6",
+                        "surface-container": "#ECEEF0",
+                        "surface-container-high": "#E6E8EA",
+                        "surface-container-highest": "#E0E3E5",
+                        "on-surface-variant": "#434655",
+                        outline: "#737686",
+                        "outline-variant": "#C3C6D7",
+                        primary: "#004AC6",
+                        "primary-container": "#2563EB",
+                        "on-primary": "#FFFFFF",
+                        "on-primary-container": "#EEEFFF",
+                        secondary: "#006591",
+                        "secondary-container": "#39B8FD",
+                        emerald: {
+                            500: "#10B981",
+                            600: "#059669",
+                            700: "#047857"
+                        },
+                        amber: {
+                            500: "#F59E0B",
+                            600: "#D97706"
+                        }
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Be Vietnam Pro", "sans-serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(16px);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 74, 198, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+        <div class="flex items-center justify-between px-6 py-3.5 max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-8">
+                <a href="../tuy_n_d_ng_vn_homepage/code.html" class="text-2xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-sky-500 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl text-primary font-bold">work</span>
+                    JobFind
+                </a>
+                <nav class="hidden md:flex items-center gap-6 font-headline text-sm font-medium">
+                    <a class="text-blue-700 font-semibold border-b-2 border-blue-600 pb-1" href="../tuyen_dung_dao_chieu_blind_profile_bidding/code.html">Tuyển Dụng Đảo Chiều (Reverse)</a>
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../kho_ng_vi_n_tuy_n_d_ng_vn/code.html">Kho ứng viên</a>
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../tin_nh_n_tuy_n_d_ng/code.html">Tin nhắn</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <!-- Blind Mode Indicator -->
+                <div class="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900 text-white text-xs font-semibold shadow-sm">
+                    <span class="material-symbols-outlined text-amber-400 text-sm">visibility_off</span>
+                    <span>Blind Profile: <strong class="text-amber-400">Đang bật (An toàn)</strong></span>
+                </div>
+                <div class="flex items-center gap-3 pl-3 border-l border-outline-variant/30">
+                    <div class="w-9 h-9 rounded-full bg-slate-800 text-amber-300 flex items-center justify-center font-bold text-xs">
+                        #VN
+                    </div>
+                    <div class="hidden sm:block text-left">
+                        <div class="text-xs font-bold leading-tight">Ẩn Danh #VN-8849</div>
+                        <div class="text-[11px] text-slate-500">Kỹ sư Frontend Senior</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-20 max-w-7xl mx-auto px-4 sm:px-6">
+        <!-- Title & Concept Explanation -->
+        <div class="py-6 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div>
+                <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 text-xs font-bold border border-indigo-200 mb-2">
+                    <span class="material-symbols-outlined text-sm text-indigo-600">swap_horizontal_circle</span>
+                    MÔ HÌNH TUYỂN DỤNG ĐẢO CHIỀU (REVERSE RECRUITING & OFFER-FIRST)
+                </div>
+                <h1 class="text-2xl sm:text-3xl font-headline font-bold text-slate-900">Doanh Nghiệp Đặt Giá (Bidding) • Ứng Viên Chọn Công Ty</h1>
+                <p class="text-xs sm:text-sm text-on-surface-variant max-w-2xl mt-1">
+                    Ứng viên đang đi làm an tâm tìm kiếm cơ hội mà không sợ quản lý hay HR công ty hiện tại phát hiện. Nhà tuyển dụng bắt buộc phải gửi lời mời kèm khung lương đề xuất cụ thể (Offer-First).
+                </p>
+            </div>
+
+            <!-- Perspective Switcher -->
+            <div class="flex items-center gap-2 p-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-semibold">
+                <button id="btnCandidateView" onclick="switchView('candidate')" class="px-3.5 py-1.5 rounded-lg bg-white text-primary shadow-sm flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs">person</span>
+                    Góc Nhìn Ứng Viên (Lời Mời Nhận Được)
+                </button>
+                <button id="btnEmployerView" onclick="switchView('employer')" class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 flex items-center gap-1">
+                    <span class="material-symbols-outlined text-xs">business</span>
+                    Góc Nhìn Nhà Tuyển Dụng (Sàn Blind Profile)
+                </button>
+            </div>
+        </div>
+
+        <!-- VIEW 1: CANDIDATE PERSPECTIVE (Received Offer-First Bids) -->
+        <div id="candidateViewSection" class="space-y-8">
+            <!-- Blind Settings Card -->
+            <div class="bg-gradient-to-r from-slate-900 to-indigo-950 rounded-2xl p-6 text-white card-shadow flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div class="flex items-start gap-4">
+                    <div class="p-3 rounded-xl bg-white/10 text-amber-300">
+                        <span class="material-symbols-outlined text-3xl">privacy_tip</span>
+                    </div>
+                    <div>
+                        <h2 class="font-headline font-bold text-base mb-1">Cấu Hình Hồ Sơ Ẩn Danh (userSetting)</h2>
+                        <p class="text-xs text-slate-300 leading-relaxed max-w-xl">
+                            Đã ẩn: Họ tên thật, Ảnh avatar, Email, Số điện thoại và Tên công ty hiện tại. Hệ thống chỉ công khai năng lực mã nguồn (<code class="text-amber-300">userSkill</code>), 4.5 năm kinh nghiệm và mức lương kỳ vọng (35 - 45 Triệu).
+                        </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-bold text-emerald-400 bg-emerald-950/80 px-3 py-1.5 rounded-xl border border-emerald-500/40 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        Đang Mở Nhận Offer-First
+                    </span>
+                    <button class="px-3 py-1.5 rounded-xl bg-white/10 border border-white/20 text-xs font-semibold hover:bg-white/20 transition">
+                        Chỉnh sửa thiết lập
+                    </button>
+                </div>
+            </div>
+
+            <!-- List of Received Offer-First Invitations -->
+            <div class="space-y-4">
+                <div class="flex items-center justify-between text-xs font-bold text-slate-700">
+                    <span>DANH SÁCH LỜI MỜI PHỎNG VẤN KÈM KHUNG LƯƠNG ĐỀ XUẤT (3 LỜI MỜI)</span>
+                    <span class="text-primary">Sắp xếp theo mức lương cao nhất</span>
+                </div>
+
+                <!-- Bid 1: From Shopee Vietnam -->
+                <div class="bg-white rounded-2xl p-6 border-2 border-emerald-500/80 card-shadow relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-emerald-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl uppercase tracking-wider flex items-center gap-1">
+                        <span class="material-symbols-outlined text-xs">local_fire_department</span>
+                        Offer-First Hàng Đầu
+                    </div>
+
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="flex items-start gap-4">
+                            <img class="w-14 h-14 rounded-xl border border-slate-200 bg-white p-2 object-contain" src="https://images.unsplash.com/photo-1599305445671-ac291c95aaa9?w=80&auto=format&fit=crop&q=80" alt="Shopee"/>
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <h3 class="font-headline font-bold text-base text-slate-900">Shopee Vietnam</h3>
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-800">Doanh Nghiệp Đã Xác Thực</span>
+                                </div>
+                                <div class="text-xs text-slate-600 mb-2">Vị trí mời: <strong>Senior Frontend Platform Engineer</strong></div>
+                                <p class="text-xs text-slate-600 max-w-xl leading-relaxed">
+                                    <em>"Chào bạn! Team Platform Shopee rất ấn tượng với điểm Proof-of-Skill 98% và các repo TypeScript của bạn trên JobFind. Chúng tôi muốn mời bạn phỏng vấn trực tiếp với mức đãi ngộ trên."</em>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Offered Salary Box -->
+                        <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-200 text-right min-w-[220px]">
+                            <div class="text-[10px] text-emerald-800 uppercase font-bold tracking-wider">Khung Lương Đề Xuất (Offer-First)</div>
+                            <div class="text-xl font-bold font-headline text-emerald-700">40 - 55 Triệu / tháng</div>
+                            <div class="text-[11px] text-emerald-800 font-medium mt-0.5">+ Thưởng ký hợp đồng 50M (Sign-on Bonus)</div>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <div class="text-xs text-slate-500 flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm text-slate-400">lock</span>
+                            Khi bấm chấp nhận, hệ thống mới mở khóa thông tin cá nhân và tạo phòng chat trực tiếp.
+                        </div>
+                        <div class="flex items-center gap-2 w-full sm:w-auto">
+                            <button class="px-4 py-2 rounded-xl border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition w-full sm:w-auto">
+                                Từ chối lịch sự
+                            </button>
+                            <button onclick="acceptOffer('Shopee Vietnam')" class="px-5 py-2 rounded-xl bg-emerald-600 text-white font-headline text-xs font-bold hover:bg-emerald-700 transition flex items-center justify-center gap-1.5 shadow-sm w-full sm:w-auto">
+                                <span class="material-symbols-outlined text-sm">handshake</span>
+                                Chấp Nhận Lời Mời & Mở Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bid 2: From Techcombank -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-14 h-14 rounded-xl border border-slate-200 bg-red-50 text-red-600 flex items-center justify-center font-bold text-sm">
+                                TCB
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2 mb-1">
+                                    <h3 class="font-headline font-bold text-base text-slate-900">Techcombank Digital</h3>
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-100 text-blue-800">Khối Ngân Hàng Số</span>
+                                </div>
+                                <div class="text-xs text-slate-600 mb-2">Vị trí mời: <strong>Lead Frontend Architect (Mobile & Web)</strong></div>
+                                <p class="text-xs text-slate-600 max-w-xl leading-relaxed">
+                                    Mời bạn gia nhập khối kiến trúc Core Banking với các dự án micro-frontends quy mô 10 triệu khách hàng.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-right min-w-[220px]">
+                            <div class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Khung Lương Đề Xuất</div>
+                            <div class="text-xl font-bold font-headline text-slate-900">45 - 60 Triệu / tháng</div>
+                            <div class="text-[11px] text-slate-600 font-medium mt-0.5">Thưởng hiệu suất năm 4 - 6 tháng lương</div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3">
+                        <div class="text-xs text-slate-500 flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm text-slate-400">schedule</span>
+                            Hạn phản hồi: Còn 48 giờ trước khi hết hạn
+                        </div>
+                        <div class="flex items-center gap-2 w-full sm:w-auto">
+                            <button class="px-4 py-2 rounded-xl border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition w-full sm:w-auto">
+                                Từ chối
+                            </button>
+                            <button onclick="acceptOffer('Techcombank Digital')" class="px-5 py-2 rounded-xl bg-primary text-white font-headline text-xs font-bold hover:bg-blue-700 transition flex items-center justify-center gap-1.5 shadow-sm w-full sm:w-auto">
+                                <span class="material-symbols-outlined text-sm">handshake</span>
+                                Chấp Nhận & Mở Chat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- VIEW 2: EMPLOYER PERSPECTIVE (Blind Talent Pool & Bidding Form) -->
+        <div id="employerViewSection" class="hidden space-y-8">
+            <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow">
+                <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+                    <div>
+                        <h2 class="text-lg font-headline font-bold text-slate-900">Sàn Ứng Viên Ẩn Danh (Blind Talent Pool)</h2>
+                        <p class="text-xs text-on-surface-variant">Sử dụng gói orderPackageCv để gửi lời mời Offer-First minh bạch cho ứng viên chất lượng cao</p>
+                    </div>
+                    <span class="text-xs font-bold text-primary bg-blue-50 px-3 py-1 rounded-full border border-blue-200">
+                        Số lượt gửi Offer còn lại: 18 lượt
+                    </span>
+                </div>
+
+                <!-- Blind Candidate Card -->
+                <div class="p-6 rounded-2xl border border-slate-200 bg-slate-50/50 hover:bg-slate-50 transition">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="flex items-start gap-4">
+                            <!-- Masked Avatar -->
+                            <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-slate-800 to-indigo-900 text-amber-300 flex items-center justify-center font-headline font-bold text-xl shadow-md shrink-0">
+                                #8849
+                            </div>
+                            <div>
+                                <div class="flex flex-wrap items-center gap-2 mb-1">
+                                    <h3 class="font-headline font-bold text-base text-slate-900">Kỹ Sư Frontend Cao Cấp #VN-8849</h3>
+                                    <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-amber-100 text-amber-900 border border-amber-300 flex items-center gap-1">
+                                        <span class="material-symbols-outlined text-xs">visibility_off</span>
+                                        BLIND PROFILE (HỒ SƠ ẨN DANH)
+                                    </span>
+                                    <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">
+                                        Proof-of-Skill A+ (Đã Xác Thực GitHub)
+                                    </span>
+                                </div>
+                                <div class="text-xs text-slate-600 mb-3 space-x-3">
+                                    <span>Kinh nghiệm: <strong>4.5 năm</strong></span>
+                                    <span>•</span>
+                                    <span>Công ty hiện tại: <span class="bg-slate-200 px-1.5 py-0.5 rounded text-slate-700 font-mono text-[11px]">[Công Ty Kỳ Lân Công Nghệ - Đã Ẩn]</span></span>
+                                    <span>•</span>
+                                    <span>Lương kỳ vọng: <strong class="text-emerald-700">35 - 45 Triệu</strong></span>
+                                </div>
+                                <!-- Skill Tags -->
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 text-xs font-mono">React 18</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 text-xs font-mono">TypeScript (Strict)</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 text-xs font-mono">Next.js SSR</span>
+                                    <span class="px-2 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200 text-xs font-mono">Tailwind CSS</span>
+                                    <span class="px-2 py-0.5 rounded bg-slate-100 text-slate-600 text-xs font-mono">89k LOC GitHub</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- CTA to Open Bidding Modal -->
+                        <div class="shrink-0 flex flex-col gap-2">
+                            <button onclick="openBidModal('#VN-8849')" class="px-6 py-2.5 rounded-xl bg-primary text-white font-headline text-xs font-bold hover:bg-blue-700 transition flex items-center justify-center gap-1.5 shadow-sm">
+                                <span class="material-symbols-outlined text-sm">send</span>
+                                Gửi Lời Mời Kèm Lương Đề Xuất (Offer-First)
+                            </button>
+                            <span class="text-[11px] text-slate-400 text-center">Bắt buộc cung cấp khung lương</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Send Offer-First Modal -->
+    <div id="bidModal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 card-shadow">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+                <h3 class="font-headline font-bold text-base text-slate-900 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary">gavel</span>
+                    Gửi Đề Xuất Offer-First Cho Ứng Viên <span id="candidateTargetId" class="text-primary font-mono">#VN-8849</span>
+                </h3>
+                <button onclick="closeBidModal()" class="text-slate-400 hover:text-slate-600">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+
+            <div class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Vị trí tuyển dụng:</label>
+                    <input type="text" value="Senior Frontend Platform Lead" class="w-full rounded-xl border border-slate-300 p-2.5 text-xs text-slate-800 focus:border-primary focus:ring-primary"/>
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label class="block font-semibold text-slate-700 mb-1">Lương tối thiểu (VNĐ):</label>
+                        <input type="text" value="38,000,000" class="w-full rounded-xl border border-slate-300 p-2.5 text-xs text-slate-800 font-mono font-bold focus:border-primary focus:ring-primary"/>
+                    </div>
+                    <div>
+                        <label class="block font-semibold text-slate-700 mb-1">Lương tối đa (VNĐ):</label>
+                        <input type="text" value="50,000,000" class="w-full rounded-xl border border-slate-300 p-2.5 text-xs text-slate-800 font-mono font-bold focus:border-primary focus:ring-primary"/>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Đãi ngộ & Thưởng đặc biệt:</label>
+                    <input type="text" value="Sign-on bonus 40M + 14 tháng lương + Bảo hiểm gia đình" class="w-full rounded-xl border border-slate-300 p-2.5 text-xs text-slate-800 focus:border-primary focus:ring-primary"/>
+                </div>
+
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Lời nhắn gửi Hiring Manager:</label>
+                    <textarea rows="3" class="w-full rounded-xl border border-slate-300 p-2.5 text-xs text-slate-800 focus:border-primary focus:ring-primary" placeholder="Mô tả văn hóa, thử thách kỹ thuật và lý do tại sao ứng viên nên cân nhắc cơ hội này..."></textarea>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-end gap-2">
+                <button onclick="closeBidModal()" class="px-4 py-2 rounded-xl border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition">Hủy</button>
+                <button onclick="submitBid()" class="px-5 py-2 rounded-xl bg-primary text-white font-headline text-xs font-bold hover:bg-blue-700 transition flex items-center gap-1 shadow-sm">
+                    <span class="material-symbols-outlined text-sm">send</span>
+                    Gửi Đề Xuất
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchView(view) {
+            const cView = document.getElementById('candidateViewSection');
+            const eView = document.getElementById('employerViewSection');
+            const btnC = document.getElementById('btnCandidateView');
+            const btnE = document.getElementById('btnEmployerView');
+
+            if (view === 'candidate') {
+                cView.classList.remove('hidden');
+                eView.classList.add('hidden');
+                btnC.className = "px-3.5 py-1.5 rounded-lg bg-white text-primary shadow-sm flex items-center gap-1";
+                btnE.className = "px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 flex items-center gap-1";
+            } else {
+                cView.classList.add('hidden');
+                eView.classList.remove('hidden');
+                btnE.className = "px-3.5 py-1.5 rounded-lg bg-white text-primary shadow-sm flex items-center gap-1";
+                btnC.className = "px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 flex items-center gap-1";
+            }
+        }
+
+        function acceptOffer(company) {
+            alert(`Bạn đã chấp nhận lời mời phỏng vấn từ ${company}! Hệ thống đã giải mã thông tin liên hệ và tự động khởi tạo phòng chat trực tiếp.`);
+            window.location.href = '../tr_chuy_n_tin_nh_n/code.html';
+        }
+
+        function openBidModal(id) {
+            document.getElementById('candidateTargetId').textContent = id;
+            const m = document.getElementById('bidModal');
+            m.classList.remove('opacity-0', 'pointer-events-none');
+        }
+
+        function closeBidModal() {
+            const m = document.getElementById('bidModal');
+            m.classList.add('opacity-0', 'pointer-events-none');
+        }
+
+        function submitBid() {
+            alert("Đã gửi lời mời Offer-First thành công! Ứng viên sẽ nhận được thông báo tức thời.");
+            closeBidModal();
+        }
+    </script>
+</body>
+</html>

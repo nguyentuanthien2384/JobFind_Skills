@@ -669,6 +669,179 @@
         "JF-009",
         "JF-003"
       ]
+    },
+    {
+      "local_id": "EXT-JF-009-PROOF-OF-SKILL",
+      "parent_screen_id": "JF-009",
+      "title": "Xác Thực Năng Lực Thực Tế (Proof-of-Skill) & GitHub Portfolio",
+      "canvas": {
+        "width": 1280,
+        "height": 1600,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/ho_so_xac_thuc_nang_luc_github_proof_of_skill/code.html",
+        "image": ".stitch/designs/ho_so_xac_thuc_nang_luc_github_proof_of_skill/screen.png"
+      },
+      "feature_id": "candidate-profile",
+      "reference_title": "Proof-of-Skill & GitHub Portfolio Verification",
+      "title_vi": "Xác Thực Năng Lực Thực Tế & GitHub Portfolio",
+      "integration_status": "proposal-complete",
+      "connected_screens": [
+        "JF-009",
+        "JF-012",
+        "JF-024"
+      ]
+    },
+    {
+      "local_id": "EXT-JF-024-MICRO-ASSESSMENT",
+      "parent_screen_id": "JF-024",
+      "title": "Micro-Assessment Lọc Spam Khi Nộp CV",
+      "canvas": {
+        "width": 1280,
+        "height": 1600,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/ung_tuyen_micro_assessment_test_nang_luc/code.html",
+        "image": ".stitch/designs/ung_tuyen_micro_assessment_test_nang_luc/screen.png"
+      },
+      "feature_id": "applications",
+      "reference_title": "Micro-Assessment & Anti-Spam Apply Flow",
+      "title_vi": "Micro-Assessment Lọc Spam Khi Nộp CV",
+      "integration_status": "proposal-complete",
+      "connected_screens": [
+        "JF-010",
+        "JF-024",
+        "JF-025",
+        "EXT-JF-018-PIZZA-TRACKER"
+      ]
+    },
+    {
+      "local_id": "EXT-JF-018-PIZZA-TRACKER",
+      "parent_screen_id": "JF-018",
+      "title": "Application Tracker Thời Gian Thực (Pizza-Tracker Cho CV) & SLA Phản Hồi",
+      "canvas": {
+        "width": 1280,
+        "height": 1700,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/don_ung_tuyen_pizza_tracker_sla_realtime/code.html",
+        "image": ".stitch/designs/don_ung_tuyen_pizza_tracker_sla_realtime/screen.png"
+      },
+      "feature_id": "applications",
+      "reference_title": "Realtime Pizza-Tracker, SLA & Constructive AI Rejection",
+      "title_vi": "Tiến Trình Ứng Tuyển Thời Gian Thực & SLA Phản Hồi",
+      "integration_status": "proposal-complete",
+      "connected_screens": [
+        "JF-018",
+        "JF-025",
+        "JF-033",
+        "JF-014"
+      ]
+    },
+    {
+      "local_id": "EXT-JF-014-AI-MOCK-INTERVIEW",
+      "parent_screen_id": "JF-014",
+      "title": "AI Mock Interview - Huấn Luyện Viên Phỏng Vấn Sát JD & CV",
+      "canvas": {
+        "width": 1280,
+        "height": 1600,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/luyen_phong_van_ai_mock_interview_jd/code.html",
+        "image": ".stitch/designs/luyen_phong_van_ai_mock_interview_jd/screen.png"
+      },
+      "feature_id": "interviews-offers",
+      "reference_title": "AI Mock Interview Coach by JD & CV",
+      "title_vi": "Luyện Phỏng Vấn Với AI Sát Theo JD & CV",
+      "integration_status": "proposal-complete",
+      "connected_screens": [
+        "JF-013",
+        "JF-014",
+        "JF-010",
+        "JF-030"
+      ]
+    },
+    {
+      "local_id": "EXT-JF-010-SKILL-GAP-ATS",
+      "parent_screen_id": "JF-010",
+      "title": "Đối Sánh Khoảng Cách Kỹ Năng (Skill Gap) & ATS Simulator",
+      "canvas": {
+        "width": 1280,
+        "height": 1600,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/doi_sanh_ky_nang_skill_gap_ats_simulator/code.html",
+        "image": ".stitch/designs/doi_sanh_ky_nang_skill_gap_ats_simulator/screen.png"
+      },
+      "feature_id": "job-detail",
+      "reference_title": "Skill Gap Analysis & ATS Scanner Simulator",
+      "title_vi": "Đối Sánh Khoảng Cách Kỹ Năng & ATS Simulator",
+      "integration_status": "proposal-complete",
+      "connected_screens": [
+        "JF-010",
+        "JF-024",
+        "EXT-JF-024-MICRO-ASSESSMENT"
+      ]
+    },
+    {
+      "local_id": "EXT-JF-012-REVERSE-RECRUITING",
+      "parent_screen_id": "JF-012",
+      "title": "Tuyển Dụng Đảo Chiều (Reverse Recruiting) & Hồ Sơ Ẩn Danh (Blind Profile)",
+      "canvas": {
+        "width": 1280,
+        "height": 1600,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/tuyen_dung_dao_chieu_blind_profile_bidding/code.html",
+        "image": ".stitch/designs/tuyen_dung_dao_chieu_blind_profile_bidding/screen.png"
+      },
+      "feature_id": "candidate-search",
+      "reference_title": "Reverse Recruiting, Blind Profile & Offer-First Bidding",
+      "title_vi": "Tuyển Dụng Đảo Chiều & Hồ Sơ Ẩn Danh",
+      "integration_status": "proposal-complete",
+      "connected_screens": [
+        "JF-012",
+        "JF-009",
+        "JF-030",
+        "JF-003"
+      ]
+    },
+    {
+      "local_id": "EXT-JF-006-VERIFIED-REVIEWS",
+      "parent_screen_id": "JF-006",
+      "title": "Đánh Giá Doanh Nghiệp Có Xác Thực (Verified Candidate Reviews) & Trải Nghiệm Phỏng Vấn",
+      "canvas": {
+        "width": 1280,
+        "height": 1600,
+        "device": "DESKTOP"
+      },
+      "stitch_screen_id": null,
+      "assets": {
+        "html": ".stitch/designs/danh_gia_cong_ty_xac_thuc_verified_reviews/code.html",
+        "image": ".stitch/designs/danh_gia_cong_ty_xac_thuc_verified_reviews/screen.png"
+      },
+      "feature_id": "companies",
+      "reference_title": "Verified Candidate Reviews & Interview Experience Ratings",
+      "title_vi": "Đánh Giá Công Ty Có Xác Thực & Trải Nghiệm Phỏng Vấn",
+      "integration_status": "proposal-complete",
+      "connected_screens": [
+        "JF-006",
+        "JF-007",
+        "JF-014",
+        "JF-018"
+      ]
     }
   ],
   "language": "vi",

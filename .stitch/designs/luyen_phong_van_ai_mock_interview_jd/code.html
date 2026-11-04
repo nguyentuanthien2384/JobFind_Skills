@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>AI Mock Interview - Huấn Luyện Viên Phỏng Vấn Cá Nhân 1-on-1 | JobFind</title>
+    <!-- Phông chữ chuẩn JobFind: Be Vietnam Pro & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#F7F9FB",
+                        "on-surface": "#191C1E",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container-low": "#F2F4F6",
+                        "surface-container": "#ECEEF0",
+                        "surface-container-high": "#E6E8EA",
+                        "surface-container-highest": "#E0E3E5",
+                        "on-surface-variant": "#434655",
+                        outline: "#737686",
+                        "outline-variant": "#C3C6D7",
+                        primary: "#004AC6",
+                        "primary-container": "#2563EB",
+                        "on-primary": "#FFFFFF",
+                        "on-primary-container": "#EEEFFF",
+                        secondary: "#006591",
+                        "secondary-container": "#39B8FD",
+                        emerald: {
+                            500: "#10B981",
+                            600: "#059669",
+                            700: "#047857"
+                        },
+                        amber: {
+                            500: "#F59E0B",
+                            600: "#D97706"
+                        }
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Be Vietnam Pro", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        mono: ["JetBrains Mono", "monospace"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(16px);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 74, 198, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+        .ai-bubble {
+            background: linear-gradient(135deg, #F0F4FF 0%, #E8F0FE 100%);
+            border: 1px solid #D2E3FC;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+        <div class="flex items-center justify-between px-6 py-3 max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-3">
+                <a href="../l_ch_ph_ng_v_n_agenda/code.html" class="flex items-center gap-1.5 text-xs font-semibold text-slate-600 hover:text-primary">
+                    <span class="material-symbols-outlined text-sm">arrow_back</span>
+                    Quay lại Lịch Phỏng Vấn
+                </a>
+                <span class="text-slate-300">|</span>
+                <span class="font-headline font-bold text-sm text-slate-900 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-purple-600 text-lg">psychology</span>
+                    AI Mock Interview: VNG Corporation - Senior Frontend Developer
+                </span>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full bg-purple-50 text-purple-700 text-xs font-bold border border-purple-200 flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-purple-600 animate-pulse"></span>
+                    AI Huấn Luyện Viên 1-on-1 Sát JD & CV
+                </span>
+                <button onclick="finishSession()" class="px-3 py-1.5 rounded-xl bg-primary text-white text-xs font-bold hover:bg-blue-700 transition">
+                    Kết Thúc & Xem Đánh Giá
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Grid: 2 Columns (Interview Stream 65% + Context & Coaching Insights 35%) -->
+    <main class="pt-20 pb-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+            <!-- Left 8 Cols: Interactive Mock Interview Chat Session -->
+            <div class="lg:col-span-8 flex flex-col h-[calc(100vh-120px)] bg-white rounded-2xl border border-slate-200 card-shadow overflow-hidden">
+                <!-- Interview Header Card -->
+                <div class="p-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-purple-600 to-indigo-600 text-white flex items-center justify-center font-bold shadow-sm">
+                            <span class="material-symbols-outlined text-lg">smart_toy</span>
+                        </div>
+                        <div>
+                            <div class="font-headline font-bold text-sm text-slate-900 flex items-center gap-2">
+                                AI Interviewer (Đóng vai: Tech Lead VNG)
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-800">Chuyên môn sâu</span>
+                            </div>
+                            <div class="text-[11px] text-slate-500">Mô phỏng phỏng vấn 5 vòng câu hỏi thực tế sát với JD Senior Frontend</div>
+                        </div>
+                    </div>
+                    <!-- Round counter -->
+                    <div class="text-right">
+                        <div class="text-[10px] text-slate-400 uppercase font-bold tracking-wider">Tiến trình</div>
+                        <div class="text-xs font-bold text-primary font-mono">Câu hỏi 3 / 5</div>
+                    </div>
+                </div>
+
+                <!-- Chat Messages Scroll Container -->
+                <div class="flex-1 p-5 overflow-y-auto space-y-5" id="chatStream">
+                    <!-- Round 1: AI Question 1 (Ice breaker) -->
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-bold shrink-0">AI</div>
+                        <div class="ai-bubble p-4 rounded-2xl max-w-xl text-xs text-slate-800 leading-relaxed shadow-sm">
+                            <div class="font-bold text-purple-900 mb-1 flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-sm">question_answer</span>
+                                Vòng 1: Giới thiệu & Tổng quan dự án thực chiến
+                            </div>
+                            Chào Bình! Anh là Hoàng, Tech Lead phụ trách mảng Web Platform tại VNG. Qua CV và tài khoản GitHub của em, anh thấy em có kinh nghiệm vững với React và TypeScript. Em có thể chia sẻ một bài toán tối ưu hiệu năng phức tạp nhất mà em từng giải quyết trong dự án thực tế không?
+                        </div>
+                    </div>
+
+                    <!-- Round 1: User Answer -->
+                    <div class="flex items-start gap-3 justify-end">
+                        <div class="bg-blue-600 text-white p-4 rounded-2xl max-w-xl text-xs leading-relaxed shadow-sm">
+                            Em chào anh Hoàng. Trong dự án gần nhất, hệ thống bảng điều khiển của công ty em bị giật lag khi render bảng dữ liệu hơn 10.000 dòng. Em đã giải quyết bằng cách áp dụng <strong>Virtual Windowing (react-window)</strong> chỉ render các dòng hiển thị trong viewport, kết hợp với <strong>Web Workers</strong> để tính toán lọc và sắp xếp dữ liệu ở background thread, giúp giảm thời gian Main Thread blocking từ 850ms xuống dưới 16ms (đạt 60fps).
+                        </div>
+                        <img class="w-8 h-8 rounded-full border border-slate-300 object-cover shrink-0" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Bình"/>
+                    </div>
+
+                    <!-- AI Feedback on Answer 1 -->
+                    <div class="flex items-start gap-3 pl-11">
+                        <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 leading-relaxed max-w-xl">
+                            <div class="font-bold flex items-center gap-1 text-emerald-800 mb-0.5">
+                                <span class="material-symbols-outlined text-sm">thumb_up</span>
+                                Nhận xét tức thời từ Huấn luyện viên AI:
+                            </div>
+                            <strong>Điểm mạnh:</strong> Trả lời mạch lạc, sử dụng các con số định lượng cụ thể (10.000 dòng, 850ms $\rightarrow$ 16ms). Thể hiện sự am hiểu sâu về Virtualization và Web Worker.<br/>
+                            <span class="text-emerald-700 font-medium">Đánh giá câu trả lời: 9.2 / 10 Điểm.</span>
+                        </div>
+                    </div>
+
+                    <!-- Round 2: AI Question 2 (Deep Dive React 18) -->
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-bold shrink-0">AI</div>
+                        <div class="ai-bubble p-4 rounded-2xl max-w-xl text-xs text-slate-800 leading-relaxed shadow-sm">
+                            <div class="font-bold text-purple-900 mb-1 flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-sm">code</span>
+                                Vòng 2: Kỹ năng chuyên môn sâu (React 18 Concurrent Features)
+                            </div>
+                            Rất tốt! Ở VNG chúng tôi đang chuyển dịch sang React 18 Concurrent Rendering. Giả sử có một tính năng tìm kiếm realtime, khi người dùng gõ phím liên tục thì UI bộ lọc bị gián đoạn. Bạn sẽ ưu tiên sử dụng `useTransition` hay `useDeferredValue` trong trường hợp này, và giải thích sự khác biệt cốt lõi giữa hai API này?
+                        </div>
+                    </div>
+
+                    <!-- Round 2: User Answer -->
+                    <div class="flex items-start gap-3 justify-end">
+                        <div class="bg-blue-600 text-white p-4 rounded-2xl max-w-xl text-xs leading-relaxed shadow-sm">
+                            Dạ, em sẽ dùng `useDeferredValue` khi prop hoặc state giá trị tìm kiếm được truyền từ component cha xuống mà mình không trực tiếp kiểm soát hàm setState. Còn nếu hàm cập nhật state nằm ngay tại component hiện tại, em sẽ bọc lệnh setState vào `startTransition`. Cả hai đều đánh dấu cập nhật đó là non-urgent, giúp giữ cho ô input phản hồi gõ phím tức thì mà không bị đơ giật.
+                        </div>
+                        <img class="w-8 h-8 rounded-full border border-slate-300 object-cover shrink-0" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Bình"/>
+                    </div>
+
+                    <!-- Round 3: AI Question 3 (Behavioral / Conflict Resolution) -->
+                    <div class="flex items-start gap-3">
+                        <div class="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-bold shrink-0">AI</div>
+                        <div class="ai-bubble p-4 rounded-2xl max-w-xl text-xs text-slate-800 leading-relaxed shadow-sm">
+                            <div class="font-bold text-purple-900 mb-1 flex items-center gap-1.5">
+                                <span class="material-symbols-outlined text-sm">groups</span>
+                                Vòng 3: Tình huống giải quyết xung đột dự án & Áp lực Deadline
+                            </div>
+                            Câu trả lời về Concurrent rất chính xác. Bây giờ là câu hỏi tình huống: Giả sử Product Manager (PO) yêu cầu bạn release một tính năng lớn trong 3 ngày tới, nhưng bạn nhận thấy mã nguồn hiện tại còn nhiều lỗ hổng bảo mật Frontend và chưa viết đủ Unit Test. Bạn sẽ trao đổi và xử lý tình huống này với team như thế nào?
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input Controls (Mic Speech-to-Text + Text Area) -->
+                <div class="p-4 bg-slate-50 border-t border-slate-200">
+                    <div class="relative flex items-end gap-2">
+                        <button class="p-2.5 rounded-xl bg-slate-200 text-slate-700 hover:bg-slate-300 transition shrink-0" title="Ghi âm câu trả lời (Speech-to-Text)">
+                            <span class="material-symbols-outlined text-lg">mic</span>
+                        </button>
+                        <div class="flex-1 relative">
+                            <textarea id="answerInput" rows="2" class="w-full rounded-xl border border-slate-300 p-2.5 text-xs text-slate-800 focus:border-primary focus:ring-primary pr-20 resize-none" placeholder="Nhập câu trả lời của bạn hoặc nhấn icon Mic để nói..."></textarea>
+                            <span class="absolute bottom-2 right-2 text-[10px] text-slate-400">Enter để gửi</span>
+                        </div>
+                        <button onclick="sendAnswer()" class="px-4 py-2.5 rounded-xl bg-primary text-white font-headline text-xs font-bold hover:bg-blue-700 transition flex items-center gap-1 shrink-0 shadow-sm">
+                            <span>Gửi</span>
+                            <span class="material-symbols-outlined text-sm">send</span>
+                        </button>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] text-slate-500 mt-2 px-1">
+                        <span>Gợi ý: Áp dụng phương pháp STAR (Situation - Task - Action - Result)</span>
+                        <span class="text-primary cursor-pointer hover:underline" onclick="getHint()">💡 Nhận gợi ý ý tưởng từ AI</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right 4 Cols: Live Coaching Assessment & Radar Chart -->
+            <div class="lg:col-span-4 space-y-6">
+                <!-- Evaluation Card -->
+                <div class="bg-white rounded-2xl p-5 border border-slate-200 card-shadow">
+                    <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+                        <h3 class="font-headline font-bold text-sm text-slate-900 flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-purple-600 text-base">analytics</span>
+                            Đánh Giá Toàn Diện Sau 2 Vòng
+                        </h3>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 font-mono">
+                            8.8 / 10
+                        </span>
+                    </div>
+
+                    <!-- 5 Dimensions Progress Bars -->
+                    <div class="space-y-3 mb-5 text-xs">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-slate-600">Độ sâu kiến thức kỹ thuật (JD Match)</span>
+                                <span class="font-bold text-slate-900">92%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-emerald-500 h-full rounded-full" style="width: 92%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-slate-600">Khả năng diễn đạt & cấu trúc STAR</span>
+                                <span class="font-bold text-slate-900">85%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-blue-600 h-full rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-slate-600">Tư duy giải quyết bài toán lớn</span>
+                                <span class="font-bold text-slate-900">88%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-purple-600 h-full rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-slate-600">Độ tự tin & phong thái phỏng vấn</span>
+                                <span class="font-bold text-slate-900">80%</span>
+                            </div>
+                            <div class="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
+                                <div class="bg-amber-500 h-full rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Strengths and Weaknesses -->
+                    <div class="space-y-3 pt-3 border-t border-slate-100 text-xs">
+                        <div class="p-3 rounded-xl bg-emerald-50/60 border border-emerald-200">
+                            <div class="font-bold text-emerald-800 flex items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-xs">verified</span>
+                                Điểm mạnh nổi bật:
+                            </div>
+                            <p class="text-slate-700 leading-relaxed">
+                                Kiến thức React 18 sâu sát với thực tế, nắm rõ sự khác biệt giữa `useTransition` và `useDeferredValue`. Dẫn chứng số liệu cụ thể.
+                            </p>
+                        </div>
+
+                        <div class="p-3 rounded-xl bg-amber-50/60 border border-amber-200">
+                            <div class="font-bold text-amber-800 flex items-center gap-1 mb-1">
+                                <span class="material-symbols-outlined text-xs">warning</span>
+                                Cần lưu ý cải thiện:
+                            </div>
+                            <p class="text-slate-700 leading-relaxed">
+                                Khi giải quyết câu hỏi tình huống với PM, nên nhấn mạnh vào việc đưa ra giải pháp thay thế (Plan B: Release MVP rút gọn trước) thay vì từ chối thẳng thừng.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JD Quick Reference Card -->
+                <div class="bg-white rounded-2xl p-5 border border-slate-200 card-shadow text-xs">
+                    <h3 class="font-headline font-bold text-sm text-slate-900 mb-2 flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-primary text-base">description</span>
+                        Dữ Liệu Đối Soát Từ JD & CV
+                    </h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-xs text-blue-600">business</span>
+                            <span>Doanh nghiệp: <strong>VNG Corporation</strong></span>
+                        </li>
+                        <li class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-xs text-blue-600">badge</span>
+                            <span>Vị trí: <strong>Senior Frontend Developer</strong></span>
+                        </li>
+                        <li class="flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-xs text-blue-600">schedule</span>
+                            <span>Lịch hẹn thật: <strong>05/11/2026 lúc 14:30</strong></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function sendAnswer() {
+            const input = document.getElementById('answerInput');
+            if (!input.value.trim()) return;
+            const chatStream = document.getElementById('chatStream');
+            const userMsg = document.createElement('div');
+            userMsg.className = 'flex items-start gap-3 justify-end';
+            userMsg.innerHTML = `
+                <div class="bg-blue-600 text-white p-4 rounded-2xl max-w-xl text-xs leading-relaxed shadow-sm">
+                    ${input.value}
+                </div>
+                <img class="w-8 h-8 rounded-full border border-slate-300 object-cover shrink-0" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"/>
+            `;
+            chatStream.appendChild(userMsg);
+            input.value = '';
+            chatStream.scrollTop = chatStream.scrollHeight;
+
+            // Simulate AI reply
+            setTimeout(() => {
+                const aiMsg = document.createElement('div');
+                aiMsg.className = 'flex items-start gap-3';
+                aiMsg.innerHTML = `
+                    <div class="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-bold shrink-0">AI</div>
+                    <div class="ai-bubble p-4 rounded-2xl max-w-xl text-xs text-slate-800 leading-relaxed shadow-sm">
+                        <div class="font-bold text-purple-900 mb-1 flex items-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm">thumb_up</span>
+                            Nhận xét từ AI Lead:
+                        </div>
+                        Cách tiếp cận của bạn rất chuyên nghiệp! Việc đề xuất release bản MVP rút gọn đảm bảo tính an toàn hệ thống và giữ được cam kết với khách hàng là phương án tối ưu nhất. Bạn đã sẵn sàng 95% cho buổi phỏng vấn chính thức ngày mai!
+                    </div>
+                `;
+                chatStream.appendChild(aiMsg);
+                chatStream.scrollTop = chatStream.scrollHeight;
+            }, 1000);
+        }
+
+        function getHint() {
+            alert("Gợi ý từ AI: Hãy chia câu trả lời làm 3 phần: 1. Đánh giá rủi ro (Risk Assessment); 2. Đề xuất phương án thay thế (Feature Flag / Staged Rollout); 3. Thuyết phục PM và thống nhất giải pháp an toàn.");
+        }
+
+        function finishSession() {
+            alert("Chúc mừng bạn đã hoàn thành buổi phỏng vấn thử với AI! Báo cáo chi tiết đã được lưu vào mục Hồ sơ & Lịch phỏng vấn.");
+        }
+    </script>
+</body>
+</html>

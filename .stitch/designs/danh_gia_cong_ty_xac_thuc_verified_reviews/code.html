@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Đánh Giá Doanh Nghiệp Có Xác Thực (Verified Candidate Reviews) - VNG Corporation - JobFind</title>
+    <!-- Phông chữ chuẩn JobFind: Be Vietnam Pro & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#F7F9FB",
+                        "on-surface": "#191C1E",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container-low": "#F2F4F6",
+                        "surface-container": "#ECEEF0",
+                        "surface-container-high": "#E6E8EA",
+                        "surface-container-highest": "#E0E3E5",
+                        "on-surface-variant": "#434655",
+                        outline: "#737686",
+                        "outline-variant": "#C3C6D7",
+                        primary: "#004AC6",
+                        "primary-container": "#2563EB",
+                        "on-primary": "#FFFFFF",
+                        "on-primary-container": "#EEEFFF",
+                        secondary: "#006591",
+                        "secondary-container": "#39B8FD",
+                        emerald: {
+                            500: "#10B981",
+                            600: "#059669",
+                            700: "#047857"
+                        },
+                        amber: {
+                            500: "#F59E0B",
+                            600: "#D97706"
+                        }
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Be Vietnam Pro", "sans-serif"],
+                        body: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(16px);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 74, 198, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+        <div class="flex items-center justify-between px-6 py-3.5 max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-8">
+                <a href="../tuy_n_d_ng_vn_homepage/code.html" class="text-2xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-sky-500 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl text-primary font-bold">work</span>
+                    JobFind
+                </a>
+                <nav class="hidden md:flex items-center gap-6 font-headline text-sm font-medium">
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../tuy_n_d_ng_vn_search_results/code.html">Tìm việc làm</a>
+                    <a class="text-blue-700 font-semibold border-b-2 border-blue-600 pb-1" href="../danh_s_ch_c_ng_ty_tuy_n_d_ng_vn/code.html">Danh sách công ty</a>
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../h_s_c_a_t_i_tuy_n_d_ng_vn/code.html">Hồ sơ cá nhân</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <button onclick="openReviewModal()" class="px-4 py-2 rounded-xl bg-primary text-white font-headline text-xs font-bold hover:bg-blue-700 transition flex items-center gap-1.5 shadow-sm">
+                    <span class="material-symbols-outlined text-sm">rate_review</span>
+                    Viết Đánh Giá Phỏng Vấn
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-20 max-w-7xl mx-auto px-4 sm:px-6">
+        <!-- Breadcrumb -->
+        <div class="py-4 flex items-center gap-2 text-xs text-on-surface-variant">
+            <a href="../tuy_n_d_ng_vn_homepage/code.html" class="hover:text-primary">Trang chủ</a>
+            <span>/</span>
+            <a href="../danh_s_ch_c_ng_ty_tuy_n_d_ng_vn/code.html" class="hover:text-primary">Công ty</a>
+            <span>/</span>
+            <a href="../company_profile_editor_vng_corporation/code.html" class="hover:text-primary">VNG Corporation</a>
+            <span>/</span>
+            <span class="text-primary font-semibold">Đánh Giá Có Xác Thực (Verified Reviews)</span>
+        </div>
+
+        <!-- Company Header Card -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 card-shadow mb-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+            <div class="flex items-start gap-5">
+                <img class="w-20 h-20 rounded-2xl border border-slate-200 bg-white p-3 object-contain shrink-0" src="https://vng.com.vn/wp-content/themes/vng/assets/images/logo.png" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=80&auto=format&fit=crop&q=80'" alt="VNG Logo"/>
+                <div>
+                    <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                        <h1 class="text-2xl font-headline font-bold text-slate-900">VNG Corporation</h1>
+                        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                            <span class="material-symbols-outlined text-xs">verified</span>
+                            DOANH NGHIỆP UY TÍN XÁC THỰC
+                        </span>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-4 text-xs text-slate-600 mb-3">
+                        <span class="flex items-center gap-1 text-amber-500 font-bold text-sm">
+                            <span class="material-symbols-outlined text-base fill-1">star</span>
+                            4.8 / 5.0
+                        </span>
+                        <span>•</span>
+                        <span class="font-semibold text-slate-800">184 Đánh giá đã xác thực</span>
+                        <span>•</span>
+                        <span>Quy mô: 2.000+ nhân sự</span>
+                        <span>•</span>
+                        <span>Công nghệ & Trò chơi trực tuyến</span>
+                    </div>
+                    <!-- Response SLA Badge -->
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-900">
+                        <span class="material-symbols-outlined text-primary text-base">timer</span>
+                        <span>Chỉ số SLA Tuyển Dụng: Phản hồi <strong class="text-primary font-bold">94% hồ sơ trong 48h</strong> • Thời gian phản hồi trung bình: <strong class="text-slate-800">1.2 ngày</strong></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scorecard Summary -->
+            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-200 text-center min-w-[180px] shrink-0">
+                <div class="text-[11px] text-slate-500 uppercase font-bold tracking-wider mb-1">Mức Độ Hài Lòng Phỏng Vấn</div>
+                <div class="text-3xl font-headline font-bold text-emerald-600">96%</div>
+                <div class="text-[11px] text-slate-600 mt-1">Ứng viên khuyên nên ứng tuyển</div>
+            </div>
+        </div>
+
+        <!-- Section 1: Detailed Interview Experience Breakdown (Specific Metric Ratings) -->
+        <div class="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 card-shadow mb-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-100 mb-6 gap-2">
+                <div>
+                    <h2 class="text-lg font-headline font-bold text-slate-900 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary">fact_check</span>
+                        Chỉ Số Trải Nghiệm Phỏng Vấn Tuyển Dụng (Được Kiểm Chứng 100%)
+                    </h2>
+                    <p class="text-xs text-on-surface-variant">Chỉ ứng viên đã nộp CV và tham gia lịch hẹn phỏng vấn thực tế trên JobFind mới có quyền chấm điểm</p>
+                </div>
+                <span class="text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                    Chống Seeding & Review Ảo
+                </span>
+            </div>
+
+            <!-- 4 Specific Metrics Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-slate-700">Độ Chuyên Nghiệp Của HR</span>
+                        <span class="text-xs font-bold text-amber-600 flex items-center gap-0.5">
+                            <span class="material-symbols-outlined text-xs">star</span> 4.9 / 5
+                        </span>
+                    </div>
+                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 98%"></div>
+                    </div>
+                    <p class="text-[11px] text-slate-500">Giao tiếp thân thiện, phản hồi đúng hẹn, hướng dẫn chi tiết quy trình.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-slate-700">Đề Thi / Phỏng Vấn Sát JD</span>
+                        <span class="text-xs font-bold text-amber-600 flex items-center gap-0.5">
+                            <span class="material-symbols-outlined text-xs">star</span> 4.8 / 5
+                        </span>
+                    </div>
+                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 96%"></div>
+                    </div>
+                    <p class="text-[11px] text-slate-500">Hỏi đúng công nghệ React/TypeScript đã ghi trong bài đăng tuyển dụng.</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-slate-700">Đúng Giờ Trên Lịch Hẹn</span>
+                        <span class="text-xs font-bold text-amber-600 flex items-center gap-0.5">
+                            <span class="material-symbols-outlined text-xs">star</span> 4.9 / 5
+                        </span>
+                    </div>
+                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 98%"></div>
+                    </div>
+                    <p class="text-[11px] text-slate-500">Người phỏng vấn có mặt đúng giờ hẹn trên lịch (sai số dưới 3 phút).</p>
+                </div>
+
+                <div class="p-4 rounded-xl bg-slate-50 border border-slate-200">
+                    <div class="flex items-center justify-between mb-2">
+                        <span class="text-xs font-bold text-slate-700">Tốc Độ Trả Kết Quả</span>
+                        <span class="text-xs font-bold text-amber-600 flex items-center gap-0.5">
+                            <span class="material-symbols-outlined text-xs">star</span> 4.7 / 5
+                        </span>
+                    </div>
+                    <div class="w-full bg-slate-200 h-2 rounded-full overflow-hidden mb-2">
+                        <div class="bg-emerald-500 h-full rounded-full" style="width: 94%"></div>
+                    </div>
+                    <p class="text-[11px] text-slate-500">Có email thông báo đỗ/trượt kèm constructive feedback trong 3-5 ngày.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Review List with "Verified Candidate" Badge Separation -->
+        <div class="space-y-6">
+            <!-- Filter Pills -->
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center gap-2 p-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-semibold">
+                    <button class="px-3.5 py-1.5 rounded-lg bg-white text-primary shadow-sm flex items-center gap-1.5">
+                        <span class="material-symbols-outlined text-xs text-emerald-600">verified</span>
+                        Đã Phỏng Vấn Thực Tế (Verified Candidate - 142)
+                    </button>
+                    <button class="px-3.5 py-1.5 rounded-lg text-slate-600 hover:text-slate-900">
+                        Đánh Giá Cựu / Nhân Viên (42)
+                    </button>
+                </div>
+                <div class="text-xs text-slate-500">
+                    Bộ lọc: <strong>Mới nhất</strong>
+                </div>
+            </div>
+
+            <!-- Review Card 1 (Verified Candidate) -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-emerald-500/60 card-shadow">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-100 gap-3 mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm">
+                            NB
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-headline font-bold text-sm text-slate-900">Ứng viên Senior Frontend Developer</span>
+                                <!-- VERIFIED CANDIDATE BADGE -->
+                                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    <span class="material-symbols-outlined text-xs">verified</span>
+                                    VERIFIED CANDIDATE • ĐÃ PHỎNG VẤN THỰC TẾ
+                                </span>
+                            </div>
+                            <div class="text-[11px] text-slate-500">Lịch phỏng vấn: 18/10/2026 • Đơn ứng tuyển: #APP-VNG-88421</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
+                        <span class="material-symbols-outlined text-base">star</span>
+                        <span class="material-symbols-outlined text-base">star</span>
+                        <span class="material-symbols-outlined text-base">star</span>
+                        <span class="material-symbols-outlined text-base">star</span>
+                        <span class="material-symbols-outlined text-base">star</span>
+                        <span class="text-slate-700 ml-1 text-xs font-semibold">(5.0)</span>
+                    </div>
+                </div>
+
+                <!-- Sub-scores -->
+                <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-slate-50 text-[11px] text-slate-700 font-medium mb-4">
+                    <div>HR chuyên nghiệp: <strong class="text-emerald-700">5/5</strong></div>
+                    <div>Đề thi sát JD: <strong class="text-emerald-700">5/5</strong></div>
+                    <div>Đúng giờ lịch hẹn: <strong class="text-emerald-700">5/5</strong></div>
+                </div>
+
+                <h3 class="font-headline font-bold text-sm text-slate-900 mb-2">"Quy trình phỏng vấn văn minh, đề thi chuyên môn cực kỳ thực tế"</h3>
+                <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                    Mình tham gia phỏng vấn vị trí Senior Frontend. Anh Tech Lead vào phòng Zoom đúng giờ 14:30. Đề bài xoay quanh việc tối ưu Virtual DOM và React 18 Concurrent Rendering đúng như những gì đã ghi trong JD. Đặc biệt sau buổi phỏng vấn 2 ngày, dù chưa nhận offer đợt này do team cần bổ sung kiến thức về WebRTC, mình vẫn nhận được thư AI feedback chi tiết giải thích rõ lý do. Rất tôn trọng ứng viên!
+                </p>
+
+                <!-- Company Response to Review -->
+                <div class="p-3.5 rounded-xl bg-blue-50/60 border border-blue-200 text-xs text-slate-800">
+                    <div class="flex items-center gap-2 font-bold text-primary mb-1">
+                        <span class="material-symbols-outlined text-sm">reply</span>
+                        Phản hồi từ Ban Tuyển Dụng VNG Corporation:
+                    </div>
+                    <p class="text-[11px] text-slate-600 leading-relaxed">
+                        Cảm ơn bạn đã dành thời gian tham gia phỏng vấn tại VNG. Dữ liệu hồ sơ của bạn vẫn được lưu trữ ưu tiên trong talent pool và team HR sẽ chủ động liên hệ lại khi có dự án Web Platform mới phù hợp!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Review Card 2 (Verified Candidate) -->
+            <div class="bg-white rounded-2xl p-6 border-2 border-emerald-500/60 card-shadow">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-100 gap-3 mb-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center font-bold text-sm">
+                            TT
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <span class="font-headline font-bold text-sm text-slate-900">Ứng viên DevOps / Cloud Engineer</span>
+                                <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                    <span class="material-symbols-outlined text-xs">verified</span>
+                                    VERIFIED CANDIDATE • ĐÃ PHỎNG VẤN THỰC TẾ
+                                </span>
+                            </div>
+                            <div class="text-[11px] text-slate-500">Lịch phỏng vấn: 05/10/2026 • Đơn ứng tuyển: #APP-VNG-77312</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-1 text-amber-500 font-bold text-sm">
+                        <span class="material-symbols-outlined text-base">star</span>
+                        <span class="material-symbols-outlined text-base">star</span>
+                        <span class="material-symbols-outlined text-base">star</span>
+                        <span class="material-symbols-outlined text-base">star</span>
+                        <span class="material-symbols-outlined text-base text-slate-300">star</span>
+                        <span class="text-slate-700 ml-1 text-xs font-semibold">(4.0)</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-slate-50 text-[11px] text-slate-700 font-medium mb-4">
+                    <div>HR chuyên nghiệp: <strong class="text-emerald-700">5/5</strong></div>
+                    <div>Đề thi sát JD: <strong class="text-emerald-700">4/5</strong></div>
+                    <div>Đúng giờ lịch hẹn: <strong class="text-emerald-700">5/5</strong></div>
+                </div>
+
+                <h3 class="font-headline font-bold text-sm text-slate-900 mb-2">"Trải nghiệm tốt, văn phòng VNG Campus hiện đại"</h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                    Vòng kỹ thuật diễn ra khá căng thẳng với nhiều câu hỏi thực tế về Kubernetes cluster troubleshooting. Tuy nhiên các anh interviewer hướng dẫn gợi mở rất nhiệt tình.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal: Write Verified Review -->
+    <div id="reviewModal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-200">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 card-shadow">
+            <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-4">
+                <h3 class="font-headline font-bold text-base text-slate-900 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-emerald-600">verified</span>
+                    Đánh Giá Trải Nghiệm Phỏng Vấn (Verified Review)
+                </h3>
+                <button onclick="closeReviewModal()" class="text-slate-400 hover:text-slate-600">
+                    <span class="material-symbols-outlined">close</span>
+                </button>
+            </div>
+
+            <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 mb-4">
+                Tài khoản của bạn đã được hệ thống xác nhận: Đã hoàn thành phỏng vấn vị trí <strong>Senior Frontend Developer</strong> vào ngày 02/11/2026. Đánh giá của bạn sẽ mang huy hiệu <strong>Verified Candidate</strong>.
+            </div>
+
+            <div class="space-y-4 text-xs">
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Độ chuyên nghiệp của HR (1 - 5 sao):</label>
+                    <select class="w-full rounded-xl border border-slate-300 p-2 text-xs">
+                        <option>⭐⭐⭐⭐⭐ (5/5) Rất chuyên nghiệp và đúng giờ</option>
+                        <option>⭐⭐⭐⭐ (4/5) Tốt</option>
+                        <option>⭐⭐⭐ (3/5) Bình thường</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Đề phỏng vấn có sát JD không:</label>
+                    <select class="w-full rounded-xl border border-slate-300 p-2 text-xs">
+                        <option>⭐⭐⭐⭐⭐ (5/5) Rất sát, hỏi đúng trọng tâm kỹ năng cần tuyển</option>
+                        <option>⭐⭐⭐⭐ (4/5) Tương đối sát</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block font-semibold text-slate-700 mb-1">Nhận xét chi tiết:</label>
+                    <textarea rows="3" class="w-full rounded-xl border border-slate-300 p-2.5 text-xs text-slate-800 focus:border-primary focus:ring-primary" placeholder="Chia sẻ kinh nghiệm phỏng vấn, câu hỏi thú vị, hoặc thái độ của ban tuyển dụng..."></textarea>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-end gap-2">
+                <button onclick="closeReviewModal()" class="px-4 py-2 rounded-xl border border-slate-300 text-xs font-semibold text-slate-700 hover:bg-slate-50 transition">Hủy</button>
+                <button onclick="submitReview()" class="px-5 py-2 rounded-xl bg-primary text-white font-headline text-xs font-bold hover:bg-blue-700 transition flex items-center gap-1 shadow-sm">
+                    <span class="material-symbols-outlined text-sm">send</span>
+                    Gửi Đánh Giá Xác Thực
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openReviewModal() {
+            document.getElementById('reviewModal').classList.remove('opacity-0', 'pointer-events-none');
+        }
+        function closeReviewModal() {
+            document.getElementById('reviewModal').classList.add('opacity-0', 'pointer-events-none');
+        }
+        function submitReview() {
+            alert("Đã gửi đánh giá phỏng vấn thành công! Đánh giá đã được gắn huy hiệu Verified Candidate.");
+            closeReviewModal();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Xác Thực Năng Lực Thực Tế (Proof-of-Skill) & GitHub Portfolio - JobFind</title>
+    <!-- Phông chữ chuẩn JobFind: Be Vietnam Pro & Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        surface: "#F7F9FB",
+                        "on-surface": "#191C1E",
+                        "surface-container-lowest": "#FFFFFF",
+                        "surface-container-low": "#F2F4F6",
+                        "surface-container": "#ECEEF0",
+                        "surface-container-high": "#E6E8EA",
+                        "surface-container-highest": "#E0E3E5",
+                        "on-surface-variant": "#434655",
+                        outline: "#737686",
+                        "outline-variant": "#C3C6D7",
+                        primary: "#004AC6",
+                        "primary-container": "#2563EB",
+                        "on-primary": "#FFFFFF",
+                        "on-primary-container": "#EEEFFF",
+                        secondary: "#006591",
+                        "secondary-container": "#39B8FD",
+                        tertiary: "#006A4E",
+                        "tertiary-container": "#70F8C7",
+                        emerald: {
+                            500: "#10B981",
+                            600: "#059669",
+                            700: "#047857"
+                        },
+                        amber: {
+                            500: "#F59E0B",
+                            600: "#D97706"
+                        }
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        "2xl": "1rem",
+                        full: "9999px"
+                    },
+                    fontFamily: {
+                        headline: ["Be Vietnam Pro", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                        label: ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #004AC6 0%, #1D4ED8 60%, #0284C7 100%);
+        }
+        .github-gradient {
+            background: linear-gradient(135deg, #24292F 0%, #161B22 100%);
+        }
+        .verified-badge {
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+            border: 1px solid #10B981;
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(16px);
+        }
+        .card-shadow {
+            box-shadow: 0 4px 20px -2px rgba(0, 74, 198, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+        }
+        /* Heatmap grid style */
+        .commit-cell {
+            width: 13px;
+            height: 13px;
+            border-radius: 2px;
+        }
+        .level-0 { background-color: #EBEDF0; }
+        .level-1 { background-color: #9BE9A8; }
+        .level-2 { background-color: #40C463; }
+        .level-3 { background-color: #30A14E; }
+        .level-4 { background-color: #216E39; }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface antialiased">
+    <!-- TopNavBar chuẩn JobFind -->
+    <header class="fixed top-0 w-full z-50 glass-nav border-b border-outline-variant/30">
+        <div class="flex items-center justify-between px-6 py-3.5 max-w-7xl mx-auto w-full">
+            <div class="flex items-center gap-8">
+                <a href="../tuy_n_d_ng_vn_homepage/code.html" class="text-2xl font-headline font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-700 to-sky-500 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-3xl text-primary font-bold">work</span>
+                    JobFind
+                </a>
+                <nav class="hidden md:flex items-center gap-6 font-headline text-sm font-medium">
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../tuy_n_d_ng_vn_search_results/code.html">Tìm việc làm</a>
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../danh_s_ch_c_ng_ty_tuy_n_d_ng_vn/code.html">Công ty</a>
+                    <a class="text-blue-700 font-semibold border-b-2 border-blue-600 pb-1" href="../h_s_c_a_t_i_tuy_n_d_ng_vn/code.html">Hồ sơ & CV</a>
+                    <a class="text-slate-600 hover:text-blue-600 transition-colors" href="../l_ch_ph_ng_v_n_agenda/code.html">Lịch phỏng vấn</a>
+                </nav>
+            </div>
+            <div class="flex items-center gap-4">
+                <div class="hidden lg:flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
+                    <span class="material-symbols-outlined text-emerald-600 text-base">verified</span>
+                    <span>Năng lực: <strong>Đã xác thực GitHub</strong></span>
+                </div>
+                <button class="relative p-2 rounded-full hover:bg-slate-100 transition-colors">
+                    <span class="material-symbols-outlined text-on-surface-variant">notifications</span>
+                    <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full"></span>
+                </button>
+                <div class="flex items-center gap-3 pl-3 border-l border-outline-variant/30">
+                    <img class="w-9 h-9 rounded-full border border-primary/20 object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Avatar"/>
+                    <div class="hidden sm:block text-left">
+                        <div class="text-xs font-bold leading-tight flex items-center gap-1">
+                            Nguyễn Văn Bình
+                            <span class="material-symbols-outlined text-xs text-blue-600">verified</span>
+                        </div>
+                        <div class="text-[11px] text-on-surface-variant">Senior Frontend Developer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20 pb-20 max-w-7xl mx-auto px-4 sm:px-6">
+        <!-- Breadcrumb & Status -->
+        <div class="flex flex-wrap items-center justify-between gap-4 py-4 text-xs">
+            <div class="flex items-center gap-2 text-on-surface-variant">
+                <a href="../tuy_n_d_ng_vn_homepage/code.html" class="hover:text-primary">Trang chủ</a>
+                <span>/</span>
+                <a href="../h_s_c_a_t_i_tuy_n_d_ng_vn/code.html" class="hover:text-primary">Hồ sơ cá nhân</a>
+                <span>/</span>
+                <span class="text-primary font-semibold">Xác thực năng lực thực tế (Proof-of-Skill)</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold border border-blue-200">
+                    <span class="w-2 h-2 rounded-full bg-blue-600 animate-pulse"></span>
+                    Đồng bộ tự động qua GitHub OAuth2
+                </span>
+                <button onclick="refreshSync()" class="px-3 py-1 rounded-md bg-white border border-slate-300 text-slate-700 hover:bg-slate-50 font-medium flex items-center gap-1 shadow-sm transition">
+                    <span class="material-symbols-outlined text-sm">sync</span>
+                    Đồng bộ ngay
+                </button>
+            </div>
+        </div>
+
+        <!-- Hero Card: Proof-of-Skill Overview -->
+        <section class="rounded-2xl p-6 sm:p-8 github-gradient text-white relative overflow-hidden card-shadow mb-8">
+            <div class="absolute -right-10 -bottom-10 opacity-10 pointer-events-none">
+                <svg width="280" height="280" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </div>
+            <div class="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40 text-xs font-semibold mb-3">
+                        <span class="material-symbols-outlined text-sm text-emerald-400">verified</span>
+                        CHỨNG THỰC MÃ NGUỒN THỰC TẾ (PROOF-OF-SKILL ENGINE)
+                    </div>
+                    <h1 class="text-2xl sm:text-3xl font-headline font-bold mb-2">Hồ Sơ Năng Lực Lập Trình @binhnguyen-dev</h1>
+                    <p class="text-slate-300 text-sm max-w-2xl leading-relaxed">
+                        Dữ liệu được trích xuất trực tiếp từ GitHub API qua định danh <code class="bg-black/30 px-2 py-0.5 rounded text-amber-300 text-xs">authIdentity: github-acceptance</code>. Toàn bộ kỹ năng được bảo chứng bởi lịch sử commit thật, không phải CV tự khai.
+                    </p>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                    <div class="bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/10 text-center min-w-[110px]">
+                        <div class="text-xs text-slate-300 font-medium">Độ tin cậy CV</div>
+                        <div class="text-2xl font-bold font-headline text-emerald-400">98%</div>
+                        <div class="text-[10px] text-slate-400">Hạng A+ Verified</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/10 text-center min-w-[110px]">
+                        <div class="text-xs text-slate-300 font-medium">Commits 12T</div>
+                        <div class="text-2xl font-bold font-headline text-amber-400">1,482</div>
+                        <div class="text-[10px] text-slate-400">Hoạt động đều đặn</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-md px-4 py-3 rounded-xl border border-white/10 text-center min-w-[110px]">
+                        <div class="text-xs text-slate-300 font-medium">Repos Public</div>
+                        <div class="text-2xl font-bold font-headline text-sky-400">42</div>
+                        <div class="text-[10px] text-slate-400">6 dự án nổi bật</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Grid: 2 Columns -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left 2 Cols: GitHub Analysis & Verified Skills -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Section 1: GitHub Activity & Contribution Heatmap -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-slate-900 text-white flex items-center justify-center">
+                                <span class="material-symbols-outlined">analytics</span>
+                            </div>
+                            <div>
+                                <h2 class="text-lg font-headline font-bold text-slate-900">Biểu Đồ Đóng Góp Mã Nguồn 365 Ngày</h2>
+                                <p class="text-xs text-on-surface-variant">Tần suất commit chứng minh tính liên tục và kỷ luật lập trình của ứng viên</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200">
+                            Liên tục 18 tuần
+                        </span>
+                    </div>
+
+                    <!-- Synthetic Heatmap visualization -->
+                    <div class="overflow-x-auto pb-2">
+                        <div class="min-w-[620px]">
+                            <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                                <span>Tháng 11</span><span>Tháng 1</span><span>Tháng 3</span><span>Tháng 5</span><span>Tháng 7</span><span>Tháng 9</span><span>Hiện tại</span>
+                            </div>
+                            <div class="grid grid-flow-col grid-rows-7 gap-1">
+                                <!-- Generated 52 columns of commit cells -->
+                                <script>
+                                    for(let i=0; i<364; i++){
+                                        let rand = Math.random();
+                                        let level = "level-0";
+                                        if (rand > 0.8) level = "level-4";
+                                        else if (rand > 0.6) level = "level-3";
+                                        else if (rand > 0.4) level = "level-2";
+                                        else if (rand > 0.25) level = "level-1";
+                                        document.write('<div class="commit-cell ' + level + '" title="Hoạt động ngày: ' + Math.floor(rand*10) + ' commits"></div>');
+                                    }
+                                </script>
+                            </div>
+                            <div class="flex items-center justify-between text-[11px] text-slate-500 mt-3 pt-3 border-t border-slate-100">
+                                <span>Đóng góp nhiều nhất vào thứ Ba & thứ Năm hàng tuần</span>
+                                <div class="flex items-center gap-1.5">
+                                    <span>Ít hơn</span>
+                                    <div class="commit-cell level-0"></div>
+                                    <div class="commit-cell level-1"></div>
+                                    <div class="commit-cell level-2"></div>
+                                    <div class="commit-cell level-3"></div>
+                                    <div class="commit-cell level-4"></div>
+                                    <span>Nhiều hơn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Top Languages & Verified userSkill Table -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-blue-50 text-primary flex items-center justify-center">
+                                <span class="material-symbols-outlined">data_object</span>
+                            </div>
+                            <div>
+                                <h2 class="text-lg font-headline font-bold text-slate-900">Bảng Kỹ Năng Đã Xác Thực Qua Mã Nguồn (userSkill)</h2>
+                                <p class="text-xs text-on-surface-variant">Tự động đối chiếu số dòng code thực tế, test coverage và tỷ lệ commit</p>
+                            </div>
+                        </div>
+                        <span class="text-xs font-semibold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md">
+                            4 Kỹ năng bảo chứng
+                        </span>
+                    </div>
+
+                    <!-- Language breakdown progress bar -->
+                    <div class="mb-6">
+                        <div class="flex items-center justify-between text-xs font-semibold mb-2">
+                            <span>Phân bổ ngôn ngữ thực tế (theo LOC - Lines of Code)</span>
+                            <span class="text-primary font-mono">186,400 dòng mã đã phân tích</span>
+                        </div>
+                        <div class="h-3 rounded-full overflow-hidden flex bg-slate-100">
+                            <div class="bg-blue-600 h-full" style="width: 48%" title="TypeScript: 48%"></div>
+                            <div class="bg-amber-400 h-full" style="width: 26%" title="JavaScript: 26%"></div>
+                            <div class="bg-sky-400 h-full" style="width: 14%" title="React / JSX: 14%"></div>
+                            <div class="bg-emerald-500 h-full" style="width: 8%" title="HTML/SCSS: 8%"></div>
+                            <div class="bg-purple-500 h-full" style="width: 4%" title="Node.js: 4%"></div>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-4 text-xs mt-3 text-slate-600">
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-blue-600"></span>TypeScript (48%)</span>
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>JavaScript (26%)</span>
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-sky-400"></span>React (14%)</span>
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>HTML/SCSS (8%)</span>
+                            <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-purple-500"></span>Node.js (4%)</span>
+                        </div>
+                    </div>
+
+                    <!-- Skills List -->
+                    <div class="space-y-4">
+                        <!-- Skill 1: React.js -->
+                        <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/40 hover:bg-emerald-50 transition">
+                            <div class="flex flex-wrap items-start justify-between gap-3 mb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-headline font-bold text-slate-900">React.js & Next.js</span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                        <span class="material-symbols-outlined text-xs">verified</span>
+                                        KỸ NĂNG ĐÃ XÁC THỰC QUA MÃ NGUỒN
+                                    </span>
+                                </div>
+                                <span class="text-xs font-mono font-bold text-emerald-700 bg-white px-2 py-0.5 rounded border border-emerald-200">
+                                    Chuyên gia (4 năm kinh nghiệm Git)
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                                Đã phát hiện trong <strong>14 repositories</strong>. Tần suất commit liên tục 36 tháng qua. Viết theo chuẩn React 18 Concurrent, Hook patterns và Custom State Management.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-4 text-[11px] text-slate-500">
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-slate-400">code</span> 54,200 LOC</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-slate-400">fork_right</span> 32 PRs đã merge</span>
+                                <span class="flex items-center gap-1 text-emerald-700 font-semibold"><span class="material-symbols-outlined text-xs text-emerald-600">check_circle</span> Khớp 100% yêu cầu JD Senior</span>
+                            </div>
+                        </div>
+
+                        <!-- Skill 2: TypeScript -->
+                        <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/40 hover:bg-emerald-50 transition">
+                            <div class="flex flex-wrap items-start justify-between gap-3 mb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-headline font-bold text-slate-900">TypeScript (Strict Mode)</span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                        <span class="material-symbols-outlined text-xs">verified</span>
+                                        KỸ NĂNG ĐÃ XÁC THỰC QUA MÃ NGUỒN
+                                    </span>
+                                </div>
+                                <span class="text-xs font-mono font-bold text-emerald-700 bg-white px-2 py-0.5 rounded border border-emerald-200">
+                                    Cao cấp (Type-Safety 98.4%)
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                                Hiện diện trong <strong>18 repositories</strong>. Strict typing, Generics nâng cao, Zero `any` policy trong các dự án sản phẩm chính.
+                            </p>
+                            <div class="flex flex-wrap items-center gap-4 text-[11px] text-slate-500">
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-slate-400">code</span> 89,500 LOC</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs text-slate-400">star</span> 340 Stars GitHub</span>
+                                <span class="flex items-center gap-1 text-emerald-700 font-semibold"><span class="material-symbols-outlined text-xs text-emerald-600">verified_user</span> Đã test tự động bằng Jest</span>
+                            </div>
+                        </div>
+
+                        <!-- Skill 3: Redux Toolkit & State Management -->
+                        <div class="p-4 rounded-xl border border-emerald-200 bg-emerald-50/40 hover:bg-emerald-50 transition">
+                            <div class="flex flex-wrap items-start justify-between gap-3 mb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-headline font-bold text-slate-900">Redux Toolkit / Zustand / TanStack Query</span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-100 text-emerald-800 border border-emerald-300">
+                                        <span class="material-symbols-outlined text-xs">verified</span>
+                                        KỸ NĂNG ĐÃ XÁC THỰC QUA MÃ NGUỒN
+                                    </span>
+                                </div>
+                                <span class="text-xs font-mono font-bold text-emerald-700 bg-white px-2 py-0.5 rounded border border-emerald-200">
+                                    Thành thạo (9 Repos)
+                                </span>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed mb-2">
+                                Triển khai kiến trúc quản lý trạng thái server-state và client-state tách biệt trên các dự án quy mô vừa và lớn.
+                            </p>
+                        </div>
+
+                        <!-- Skill 4: Docker & CI/CD (CV tự khai vs Chưa có mã nguồn) -->
+                        <div class="p-4 rounded-xl border border-amber-200 bg-amber-50/40 hover:bg-amber-50 transition">
+                            <div class="flex flex-wrap items-start justify-between gap-3 mb-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="font-headline font-bold text-slate-900">Docker & Kubernetes / CI/CD Pipeline</span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-800 border border-amber-300">
+                                        <span class="material-symbols-outlined text-xs">info</span>
+                                        CV TỰ KHAI (CHƯA XÁC THỰC MÃ NGUỒN)
+                                    </span>
+                                </div>
+                                <button onclick="openMicroAssessmentModal()" class="text-xs font-semibold text-primary hover:underline flex items-center gap-1">
+                                    Làm Micro-Assessment để xác thực <span class="material-symbols-outlined text-xs">arrow_forward</span>
+                                </button>
+                            </div>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Ứng viên tự khai kỹ năng này trong CV nhưng chưa tìm thấy tệp `Dockerfile` hoặc `.github/workflows` trong các public repos. Gợi ý làm bài kiểm tra ngắn 5 phút để bảo chứng huy hiệu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Featured Repositories Analyzed -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow">
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-slate-100 text-slate-800 flex items-center justify-center">
+                                <span class="material-symbols-outlined">source</span>
+                            </div>
+                            <div>
+                                <h2 class="text-lg font-headline font-bold text-slate-900">Kho Mã Nguồn Thực Tế Nổi Bật (Public Repos)</h2>
+                                <p class="text-xs text-on-surface-variant">AI tự động phân tích cấu trúc kiến trúc, clean code và test coverage</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="p-4 rounded-xl border border-slate-200 hover:border-primary transition group">
+                            <div class="flex items-center justify-between mb-2">
+                                <a href="https://github.com/binhnguyen-dev/react-design-system" target="_blank" class="font-headline font-bold text-primary group-hover:underline flex items-center gap-1 text-sm">
+                                    <span class="material-symbols-outlined text-sm">folder</span>
+                                    react-design-system
+                                </a>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Clean 96%</span>
+                            </div>
+                            <p class="text-xs text-slate-600 line-clamp-2 mb-3">
+                                Bộ thư viện UI Components React 18 với Storybook, Tailwind, tự động build gói npm và xuất type definitions chuẩn.
+                            </p>
+                            <div class="flex items-center gap-4 text-[11px] text-slate-500">
+                                <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-600"></span> TypeScript</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">star</span> 348</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">call_split</span> 52</span>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-xl border border-slate-200 hover:border-primary transition group">
+                            <div class="flex items-center justify-between mb-2">
+                                <a href="https://github.com/binhnguyen-dev/jobfind-microfrontends" target="_blank" class="font-headline font-bold text-primary group-hover:underline flex items-center gap-1 text-sm">
+                                    <span class="material-symbols-outlined text-sm">folder</span>
+                                    jobfind-microfrontends
+                                </a>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-100 text-emerald-800">Arch A</span>
+                            </div>
+                            <p class="text-xs text-slate-600 line-clamp-2 mb-3">
+                                Kiến trúc Module Federation kết nối các micro-apps độc lập: Candidate Portal, Employer Dashboard và Payment Flow.
+                            </p>
+                            <div class="flex items-center gap-4 text-[11px] text-slate-500">
+                                <span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-blue-600"></span> TypeScript</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">star</span> 194</span>
+                                <span class="flex items-center gap-1"><span class="material-symbols-outlined text-xs">call_split</span> 28</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right 1 Col: Verification Guardrails, Trust Index & Actions -->
+            <div class="space-y-6">
+                <!-- Trust Card -->
+                <div class="bg-gradient-to-br from-emerald-600 to-teal-800 rounded-2xl p-6 text-white card-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-3xl text-emerald-200">shield_with_heart</span>
+                        <div>
+                            <h3 class="font-headline font-bold text-base">Huy Hiệu Proof-of-Skill</h3>
+                            <p class="text-xs text-emerald-100">Bảo chứng độc quyền trên JobFind</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-emerald-100/90 leading-relaxed mb-4">
+                        Hồ sơ có huy hiệu <strong class="text-white">"Kỹ năng đã xác thực qua mã nguồn"</strong> nhận được <strong>gấp 3.8 lần</strong> lượt mời phỏng vấn từ các công ty công nghệ hàng đầu (VNG, FPT, MoMo, Shopee).
+                    </p>
+                    <div class="p-3 rounded-xl bg-white/10 backdrop-blur border border-white/10 text-xs space-y-2">
+                        <div class="flex items-center justify-between">
+                            <span class="text-emerald-100">Định danh GitHub:</span>
+                            <span class="font-mono font-bold text-white">authIdentity #88204</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-emerald-100">Lần đồng bộ cuối:</span>
+                            <span class="text-white font-medium">Hôm nay, 07:45</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-emerald-100">Trạng thái API:</span>
+                            <span class="text-emerald-300 font-bold flex items-center gap-1">
+                                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Đồng bộ hợp lệ
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Connect / Permissions Card -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow">
+                    <h3 class="font-headline font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary text-base">admin_panel_settings</span>
+                        Quyền Riêng Tư & Bảo Mật Mã Nguồn
+                    </h3>
+                    <ul class="text-xs text-slate-600 space-y-2.5 mb-6">
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-emerald-600 text-sm mt-0.5">check_circle</span>
+                            <span>Chỉ quét dữ liệu công khai (Public repositories, commit logs, issue counts).</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-emerald-600 text-sm mt-0.5">check_circle</span>
+                            <span>Không yêu cầu quyền truy cập vào các Private repo hay bí mật công nghệ của công ty cũ.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="material-symbols-outlined text-emerald-600 text-sm mt-0.5">check_circle</span>
+                            <span>Có thể ngắt kết nối hoặc xóa dữ liệu đã cache bất kỳ lúc nào.</span>
+                        </li>
+                    </ul>
+                    <div class="pt-4 border-t border-slate-100 space-y-2">
+                        <a href="../ung_tuyen_micro_assessment_test_nang_luc/code.html" class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-semibold hover:bg-blue-700 transition flex items-center justify-center gap-2 shadow-sm">
+                            <span class="material-symbols-outlined text-sm">quiz</span>
+                            Làm Micro-Assessment xác thực thêm
+                        </a>
+                        <button class="w-full py-2 px-4 rounded-xl border border-slate-300 text-slate-700 text-xs font-semibold hover:bg-slate-50 transition flex items-center justify-center gap-1.5">
+                            <span class="material-symbols-outlined text-sm">download</span>
+                            Xuất báo cáo năng lực Proof-of-Skill (PDF)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Linked Profiles -->
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 card-shadow">
+                    <h3 class="font-headline font-bold text-sm text-slate-900 mb-3 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-slate-700 text-base">link</span>
+                        Liên Kết Định Danh Lập Trình Viên
+                    </h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-2.5">
+                                <svg class="w-5 h-5 text-slate-900" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span class="text-xs font-semibold text-slate-800">GitHub</span>
+                            </div>
+                            <span class="text-[11px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Đã kết nối</span>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-2.5">
+                                <span class="material-symbols-outlined text-amber-600 text-lg">code</span>
+                                <span class="text-xs font-semibold text-slate-800">LeetCode / Codewars</span>
+                            </div>
+                            <button class="text-[11px] font-bold text-primary hover:underline">Liên kết ngay</button>
+                        </div>
+                        <div class="flex items-center justify-between p-3 rounded-xl bg-slate-50 border border-slate-200">
+                            <div class="flex items-center gap-2.5">
+                                <span class="material-symbols-outlined text-blue-500 text-lg">layers</span>
+                                <span class="text-xs font-semibold text-slate-800">GitLab / Bitbucket</span>
+                            </div>
+                            <button class="text-[11px] font-bold text-primary hover:underline">Liên kết ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Notification Toast (Hidden by default) -->
+    <div id="syncToast" class="fixed bottom-6 right-6 z-50 bg-slate-900 text-white px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 transition-all duration-300 transform translate-y-20 opacity-0 pointer-events-none">
+        <span class="material-symbols-outlined text-emerald-400">check_circle</span>
+        <div class="text-xs">
+            <p class="font-bold">Đã đồng bộ thành công dữ liệu GitHub!</p>
+            <p class="text-slate-300">Đã cập nhật 14 commits mới và đối soát 4 kỹ năng userSkill.</p>
+        </div>
+    </div>
+
+    <script>
+        function refreshSync() {
+            const toast = document.getElementById('syncToast');
+            toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+                toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+            }, 3500);
+        }
+    </script>
+</body>
+</html>
