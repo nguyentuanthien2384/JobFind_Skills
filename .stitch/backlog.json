@@ -4264,11 +4264,11 @@
       "kind": "screen-extension",
       "feature_id": "candidate-profile",
       "screen_id": "JF-009",
-      "title": "Hồ sơ ứng viên — Xác thực năng lực thực tế (Proof-of-Skill) & GitHub Portfolio",
+      "title": "Hồ sơ ứng viên — Xác thực năng lực thực tế đa ngành (Proof-of-Skill: Sales/Marketing/Kế toán-HR/IT) & GitHub Portfolio",
       "mode": "match-reference",
       "design_status": "proposal-complete",
-      "code_status": "planned",
-      "test_status": "verified-browser",
+      "code_status": "implemented",
+      "test_status": "passed",
       "evidence": [
         {
           "field": "design_status",
@@ -4281,20 +4281,28 @@
         {
           "field": "spec",
           "ref": ".docs/ui-mockups/screens/EXT-JF-009-PROOF-OF-SKILL.md"
+        },
+        {
+          "field": "code_status",
+          "ref": "backend/src/services/differentiatorService.js"
+        },
+        {
+          "field": "test_status",
+          "ref": "backend/tests/test-multi-industry-differentiator.cjs"
         }
       ],
-      "next_action": "Ready for GitHub OAuth2 API integration and userSkill code verification sync."
+      "next_action": "Implemented in differentiatorService.syncGithubPortfolioSkills and MultiIndustryDifferentiatorHub.js; verified by test-multi-industry-differentiator.cjs."
     },
     {
       "id": "EXT-JF-024-MICRO-ASSESSMENT",
       "kind": "screen-extension",
       "feature_id": "applications",
       "screen_id": "JF-024",
-      "title": "Ứng tuyển — Micro-Assessment kiểm tra năng lực ngắn & Lọc spam apply",
+      "title": "Ứng tuyển — AI Situational Micro-Assessment 3 phút đa ngành (Sales, Marketing, Kế toán/HR, IT) & Lọc spam apply",
       "mode": "match-reference",
       "design_status": "proposal-complete",
-      "code_status": "planned",
-      "test_status": "verified-browser",
+      "code_status": "implemented",
+      "test_status": "passed",
       "evidence": [
         {
           "field": "design_status",
@@ -4307,20 +4315,28 @@
         {
           "field": "spec",
           "ref": ".docs/ui-mockups/screens/EXT-JF-024-MICRO-ASSESSMENT.md"
+        },
+        {
+          "field": "code_status",
+          "ref": "backend/src/services/differentiatorService.js"
+        },
+        {
+          "field": "test_status",
+          "ref": "backend/tests/test-multi-industry-differentiator.cjs"
         }
       ],
-      "next_action": "Integrate countdown timer and question grader into candidate apply flow."
+      "next_action": "Implemented in differentiatorService (generateMicroTestPrompts, evaluateSituationalAnswer) and MultiIndustryDifferentiatorHub.js; verified by test-multi-industry-differentiator.cjs."
     },
     {
       "id": "EXT-JF-018-PIZZA-TRACKER",
       "kind": "screen-extension",
       "feature_id": "applications",
       "screen_id": "JF-018",
-      "title": "Đơn ứng tuyển — Pizza-Tracker tiến trình trực quan thời gian thực, SLA & Constructive AI Rejection",
+      "title": "Đơn ứng tuyển — Pizza-Tracker 7 chặng thời gian thực, SLA 72h & Constructive AI Rejection",
       "mode": "match-reference",
       "design_status": "proposal-complete",
-      "code_status": "planned",
-      "test_status": "verified-browser",
+      "code_status": "implemented",
+      "test_status": "passed",
       "evidence": [
         {
           "field": "design_status",
@@ -4333,20 +4349,28 @@
         {
           "field": "spec",
           "ref": ".docs/ui-mockups/screens/EXT-JF-018-PIZZA-TRACKER.md"
+        },
+        {
+          "field": "code_status",
+          "ref": "backend/src/services/differentiatorService.js"
+        },
+        {
+          "field": "test_status",
+          "ref": "backend/tests/test-multi-industry-differentiator.cjs"
         }
       ],
-      "next_action": "Connect webPushDelivery and realtime presence to update candidate view state."
+      "next_action": "Implemented in differentiatorService.updateCvStageWithTracker and Socket.IO cv:stage_updated; verified by test-multi-industry-differentiator.cjs."
     },
     {
       "id": "EXT-JF-014-AI-MOCK-INTERVIEW",
       "kind": "screen-extension",
       "feature_id": "interviews-offers",
       "screen_id": "JF-014",
-      "title": "Lịch phỏng vấn — AI Mock Interview huấn luyện viên phỏng vấn 1-on-1 sát JD & CV",
+      "title": "Lịch phỏng vấn — AI Mock Interviewer 1-on-1 đóng vai đa ngành (Sales, Marketing, Kế toán/HR, IT) theo cấu trúc STAR",
       "mode": "match-reference",
       "design_status": "proposal-complete",
-      "code_status": "planned",
-      "test_status": "verified-browser",
+      "code_status": "implemented",
+      "test_status": "passed",
       "evidence": [
         {
           "field": "design_status",
@@ -4359,20 +4383,28 @@
         {
           "field": "spec",
           "ref": ".docs/ui-mockups/screens/EXT-JF-014-AI-MOCK-INTERVIEW.md"
+        },
+        {
+          "field": "code_status",
+          "ref": "backend/src/controllers/mockInterviewController.js"
+        },
+        {
+          "field": "test_status",
+          "ref": "backend/tests/test-multi-industry-differentiator.cjs"
         }
       ],
-      "next_action": "Connect AI chatbot service with speech-to-text and radar scoring engine."
+      "next_action": "Implemented in mockInterviewController.js and MockInterviewSessions model; verified by test-multi-industry-differentiator.cjs."
     },
     {
       "id": "EXT-JF-010-SKILL-GAP-ATS",
       "kind": "screen-extension",
       "feature_id": "job-detail",
       "screen_id": "JF-010",
-      "title": "Chi tiết việc làm — Đối sánh khoảng cách kỹ năng (Skill Gap) & Bộ mô phỏng ATS Scanner",
+      "title": "Chi tiết việc làm — Đối sánh khoảng cách kỹ năng đa ngành (Skill Gap) & Bộ mô phỏng ATS Scanner",
       "mode": "match-reference",
       "design_status": "proposal-complete",
-      "code_status": "planned",
-      "test_status": "verified-browser",
+      "code_status": "implemented",
+      "test_status": "passed",
       "evidence": [
         {
           "field": "design_status",
@@ -4385,20 +4417,28 @@
         {
           "field": "spec",
           "ref": ".docs/ui-mockups/screens/EXT-JF-010-SKILL-GAP-ATS.md"
+        },
+        {
+          "field": "code_status",
+          "ref": "backend/src/services/differentiatorService.js"
+        },
+        {
+          "field": "test_status",
+          "ref": "backend/tests/test-multi-industry-differentiator.cjs"
         }
       ],
-      "next_action": "Connect pre-apply skill gap modal into JobDetail.js."
+      "next_action": "Implemented in differentiatorService.analyzeSkillGapAndAts; verified by test-multi-industry-differentiator.cjs."
     },
     {
       "id": "EXT-JF-012-REVERSE-RECRUITING",
       "kind": "screen-extension",
       "feature_id": "candidate-search",
       "screen_id": "JF-012",
-      "title": "Kho ứng viên — Tuyển dụng đảo chiều (Reverse Recruiting), Blind Profile & Offer-First Bidding",
+      "title": "Kho ứng viên — Tuyển dụng đảo chiều đa ngành (Reverse Recruiting), Blind Profile & Offer-First Bidding",
       "mode": "match-reference",
       "design_status": "proposal-complete",
-      "code_status": "planned",
-      "test_status": "verified-browser",
+      "code_status": "implemented",
+      "test_status": "passed",
       "evidence": [
         {
           "field": "design_status",
@@ -4411,20 +4451,28 @@
         {
           "field": "spec",
           "ref": ".docs/ui-mockups/screens/EXT-JF-012-REVERSE-RECRUITING.md"
+        },
+        {
+          "field": "code_status",
+          "ref": "backend/src/controllers/invitationController.js"
+        },
+        {
+          "field": "test_status",
+          "ref": "backend/tests/test-multi-industry-differentiator.cjs"
         }
       ],
-      "next_action": "Connect userSetting blind profile flag and employer Offer-First bidding flow."
+      "next_action": "Implemented in invitationController.js, JobInvitations model and UserSettings blind protection; verified by test-multi-industry-differentiator.cjs."
     },
     {
       "id": "EXT-JF-006-VERIFIED-REVIEWS",
       "kind": "screen-extension",
       "feature_id": "companies",
       "screen_id": "JF-006",
-      "title": "Chi tiết công ty — Đánh giá doanh nghiệp có xác thực & Chấm điểm trải nghiệm phỏng vấn",
+      "title": "Chi tiết công ty — Đánh giá doanh nghiệp xác thực 3 tầng (INTERVIEWED_CANDIDATE / APPLICANT / PUBLIC) & Chấm điểm phỏng vấn",
       "mode": "match-reference",
       "design_status": "proposal-complete",
-      "code_status": "planned",
-      "test_status": "verified-browser",
+      "code_status": "implemented",
+      "test_status": "passed",
       "evidence": [
         {
           "field": "design_status",
@@ -4437,9 +4485,17 @@
         {
           "field": "spec",
           "ref": ".docs/ui-mockups/screens/EXT-JF-006-VERIFIED-REVIEWS.md"
+        },
+        {
+          "field": "code_status",
+          "ref": "backend/src/services/differentiatorService.js"
+        },
+        {
+          "field": "test_status",
+          "ref": "backend/tests/test-multi-industry-differentiator.cjs"
         }
       ],
-      "next_action": "Link companyReview table with applications and interview-calendar events."
+      "next_action": "Implemented in differentiatorService.createVerifiedReview; verified by test-multi-industry-differentiator.cjs."
     }
   ]
 }

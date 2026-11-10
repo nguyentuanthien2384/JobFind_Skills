@@ -1,4 +1,4 @@
-# EXT-JF-010-SKILL-GAP-ATS · Biểu Đồ Đối Sánh Kỹ Năng & ATS Simulator
+# EXT-JF-010-SKILL-GAP-ATS · Biểu Đồ Đối Sánh Kỹ Năng & ATS Simulator Đa Ngành
 
 ## Identity và độ tin cậy
 Feature `job-detail` · Sub-feature: `skill-gap-ats-simulator` · Actor: CANDIDATE
@@ -6,17 +6,18 @@ Stitch project: https://stitch.withgoogle.com/projects/4225480897019041322
 Local key: `EXT-JF-010-SKILL-GAP-ATS` (Biến thể mở rộng từ JF-010).
 Canvas: 1280 × 1600 (DESKTOP).
 Trạng thái thiết kế: `proposal-complete`.
-Route status: `/jobs/:id/skill-gap`.
+Route status: `/jobs/:id/skill-gap` (hoặc modal trên `/detail-job/:id`).
 
 ## Nghiệp vụ cốt lõi
-1. **Kiểm tra độ tương thích ATS trước khi nộp CV:** Ngăn chặn việc ứng viên bị loại oan uổng vì thiếu từ khóa chuẩn trong bản CV.
-2. **Đối sánh trực quan giữa `userSkill` và JD:** Phân loại rõ kỹ năng đã khớp (10/12) và kỹ năng còn khuyết (Unit testing Jest, Web Vitals).
-3. **Đề xuất từ khóa AI:** Gợi ý ngữ cảnh thực tế để bổ sung từ khóa vào bản CV nộp cho doanh nghiệp.
+1. **Kiểm tra độ tương thích ATS trước khi nộp CV:** Ngăn chặn việc ứng viên ở mọi ngành nghề (Sales, Marketing, Kế toán/Nhân sự, IT) bị loại đáng tiếc vì thiếu từ khóa chuyên môn chuẩn trong CV.
+2. **Đối sánh trực quan giữa `UserSkills` và `DetailPosts`:** Phân loại rõ kỹ năng đã khớp (`matchedSkills`) và kỹ năng còn khuyết (`missingSkills`) kèm điểm tương thích `atsScore` (%).
+3. **Đề xuất từ khóa AI (`keywordSuggestions`):** Gợi ý câu văn mẫu và ngữ cảnh thực tế để ứng viên bổ sung vào CV trước khi bấm ứng tuyển.
 
-## Source mapping
-- Frontend: `frontend/src/container/JobDetail/SkillGapModal.js`
-- Adapter API: `frontend/src/service/jobService.js`, `frontend/src/service/aiService.js`
-- Backend Controller/Model: `backend/src/controllers/postController.js`, `backend/src/controllers/aiController.js`.
+## Thiết kế API & Source mapping
+- **API Endpoint:** `POST /api/ai/skill-gap-simulator` (`ACCOUNT_SELF`)
+- **Frontend:** `frontend/src/container/Candidate/MultiIndustryDifferentiatorHub.js`, `frontend/src/container/JobDetail/JobDetail.js`
+- **Adapter API:** `frontend/src/service/differentiatorService.js` (`analyzeSkillGapAndAtsService`)
+- **Backend:** `backend/src/controllers/differentiatorController.js`, `backend/src/services/differentiatorService.js`
 
 ## Assets
 - Mockup HTML: `.stitch/designs/doi_sanh_ky_nang_skill_gap_ats_simulator/code.html`

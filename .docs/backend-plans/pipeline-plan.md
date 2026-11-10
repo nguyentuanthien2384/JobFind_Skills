@@ -52,3 +52,7 @@ Trace endpoint tới controller/service/store. Legacy backend và job-core MySQL
 
 ## Kết quả
 Patch vào owner/controller/service/contract/model thực sự cần thiết; kiểm tra có evidence và plan rollout nếu user giao đổi mode. Các lệnh live migration/seed/payment/email không được tự chạy để hoàn tất plan.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+- **Service & Controller**: `differentiatorService.updateCvStageWithTracker` (`PUT /api/cv/stage`) đồng bộ trạng thái `Cvs.applicationStage`, tính SLA 72h của công ty (`avgResponseHours`, `responseRate`), sinh thư phản hồi xây dựng `aiFeedbackForCandidate` kèm 3 việc làm gợi ý khi `REJECTED`, và phát sự kiện Socket.IO `cv:stage_updated`.
+- **Verification**: `node backend/tests/test-multi-industry-differentiator.cjs` — PASS.

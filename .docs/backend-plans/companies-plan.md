@@ -50,3 +50,8 @@ Trace endpoint tới controller/service/store. Legacy backend và job-core MySQL
 
 ## Kết quả
 Patch vào owner/controller/service/contract/model thực sự cần thiết; kiểm tra có evidence và plan rollout nếu user giao đổi mode. Các lệnh live migration/seed/payment/email không được tự chạy để hoàn tất plan.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+- **Migration & Model**: Bổ sung vào bảng `CompanyReviews` (`backend/src/models/companyReview.js`): `verificationType` (`PUBLIC`, `APPLICANT`, `INTERVIEWED_CANDIDATE`), `relatedCvId` (`INTEGER`), `interviewExperienceRating` (`INTEGER` 1–5); bổ sung vào `Companies`: `avgResponseHours`, `responseRate`.
+- **Service & Controller**: `differentiatorService.createVerifiedReview` tự động đối soát lịch sử `Cvs` của `userId` tại `companyId` để gán `verificationType` chống seeding/review ảo.
+- **Verification**: `node backend/tests/test-multi-industry-differentiator.cjs` — PASS.

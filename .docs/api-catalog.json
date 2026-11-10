@@ -800,6 +800,90 @@
       "method": "POST",
       "path": "/internal/emit-notification",
       "permissions_in_declaration": []
+    },
+    {
+      "method": "POST",
+      "path": "/api/ai/generate-micro-test",
+      "permissions_in_declaration": [
+        "JOB_MANAGE"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/ai/evaluate-situational-answer",
+      "permissions_in_declaration": [
+        "CANDIDATE_APPLY"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/ai/skill-gap-simulator",
+      "permissions_in_declaration": [
+        "ACCOUNT_SELF"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/mock-interview/start",
+      "permissions_in_declaration": [
+        "ACCOUNT_SELF"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/mock-interview/:sessionId/submit",
+      "permissions_in_declaration": [
+        "ACCOUNT_SELF"
+      ]
+    },
+    {
+      "method": "PUT",
+      "path": "/api/cv/stage",
+      "permissions_in_declaration": [
+        "RECRUITMENT_READ"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/cv/stage",
+      "permissions_in_declaration": [
+        "RECRUITMENT_READ"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/company-reviews/verified",
+      "permissions_in_declaration": [
+        "SOCIAL_INTERACT"
+      ]
+    },
+    {
+      "method": "GET",
+      "path": "/api/candidates/blind-search",
+      "permissions_in_declaration": [
+        "CANDIDATE_SEARCH"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/job-invitations",
+      "permissions_in_declaration": [
+        "CANDIDATE_SEARCH"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/job-invitations/:invitationId/respond",
+      "permissions_in_declaration": [
+        "ACCOUNT_SELF"
+      ]
+    },
+    {
+      "method": "POST",
+      "path": "/api/profile/proof-of-skill/sync-github",
+      "permissions_in_declaration": [
+        "ACCOUNT_SELF"
+      ]
     }
   ],
   "modern": [

@@ -51,3 +51,8 @@ Trace endpoint tới controller/service/store. Legacy backend và job-core MySQL
 
 ## Kết quả
 Patch vào owner/controller/service/contract/model thực sự cần thiết; kiểm tra có evidence và plan rollout nếu user giao đổi mode. Các lệnh live migration/seed/payment/email không được tự chạy để hoàn tất plan.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+- **Migration & Model**: Bổ sung vào `UserSkills` (`backend/src/models/userSkill.js`): `isVerified` (`BOOLEAN`), `verificationSource` (`GITHUB_API`, `MICRO_TEST`, `PORTFOLIO_LINK`, `CERTIFICATE_VERIFY`), `verifiedMetadata` (`TEXT` JSON), `verifiedAt` (`DATE`).
+- **Service & Controller**: `differentiatorService.syncGithubPortfolioSkills` (xác thực năng lực thực tế đa ngành cho Sales/Marketing/Kế toán-HR/IT) và `differentiatorService.respondToJobInvitation` (mở khóa thông tin 2 chiều + trừ 1 lượt `allowCvFree`/`allowCv` + tạo `CandidateView` + `ChatMessage` khi `ACCEPTED`).
+- **Verification**: `node backend/tests/test-multi-industry-differentiator.cjs` — PASS.

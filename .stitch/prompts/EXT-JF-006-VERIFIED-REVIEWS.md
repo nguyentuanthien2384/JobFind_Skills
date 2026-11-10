@@ -3,9 +3,10 @@
 Sử dụng dự án Stitch hiện có của JobFind: https://stitch.withgoogle.com/projects/4225480897019041322. Tạo biến thể mở rộng (extension) từ màn hình chuẩn JF-006 ("Danh Mục Công Ty") & JF-007 ("Danh Sách Công Ty - Tuyển Dụng VN"), kích thước canvas 1280 × 1600; mã danh mục cục bộ là EXT-JF-006-VERIFIED-REVIEWS.
 
 **MỤC ĐÍCH / VAI TRÒ (PURPOSE / ACTOR)**
-- Tính năng: Đánh giá công ty có xác thực (Verified Candidate Reviews):
-  + Huy hiệu "Đã từng phỏng vấn / Ứng tuyển thực tế": Liên kết trực tiếp bảng `companyReview` với dữ liệu lịch sử nộp CV và lịch phỏng vấn của người dùng trên hệ thống. Những đánh giá từ tài khoản thực sự đã trải qua quy trình phỏng vấn tại công ty đó sẽ có nhãn "Verified Candidate", tách biệt hoàn toàn với đánh giá từ người dùng vãng lai.
-  + Đánh giá trải nghiệm phỏng vấn riêng biệt: Cho phép ứng viên chấm điểm sát quy trình tuyển dụng (Độ chuyên nghiệp của HR, Đề phỏng vấn có sát JD không, Có đúng giờ trên lịch hẹn không) ngay sau khi sự kiện trên lịch phỏng vấn kết thúc.
+- Tính năng: Đánh giá công ty có xác thực (Verified Candidate Reviews) & Chỉ số SLA:
+  + Mở rộng bảng `CompanyReviews` với `verificationType` (`PUBLIC`, `APPLICANT`, `INTERVIEWED_CANDIDATE`), `relatedCvId` (FK tới `cv.js`) và `interviewExperienceRating` (TINYINT 1–5).
+  + Khi trạng thái hồ sơ `Cvs.applicationStage` đạt từ `'INTERVIEW_SCHEDULED'` trở lên, mở khóa quyền viết đánh giá gắn nhãn `"Ứng viên đã phỏng vấn thực tế"` (`POST /api/company-reviews/verified`).
+  + Hiển thị đồng thời chỉ số `Companies.avgResponseHours` và `Companies.responseRate` (% xử lý trong 72h).
 - Vai trò người dùng: CANDIDATE, PUBLIC, COMPANY.
 
 **HỆ THỐNG THIẾT KẾ (DESIGN SYSTEM - BẮT BUỘC)**

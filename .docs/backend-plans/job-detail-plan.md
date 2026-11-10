@@ -53,3 +53,7 @@ Trace endpoint tới controller/service/store. Legacy backend và job-core MySQL
 
 ## Kết quả
 Patch vào owner/controller/service/contract/model thực sự cần thiết; kiểm tra có evidence và plan rollout nếu user giao đổi mode. Các lệnh live migration/seed/payment/email không được tự chạy để hoàn tất plan.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+- **Service & Controller**: `differentiatorService.analyzeSkillGapAndAts` (`POST /api/ai/skill-gap-simulator`) phân tích độ khớp CV với JD đa ngành (Sales, Marketing, Kế toán/HR, IT), mô phỏng tăng điểm khi tick chọn kỹ năng còn thiếu và kiểm tra ATS.
+- **Verification**: `node backend/tests/test-multi-industry-differentiator.cjs` — PASS.

@@ -58,3 +58,8 @@ Trace endpoint tới controller/service/store. Legacy backend và job-core MySQL
 
 ## Kết quả
 Patch vào owner/controller/service/contract/model thực sự cần thiết; kiểm tra có evidence và plan rollout nếu user giao đổi mode. Các lệnh live migration/seed/payment/email không được tự chạy để hoàn tất plan.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+- **Migration & Model**: Tạo bảng `MockInterviewSessions` (`backend/src/models/mockInterviewSession.js`) lưu `userId`, `postId`, `questionsAndAnswers` (JSON array 5 câu hỏi sát JD đa ngành Sales/Marketing/Kế toán-HR/IT + phản hồi STAR), `overallScore` (0–100), `cvImprovementTips` (`TEXT`), `status` (`IN_PROGRESS`, `COMPLETED`).
+- **Service & Controller**: `differentiatorService.startMockInterview`, `differentiatorService.submitMockInterview`, `backend/src/controllers/mockInterviewController.js`.
+- **Verification**: `node backend/tests/test-multi-industry-differentiator.cjs` — PASS.

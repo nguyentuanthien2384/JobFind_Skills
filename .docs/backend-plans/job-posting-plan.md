@@ -54,3 +54,8 @@ Trace endpoint tới controller/service/store. Legacy backend và job-core MySQL
 
 ## Kết quả
 Patch vào owner/controller/service/contract/model thực sự cần thiết; kiểm tra có evidence và plan rollout nếu user giao đổi mode. Các lệnh live migration/seed/payment/email không được tự chạy để hoàn tất plan.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+- **Migration & Model**: Bổ sung vào `DetailPosts` (`backend/src/models/detailpost.js`): `hasMicroTest` (`BOOLEAN`, default `false`), `microTestPrompt` (`TEXT`), `microTestTimeLimit` (`INTEGER`, default `300`).
+- **Service & Controller**: `differentiatorService.generateMicroTestPrompts` (`POST /api/ai/generate-micro-test`) sinh 3 đề bài tình huống thực tế (Case Study 3 phút) theo ngành nghề (`SALES`, `MARKETING`, `ACCOUNTING_HR`, `IT`).
+- **Verification**: `node backend/tests/test-multi-industry-differentiator.cjs` — PASS.

@@ -57,3 +57,9 @@ Required: decision
 
 ## Nếu thêm contract
 Ghi method/path/owner, actor/permission/tenant, params/query/body/headers/schema, status/response/error, pagination/limits, duplicate/concurrency/event, compatibility và tests. Phần mới ghi PROPOSED cho tới khi router/contract/code và kiểm tra có bằng chứng.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+| Endpoint | Owner | Permission | Body / Response | Trạng thái |
+| --- | --- | --- | --- | --- |
+| `POST /api/mock-interview/start` | legacy (`differentiatorRoutes.js`) | `ACCOUNT_SELF` | Body: `{ userId, postId }` $\rightarrow$ Khởi tạo phiên trong bảng `MockInterviewSessions` (`status = 'IN_PROGRESS'`), sinh 5 câu hỏi phỏng vấn đóng vai sát JD đa ngành (Giám đốc Sales, CMO Marketing, Kế toán trưởng / HR Director, Tech Lead IT). | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |
+| `POST /api/mock-interview/:sessionId/submit` | legacy (`differentiatorRoutes.js`) | `ACCOUNT_SELF` | Body: `{ userAnswers: [{ questionId, questionText, userAnswer }] }` $\rightarrow$ Chấm điểm theo cấu trúc STAR (Situation - Task - Action - Result), lưu `overallScore` (0–100), `radarMetrics` và `cvImprovementTips`, chuyển `status = 'COMPLETED'`. | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |

@@ -182,7 +182,9 @@
     "apis": [
       "GET /api/get-detail-post-by-id",
       "GET /api/jobs/:id",
-      "POST /api/create-new-cv"
+      "POST /api/create-new-cv",
+      "POST /api/ai/evaluate-situational-answer",
+      "POST /api/ai/skill-gap-simulator"
     ],
     "rules": [
       "Ứng tuyển là modal trên /detail-job/:id; /apply chưa là route hiện hữu.",
@@ -242,7 +244,8 @@
       "GET /api/get-list-company",
       "GET /api/get-detail-company-by-id",
       "GET /api/get-review-by-company",
-      "POST /api/toggle-follow-company"
+      "POST /api/toggle-follow-company",
+      "POST /api/company-reviews/verified"
     ],
     "rules": [
       "JF-006 và JF-007 là 2 biến thể cùng /company.",
@@ -473,7 +476,9 @@
       "PUT /api/update-user",
       "GET /api/profile",
       "PUT /api/profile",
-      "PUT /api/setDataUserSetting"
+      "PUT /api/setDataUserSetting",
+      "POST /api/profile/proof-of-skill/sync-github",
+      "POST /api/job-invitations/:invitationId/respond"
     ],
     "rules": [
       "Legacy user profile và identity profile cần adapter đúng mode.",
@@ -601,7 +606,9 @@
       "GET /api/get-all-cv-by-userId",
       "GET /api/my-applications",
       "GET /api/get-detail-user-by-id",
-      "GET /api/profile/cvs"
+      "GET /api/profile/cvs",
+      "POST /api/ai/evaluate-situational-answer",
+      "PUT /api/cv/stage"
     ],
     "rules": [
       "Apply wizard là trình bày mở rộng của modal; giữ data contract đã có.",
@@ -1059,7 +1066,8 @@
       "POST /api/jobs",
       "PUT /api/jobs/:id",
       "POST /api/jobs/:id/repost",
-      "GET /api/jobs/manage"
+      "GET /api/jobs/manage",
+      "POST /api/ai/generate-micro-test"
     ],
     "rules": [
       "Giữ JOB_MANAGE/owner/company state và quota server.",
@@ -1116,7 +1124,9 @@
       "GET /api/candidate-search-jobs",
       "GET /api/check-see-candiate",
       "GET /api/talent-pool",
-      "POST /api/talent-pool"
+      "POST /api/talent-pool",
+      "GET /api/candidates/blind-search",
+      "POST /api/job-invitations"
     ],
     "rules": [
       "Giữ route /admin/list-candiate và endpoint spelling đang dùng.",
@@ -1175,7 +1185,8 @@
       "GET /api/applications/board",
       "PATCH /api/applications/:id/stage",
       "PATCH /api/applications/:id/rating",
-      "POST /api/applications/:id/notes"
+      "POST /api/applications/:id/notes",
+      "PUT /api/cv/stage"
     ],
     "rules": [
       "Dùng 6 stage keys source thay vì labels tiếng Anh mẫu.",
@@ -1240,7 +1251,9 @@
     "apis": [
       "POST /api/applications/:id/interview-invitation",
       "POST /api/applications/:id/decision-notification",
-      "GET /api/my-applications"
+      "GET /api/my-applications",
+      "POST /api/mock-interview/start",
+      "POST /api/mock-interview/:sessionId/submit"
     ],
     "rules": [
       "Forms thư phỏng vấn/offer có trong pipeline; calendar tổng hợp độc lập là proposal.",

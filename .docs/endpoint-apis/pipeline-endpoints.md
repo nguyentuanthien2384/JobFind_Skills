@@ -61,3 +61,8 @@ Required: body
 
 ## Nếu thêm contract
 Ghi method/path/owner, actor/permission/tenant, params/query/body/headers/schema, status/response/error, pagination/limits, duplicate/concurrency/event, compatibility và tests. Phần mới ghi PROPOSED cho tới khi router/contract/code và kiểm tra có bằng chứng.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+| Endpoint | Owner | Permission | Body / Response | Trạng thái |
+| --- | --- | --- | --- | --- |
+| `PUT /api/cv/stage` / `POST /api/cv/stage` | legacy (`differentiatorRoutes.js`) | `RECRUITMENT_READ` | Body: `{ cvId, newStage, hrNote }` $\rightarrow$ Đồng bộ thao tác chuyển cột hồ sơ của HR trên bảng `Cvs` với Pizza-Tracker của ứng viên, tính SLA 72h (`avgResponseHours`, `responseRate`), sinh thư `aiFeedbackForCandidate` + 3 `suggestedPosts` khi `REJECTED`, và phát Socket.IO `cv:stage_updated`. | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |

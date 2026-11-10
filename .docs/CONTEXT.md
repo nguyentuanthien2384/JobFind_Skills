@@ -1,31 +1,28 @@
-# JobFind — Context · 04/11/2026
+# JobFind — Context · 10/11/2026
 
-Bộ skills v3 JobFind tích hợp đầy đủ 37 màn native Stitch (100% tiếng Việt) và 8 phân hệ mở rộng đột phá theo yêu cầu người dùng, kiểm định toàn vẹn qua verify_bundle.py (0 lỗi).
+Bộ skills v3 JobFind tích hợp đầy đủ 37 màn native Stitch (100% tiếng Việt), 8 phân hệ mở rộng đột phá Đa Ngành Nghề (Sales/CSKH, Marketing/Truyền thông, Kế toán/Nhân sự/Hành chính, Thiết kế, Vận hành, IT) kèm trọn bộ mã nguồn Backend/Frontend/Migration/Tests và kiểm định toàn vẹn qua `verify_bundle.py` (0 lỗi).
 
 ## Đã có
 - **Hạ tầng tri thức & Skills**: 42 skills, 31 feature slices × 6 docs (186 tài liệu đặc tả), 25 workflows, 18 templates.
-- **Route & API static catalog**: 94 route declarations (92 unique patterns), 124 legacy endpoints, 71 modern operations / 42 schemas, 32 Sequelize models.
-- **Màn hình Native Stitch (37 màn)**: Tham chiếu exact tại https://stitch.withgoogle.com/projects/4225480897019041322; 100% prompt và spec tiếng Việt; mã HTML mockup đã bản địa hóa tự nhiên.
-- **Màn hình mở rộng đột phá (8 màn EXT)**:
-  1. `EXT-JF-010-CANDIDATE-INSIGHTS`: Báo cáo ứng tuyển, mức cạnh tranh & nạp điểm (đã tích hợp chuẩn vào JF-010, JF-036, JF-037, JF-009, JF-003).
-  2. `EXT-JF-009-PROOF-OF-SKILL`: Xác thực năng lực thực tế qua GitHub Portfolio tự động (Heatmap, commit frequency, repos, top languages LOC).
-  3. `EXT-JF-024-MICRO-ASSESSMENT`: Micro-Assessment kiểm tra nhanh gắn bước nộp CV lọc spam apply.
-  4. `EXT-JF-018-PIZZA-TRACKER`: Theo dõi tiến trình ứng tuyển thời gian thực dạng Pizza-Tracker, chỉ số SLA 48h & Constructive AI Rejection.
-  5. `EXT-JF-014-AI-MOCK-INTERVIEW`: Huấn luyện viên phỏng vấn AI 1-on-1 sát JD & CV (5 vòng, radar chart đánh giá).
-  6. `EXT-JF-010-SKILL-GAP-ATS`: Biểu đồ khoảng cách kỹ năng (Skill Gap) & Bộ mô phỏng quét lọc ATS Simulator trước khi apply.
-  7. `EXT-JF-012-REVERSE-RECRUITING`: Tuyển dụng đảo chiều, chế độ Blind Profile ẩn danh & cơ chế Offer-First Bidding.
-  8. `EXT-JF-006-VERIFIED-REVIEWS`: Đánh giá doanh nghiệp xác thực theo lịch sử ứng tuyển & chấm điểm trải nghiệm phỏng vấn (HR SLA, độ sát JD).
+- **Route & API static catalog**: 94 route declarations + 12 Multi-Industry Differentiator routes (`backend/src/routes/differentiatorRoutes.js`), 136 legacy endpoints trong `.docs/api-catalog.json`, 71 modern operations / 42 schemas, 34 Sequelize models (gồm `MockInterviewSession` và `JobInvitation`).
+- **Màn hình Native Stitch (37 màn)**: Tham chiếu exact tại https://stitch.withgoogle.com/projects/4225480897019041322; 100% prompt và spec tiếng Việt.
+- **Phân hệ mở rộng đột phá Đa Ngành Nghề (8 màn EXT + Full Source Code)**:
+  1. `EXT-JF-010-CANDIDATE-INSIGHTS`: Báo cáo ứng tuyển, mức cạnh tranh & nạp điểm (tích hợp JF-010, JF-036, JF-037, JF-009, JF-003).
+  2. `EXT-JF-024-MICRO-ASSESSMENT`: AI Situational Micro-Assessment (Bài test tình huống 3 phút mọi ngành nghề: Sales, Marketing, Kế toán/HR, IT; `DetailPosts.hasMicroTest`, `Cvs.aiSituationalScore`, `Cvs.aiEvaluationSummary`).
+  3. `EXT-JF-014-AI-MOCK-INTERVIEW`: AI Mock Interviewer 1-on-1 đóng vai theo JD đa ngành & chấm điểm STAR (`MockInterviewSessions`, `overallScore`, `cvImprovementTips`).
+  4. `EXT-JF-018-PIZZA-TRACKER`: Application Pizza-Tracker 7 chặng thời gian thực, cam kết SLA 72h (`Companies.avgResponseHours`, `responseRate`), Socket.IO `cv:stage_updated` & Constructive AI Rejection (`Cvs.aiFeedbackForCandidate` + 3 việc làm gợi ý).
+  5. `EXT-JF-012-REVERSE-RECRUITING`: Tuyển dụng đảo chiều (Reverse Recruiting), chế độ `UserSettings.isBlindProfile`, `minExpectedSalary`, `blockedCompanyIds`, bảng `JobInvitations` & mở khóa 2 chiều + trừ quota `allowCvFree`/`allowCv` + tạo `ChatMessage` khi `ACCEPTED`.
+  6. `EXT-JF-006-VERIFIED-REVIEWS`: Đánh giá doanh nghiệp xác thực 3 tầng (`INTERVIEWED_CANDIDATE`, `APPLICANT`, `PUBLIC`) gắn `relatedCvId` và `interviewExperienceRating`.
+  7. `EXT-JF-009-PROOF-OF-SKILL`: Xác thực năng lực thực tế đa ngành (`UserSkills.isVerified`, `verificationSource`, `verifiedMetadata`: GitHub API cho IT & Case Study/Chứng chỉ ACCA/CPA/SHRM/ROAS cho Sales, Marketing, Kế toán/HR).
+  8. `EXT-JF-010-SKILL-GAP-ATS`: Phân tích khoảng cách kỹ năng (Skill Gap) & Bộ mô phỏng ATS Simulator đa ngành (`POST /api/ai/skill-gap-simulator`).
 
 ## Trạng thái độc lập (Ledger)
-- **Design status**: 37 màn native đạt `reference-complete`; 8 màn mở rộng đạt `proposal-complete` kèm mockup HTML và đặc tả chi tiết.
-- **Code status**: `unverified` / `planned` (source mapping hoàn tất, chưa triển khai code production; không đánh dấu implemented khi chưa có code thực tế).
-- **Test status**: 8 màn mở rộng đã `verified-browser` (kiểm thử bố cục/liên kết trên mockup HTML); native screens ở trạng thái `not-run`.
+- **Design status**: 37 màn native đạt `reference-complete`; 8 màn mở rộng đạt `proposal-complete` / `integrated` kèm mockup HTML tương tác đa ngành nghề.
+- **Code status**: 7 phân hệ Multi-Industry Differentiator đạt `implemented` (`backend/src/migrations/migrationzzzzzzzzzzzz-multi-industry-features.js`, `backend/src/models/*`, `backend/src/services/differentiatorService.js`, `backend/src/controllers/*`, `backend/src/routes/differentiatorRoutes.js`, `frontend/src/service/differentiatorService.js`, `frontend/src/container/Candidate/MultiIndustryDifferentiatorHub.js`, đóng gói tại `DALN_JobFind_MultiIndustry_Features_Full.zip`). Các màn native còn lại giữ `unverified`.
+- **Test status**: 7 phân hệ Multi-Industry Differentiator đạt `passed` (`node backend/tests/test-multi-industry-differentiator.cjs` exit code 0) và `verified-browser`.
 
 ## Tiếp tục
 1. Hàng đợi tiếp theo trong backlog: `EXT-JF-036-MOBILE` (Mở rộng trải nghiệm tìm kiếm việc làm JF-036 trên thiết bị di động).
-2. Khi bắt tay vào code hoặc test: Chọn feature/screen ID tương ứng, đọc six docs (`.docs/ideas`, `design-briefs`, `frontend-plans`, `backend-plans`, `endpoint-apis`, `qa`), screen contract và source hiện hành.
-3. Giữ nguyên stack (React 18 JSX CRA + Express Babel Sequelize legacy / microservices), duy trì routing legacy, kiểm định server-side và cập nhật bằng chứng thực tế vào backlog/ledger.
+2. Khi tích hợp sang repo runtime: giải nén `DALN_JobFind_MultiIndustry_Features_Full.zip` hoặc copy trực tiếp `backend/` và `frontend/`, chạy `npx sequelize-cli db:migrate` và mount `initDifferentiatorRoutes(app)` trong `backend/src/routes/web.js`.
 
-Calendar tổng hợp, general system settings và recurring subscriptions là PROPOSAL/partial. Source có interview/offer forms và gói post/CV; không tuyên bố thiếu toàn bộ nghiệp vụ đó.
-
-Archive trước phiên: `.docs/archive/20261104T012330713981Z-66a955b9/CONTEXT.md`
+Archive trước phiên: `.docs/archive/20261110T141353652553Z-958c0814/CONTEXT.md`

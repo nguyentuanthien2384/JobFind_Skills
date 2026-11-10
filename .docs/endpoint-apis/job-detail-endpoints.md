@@ -38,3 +38,9 @@ Legacy DTO hoặc query-only: đọc controller/service và schema được dẫ
 
 ## Nếu thêm contract
 Ghi method/path/owner, actor/permission/tenant, params/query/body/headers/schema, status/response/error, pagination/limits, duplicate/concurrency/event, compatibility và tests. Phần mới ghi PROPOSED cho tới khi router/contract/code và kiểm tra có bằng chứng.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+| Endpoint | Owner | Permission | Body / Response | Trạng thái |
+| --- | --- | --- | --- | --- |
+| `POST /api/ai/skill-gap-simulator` | legacy (`differentiatorRoutes.js`) | `ACCOUNT_SELF` | Body: `{ postId, cvText, simulatedExtraSkills }` $\rightarrow$ Phân tích độ khớp CV với JD đa ngành (`currentMatchPercentage`), tách từ khóa (`matchedSkills`, `missingMandatorySkills`, `missingNiceToHaveSkills`), mô phỏng tăng điểm tức thời (`simulatedMatchPercentage`) và kiểm tra định dạng ATS (`atsCheck`). | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |
+| `POST /api/ai/evaluate-situational-answer` | legacy (`differentiatorRoutes.js`) | `CANDIDATE_APPLY` | Body: `{ cvId, postId, answerText }` $\rightarrow$ Chấm điểm bài test tình huống 3 phút (`DetailPosts.hasMicroTest = true`) ngay sau khi nộp CV. | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |

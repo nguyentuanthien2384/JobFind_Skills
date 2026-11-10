@@ -104,6 +104,25 @@
 
     <!-- Main Grid: 2 Columns (Interview Stream 65% + Context & Coaching Insights 35%) -->
     <main class="pt-20 pb-16 max-w-7xl mx-auto px-4 sm:px-6">
+        <!-- Multi-Industry Role-play Switcher & DB Contract Banner -->
+        <div class="mb-5 p-4 rounded-2xl bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-900 text-white flex flex-col lg:flex-row lg:items-center justify-between gap-4 card-shadow">
+            <div>
+                <div class="text-[11px] font-bold uppercase tracking-wider text-purple-300 flex items-center gap-1.5 mb-1">
+                    <span class="material-symbols-outlined text-sm">diversity_3</span>
+                    AI Mock Interviewer Đa Ngành Nghề (Bảng <code class="text-amber-300">MockInterviewSessions</code> • <code class="text-emerald-300">POST /api/mock-interview/start</code>)
+                </div>
+                <p class="text-xs text-slate-200">
+                    AI tự động đóng vai Giám đốc / Trưởng bộ phận theo đúng JD từng ngành: chấm điểm cấu trúc <strong>STAR (Situation - Task - Action - Result)</strong> và gợi ý viết lại CV (<code class="text-amber-300">cvImprovementTips</code>).
+                </p>
+            </div>
+            <div class="flex flex-wrap items-center gap-1.5 text-xs font-bold shrink-0">
+                <button onclick="switchMockPersona('SALES')" id="persona-SALES" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition">💼 Giám đốc Kinh doanh (Sales)</button>
+                <button onclick="switchMockPersona('MARKETING')" id="persona-MARKETING" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition">📣 CMO Marketing</button>
+                <button onclick="switchMockPersona('ACCOUNTING_HR')" id="persona-ACCOUNTING_HR" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition">📊 Kế toán trưởng / HR Director</button>
+                <button onclick="switchMockPersona('IT')" id="persona-IT" class="px-3 py-1.5 rounded-xl bg-amber-400 text-slate-950 shadow-sm transition">💻 Tech Lead IT</button>
+            </div>
+        </div>
+
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
             <!-- Left 8 Cols: Interactive Mock Interview Chat Session -->
             <div class="lg:col-span-8 flex flex-col h-[calc(100vh-120px)] bg-white rounded-2xl border border-slate-200 card-shadow overflow-hidden">
@@ -115,10 +134,10 @@
                         </div>
                         <div>
                             <div class="font-headline font-bold text-sm text-slate-900 flex items-center gap-2">
-                                AI Interviewer (Đóng vai: Tech Lead VNG)
-                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-800">Chuyên môn sâu</span>
+                                <span id="personaRoleTitle">AI Interviewer (Đóng vai: Tech Lead VNG)</span>
+                                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-100 text-purple-800">5 câu hỏi sát JD</span>
                             </div>
-                            <div class="text-[11px] text-slate-500">Mô phỏng phỏng vấn 5 vòng câu hỏi thực tế sát với JD Senior Frontend</div>
+                            <div id="personaRoleSub" class="text-[11px] text-slate-500">Mô phỏng phỏng vấn 5 vòng câu hỏi thực tế sát với JD • Lưu <code class="text-purple-700 font-mono">overallScore (0-100)</code></div>
                         </div>
                     </div>
                     <!-- Round counter -->
@@ -364,7 +383,45 @@
         }
 
         function finishSession() {
-            alert("Chúc mừng bạn đã hoàn thành buổi phỏng vấn thử với AI! Báo cáo chi tiết đã được lưu vào mục Hồ sơ & Lịch phỏng vấn.");
+            alert("Chúc mừng bạn đã hoàn thành buổi phỏng vấn thử với AI (POST /api/mock-interview/:sessionId/submit)! Báo cáo STAR, overallScore và cvImprovementTips đã được lưu vào bảng MockInterviewSessions.");
+        }
+
+        const MOCK_PERSONAS = {
+            SALES: {
+                title: "AI Interviewer (Đóng vai: Giám đốc Kinh doanh B2B)",
+                sub: "Mô phỏng 5 vòng: Pitching, Xử lý từ chối giá, Chốt Deal & Giữ chân khách hàng VIP",
+                q3: "Giả sử khách hàng doanh nghiệp lớn chê giá cao hơn đối thủ 20% và muốn dừng đàm phán ngay trước ngày chốt quý. Bạn sẽ áp dụng mô hình STAR để đàm phán giữ biên lợi nhuận như thế nào?"
+            },
+            MARKETING: {
+                title: "AI Interviewer (Đóng vai: Giám đốc Marketing - CMO)",
+                sub: "Mô phỏng 5 vòng: Tối ưu ROAS/CPA, IMC Campaign, Xử lý khủng hoảng truyền thông",
+                q3: "Chiến dịch quảng cáo chủ lực đang ngốn 60% ngân sách nhưng CPA tăng gấp đôi trong 3 ngày liên tiếp. Hãy trình bày theo cấu trúc STAR cách bạn chẩn đoán phễu và xoay chuyển ROAS."
+            },
+            ACCOUNTING_HR: {
+                title: "AI Interviewer (Đóng vai: Kế toán trưởng / HR Director)",
+                sub: "Mô phỏng 5 vòng: Chuẩn mực VAS/Thuế, Đối soát công nợ, Luật Lao động & Giữ chân nhân sự",
+                q3: "Khi kiểm toán nội bộ phát hiện chênh lệch hóa đơn đầu vào 350 triệu đồng sát kỳ quyết toán thuế, hoặc khi 3 nhân sự chủ chốt đồng loạt xin nghỉ, bạn xử lý từng bước ra sao?"
+            },
+            IT: {
+                title: "AI Interviewer (Đóng vai: Tech Lead VNG)",
+                sub: "Mô phỏng phỏng vấn 5 vòng câu hỏi thực tế sát với JD Senior Frontend",
+                q3: "Giả sử Product Manager (PO) yêu cầu bạn release một tính năng lớn trong 3 ngày tới, nhưng bạn nhận thấy mã nguồn hiện tại còn nhiều lỗ hổng bảo mật Frontend và chưa viết đủ Unit Test. Bạn sẽ trao đổi và xử lý tình huống này với team như thế nào?"
+            }
+        };
+
+        function switchMockPersona(key) {
+            const p = MOCK_PERSONAS[key];
+            if (!p) return;
+            document.getElementById('personaRoleTitle').textContent = p.title;
+            document.getElementById('personaRoleSub').innerHTML = p.sub;
+            ['SALES', 'MARKETING', 'ACCOUNTING_HR', 'IT'].forEach(k => {
+                const btn = document.getElementById('persona-' + k);
+                if (k === key) {
+                    btn.className = "px-3 py-1.5 rounded-xl bg-amber-400 text-slate-950 shadow-sm transition";
+                } else {
+                    btn.className = "px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white transition";
+                }
+            });
         }
     </script>
 </body>

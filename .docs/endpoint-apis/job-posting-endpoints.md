@@ -87,3 +87,8 @@ Required: timeEnd
 
 ## Nếu thêm contract
 Ghi method/path/owner, actor/permission/tenant, params/query/body/headers/schema, status/response/error, pagination/limits, duplicate/concurrency/event, compatibility và tests. Phần mới ghi PROPOSED cho tới khi router/contract/code và kiểm tra có bằng chứng.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+| Endpoint | Owner | Permission | Body / Response | Trạng thái |
+| --- | --- | --- | --- | --- |
+| `POST /api/ai/generate-micro-test` | legacy (`differentiatorRoutes.js`) | `JOB_MANAGE` | Body: `{ jobTitle, descriptionHTML, categoryJobCode }` $\rightarrow$ Sinh 3 đề bài tình huống thực tế (Case Study 3 phút) theo ngành nghề (`SALES`, `MARKETING`, `ACCOUNTING_HR`, `IT`) để HR chọn lưu vào `DetailPosts` (`hasMicroTest`, `microTestPrompt`, `microTestTimeLimit = 300`). | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |

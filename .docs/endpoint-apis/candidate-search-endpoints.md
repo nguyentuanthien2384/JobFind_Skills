@@ -47,3 +47,9 @@ Required: candidateId
 
 ## Nếu thêm contract
 Ghi method/path/owner, actor/permission/tenant, params/query/body/headers/schema, status/response/error, pagination/limits, duplicate/concurrency/event, compatibility và tests. Phần mới ghi PROPOSED cho tới khi router/contract/code và kiểm tra có bằng chứng.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+| Endpoint | Owner | Permission | Body / Response | Trạng thái |
+| --- | --- | --- | --- | --- |
+| `GET /api/candidates/blind-search` | legacy (`differentiatorRoutes.js`) | `CANDIDATE_SEARCH` | Query: `categoryJobCode`, `addressCode`, `experienceJobCode`, `maxBudgetSalary` $\rightarrow$ Tìm ứng viên đa ngành có bảo vệ `UserSettings.isBlindProfile` (che tên/email/SĐT/avatar thành `Ứng viên Ẩn danh #ID`) và loại bỏ tuyệt đối ứng viên có `blockedCompanyIds` chứa `companyId` của HR. | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |
+| `POST /api/job-invitations` | legacy (`differentiatorRoutes.js`) | `CANDIDATE_SEARCH` | Body: `{ candidateId, postId, offeredSalaryMin, offeredSalaryMax, pitchMessage }` $\rightarrow$ Kiểm tra `offeredSalaryMax >= UserSettings.minExpectedSalary`, tạo bản ghi `JobInvitations` (`status = 'PENDING'`, hạn 7 ngày) và phát Socket.IO `invitation:received`. | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |

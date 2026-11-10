@@ -43,3 +43,9 @@ Legacy DTO hoặc query-only: đọc controller/service và schema được dẫ
 
 ## Nếu thêm contract
 Ghi method/path/owner, actor/permission/tenant, params/query/body/headers/schema, status/response/error, pagination/limits, duplicate/concurrency/event, compatibility và tests. Phần mới ghi PROPOSED cho tới khi router/contract/code và kiểm tra có bằng chứng.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+| Endpoint | Owner | Permission | Body / Response | Trạng thái |
+| --- | --- | --- | --- | --- |
+| `POST /api/ai/evaluate-situational-answer` | legacy (`differentiatorRoutes.js`) | `CANDIDATE_APPLY` | Body: `{ cvId, postId, answerText }` $\rightarrow$ Chấm điểm tình huống đa ngành `aiSituationalScore` (1–10), `aiEvaluationSummary` (3 ý tóm tắt cho HR) và chuyển `applicationStage = 'AI_SCREENED'`. | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |
+| `PUT /api/cv/stage` / `POST /api/cv/stage` | legacy (`differentiatorRoutes.js`) | `RECRUITMENT_READ` | Body: `{ cvId, newStage, hrNote }` $\rightarrow$ Cập nhật 7 chặng Pizza-Tracker (`SUBMITTED`, `AI_SCREENED`, `HR_VIEWED`, `SHORTLISTED`, `INTERVIEW_SCHEDULED`, `OFFERED`, `REJECTED`), ghi `hrViewedAt`, tính SLA 72h (`avgResponseHours`, `responseRate`), sinh thư `aiFeedbackForCandidate` + 3 `suggestedPosts` khi `REJECTED`, phát Socket.IO `cv:stage_updated`. | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |

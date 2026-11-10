@@ -118,22 +118,63 @@
             </div>
         </div>
 
-        <!-- Banner Explanation -->
-        <div class="rounded-2xl p-5 bg-gradient-to-r from-blue-900 to-indigo-900 text-white card-shadow mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <!-- Banner Explanation + Multi-Industry Switcher -->
+        <div class="rounded-2xl p-5 bg-gradient-to-r from-blue-900 to-indigo-900 text-white card-shadow mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div class="flex items-start gap-3.5">
                 <div class="p-2.5 rounded-xl bg-white/10 text-amber-300">
                     <span class="material-symbols-outlined text-2xl">verified_user</span>
                 </div>
                 <div>
-                    <h1 class="font-headline font-bold text-base sm:text-lg mb-1">Micro-Assessment Ứng Tuyển (4 Câu Hỏi Tình Huống)</h1>
+                    <h1 class="font-headline font-bold text-base sm:text-lg mb-1">Situational Micro-Assessment Đa Ngành (Lọc Spam Apply)</h1>
                     <p class="text-slate-300 text-xs leading-relaxed max-w-xl">
-                        Để đảm bảo chất lượng ứng viên và ngăn ngừa hiện tượng rải CV hàng loạt (Spam Apply), nhà tuyển dụng VNG Corporation yêu cầu trả lời ngắn gọn 4 tình huống thực chiến. Kết quả sẽ được đính kèm trực tiếp vào hồ sơ nộp.
+                        Thay vì chỉ nộp CV tĩnh, hệ thống cho phép HR đính kèm tình huống thực tế (<code class="text-amber-300">DetailPosts.hasMicroTest = true</code>, <code class="text-amber-300">microTestTimeLimit = 300s</code>). AI chấm tự động thang điểm 1–10 (<code class="text-emerald-300">Cvs.aiSituationalScore</code>) và tóm tắt 3 ý chính (<code class="text-emerald-300">aiEvaluationSummary</code>) cho HR.
                     </p>
                 </div>
             </div>
             <div class="shrink-0 bg-white/10 px-3 py-2 rounded-xl border border-white/20 text-center">
-                <div class="text-[10px] text-slate-300">Tiêu chuẩn qua vòng</div>
-                <div class="text-lg font-bold text-emerald-300 font-headline">≥ 75% Điểm</div>
+                <div class="text-[10px] text-slate-300">Chấm điểm tự động AI</div>
+                <div class="text-lg font-bold text-emerald-300 font-headline">Thang 1.0 – 10.0</div>
+            </div>
+        </div>
+
+        <!-- Multi-Industry Case Study Selector (Sales, Marketing, Kế toán/Nhân sự, IT) -->
+        <div class="bg-white rounded-2xl p-5 border border-slate-200 card-shadow mb-6">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-100">
+                <div>
+                    <div class="text-xs font-bold text-primary uppercase tracking-wider">ĐỊNH HƯỚNG ĐA NGÀNH NGHỀ (MULTI-INDUSTRY SITUATIONAL CASE STUDY)</div>
+                    <p class="text-xs text-slate-500 mt-0.5">Chọn nhóm ngành để xem câu hỏi tình huống do AI gợi ý tự động qua <code class="font-mono text-slate-700">POST /api/ai/generate-micro-test</code></p>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-bold">
+                    Thời gian giới hạn: 300 giây (5 phút)
+                </span>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 mt-4">
+                <button type="button" onclick="selectIndustryCase('SALES')" id="btn-case-SALES" class="p-3 rounded-xl border-2 border-primary bg-blue-50/60 text-left transition">
+                    <div class="text-xs font-headline font-bold text-slate-900">1. Sales / CSKH</div>
+                    <div class="text-[11px] text-slate-500 mt-0.5">Xử lý khách phàn nàn giá & từ chối</div>
+                </button>
+                <button type="button" onclick="selectIndustryCase('MARKETING')" id="btn-case-MARKETING" class="p-3 rounded-xl border border-slate-200 hover:border-primary text-left transition">
+                    <div class="text-xs font-headline font-bold text-slate-900">2. Marketing / PR</div>
+                    <div class="text-[11px] text-slate-500 mt-0.5">Chiến dịch 150 từ với ngân sách giả định</div>
+                </button>
+                <button type="button" onclick="selectIndustryCase('ACCOUNTING_HR')" id="btn-case-ACCOUNTING_HR" class="p-3 rounded-xl border border-slate-200 hover:border-primary text-left transition">
+                    <div class="text-xs font-headline font-bold text-slate-900">3. Kế toán / Nhân sự</div>
+                    <div class="text-[11px] text-slate-500 mt-0.5">Sai lệch chứng từ & xung đột nội bộ</div>
+                </button>
+                <button type="button" onclick="selectIndustryCase('IT')" id="btn-case-IT" class="p-3 rounded-xl border border-slate-200 hover:border-primary text-left transition">
+                    <div class="text-xs font-headline font-bold text-slate-900">4. IT / Phần mềm</div>
+                    <div class="text-[11px] text-slate-500 mt-0.5">Xử lý nghẽn hiệu năng & kiến trúc</div>
+                </button>
+            </div>
+            <div id="industryCaseBox" class="mt-4 p-4 rounded-xl bg-slate-50 border border-slate-200">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span id="industryCaseBadge" class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-[11px] font-bold">NGÀNH SALES / CSKH • CASE STUDY BẮT BUỘC (microTestPrompt)</span>
+                    <span class="text-[11px] text-slate-500 font-mono">DetailPosts.microTestTimeLimit = 300s</span>
+                </div>
+                <p id="industryCasePrompt" class="text-xs sm:text-sm font-semibold text-slate-800 leading-relaxed">
+                    "Một khách hàng doanh nghiệp B2B chiếm 15% doanh số quý bất ngờ yêu cầu giảm giá 20% vì đối thủ chào giá thấp hơn, nếu không sẽ ngừng gia hạn hợp đồng trong 48 giờ tới. Bạn sẽ phản hồi và đàm phán theo từng bước như thế nào để giữ chân khách hàng mà không phá vỡ biên lợi nhuận công ty?"
+                </p>
+                <textarea id="situationalAnswerInput" rows="3" class="mt-3 w-full rounded-xl border border-slate-300 p-3 text-xs text-slate-800 focus:border-primary focus:ring-primary" placeholder="Nhập câu trả lời tình huống của bạn (lưu vào Cvs.microTestAnswer)...">Tôi sẽ lắng nghe phản hồi của khách hàng B2B, phân tích tổng chi phí sở hữu (TCO) và ROI thực tế mà giải pháp mang lại; đề xuất gói hỗ trợ kỹ thuật ưu tiên kèm cam kết SLA 99.9% thay vì giảm giá trực tiếp làm ảnh hưởng biên lợi nhuận.</textarea>
             </div>
         </div>
 
@@ -267,23 +308,23 @@
             <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
                 <span class="material-symbols-outlined text-3xl">verified</span>
             </div>
-            <h3 class="font-headline font-bold text-lg text-slate-900 mb-1">Hoàn Thành Micro-Assessment!</h3>
+            <h3 class="font-headline font-bold text-lg text-slate-900 mb-1">Hoàn Thành Situational Micro-Assessment!</h3>
             <p class="text-xs text-slate-600 mb-4">
-                Điểm số đánh giá tự động: <strong class="text-emerald-600 text-sm">100 / 100 Điểm (Xuất Sắc)</strong>.<br/>
-                Hồ sơ CV của bạn đã được gắn huy hiệu ưu tiên và chuyển thẳng vào hộp thư tuyển dụng của VNG Corporation!
+                Điểm AI chấm tự động (<code class="font-mono">aiSituationalScore</code>): <strong class="text-emerald-600 text-sm">8.8 / 10.0 Điểm</strong>.<br/>
+                Trạng thái hồ sơ đã chuyển sang <code class="font-mono text-primary font-bold">AI_SCREENED</code> và tóm tắt 3 ý chính (<code class="font-mono">aiEvaluationSummary</code>) cho HR!
             </p>
             <div class="p-3 rounded-xl bg-slate-50 border border-slate-200 text-left text-xs space-y-1.5 mb-5 font-medium">
                 <div class="flex justify-between">
-                    <span class="text-slate-500">Mã đơn ứng tuyển:</span>
-                    <span class="font-mono text-slate-800">#APP-VNG-2026-9921</span>
+                    <span class="text-slate-500">Độ hiểu nghiệp vụ:</span>
+                    <span class="text-slate-800 font-semibold">Nắm bắt đúng trọng tâm tình huống</span>
                 </div>
                 <div class="flex justify-between">
-                    <span class="text-slate-500">Trạng thái lọc spam:</span>
-                    <span class="text-emerald-700 font-bold">ĐÃ VƯỢT QUA VÒNG LỌC TỰ ĐỘNG</span>
+                    <span class="text-slate-500">Tư duy giải quyết vấn đề:</span>
+                    <span class="text-slate-800 font-semibold">Giải pháp thực tế, bảo vệ biên lợi nhuận</span>
                 </div>
                 <div class="flex justify-between">
-                    <span class="text-slate-500">Thời gian làm bài:</span>
-                    <span class="text-slate-800">03 phút 18 giây</span>
+                    <span class="text-slate-500">Mức độ phù hợp JD:</span>
+                    <span class="text-emerald-700 font-bold">KHUYẾN NGHỊ PHỎNG VẤN (AI_SCREENED)</span>
                 </div>
             </div>
             <a href="../don_ung_tuyen_pizza_tracker_sla_realtime/code.html" class="w-full py-2.5 px-4 rounded-xl bg-primary text-white font-headline text-xs font-bold hover:bg-blue-700 transition flex items-center justify-center gap-2">
@@ -294,8 +335,47 @@
     </div>
 
     <script>
-        // Countdown timer simulation
-        let timeRemaining = 522; // 8 mins 42 secs
+        const INDUSTRY_CASES = {
+            SALES: {
+                badge: 'NGÀNH SALES / CSKH • CASE STUDY BẮT BUỘC (microTestPrompt)',
+                prompt: '"Một khách hàng doanh nghiệp B2B chiếm 15% doanh số quý bất ngờ yêu cầu giảm giá 20% vì đối thủ chào giá thấp hơn, nếu không sẽ ngừng gia hạn hợp đồng trong 48 giờ tới. Bạn sẽ phản hồi và đàm phán theo từng bước như thế nào để giữ chân khách hàng mà không phá vỡ biên lợi nhuận công ty?"',
+                sample: 'Tôi sẽ lắng nghe phản hồi của khách hàng B2B, phân tích tổng chi phí sở hữu (TCO) và ROI thực tế mà giải pháp mang lại; đề xuất gói hỗ trợ kỹ thuật ưu tiên kèm cam kết SLA 99.9% thay vì giảm giá trực tiếp làm ảnh hưởng biên lợi nhuận.'
+            },
+            MARKETING: {
+                badge: 'NGÀNH MARKETING / TRUYỀN THÔNG • CASE STUDY 150 TỪ (microTestPrompt)',
+                prompt: '"Giả sử công ty ra mắt dòng sản phẩm mới hướng tới tệp khách hàng văn phòng với ngân sách thử nghiệm chỉ 50 triệu VNĐ trong 14 ngày. Trong khoảng 150 từ, hãy đề xuất ý tưởng chủ đạo (Key Hook), phân bổ kênh triển khai và chỉ số đo lường (KPIs) quan trọng nhất."',
+                sample: 'Triển khai chiến dịch Micro-Influencer & UGC TikTok/Reels (60% ngân sách = 30 triệu) kết hợp Retargeting Lead Ads (40% = 20 triệu), tập trung đo lường CPA, CTR và tỷ lệ chuyển đổi dùng thử (Trial-to-Paid Conversion).'
+            },
+            ACCOUNTING_HR: {
+                badge: 'NGÀNH KẾ TOÁN / NHÂN SỰ / HÀNH CHÍNH • CASE STUDY (microTestPrompt)',
+                prompt: '"Trước hạn chốt báo cáo thuế/tài chính 24 giờ, bạn phát hiện một khoản thanh toán 350 triệu VNĐ thiếu biên bản nghiệm thu hợp lệ và lệch số liệu với hóa đơn nhà cung cấp. Bạn sẽ xử lý tình huống này như thế nào để vừa đảm bảo tuân thủ chuẩn mực kế toán vừa không làm đình trệ vận hành?"',
+                sample: 'Lập biên bản đối soát tạm thời, treo khoản chênh lệch vào tài khoản chờ xử lý theo đúng chuẩn mực kế toán, đồng thời phối hợp ngay với bộ phận Kinh doanh và nhà cung cấp để bổ sung chứng từ nghiệm thu hợp lệ trước giờ khóa sổ.'
+            },
+            IT: {
+                badge: 'NGÀNH IT / PHẦN MỀM • CASE STUDY HỆ THỐNG (microTestPrompt)',
+                prompt: '"Hệ thống ứng tuyển/thanh toán tăng vọt lưu lượng gấp 10 lần giờ cao điểm khiến API phản hồi chậm 8 giây và xuất hiện lỗi trừ trùng lặp quota. Bạn sẽ khoanh vùng nguyên nhân và thiết kế giải pháp xử lý ở tầng Database & Application như thế nào?"',
+                sample: 'Áp dụng Database Transaction kết hợp Row-level Locking / Idempotency Key chống trừ trùng lặp quota, bổ sung Composite Index cho truy vấn nóng và đưa tác vụ chấm điểm AI sang hàng đợi bất đồng bộ (Queue).'
+            }
+        };
+
+        function selectIndustryCase(key) {
+            const item = INDUSTRY_CASES[key] || INDUSTRY_CASES.SALES;
+            document.getElementById('industryCaseBadge').textContent = item.badge;
+            document.getElementById('industryCasePrompt').textContent = item.prompt;
+            document.getElementById('situationalAnswerInput').value = item.sample;
+            ['SALES', 'MARKETING', 'ACCOUNTING_HR', 'IT'].forEach(k => {
+                const btn = document.getElementById('btn-case-' + k);
+                if (!btn) return;
+                if (k === key) {
+                    btn.className = 'p-3 rounded-xl border-2 border-primary bg-blue-50/60 text-left transition';
+                } else {
+                    btn.className = 'p-3 rounded-xl border border-slate-200 hover:border-primary text-left transition';
+                }
+            });
+        }
+
+        // Countdown timer simulation (microTestTimeLimit = 300s)
+        let timeRemaining = 300;
         const timerElem = document.getElementById('countdown');
         setInterval(() => {
             if (timeRemaining > 0) {

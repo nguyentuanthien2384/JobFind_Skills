@@ -63,3 +63,9 @@ Trace endpoint tới controller/service/store. Legacy backend và job-core MySQL
 
 ## Kết quả
 Patch vào owner/controller/service/contract/model thực sự cần thiết; kiểm tra có evidence và plan rollout nếu user giao đổi mode. Các lệnh live migration/seed/payment/email không được tự chạy để hoàn tất plan.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+- **Migration**: `backend/src/migrations/migrationzzzzzzzzzzzz-multi-industry-features.js` bổ sung vào bảng `Cvs`: `microTestAnswer` (`TEXT`), `aiSituationalScore` (`FLOAT` 1–10), `aiEvaluationSummary` (`TEXT`), `applicationStage` (`STRING(50)`, default `'SUBMITTED'`), `stageUpdatedAt` (`DATE`), `hrViewedAt` (`DATE`), `aiFeedbackForCandidate` (`TEXT`); bổ sung vào `Companies`: `avgResponseHours` (`FLOAT`), `responseRate` (`FLOAT`).
+- **Service & Controller**: `backend/src/services/differentiatorService.js` (`evaluateSituationalAnswer`, `updateCvStageWithTracker`), `backend/src/controllers/differentiatorController.js`, `backend/src/routes/differentiatorRoutes.js`.
+- **Realtime Event**: `cv:stage_updated` trong `backend/src/contracts/differentiator.events.v1.json`.
+- **Verification**: `node backend/tests/test-multi-industry-differentiator.cjs` — PASS.

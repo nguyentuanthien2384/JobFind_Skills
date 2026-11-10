@@ -37,3 +37,8 @@ Legacy DTO hoặc query-only: đọc controller/service và schema được dẫ
 
 ## Nếu thêm contract
 Ghi method/path/owner, actor/permission/tenant, params/query/body/headers/schema, status/response/error, pagination/limits, duplicate/concurrency/event, compatibility và tests. Phần mới ghi PROPOSED cho tới khi router/contract/code và kiểm tra có bằng chứng.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+| Endpoint | Owner | Permission | Body / Response | Trạng thái |
+| --- | --- | --- | --- | --- |
+| `POST /api/company-reviews/verified` | legacy (`differentiatorRoutes.js`) | `SOCIAL_INTERACT` | Body: `{ companyId, star, interviewExperienceRating, content }` $\rightarrow$ Đối soát lịch sử nộp CV của `userId` tại `companyId` để tự động gán `verificationType` (`INTERVIEWED_CANDIDATE` nếu qua `INTERVIEW_SCHEDULED`/`OFFERED`, `APPLICANT` nếu đã nộp CV, `PUBLIC` nếu chưa nộp) và gắn `relatedCvId`. | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |

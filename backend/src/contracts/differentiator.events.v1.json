@@ -1,0 +1,75 @@
+{
+  "payloadVersion": 1,
+  "events": {
+    "cv:stage_updated": {
+      "payloadVersion": 1,
+      "description": "Sự kiện thời gian thực cập nhật tiến trình Pizza-Tracker khi HR mở xem CV hoặc chuyển trạng thái tuyển dụng.",
+      "roomPattern": "user:<candidateId>",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "required": ["v", "event", "cvId", "postId", "candidateId", "applicationStage", "stageUpdatedAt"],
+        "properties": {
+          "v": { "type": "integer", "const": 1 },
+          "event": { "type": "string", "const": "cv:stage_updated" },
+          "cvId": { "type": "integer", "minimum": 1 },
+          "postId": { "type": "integer", "minimum": 1 },
+          "candidateId": { "type": "integer", "minimum": 1 },
+          "applicationStage": {
+            "type": "string",
+            "enum": [
+              "SUBMITTED",
+              "AI_SCREENED",
+              "HR_VIEWED",
+              "SHORTLISTED",
+              "INTERVIEW_SCHEDULED",
+              "OFFERED",
+              "REJECTED"
+            ]
+          },
+          "stageLabel": { "type": "string" },
+          "stageUpdatedAt": { "type": "string", "format": "date-time" },
+          "hrViewedAt": { "type": ["string", "null"], "format": "date-time" },
+          "aiFeedbackForCandidate": { "type": ["string", "null"] },
+          "suggestedPosts": { "type": "array" },
+          "slaMetrics": {
+            "type": ["object", "null"],
+            "properties": {
+              "avgResponseHours": { "type": ["number", "null"] },
+              "responseRate": { "type": "number" },
+              "totalApplications": { "type": "integer" }
+            }
+          },
+          "message": { "type": "string" }
+        }
+      }
+    },
+    "invitation:received": {
+      "payloadVersion": 1,
+      "description": "Sự kiện thời gian thực khi nhà tuyển dụng gửi lời mời phỏng vấn kèm khung lương cam kết (Offer-First Bidding) tới hồ sơ ẩn danh.",
+      "roomPattern": "user:<candidateId>",
+      "schema": {
+        "$schema": "https://json-schema.org/draft/2020-12/schema",
+        "type": "object",
+        "required": ["v", "event", "invitationId", "companyId", "recruiterId", "candidateId", "offeredSalaryMin", "offeredSalaryMax", "status"],
+        "properties": {
+          "v": { "type": "integer", "const": 1 },
+          "event": { "type": "string", "const": "invitation:received" },
+          "invitationId": { "type": "integer", "minimum": 1 },
+          "companyId": { "type": "integer", "minimum": 1 },
+          "recruiterId": { "type": "integer", "minimum": 1 },
+          "candidateId": { "type": "integer", "minimum": 1 },
+          "postId": { "type": ["integer", "null"] },
+          "offeredSalaryMin": { "type": "integer", "minimum": 1 },
+          "offeredSalaryMax": { "type": "integer", "minimum": 1 },
+          "pitchMessage": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["PENDING", "ACCEPTED", "DECLINED", "EXPIRED"]
+          },
+          "createdAt": { "type": "string", "format": "date-time" }
+        }
+      }
+    }
+  }
+}

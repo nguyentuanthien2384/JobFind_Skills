@@ -3676,8 +3676,8 @@
     },
     {
       "path": ".docs/CONTEXT.md",
-      "bytes": 3469,
-      "sha256": "958c08142fe9efe5a5470affdfb3e27d70e259e7bf103d0dbe2e81350a470601"
+      "bytes": 4328,
+      "sha256": "e1294a8d07a06ab71d54cc41cc8f1575233ddbd34132e78f83b63887c48e6abe"
     },
     {
       "path": ".docs/DESIGN_GAPS.md",
@@ -3686,8 +3686,8 @@
     },
     {
       "path": ".docs/FEATURES_DONE.md",
-      "bytes": 4217,
-      "sha256": "d475160be52e0cb50e38e004655da092a20465bf8882523cc86c4fbb53c0a67b"
+      "bytes": 5379,
+      "sha256": "623391041767df615d5318e276163e6ab11b130e3ca3edf8ff452ed15e1d482c"
     },
     {
       "path": ".docs/INDEX.md",
@@ -3711,13 +3711,28 @@
     },
     {
       "path": ".docs/api-catalog.json",
-      "bytes": 166654,
-      "sha256": "e20e52c2706649896c30da4f3bf87e23f85d2086bb3f56f6b2b0ffd84128d740"
+      "bytes": 168495,
+      "sha256": "2aa585a8cd6842d351883eb0120b8bbc04812d7c7d0d2b17f0629d353d0d6a65"
+    },
+    {
+      "path": ".docs/archive/20261104T012330713981Z-66a955b9/CONTEXT.md",
+      "bytes": 5127,
+      "sha256": "66a955b98a0644bdcf1b29dfa5729370581d45e79ee55ffad436e94b06e68a64"
+    },
+    {
+      "path": ".docs/archive/20261110T141353652553Z-958c0814/CONTEXT.md",
+      "bytes": 3469,
+      "sha256": "958c08142fe9efe5a5470affdfb3e27d70e259e7bf103d0dbe2e81350a470601"
     },
     {
       "path": ".docs/archive/README.md",
       "bytes": 319,
       "sha256": "be7f54ef6498b082de870faf578fc4fefd721985b995ddd9fcb8602ad05e4edc"
+    },
+    {
+      "path": ".docs/archive/index.jsonl",
+      "bytes": 417,
+      "sha256": "33858679afad85857761f760b7c6d728a3cb5e13d4f6557664278788cd12a938"
     },
     {
       "path": ".docs/backend-plans/admin-companies-plan.md",
@@ -3751,8 +3766,8 @@
     },
     {
       "path": ".docs/backend-plans/applications-plan.md",
-      "bytes": 5265,
-      "sha256": "6dbf21094fff8c24abfe3538a3692d22006a7eae8f16330de377ea5d737fb1ca"
+      "bytes": 6221,
+      "sha256": "4cd56343258a6802abebe9ff16c036e171dab82ed264426b49b758b123a1b3f2"
     },
     {
       "path": ".docs/backend-plans/auth-login-plan.md",
@@ -3781,13 +3796,13 @@
     },
     {
       "path": ".docs/backend-plans/candidate-profile-plan.md",
-      "bytes": 3441,
-      "sha256": "db67190f341888ce9211db04034abbfc0adcfaf6764080de3636df94026827c5"
+      "bytes": 4224,
+      "sha256": "40d09703ccb911dcc8cf48b8ada6ecf1c7a5afbd2f35235c197bfeb43bfb3284"
     },
     {
       "path": ".docs/backend-plans/candidate-search-plan.md",
-      "bytes": 3545,
-      "sha256": "d0383bdcf9878d4e30383f4810844002f18b93d88c35b6d8bcf4bf3e49be012c"
+      "bytes": 4367,
+      "sha256": "fa283594ea408aee9a7e8f600fbb1d8fc65c083097a7ed68110f8f742d5992cc"
     },
     {
       "path": ".docs/backend-plans/chat-plan.md",
@@ -3796,8 +3811,8 @@
     },
     {
       "path": ".docs/backend-plans/companies-plan.md",
-      "bytes": 3434,
-      "sha256": "d1bbaf533b4ed1d5c1fd4bd852eb97c33ff5c0422318baffbe7282621b134cc6"
+      "bytes": 4127,
+      "sha256": "bec92c48084d51cdd43136226d0000d4a94ef136035a83e04bb416f47dbd9e54"
     },
     {
       "path": ".docs/backend-plans/company-profile-plan.md",
@@ -3821,18 +3836,18 @@
     },
     {
       "path": ".docs/backend-plans/interviews-offers-plan.md",
-      "bytes": 4947,
-      "sha256": "37683b22ea4b15ce6410db4144c302fbcf82e560d56f2933ce41f738eb34fca2"
+      "bytes": 5640,
+      "sha256": "bda40b15ff1c5d5220cce733f1322e0738cbf58d07396cb0afec2a974607c877"
     },
     {
       "path": ".docs/backend-plans/job-detail-plan.md",
-      "bytes": 3608,
-      "sha256": "bf3677df39e6f462e69ad79ee268a84ec7e52615840c927a3a15eee440f2d44c"
+      "bytes": 4064,
+      "sha256": "692f6fded539cd9e665634bfc4b67176686484867661840a9a46989614f3ad02"
     },
     {
       "path": ".docs/backend-plans/job-posting-plan.md",
-      "bytes": 3853,
-      "sha256": "c84fd355992fc79d423e416a65566abd07e577b0174d7f2a01b15ce961fe1fd9"
+      "bytes": 4484,
+      "sha256": "61a1e8355445fc225a083dc507dc8427a02436838ccc6fb93fe5219e369ca0a9"
     },
     {
       "path": ".docs/backend-plans/job-search-plan.md",
@@ -3851,8 +3866,8 @@
     },
     {
       "path": ".docs/backend-plans/pipeline-plan.md",
-      "bytes": 3703,
-      "sha256": "5fcb3fb24379fac571bf6f2d19e623427965dab92765c6a53e964a7ae4cba607"
+      "bytes": 4248,
+      "sha256": "99b9f9231407c37eb9d4a2ffd0402e9340bfbec08c1a316d9369836b682cd342"
     },
     {
       "path": ".docs/backend-plans/recruitment-catalogs-plan.md",
@@ -4061,8 +4076,8 @@
     },
     {
       "path": ".docs/endpoint-apis/applications-endpoints.md",
-      "bytes": 3779,
-      "sha256": "e412e774ef15998be5247d879905150f5fc204a73e76a47af86e7f520b522356"
+      "bytes": 4888,
+      "sha256": "ef620523b5c795dc9920ed7851745fa5ae982989c588e85a826a543db898785b"
     },
     {
       "path": ".docs/endpoint-apis/auth-login-endpoints.md",
@@ -4091,13 +4106,13 @@
     },
     {
       "path": ".docs/endpoint-apis/candidate-profile-endpoints.md",
-      "bytes": 3630,
-      "sha256": "82503c40d863f8b893b252e881717a4f9de22a3d4d796ddb6f48efb4addef098"
+      "bytes": 4808,
+      "sha256": "68bb0f32357c25a3cf37adee1f75625aeb8e194e3b760568c8d66af2349f2a56"
     },
     {
       "path": ".docs/endpoint-apis/candidate-search-endpoints.md",
-      "bytes": 3210,
-      "sha256": "8b48c40e0bc72f23601db1672c7b9b6baea7345c91a3bc683a6fb04832f2dc2c"
+      "bytes": 4313,
+      "sha256": "2b920545f8f3669535c955d02edc195e100b16cce0011bf9781c49d256d753af"
     },
     {
       "path": ".docs/endpoint-apis/chat-endpoints.md",
@@ -4106,8 +4121,8 @@
     },
     {
       "path": ".docs/endpoint-apis/companies-endpoints.md",
-      "bytes": 2708,
-      "sha256": "8e3baeb4700c3c0aaac0cab71d2075b0a4e9473dc34c8d77f6cf638ec6c2aa77"
+      "bytes": 3396,
+      "sha256": "a7b3fa44f007711dedce8c75b97618933f9fcae6c4f551d50ceeb43716249f57"
     },
     {
       "path": ".docs/endpoint-apis/company-profile-endpoints.md",
@@ -4131,18 +4146,18 @@
     },
     {
       "path": ".docs/endpoint-apis/interviews-offers-endpoints.md",
-      "bytes": 7075,
-      "sha256": "769e76627c65dd76baf36b357dfcca40147c5ad1019aa619be783d1c01029d3e"
+      "bytes": 8119,
+      "sha256": "9b3bdb1b469a8c5882740a70671314ee91a00412720f36f233e7f45783ddb2fe"
     },
     {
       "path": ".docs/endpoint-apis/job-detail-endpoints.md",
-      "bytes": 2668,
-      "sha256": "cf250d5d3f2ce0747f32a6c07e4f8a71caf1cbadb1a969a5f2487579423d0ffa"
+      "bytes": 3680,
+      "sha256": "4a58a17681187a42f50ca87e9cde63280f8d7dc61f1323c11f98ea5b1d6a0f3e"
     },
     {
       "path": ".docs/endpoint-apis/job-posting-endpoints.md",
-      "bytes": 5958,
-      "sha256": "ec55a987dd5a6d73800551411e82ccc2fe658dbb42207617e3daa0fb49d35242"
+      "bytes": 6601,
+      "sha256": "35097fd90f6f73501ae4d4643a69fb07e49f811c8339eb622ab9247f740c5cac"
     },
     {
       "path": ".docs/endpoint-apis/job-search-endpoints.md",
@@ -4161,8 +4176,8 @@
     },
     {
       "path": ".docs/endpoint-apis/pipeline-endpoints.md",
-      "bytes": 3329,
-      "sha256": "9d809e06b7a09c3e25f2475780d588baea2164dd3f1bf8d3217f11059d7cfdc3"
+      "bytes": 4009,
+      "sha256": "f355a6b4639bb757456fc5cccf6f60623d8f126d8ef84cfd830657b02a274334"
     },
     {
       "path": ".docs/endpoint-apis/recruitment-catalogs-endpoints.md",
@@ -4186,8 +4201,8 @@
     },
     {
       "path": ".docs/feature-catalog.json",
-      "bytes": 67635,
-      "sha256": "a3b30555e69b48990d530d317ea629759fdb99566f8780c6424fd86eb802b567"
+      "bytes": 68197,
+      "sha256": "2a4c12309eb17a3a6fddde80f6e618aa79a8a3219adfefb44f061876c057bdec"
     },
     {
       "path": ".docs/frontend-plans/admin-companies-plan.md",
@@ -4716,38 +4731,38 @@
     },
     {
       "path": ".docs/ui-mockups/screens/EXT-JF-006-VERIFIED-REVIEWS.md",
-      "bytes": 1951,
-      "sha256": "5e914b91ac0d59d97a80d05d67513328417a87dffb60907ddff4b82926e7ddd5"
+      "bytes": 3312,
+      "sha256": "534afe0b3182331e2cf3403130e5ebba26d68e365234daf8a18e2c65b50ae09f"
     },
     {
       "path": ".docs/ui-mockups/screens/EXT-JF-009-PROOF-OF-SKILL.md",
-      "bytes": 1888,
-      "sha256": "9c0b94952634410346bdb40d2a8c75e8e0e6df7b73100991b680bd3450bd227a"
+      "bytes": 2540,
+      "sha256": "1bc7a800cb6508c9f14b58000f5d17adad385d6af054be0be64bb1d0cdbc8bff"
     },
     {
       "path": ".docs/ui-mockups/screens/EXT-JF-010-SKILL-GAP-ATS.md",
-      "bytes": 1517,
-      "sha256": "f8d99a532090a4bf3e6da16ca83a8a45adcd3b0ab8db665fe601e99b4c44a7fb"
+      "bytes": 1918,
+      "sha256": "da97135129b8181c2bee7f35070f9bac8b15b81d67249083d672067e789b56f8"
     },
     {
       "path": ".docs/ui-mockups/screens/EXT-JF-012-REVERSE-RECRUITING.md",
-      "bytes": 2093,
-      "sha256": "0ae71729d4826a29ac363ff704c275f93a30e9a9d135a6a2fedf378ab9ff89e5"
+      "bytes": 4438,
+      "sha256": "33b448c4e06377f447f103a7f4e1e722d74d23f2d29cd7378bdbbf9b9e92ee6c"
     },
     {
       "path": ".docs/ui-mockups/screens/EXT-JF-014-AI-MOCK-INTERVIEW.md",
-      "bytes": 1765,
-      "sha256": "785de3b429c586f26a376d97e1148b5077e3ccffee070df0f635682664af9998"
+      "bytes": 3500,
+      "sha256": "e6f0f97f3fe17cccb1b0e8e92348a069a02171c89dd936dc1a81c191b946103f"
     },
     {
       "path": ".docs/ui-mockups/screens/EXT-JF-018-PIZZA-TRACKER.md",
-      "bytes": 1834,
-      "sha256": "e21e9f30d6736816824f1d3443213d6371fd8f93f3190d55cc44a4da5bbca880"
+      "bytes": 3774,
+      "sha256": "3d93c6bf83f8c6f7b17f6ea9d8e1a4e9a625332cf1927461b3fa9854def15b9e"
     },
     {
       "path": ".docs/ui-mockups/screens/EXT-JF-024-MICRO-ASSESSMENT.md",
-      "bytes": 1743,
-      "sha256": "e9a30f55c7663766f49c4bc2c23f630bb8d355e82ce0d47113586862780ab772"
+      "bytes": 3627,
+      "sha256": "9a9ab868b279c9fd93f423fc9a8013a4da97ada83c5f0ce04a63876035e7ce57"
     },
     {
       "path": ".docs/ui-mockups/screens/JF-001.md",
@@ -4956,8 +4971,8 @@
     },
     {
       "path": ".stitch/backlog.json",
-      "bytes": 156696,
-      "sha256": "c2871aa03c2f23c6cc1837368cd0524d3ecffd42f0d3d1e797a6bfbb645a1bab"
+      "bytes": 159086,
+      "sha256": "6cf9267a6b82919db347a349f676b196ad075a4d29a1b07460b74ecf2c18b604"
     },
     {
       "path": ".stitch/designs/404_page_tuy_n_d_ng_vn/code.html",
@@ -5011,8 +5026,8 @@
     },
     {
       "path": ".stitch/designs/danh_gia_cong_ty_xac_thuc_verified_reviews/code.html",
-      "bytes": 25979,
-      "sha256": "58fcada0d7761956c8e4685af960851a3105500d0255eda5e8ff7789d189e672"
+      "bytes": 26092,
+      "sha256": "5c5d5b4b64a84877d2e710c4eb06c7b35155bd251df2fc195cb97d6aa1d18f18"
     },
     {
       "path": ".stitch/designs/danh_m_c_c_ng_ty/code.html",
@@ -5041,8 +5056,8 @@
     },
     {
       "path": ".stitch/designs/don_ung_tuyen_pizza_tracker_sla_realtime/code.html",
-      "bytes": 27934,
-      "sha256": "5d48240c088299ee90a07a69ab3e7589bbe425aef4c7a5e05411a01d53daebca"
+      "bytes": 28101,
+      "sha256": "1455dc7a57c262ec23ae4425ff3c75f046fd355b8af17d0a6da448be56d28457"
     },
     {
       "path": ".stitch/designs/duy_t_h_s_c_ng_ty/code.html",
@@ -5151,8 +5166,8 @@
     },
     {
       "path": ".stitch/designs/luyen_phong_van_ai_mock_interview_jd/code.html",
-      "bytes": 24927,
-      "sha256": "a2a5e6bb49e66a32f910ecf5eebdf86b0429e5bd52ab9cdc2e75420b2225036f"
+      "bytes": 29996,
+      "sha256": "3062df75504a5df77ed1261998bba986d3f62e3d7a07e3b4c2f2fcf922d34b84"
     },
     {
       "path": ".stitch/designs/n_ng_tuy_n_c_a_t_i_tuy_n_d_ng_vn/code.html",
@@ -5346,13 +5361,13 @@
     },
     {
       "path": ".stitch/designs/tuyen_dung_dao_chieu_blind_profile_bidding/code.html",
-      "bytes": 28123,
-      "sha256": "f17f66964c44415ab2c05e41005e66903c84a9a3a8a2924120be906c71f509de"
+      "bytes": 28294,
+      "sha256": "3a4dcf3a47fb96b8e4ea8b00836e9430c0e1a8d8935d98c478190a4b0730cab5"
     },
     {
       "path": ".stitch/designs/ung_tuyen_micro_assessment_test_nang_luc/code.html",
-      "bytes": 21016,
-      "sha256": "22895b092537605d32dbc0cfbc51d23b1828ef04a593d728dfe1ed913b01c5bc"
+      "bytes": 30156,
+      "sha256": "ef9e7466af4a451e67a82f0cdc74d6a2469c285f6cd70fa53097bd4e309e209d"
     },
     {
       "path": ".stitch/designs/x_c_th_c_doanh_nghi_p_admin/code.html",
@@ -5376,8 +5391,8 @@
     },
     {
       "path": ".stitch/prompts/EXT-JF-006-VERIFIED-REVIEWS.md",
-      "bytes": 2097,
-      "sha256": "3fab031cc7a477bd28c91230ff449c20c3c452f4387e43646e0264bcf515aded"
+      "bytes": 1915,
+      "sha256": "2ab5a24f9cb3d8fca67ba37c7d095c569f134fc5a83cd319310cfa3c7120e774"
     },
     {
       "path": ".stitch/prompts/EXT-JF-009-PROOF-OF-SKILL.md",
@@ -5391,23 +5406,23 @@
     },
     {
       "path": ".stitch/prompts/EXT-JF-012-REVERSE-RECRUITING.md",
-      "bytes": 2055,
-      "sha256": "103fce21372bd8894ee11f5fda9297d22a46c9da0d7e70076b222a0d76d88f46"
+      "bytes": 2335,
+      "sha256": "ba2d2ff7d0b5932c85d966e95b040945c87603eeb6a1dae985a878e0a1697180"
     },
     {
       "path": ".stitch/prompts/EXT-JF-014-AI-MOCK-INTERVIEW.md",
-      "bytes": 1806,
-      "sha256": "2124f818216ad292094ad7fb7a8b05e462cc513e713342eb8fc2e52325750818"
+      "bytes": 1949,
+      "sha256": "25f854a34f440eb4afeec2ab7b87ce3ae773602bd4b6cc589248e1f837785294"
     },
     {
       "path": ".stitch/prompts/EXT-JF-018-PIZZA-TRACKER.md",
-      "bytes": 2274,
-      "sha256": "4482d1d63f3e4eb14eb676bcbcea9c3995b2b96353bb211a08bf08c73d822936"
+      "bytes": 2217,
+      "sha256": "313b25f6c1828a7e2a8081c762c5feece08ceb80ea86959bedb70faf53293328"
     },
     {
       "path": ".stitch/prompts/EXT-JF-024-MICRO-ASSESSMENT.md",
-      "bytes": 2249,
-      "sha256": "9bae3a0c0ab940e54243cb8b95d12fddafda61ea0788eec3fe5087e6bf48599f"
+      "bytes": 2346,
+      "sha256": "787c5c30b839f1de3ace5845bbb6d6fec7ec4c79debb2ea3f155505a6be00f55"
     },
     {
       "path": ".stitch/prompts/JF-001.md",
@@ -5613,6 +5628,101 @@
       "path": "README.md",
       "bytes": 2331,
       "sha256": "4a6ba442d5d62091a49046b40d7c4f91020b48d03025a6b6a941fe2d2ef450a1"
+    },
+    {
+      "path": "README_DIFFERENTIATOR.md",
+      "bytes": 6016,
+      "sha256": "eb10868f609dfbb88d76fa8ab10a70b9a7ea6ae6b3c94b64ea263a5e534a2965"
+    },
+    {
+      "path": "backend/src/contracts/differentiator.events.v1.json",
+      "bytes": 3221,
+      "sha256": "493dca37710f94298dc726dfb9407f151d45c4daa498bab62bac951269cd04bf"
+    },
+    {
+      "path": "backend/src/controllers/differentiatorController.js",
+      "bytes": 5120,
+      "sha256": "1526f267af4deefdbefddf3995282e84281ea889148547dfd52b7db498273c8b"
+    },
+    {
+      "path": "backend/src/controllers/invitationController.js",
+      "bytes": 336,
+      "sha256": "749b2ba5c300ddcb479b623d66d42cba32534a0c15e66bd2b5a977e46cf0a6b8"
+    },
+    {
+      "path": "backend/src/controllers/mockInterviewController.js",
+      "bytes": 494,
+      "sha256": "a5fbcb951b6a7ecd7e2e2c3769a61ca920106d1207eeca62523e8be63bb5d4df"
+    },
+    {
+      "path": "backend/src/migrations/migrationzzzzzzzzzzzz-multi-industry-features.js",
+      "bytes": 12466,
+      "sha256": "f06873d761d3252ebc3553450e91e48b906a869597c4be29febd9965511b41c7"
+    },
+    {
+      "path": "backend/src/models/company.js",
+      "bytes": 1918,
+      "sha256": "23a37aa6087eaa5c631304a817146f4509ba389dc053311559c8e15b38d0f964"
+    },
+    {
+      "path": "backend/src/models/companyReview.js",
+      "bytes": 1113,
+      "sha256": "61546065a99ba32b90f591d1fa7f9abe5da114d9db99e56bba2823bdfa9a1c9c"
+    },
+    {
+      "path": "backend/src/models/cv.js",
+      "bytes": 1417,
+      "sha256": "f7e208ba935e753f5bdcd8d71f66ce85e80bfc6aaa690f7c3577d06b360329d0"
+    },
+    {
+      "path": "backend/src/models/detailpost.js",
+      "bytes": 2143,
+      "sha256": "a063f1aa9536e55c9e52c2465f6c3d612b9a5cf09bc7713c29f564b563adc5f8"
+    },
+    {
+      "path": "backend/src/models/jobInvitation.js",
+      "bytes": 1171,
+      "sha256": "0d71d3dacbfd750f6ff9c2521ab579236e8c23f6fe8058f61e63a1a374b90bb9"
+    },
+    {
+      "path": "backend/src/models/mockInterviewSession.js",
+      "bytes": 880,
+      "sha256": "af7259d7c21777992e8f9aa364475e259cb900a6287c2b9272f8c23151c736aa"
+    },
+    {
+      "path": "backend/src/models/userSetting.js",
+      "bytes": 1608,
+      "sha256": "6cc57f4fdfa7bfd6d34a6835198a7b37582c567704c24da56fa99bb8af38139b"
+    },
+    {
+      "path": "backend/src/models/userSkill.js",
+      "bytes": 657,
+      "sha256": "ba9ba2728357547eb9953b525379bd22d5c91e105266f704bd1937653ee5bba8"
+    },
+    {
+      "path": "backend/src/routes/differentiatorRoutes.js",
+      "bytes": 2886,
+      "sha256": "ce4c1863d84d4abfbc76294b7911baac4f141c343de33fc4903831662ddf3f98"
+    },
+    {
+      "path": "backend/src/services/differentiatorService.js",
+      "bytes": 51705,
+      "sha256": "fabf107a88dbe18b08eeae207ccc2732a54fc273f856a17c1d24b0e51f9bb4f3"
+    },
+    {
+      "path": "backend/tests/test-multi-industry-differentiator.cjs",
+      "bytes": 13839,
+      "sha256": "220c54960e71a20d19cf374676b68fdc2c297c3ded2dc43dc676309f9b2dd45f"
+    },
+    {
+      "path": "frontend/src/container/Candidate/MultiIndustryDifferentiatorHub.js",
+      "bytes": 15625,
+      "sha256": "485526d8ca86d076a8b408d3ec7f9b6c51402a8dffe929b77729e98f9ff56a41"
+    },
+    {
+      "path": "frontend/src/service/differentiatorService.js",
+      "bytes": 1748,
+      "sha256": "57154c1249e926e8df72edbd93df2022cb8d2d55e45e39cc762a9fb9407c8aa4"
     },
     {
       "path": "jobfind-kit.json",

@@ -1,16 +1,13 @@
-# Prompt thiết kế · EXT-JF-024-MICRO-ASSESSMENT · Micro-Assessment Lọc Spam Nộp CV
+# Prompt thiết kế · EXT-JF-024-MICRO-ASSESSMENT · Situational Micro-Assessment Đa Ngành Lọc Spam Nộp CV
 
 Sử dụng dự án Stitch hiện có của JobFind: https://stitch.withgoogle.com/projects/4225480897019041322. Tạo biến thể mở rộng (extension) từ màn hình chuẩn JF-024 ("Ứng tuyển: Senior UI/UX Designer (Desktop)"), kích thước canvas 1280 × 1600; mã danh mục cục bộ là EXT-JF-024-MICRO-ASSESSMENT.
 
 **MỤC ĐÍCH / VAI TRÒ (PURPOSE / ACTOR)**
-- Tính năng: Micro-Assessment (Bài kiểm tra ngắn gắn liền với bước nộp CV): Cho phép nhà tuyển dụng gắn kèm 3–5 câu hỏi tình huống hoặc bài test code/trắc nghiệm ngắn (giới hạn 5–10 phút) vào bài đăng (`post` / `detailpost`). Hồ sơ kèm kết quả giải bài sẽ giúp HR lọc ngay ứng viên rải CV hàng loạt (spam apply).
-- Vai trò người dùng: CANDIDATE (Ứng viên tìm việc), EMPLOYER (Nhà tuyển dụng).
-- Hành động chính:
-  1. Theo dõi đồng hồ đếm ngược trực quan (Countdown Timer giới hạn 10 phút).
-  2. Trả lời các câu hỏi tình huống trắc nghiệm và code review thực tế bám sát JD vị trí.
-  3. Hoàn thành đoạn code logic ngắn (useDebounce custom hook).
-  4. Trình bày phương án giải quyết tình huống lỗi production thực tế.
-  5. Đính kèm điểm số tự động vào đơn ứng tuyển để vượt qua phễu lọc spam tự động.
+- Tính năng: Situational Micro-Assessment (Bài kiểm tra tình huống nghề nghiệp đa ngành gắn liền với bước nộp CV):
+  + Mở rộng bảng `DetailPosts` (`hasMicroTest`, `microTestPrompt`, `microTestTimeLimit = 300s`) và `Cvs` (`microTestAnswer`, `aiSituationalScore` thang 1–10, `aiEvaluationSummary` gồm 3 tiêu chí: Độ hiểu nghiệp vụ, Tư duy giải quyết vấn đề, Mức độ phù hợp JD).
+  + Hỗ trợ đa ngành nghề: Sales/CSKH (xử lý khách hàng phàn nàn về giá), Marketing/Truyền thông (chiến dịch ngắn gọn 150 từ với ngân sách giả định), Kế toán/Nhân sự/Hành chính (xử lý sai lệch chứng từ hoặc xung đột nội bộ), và IT/Phần mềm.
+  + Cho phép HR bấm `POST /api/ai/generate-micro-test` để AI sinh sẵn 3 câu hỏi tình huống sát ngành nghề, và chấm tự động qua `POST /api/ai/evaluate-situational-answer`.
+- Vai trò người dùng: CANDIDATE (Ứng viên tìm việc), EMPLOYER / COMPANY (Nhà tuyển dụng).
 
 **HỆ THỐNG THIẾT KẾ (DESIGN SYSTEM - BẮT BUỘC)**
 - Chế độ: match-reference (khớp mẫu chuẩn Material 3 của JobFind).
@@ -19,5 +16,5 @@ Sử dụng dự án Stitch hiện có của JobFind: https://stitch.withgoogle.
 
 **BÀN GIAO MÃ NGUỒN VÀ LIÊN KẾT**
 - Mockup HTML hoàn chỉnh: `.stitch/designs/ung_tuyen_micro_assessment_test_nang_luc/code.html`.
-- Liên kết hệ thống: Nối trực tiếp từ trang JD `JF-010`, luồng nộp CV `JF-022`/`JF-023`/`JF-024`, sang Pizza-Tracker `EXT-JF-018-PIZZA-TRACKER` và phễu tuyển dụng Kanban `JF-025`.
+- Liên kết hệ thống: Nối trực tiếp từ trang JD `JF-010`, đăng tin `JF-021`, luồng nộp CV `JF-022`/`JF-023`/`JF-024`, sang Pizza-Tracker `EXT-JF-018-PIZZA-TRACKER` và phễu tuyển dụng Kanban `JF-025`.
 - Trạng thái thiết kế: `proposal-complete` (100% tiếng Việt tự nhiên).

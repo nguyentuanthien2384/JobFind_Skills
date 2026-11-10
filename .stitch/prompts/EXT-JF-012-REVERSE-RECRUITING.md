@@ -1,12 +1,13 @@
-# Prompt thiết kế · EXT-JF-012-REVERSE-RECRUITING · Tuyển Dụng Đảo Chiều & Hồ Sơ Ẩn Danh
+# Prompt thiết kế · EXT-JF-012-REVERSE-RECRUITING · Tuyển Dụng Ngược Ẩn Danh (Blind Profile & Salary Bidding)
 
 Sử dụng dự án Stitch hiện có của JobFind: https://stitch.withgoogle.com/projects/4225480897019041322. Tạo biến thể mở rộng (extension) từ màn hình chuẩn JF-012 ("Kho Ứng Viên - Tuyển Dụng VN"), kích thước canvas 1280 × 1600; mã danh mục cục bộ là EXT-JF-012-REVERSE-RECRUITING.
 
 **MỤC ĐÍCH / VAI TRÒ (PURPOSE / ACTOR)**
-- Tính năng: Tuyển dụng đảo chiều (Reverse Recruiting) & Hồ sơ ẩn danh:
-  + Chế độ Blind Profile (Hồ sơ ẩn danh): Bổ sung cấu hình trong `userSetting` cho phép ẩn tên thật, ảnh đại diện, email và tên công ty hiện tại; chỉ hiển thị kỹ năng (`userSkill`), số năm kinh nghiệm, dự án đã làm và mức lương mong muốn.
-  + Cơ chế "Bidding / Offer-First": Khi nhà tuyển dụng dùng gói `orderPackageCv` để tìm ứng viên, họ phải gửi "Lời mời phỏng vấn kèm khung lương đề xuất". Chỉ khi ứng viên bấm chấp nhận lời mời, hệ thống mới mở khóa thông tin cá nhân và tự động khởi tạo phòng chat (`chatMessage`) giữa hai bên.
-- Vai trò người dùng: CANDIDATE (Ứng viên tìm việc), EMPLOYER (Nhà tuyển dụng).
+- Tính năng: Tuyển dụng ngược ẩn danh (Blind Profile & Salary Bidding Offer-First):
+  + Mở rộng `UserSettings` (`isBlindProfile`, `minExpectedSalary`, `blockedCompanyIds`): Ẩn Họ tên, SĐT, Email, Ảnh đại diện và Công ty hiện tại; lọc bỏ hoàn toàn ứng viên có `blockedCompanyIds` chứa `companyId` của HR đang đăng nhập (`GET /api/candidates/blind-search`).
+  + Tạo bảng `JobInvitations` (`companyId`, `recruiterId`, `candidateId`, `postId`, `offeredSalaryMin`, `offeredSalaryMax`, `pitchMessage`, `status`, `respondedAt`): HR gửi lời mời kèm khung lương đề xuất (`POST /api/job-invitations`, sự kiện `invitation:received`).
+  + Chống mất tiền oan cho HR: Chỉ khi ứng viên bấm Chấp nhận (`POST /api/job-invitations/:invitationId/respond` với `ACCEPTED`), hệ thống mới trừ 1 lượt trong gói `orderPackageCv.js`, mở khóa thông tin liên hệ và tự động tạo cuộc hội thoại trong `chatController.js`.
+- Vai trò người dùng: CANDIDATE (Ứng viên tìm việc), EMPLOYER / COMPANY (Nhà tuyển dụng).
 
 **HỆ THỐNG THIẾT KẾ (DESIGN SYSTEM - BẮT BUỘC)**
 - Chế độ: match-reference (khớp mẫu chuẩn Material 3 của JobFind).

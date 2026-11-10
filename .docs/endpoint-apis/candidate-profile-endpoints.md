@@ -50,3 +50,9 @@ Required:
 
 ## Nếu thêm contract
 Ghi method/path/owner, actor/permission/tenant, params/query/body/headers/schema, status/response/error, pagination/limits, duplicate/concurrency/event, compatibility và tests. Phần mới ghi PROPOSED cho tới khi router/contract/code và kiểm tra có bằng chứng.
+
+## Bổ sung Multi-Industry Differentiator (10/11/2026 — IMPLEMENTED & TESTED)
+| Endpoint | Owner | Permission | Body / Response | Trạng thái |
+| --- | --- | --- | --- | --- |
+| `POST /api/profile/proof-of-skill/sync-github` | legacy (`differentiatorRoutes.js`) | `ACCOUNT_SELF` | Body: `{ githubUsername, portfolioUrl, caseStudySummary, certificateCode, industryGroup }` $\rightarrow$ Xác thực năng lực thực tế đa ngành (GitHub API cho IT; Case Study KPI/ROAS/Chứng chỉ ACCA/CPA/SHRM cho Sales, Marketing, Kế toán/HR) và cập nhật `UserSkills` (`isVerified`, `verificationSource`, `verifiedMetadata`, `verifiedAt`). | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |
+| `POST /api/job-invitations/:invitationId/respond` | legacy (`differentiatorRoutes.js`) | `ACCOUNT_SELF` | Body: `{ action: 'ACCEPTED' \| 'REJECTED' }` $\rightarrow$ Khi ứng viên chọn `ACCEPTED`: trừ 1 lượt mở khóa CV của công ty (`allowCvFree`/`allowCv`), ghi `CandidateView`, mở khóa thông tin liên hệ 2 chiều và tự động tạo tin nhắn `ChatMessage` đầu tiên. | `IMPLEMENTED` (`test-multi-industry-differentiator.cjs` PASS) |
