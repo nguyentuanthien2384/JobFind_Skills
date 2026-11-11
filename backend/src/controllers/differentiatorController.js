@@ -13,10 +13,12 @@ const handleGenerateMicroTest = async (req, res) => {
 
 const handleEvaluateSituationalAnswer = async (req, res) => {
   try {
+    const io = req.app?.get ? req.app.get('io') : null;
     const userId = req.user?.id || req.body?.userId;
     const data = await differentiatorService.evaluateSituationalAnswer({
       ...req.body,
-      userId
+      userId,
+      io
     });
     return res.status(200).json(data);
   } catch (error) {
@@ -44,6 +46,19 @@ const handleSubmitMockInterview = async (req, res) => {
       sessionId: req.params?.sessionId || req.body?.sessionId,
       userId,
       answers: req.body?.answers
+    });
+    return res.status(200).json(data);
+  } catch (error) {
+    return res.status(500).json({ errCode: -1, errMessage: 'Error from server' });
+  }
+};
+
+const handleGetMyMockInterviews = async (req, res) => {
+  try {
+    const userId = req.user?.id || req.query?.userId;
+    const data = await differentiatorService.getMyMockInterviewSessions({
+      userId,
+      postId: req.query?.postId
     });
     return res.status(200).json(data);
   } catch (error) {
@@ -137,12 +152,31 @@ const handleRespondJobInvitation = async (req, res) => {
   }
 };
 
+const handleGetMyJobInvitations = async (req, res) => {
+  try {
+    const userId = req.user?.id || req.query?.userId;
+    const companyId = req.authorization?.companyId || req.user?.companyId || req.query?.companyId;
+    const roleCode =
+      req.authorization?.roleCode || req.user?.userAccountData?.roleCode || req.query?.roleCode || 'CANDIDATE';
+    const data = await differentiatorService.getMyJobInvitations({
+      userId,
+      companyId,
+      roleCode
+    });
+    return res.status(200).json(data);
+  } catch (error) {
+    return res.status(500).json({ errCode: -1, errMessage: 'Error from server' });
+  }
+};
+
 const handleSyncGithubPortfolio = async (req, res) => {
   try {
     const userId = req.user?.id || req.body?.userId;
     const data = await differentiatorService.syncGithubPortfolioSkills({
       userId,
-      githubUsername: req.body?.githubUsername
+      githubUsername: req.body?.githubUsername,
+      portfolioUrl: req.body?.portfolioUrl,
+      certificateLink: req.body?.certificateLink
     });
     return res.status(200).json(data);
   } catch (error) {
@@ -155,11 +189,13 @@ module.exports = {
   handleEvaluateSituationalAnswer,
   handleStartMockInterview,
   handleSubmitMockInterview,
+  handleGetMyMockInterviews,
   handleAnalyzeSkillGapAndAts,
   handleUpdateCvStage,
   handleCreateVerifiedReview,
   handleSearchBlindCandidates,
   handleSendJobInvitation,
   handleRespondJobInvitation,
+  handleGetMyJobInvitations,
   handleSyncGithubPortfolio
 };

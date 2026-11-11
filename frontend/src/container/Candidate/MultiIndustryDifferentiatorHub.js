@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import {
     generateMicroTestService,
     evaluateSituationalAnswerService,
     startMockInterviewService,
     submitMockInterviewService,
+    getMyMockInterviewsService,
     updateCvStageTrackerService,
     createVerifiedCompanyReviewService,
     searchBlindCandidatesService,
     sendReverseJobInvitationService,
+    getMyJobInvitationsService,
     respondToJobInvitationService,
     syncGithubPortfolioSkillsService,
     analyzeSkillGapAndAtsService
@@ -27,10 +30,27 @@ const MultiIndustryDifferentiatorHub = () => {
     const [candidateAnswer, setCandidateAnswer] = useState('');
     const [evaluationResult, setEvaluationResult] = useState(null);
     const [mockSession, setMockSession] = useState(null);
+    const [myMockHistory, setMyMockHistory] = useState([]);
     const [blindCandidates, setBlindCandidates] = useState([]);
+    const [myInvitations, setMyInvitations] = useState([]);
+    const [githubUsername, setGithubUsername] = useState('');
+    const [portfolioUrl, setPortfolioUrl] = useState('');
     const [githubReport, setGithubReport] = useState(null);
     const [skillGapReport, setSkillGapReport] = useState(null);
     const [statusMessage, setStatusMessage] = useState('');
+
+    useEffect(() => {
+        getMyJobInvitationsService()
+            .then((res) => {
+                if (res?.errCode === 0) setMyInvitations(res.data || []);
+            })
+            .catch(() => {});
+        getMyMockInterviewsService()
+            .then((res) => {
+                if (res?.errCode === 0) setMyMockHistory(res.data || []);
+            })
+            .catch(() => {});
+    }, []);
 
     const handleGeneratePrompts = async () => {
         const res = await generateMicroTestService({
@@ -51,6 +71,7 @@ const MultiIndustryDifferentiatorHub = () => {
         if (res?.errCode === 0) {
             setEvaluationResult(res.data);
             setStatusMessage('AI đã chấm điểm tình huống và cập nhật trạng thái AI_SCREENED!');
+            toast.success('Đã chấm điểm tình huống bằng AI!');
         }
     };
 
@@ -58,6 +79,7 @@ const MultiIndustryDifferentiatorHub = () => {
         const res = await startMockInterviewService({ postId });
         if (res?.errCode === 0) {
             setMockSession(res.data);
+            toast.info('Đã khởi tạo phòng phỏng vấn thử AI (5 câu hỏi sát JD)!');
         }
     };
 
@@ -71,6 +93,10 @@ const MultiIndustryDifferentiatorHub = () => {
         });
         if (res?.errCode === 0) {
             setMockSession(res.data);
+            getMyMockInterviewsService().then((r) => {
+                if (r?.errCode === 0) setMyMockHistory(r.data || []);
+            }).catch(() => {});
+            toast.success(`Hoàn thành phỏng vấn thử: ${res.data?.overallScore}/10 điểm!`);
         }
     };
 
@@ -79,12 +105,30 @@ const MultiIndustryDifferentiatorHub = () => {
         if (res?.errCode === 0) {
             setBlindCandidates(res.data || []);
         }
+        const invRes = await getMyJobInvitationsService();
+        if (invRes?.errCode === 0) {
+            setMyInvitations(invRes.data || []);
+        }
     };
 
-    const handleSyncGithub = async (githubUsername = '') => {
-        const res = await syncGithubPortfolioSkillsService({ githubUsername });
+    const handleRespondInvitation = async (invitationId, action) => {
+        const res = await respondToJobInvitationService(invitationId, { action });
+        if (res?.errCode === 0) {
+            toast.success(res.errMessage);
+            handleLoadBlindPool();
+        } else {
+            toast.error(res?.errMessage || 'Không thể phản hồi lời mời');
+        }
+    };
+
+    const handleSyncGithub = async () => {
+        const res = await syncGithubPortfolioSkillsService({
+            githubUsername,
+            portfolioUrl
+        });
         if (res?.errCode === 0) {
             setGithubReport(res.data);
+            toast.success(res.errMessage || 'Đã xác thực kỹ năng thành công!');
         }
     };
 
@@ -114,7 +158,7 @@ const MultiIndustryDifferentiatorHub = () => {
                             3. Blind Profile & Salary Bidding (Offer-First)
                         </button>
                         <button type="button" className={`btn btn-sm ${activeTab === 'PROOF_SKILL' ? 'btn-primary' : 'btn-outline-primary'}`} onClick={() => { setActiveTab('PROOF_SKILL'); handleSyncGithub(); handleCheckSkillGap(); }}>
-                            4. Proof-of-Skill GitHub & Skill Gap ATS
+                            4. Proof-of-Skill & Skill Gap ATS
                         </button>
                     </div>
                 </div>
@@ -127,7 +171,7 @@ const MultiIndustryDifferentiatorHub = () => {
             {activeTab === 'MICRO_TEST' && (
                 <div className="card shadow-sm border-0">
                     <div className="card-body">
-                        <h5 className="fw-bold">Bài kiểm tra tình huống ngắn (Micro-Assessment 5 phút) & Luyện phỏng vấn AI đa ngành</h5>
+                        <h5 className="fw-bold">Bài kiểm tra tình huống ngắn (Micro-Assessment 3 phút) & Luyện phỏng vấn AI đa ngành</h5>
                         <div className="d-flex flex-wrap gap-2 my-3">
                             {INDUSTRY_OPTIONS.map((item) => (
                                 <button
@@ -153,7 +197,7 @@ const MultiIndustryDifferentiatorHub = () => {
                         ))}
 
                         <div className="mt-3">
-                            <label className="form-label fw-semibold">Câu trả lời tình huống của ứng viên (Giới hạn 300 giây):</label>
+                            <label className="form-label fw-semibold">Câu trả lời tình huống của ứng viên (Giới hạn 180 giây):</label>
                             <textarea
                                 className="form-control mb-2"
                                 rows={3}
@@ -184,6 +228,18 @@ const MultiIndustryDifferentiatorHub = () => {
                                     <li><strong>Tư duy giải quyết vấn đề:</strong> {evaluationResult.aiEvaluationSummary?.problemSolving}</li>
                                     <li><strong>Mức độ phù hợp JD:</strong> {evaluationResult.aiEvaluationSummary?.fitLevel}</li>
                                 </ul>
+                            </div>
+                        )}
+
+                        {myMockHistory.length > 0 && (
+                            <div className="mt-3 border-top pt-3">
+                                <h6 className="fw-bold">Lịch sử Phỏng vấn thử AI đã đồng bộ ({myMockHistory.length} phiên):</h6>
+                                {myMockHistory.slice(0, 3).map((item) => (
+                                    <div key={item.id} className="small text-muted mb-1">
+                                        • Phiên #{item.id} (Tin #{item.postId}) — Trạng thái: <strong>{item.status}</strong>
+                                        {item.overallScore ? ` — Điểm: ${item.overallScore}/10` : ''}
+                                    </div>
+                                ))}
                             </div>
                         )}
                     </div>
@@ -235,25 +291,46 @@ const MultiIndustryDifferentiatorHub = () => {
                             <button
                                 type="button"
                                 className="btn btn-sm btn-primary"
-                                onClick={() => sendReverseJobInvitationService({
-                                    candidateId: 2,
-                                    postId: 1,
-                                    offeredSalaryMin: 25,
-                                    offeredSalaryMax: 35,
-                                    pitchMessage: 'Mời bạn tham gia phỏng vấn vị trí Kế toán trưởng / Trưởng phòng Kinh doanh.'
-                                })}
+                                onClick={async () => {
+                                    await sendReverseJobInvitationService({
+                                        candidateId: 2,
+                                        postId: 1,
+                                        offeredSalaryMin: 25,
+                                        offeredSalaryMax: 35,
+                                        pitchMessage: 'Mời bạn tham gia phỏng vấn vị trí Kế toán trưởng / Trưởng phòng Kinh doanh.'
+                                    });
+                                    handleLoadBlindPool();
+                                }}
                             >
                                 Gửi lời mời Offer-First (25 - 35 triệu)
                             </button>
-                            <button
-                                type="button"
-                                className="btn btn-sm btn-success"
-                                onClick={() => respondToJobInvitationService(1, { action: 'ACCEPTED' })}
-                            >
-                                Ứng viên Chấp nhận (Mở khóa 2 chiều & Tạo phòng Chat)
-                            </button>
                         </div>
-                        <div className="small">Số hồ sơ đang bật tìm việc (đã lọc chặn công ty cũ): {blindCandidates.length}</div>
+                        <div className="small mb-3">Số hồ sơ đang bật tìm việc (đã lọc chặn công ty cũ): <strong>{blindCandidates.length}</strong></div>
+
+                        {myInvitations.length > 0 && (
+                            <div className="border-top pt-3">
+                                <h6 className="fw-bold">Danh sách Lời mời Offer-First đồng bộ ({myInvitations.length}):</h6>
+                                {myInvitations.map((inv) => (
+                                    <div key={inv.id} className="border rounded p-2 mb-2 d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Lời mời #{inv.id}</strong> • Khung lương cam kết: <span className="text-success fw-bold">{inv.offeredSalaryMin} – {inv.offeredSalaryMax} triệu VNĐ</span>
+                                            <div className="small text-muted">{inv.pitchMessage}</div>
+                                            <span className="badge bg-secondary">{inv.status}</span>
+                                        </div>
+                                        {inv.status === 'PENDING' && (
+                                            <div className="d-flex gap-2">
+                                                <button type="button" className="btn btn-sm btn-success" onClick={() => handleRespondInvitation(inv.id, 'ACCEPTED')}>
+                                                    Chấp nhận & Mở Chat
+                                                </button>
+                                                <button type="button" className="btn btn-sm btn-outline-danger" onClick={() => handleRespondInvitation(inv.id, 'DECLINED')}>
+                                                    Từ chối
+                                                </button>
+                                            </div>
+                                        )}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
                     </div>
                 </div>
             )}
@@ -261,15 +338,40 @@ const MultiIndustryDifferentiatorHub = () => {
             {activeTab === 'PROOF_SKILL' && (
                 <div className="card shadow-sm border-0">
                     <div className="card-body">
-                        <h5 className="fw-bold">Xác thực kỹ năng qua GitHub API & Biểu đồ khoảng cách kỹ năng (Skill Gap ATS)</h5>
+                        <h5 className="fw-bold">Xác thực kỹ năng thực tế Đa ngành (GitHub / Portfolio / Chứng chỉ) & Skill Gap ATS</h5>
+                        <div className="row g-2 my-2">
+                            <div className="col-md-5">
+                                <input
+                                    type="text"
+                                    className="form-control form-control-sm"
+                                    placeholder="GitHub Username (cho ngành IT)"
+                                    value={githubUsername}
+                                    onChange={(e) => setGithubUsername(e.target.value)}
+                                />
+                            </div>
+                            <div className="col-md-5">
+                                <input
+                                    type="url"
+                                    className="form-control form-control-sm"
+                                    placeholder="Link Portfolio / Chứng chỉ (Sales, Marketing, Kế toán, Thiết kế...)"
+                                    value={portfolioUrl}
+                                    onChange={(e) => setPortfolioUrl(e.target.value)}
+                                />
+                            </div>
+                            <div className="col-md-2">
+                                <button type="button" className="btn btn-sm btn-primary w-100" onClick={handleSyncGithub}>
+                                    Xác thực ngay
+                                </button>
+                            </div>
+                        </div>
                         {githubReport && (
-                            <div className="small mb-2">
-                                <strong>{githubReport.verifiedLabel}:</strong> {githubReport.publicRepos} Public Repos • {githubReport.commitsLastYear} Commits/năm
+                            <div className="alert alert-success small mb-2 mt-2">
+                                <strong>✓ {githubReport.verifiedLabel}:</strong> {githubReport.publicRepos} Public Repos • {githubReport.commitsLastYear} Commits/năm
                             </div>
                         )}
                         {skillGapReport && (
-                            <div className="small">
-                                <strong>Điểm tương thích ATS:</strong> {skillGapReport.atsScore}%
+                            <div className="small mt-2">
+                                <strong>Điểm tương thích ATS:</strong> <span className="badge bg-primary">{skillGapReport.atsScore}%</span>
                             </div>
                         )}
                     </div>

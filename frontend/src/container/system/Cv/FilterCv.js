@@ -1,0 +1,518 @@
+import React, { useEffect, useMemo, useState } from 'react';
+import { Select, Modal } from 'antd';
+import { ExclamationCircleOutlined } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
+import ReactPaginate from 'react-paginate';
+import { toast } from 'react-toastify';
+import { getFilterCv, getCandidateSearchJobs, checkSeeCandiate } from '../../../service/cvService';
+import { getAllSkillByJobCode } from '../../../service/userService';
+import { sendReverseJobInvitationService } from '../../../service/differentiatorService';
+import { notifyRewardWalletUpdated, subscribeRewardWalletUpdated } from '../../../service/rewardPaymentService';
+import { useFetchAllcode } from '../../../util/fetch';
+import { PAGINATION } from '../../../util/constant';
+import './FilterCv.css';
+import useListQuery, { clampListPage } from '../../../util/useListQuery';
+import StableList from '../../../components/common/StableList';
+
+const emptyFilters = () => ({ keyword: '', categoryJobCode: '', experienceJobCode: '',
+    provinceCode: '', salaryCode: '', listSkills: [], skillMode: 'any', minMatch: 0, sort: 'match' });
+const hasCriteria = filters => Boolean(filters.categoryJobCode || filters.experienceJobCode ||
+    filters.provinceCode || filters.salaryCode || filters.listSkills.length);
+const criterionLabels = { categoryJobCode: 'Ngành nghề', experienceJobCode: 'Kinh nghiệm',
+    provinceCode: 'Địa điểm', salaryCode: 'Mức lương' };
+const filterOption = (input, option) => (option?.label || '').toLocaleLowerCase('vi').includes(input.toLocaleLowerCase('vi'));
+
+const FilterCv = () => {
+    const navigate = useNavigate();
+    const [user] = useState(() => {
+        try { return JSON.parse(localStorage.getItem('userData')) || {}; } catch { return {}; }
+    });
+    const canPurchasePackages = user?.roleCode === 'COMPANY'
+        && (user.companyStatusCode === undefined || (user.companyStatusCode === 'S1' && user.companyCensorCode === 'CS1'));
+    const isRecruiterStaff = user?.roleCode === 'EMPLOYER';
+    const [query, setQuery] = useListQuery({ ...emptyFilters(), page: 0 });
+    const { page } = query;
+    const filters = useMemo(() => {
+        const { page: unusedPage, ...criteria } = query;
+        return criteria;
+    }, [query]);
+    const [result, setResult] = useState({ data: [], count: 0 });
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+    const [retry, setRetry] = useState(0);
+    const [settledRequest, setSettledRequest] = useState('');
+    const filterKey = JSON.stringify(filters);
+    const requestKey = JSON.stringify([filterKey, page, retry]);
+    const busy = loading || settledRequest !== requestKey;
+    const [skills, setSkills] = useState([]);
+    const [skillError, setSkillError] = useState('');
+    const [allowance, setAllowance] = useState(null);
+    const [jobs, setJobs] = useState([]);
+    const [jobSearch, setJobSearch] = useState('');
+    const [jobLoading, setJobLoading] = useState(false);
+    const [jobError, setJobError] = useState('');
+    const [selectedJob, setSelectedJob] = useState(null);
+    const [jobCount, setJobCount] = useState(0);
+
+    // Offer-First Reverse Bidding Modal State
+    const [biddingCandidate, setBiddingCandidate] = useState(null);
+    const [bidSalaryMin, setBidSalaryMin] = useState(18000000);
+    const [bidSalaryMax, setBidSalaryMax] = useState(25000000);
+    const [bidMessage, setBidMessage] = useState('');
+    const [sendingBid, setSendingBid] = useState(false);
+
+    const { data: provinces } = useFetchAllcode('PROVINCE');
+    const { data: experiences } = useFetchAllcode('EXPTYPE');
+    const { data: salaries } = useFetchAllcode('SALARYTYPE');
+    const { data: categories } = useFetchAllcode('JOBTYPE');
+
+    useEffect(() => {
+        let active = true;
+        setLoading(true); setError('');
+        const timer = setTimeout(async () => {
+            try {
+                const response = await getFilterCv({ ...filters, limit: PAGINATION.pagerow,
+                    offset: page * PAGINATION.pagerow,
+                    listSkills: filters.listSkills.filter(value => typeof value === 'number'),
+                    otherSkills: filters.listSkills.filter(value => typeof value === 'string'),
+                });
+                if (!active) return;
+                if (!response || response.errCode !== 0 || !Array.isArray(response.data)) {
+                    throw new Error(response?.errMessage || 'Không tải được ứng viên. Vui lòng thử lại.');
+                }
+                const validPage = clampListPage(page, response.count, PAGINATION.pagerow);
+                if (validPage !== page) { setQuery({ page: validPage }, { replace: true }); return; }
+                setResult(response);
+                setAllowance(response.allowance || null);
+            } catch (failure) {
+                if (active) { setResult({ data: [], count: 0 }); setError(failure.message || 'Không tải được ứng viên. Vui lòng thử lại.'); }
+            } finally { if (active) { setLoading(false); setSettledRequest(requestKey); } }
+        }, 250);
+        return () => { active = false; clearTimeout(timer); };
+    }, [filters, page, retry, requestKey, setQuery]);
+
+    useEffect(() => {
+        let active = true;
+        setSkills([]); setSkillError('');
+        if (filters.categoryJobCode) {
+            (async () => {
+                try {
+                    const response = await getAllSkillByJobCode(filters.categoryJobCode);
+                    if (response?.errCode !== 0) throw new Error();
+                    if (active) setSkills((response.data || []).map(skill => ({ value: Number(skill.id), label: skill.name })));
+                } catch { if (active) setSkillError('Chưa tải được gợi ý kỹ năng. Bạn vẫn có thể nhập tên kỹ năng.'); }
+            })();
+        }
+        return () => { active = false; };
+    }, [filters.categoryJobCode, retry]);
+
+    useEffect(() => {
+        if (!user.companyId) return;
+        let active = true;
+        setJobLoading(true); setJobError('');
+        const timer = setTimeout(async () => {
+            try {
+                const response = await getCandidateSearchJobs({ search: jobSearch });
+                if (response?.errCode !== 0) throw new Error(response?.errMessage);
+                if (active) { setJobs(response.data || []); setJobCount(response.count || 0); }
+            } catch { if (active) { setJobs([]); setJobError('Chưa tải được tin tuyển dụng. Bạn có thể tự chọn tiêu chí bên dưới.'); } }
+            finally { if (active) setJobLoading(false); }
+        }, 250);
+        return () => { active = false; clearTimeout(timer); };
+    }, [jobSearch, user.companyId, retry]);
+
+    useEffect(() => {
+        if (typeof subscribeRewardWalletUpdated !== 'function') return undefined;
+        return subscribeRewardWalletUpdated((event) => {
+            if (event?.detail?.allowance) {
+                setAllowance(event.detail.allowance);
+            } else if (
+                event?.detail?.paidOrder?.purpose === 'PACKAGE_CV'
+                || event?.detail?.redeemed === 'CV_5'
+                || event?.detail?.redeemed === 'CV_20'
+            ) {
+                setRetry((value) => value + 1);
+            }
+        });
+    }, []);
+
+    const change = (key, value) => {
+        setQuery(current => {
+            const next = { ...current, page: 0, [key]: value ?? '', ...(key === 'categoryJobCode' ? { listSkills: [] } : {}) };
+            if (!hasCriteria(next)) next.minMatch = 0;
+            return next;
+        }, { replace: key === 'keyword' });
+    };
+    const reset = () => { setQuery({ ...emptyFilters(), page: 0 }); setSelectedJob(null); setJobSearch(''); };
+    const applyJob = id => {
+        const job = jobs.find(item => item.id === id);
+        if (!job) { setSelectedJob(null); return; }
+        setSelectedJob(job);
+        setQuery({ ...emptyFilters(), ...job.criteria, page: 0, listSkills: job.criteria.listSkills.map(skill => Number(skill.id)) });
+    };
+
+    const openOfferFirstModal = (candidate) => {
+        const floor = Number(candidate.minExpectedSalary || 0);
+        setBiddingCandidate(candidate);
+        setBidSalaryMin(floor > 0 ? floor : 18000000);
+        setBidSalaryMax(floor > 0 ? Math.round(floor * 1.3) : 25000000);
+        setBidMessage(selectedJob ? `Mời bạn tham gia phỏng vấn vị trí "${selectedJob.name}" tại công ty chúng tôi.` : 'Chào bạn, hồ sơ năng lực của bạn rất phù hợp với vị trí công ty đang tuyển dụng.');
+    };
+
+    const handleSendOfferFirstBid = async () => {
+        if (!biddingCandidate || sendingBid) return;
+        setSendingBid(true);
+        try {
+            const res = await sendReverseJobInvitationService({
+                candidateUserId: biddingCandidate.userId,
+                postId: selectedJob?.id || null,
+                offeredSalaryMin: Number(bidSalaryMin),
+                offeredSalaryMax: Number(bidSalaryMax),
+                message: bidMessage
+            });
+            if (res?.errCode === 0) {
+                toast.success(res.errMessage || 'Đã gửi lời mời Offer-First thành công! Khi ứng viên đồng ý, hệ thống sẽ mở khóa liên hệ 2 chiều.');
+                setBiddingCandidate(null);
+            } else {
+                toast.error(res?.errMessage || 'Không thể gửi lời mời Offer-First.');
+            }
+        } catch {
+            toast.error('Lỗi kết nối khi gửi lời mời Offer-First.');
+        } finally {
+            setSendingBid(false);
+        }
+    };
+
+    const openCandidate = (candidateOrId, analyze = false) => {
+        const candidateObj = typeof candidateOrId === 'object' && candidateOrId !== null
+            ? candidateOrId
+            : (result.data || []).find(item => Number(item.userId) === Number(candidateOrId));
+        const id = typeof candidateOrId === 'object' && candidateOrId !== null ? candidateOrId.userId : candidateOrId;
+        const isUnlocked = Boolean(candidateObj?.isUnlocked);
+        const query = selectedJob ? `?jobId=${encodeURIComponent(selectedJob.id)}` : '';
+        const open = (grantInfo = null) => {
+            if (grantInfo && typeof window !== 'undefined' && window.sessionStorage) {
+                try {
+                    window.sessionStorage.setItem(`jobfind_cv_grant_${id}`, JSON.stringify(grantInfo));
+                } catch {
+                    // ignore storage quota errors
+                }
+            }
+            navigate(`/admin/candiate/${id}/${query}${analyze ? '#ai-review' : ''}`);
+        };
+        if (user.roleCode === 'ADMIN') { open(); return; }
+        if (isUnlocked) {
+            open({
+                errCode: 0,
+                alreadyGranted: true,
+                existingAllowanceType: candidateObj?.unlockedAllowanceType || 'FREE',
+                allowance
+            });
+            return;
+        }
+        if (allowance && Number(allowance.free || 0) <= 0 && Number(allowance.paid || 0) <= 0) {
+            Modal.confirm({
+                title: 'Công ty đã hết lượt xem CV',
+                icon: <ExclamationCircleOutlined />,
+                content: canPurchasePackages
+                    ? 'Công ty bạn hiện đã hết lượt xem CV (0 lượt miễn phí, 0 lượt đã mua). Bạn có muốn chuyển sang trang Mua thêm lượt xem ứng viên để mở khóa hồ sơ này không?'
+                    : 'Công ty bạn hiện đã hết lượt xem CV (0 lượt miễn phí, 0 lượt đã mua). Vui lòng liên hệ Chủ doanh nghiệp (Quản trị công ty) để mua thêm gói hoặc đổi điểm Top Point.',
+                okText: canPurchasePackages ? 'Mua thêm lượt xem' : 'Xem quỹ lượt công ty',
+                cancelText: 'Đóng',
+                onOk: () => navigate(canPurchasePackages ? '/admin/buy-cv' : '/admin/rewards/')
+            });
+            return;
+        }
+        const quotaHint = allowance
+            ? Number(allowance.free || 0) > 0
+                ? `ưu tiên trừ 1 lượt miễn phí — hiện còn ${allowance.free} lượt miễn phí, ${allowance.paid} lượt đã mua`
+                : `trừ 1 lượt đã mua — hiện còn ${allowance.paid} lượt`
+            : 'trừ 1 lượt xem';
+        Modal.confirm({
+            title: analyze ? 'Mở khóa hồ sơ & phân tích CV bằng AI' : 'Xem CV và thông tin liên hệ',
+            icon: <ExclamationCircleOutlined />,
+            content: `Công ty sẽ dùng 1 lượt xem (${quotaHint}) nếu chưa mở quyền với ứng viên này. Xem lại hồ sơ đã mở không trừ thêm lượt.`,
+            okText: 'Xem hồ sơ (-1 lượt)',
+            cancelText: 'Hủy',
+            onOk: async () => {
+                if (typeof checkSeeCandiate === 'function') {
+                    try {
+                        const grantRes = await checkSeeCandiate({
+                            userId: user.id,
+                            companyId: user.companyId,
+                            candidateId: id
+                        });
+                        if (!grantRes || typeof grantRes.errCode !== 'number') {
+                            open();
+                            return;
+                        }
+                        if (grantRes.errCode !== 0) {
+                            if (grantRes.allowance) setAllowance(grantRes.allowance);
+                            toast.error(grantRes.errMessage || 'Không thể mở khóa hồ sơ ứng viên.');
+                            if (grantRes.errCode === 1) {
+                                navigate(canPurchasePackages ? '/admin/buy-cv' : '/admin/rewards/');
+                            }
+                            return;
+                        }
+                        if (grantRes.allowance) {
+                            setAllowance(grantRes.allowance);
+                        }
+                        setResult(prev => ({
+                            ...prev,
+                            data: (prev.data || []).map(item =>
+                                Number(item.userId) === Number(id)
+                                    ? {
+                                        ...item,
+                                        isUnlocked: true,
+                                        unlockedAllowanceType: grantRes.chargedAllowance || item.unlockedAllowanceType || 'FREE'
+                                    }
+                                    : item
+                            )
+                        }));
+                        if (typeof notifyRewardWalletUpdated === 'function') {
+                            notifyRewardWalletUpdated({ allowance: grantRes.allowance, candidateId: id });
+                        }
+                        if (!grantRes.alreadyGranted) {
+                            const remainText = grantRes.allowance
+                                ? ` (Còn lại: ${grantRes.allowance.free} miễn phí • ${grantRes.allowance.paid} đã mua)`
+                                : '';
+                            toast.success(
+                                grantRes.chargedAllowance === 'FREE'
+                                    ? `Đã trừ 1 lượt xem CV miễn phí để mở khóa hồ sơ!${remainText}`
+                                    : `Đã trừ 1 lượt xem CV để mở khóa hồ sơ!${remainText}`
+                            );
+                        }
+                        open(grantRes);
+                        return;
+                    } catch (err) {
+                        toast.error(err?.message || 'Không thể mở khóa hồ sơ ứng viên.');
+                        return;
+                    }
+                }
+                open();
+            }
+        });
+    };
+    const select = (key, label, values) => <div className="cv-search-field" key={key}>
+        <label htmlFor={`cv-filter-${key}`}>{label}</label>
+        <Select id={`cv-filter-${key}`} aria-label={label} placeholder={`Tất cả ${label.toLocaleLowerCase('vi')}`}
+            allowClear showSearch filterOption={filterOption} value={filters[key] || undefined}
+            onChange={value => change(key, value)} options={(values || []).map(item => ({ value: item.code, label: item.value }))} />
+    </div>;
+    const selectedSkillOptions = (selectedJob?.criteria.listSkills || []).map(skill => ({ value: Number(skill.id), label: skill.name }));
+    const skillOptions = [...new Map([...selectedSkillOptions, ...skills].map(skill => [skill.value, skill])).values()];
+    const activeCount = Object.keys(criterionLabels).filter(key => filters[key]).length + filters.listSkills.length + (filters.keyword ? 1 : 0);
+
+    return <div className="cv-search">
+        <header className="cv-search-header">
+            <div><span className="cv-search-eyebrow">KHÔNG GIAN TUYỂN DỤNG & SĂN ĐẦU NGƯỜI ẨN DANH</span><h1>Tìm ứng viên phù hợp</h1>
+                <p>Khám phá hồ sơ đang tìm việc, kiểm tra huy hiệu kỹ năng đã xác thực và gửi lời mời Offer-First.</p></div>
+            {allowance && <div className="cv-search-allowance">
+                <div className="cv-search-allowance-head">
+                    <strong>Lượt xem CV</strong>
+                    <span className="cv-search-allowance-total">{Number(allowance.free || 0) + Number(allowance.paid || 0)} lượt</span>
+                </div>
+                <span>Số lượt xem miễn phí: {allowance.free}</span>
+                <span>Số lượt xem: {allowance.paid}</span>
+                {canPurchasePackages && (
+                    <button type="button" className="cv-search-allowance-buy" onClick={() => navigate('/admin/buy-cv')}>
+                        + Mua thêm lượt xem
+                    </button>
+                )}
+                {isRecruiterStaff && (
+                    <button
+                        type="button"
+                        className="cv-search-allowance-buy"
+                        title="Chỉ Chủ công ty mới có quyền thanh toán mua thêm gói dịch vụ"
+                        onClick={() => navigate('/admin/rewards/')}
+                    >
+                        Quỹ lượt công ty
+                    </button>
+                )}
+            </div>}
+        </header>
+        {user.companyId && <section className="cv-search-job" aria-label="Gợi ý từ tin tuyển dụng">
+            <div><h2>Bắt đầu từ tin tuyển dụng</h2><p>Lấy ngành nghề, kinh nghiệm, lương, địa điểm và gợi ý kỹ năng từ tin của công ty.</p></div>
+            <div><Select aria-label="Chọn tin tuyển dụng" placeholder="Tìm tên tin tuyển dụng của công ty"
+                showSearch allowClear filterOption={false} loading={jobLoading} onSearch={setJobSearch}
+                value={selectedJob?.id} onChange={applyJob}
+                options={[...new Map([...(selectedJob ? [selectedJob] : []), ...jobs].map(job => [job.id, job])).values()]
+                    .map(job => ({ value: job.id, label: `#${job.id} · ${job.name}` }))}
+                notFoundContent={jobLoading ? 'Đang tải tin...' : 'Không có tin phù hợp'} />
+                {jobCount > jobs.length && <small>Nhập tên để tìm trong {jobCount} tin tuyển dụng.</small>}
+                {jobError && <small role="status">{jobError}</small>}
+                {selectedJob && <small>Đã lấy gợi ý từ “{selectedJob.name}”. Bạn có thể điều chỉnh tiêu chí bên dưới.</small>}
+            </div>
+        </section>}
+        <div className="cv-search-layout">
+            <aside className="cv-search-filters" aria-label="Bộ lọc ứng viên">
+                <div className="cv-search-filter-heading"><h2>Bộ lọc {activeCount > 0 && <span>{activeCount}</span>}</h2>
+                    <button type="button" className="cv-search-text-button" onClick={reset}>Xóa bộ lọc</button></div>
+                <div className="cv-search-field"><label htmlFor="cv-keyword">Từ khóa</label>
+                    <input id="cv-keyword" type="search" placeholder="Tên ứng viên hoặc kỹ năng" maxLength={120}
+                        value={filters.keyword} onChange={event => change('keyword', event.target.value)} /></div>
+                {select('categoryJobCode', 'Ngành nghề', categories)}
+                {select('provinceCode', 'Địa điểm', provinces)}
+                {select('experienceJobCode', 'Kinh nghiệm', experiences)}
+                {select('salaryCode', 'Mức lương', salaries)}
+                <div className="cv-search-field"><label htmlFor="cv-skills">Kỹ năng cần có</label>
+                    <Select id="cv-skills" aria-label="Kỹ năng cần có" mode="tags" allowClear showSearch
+                        placeholder="Chọn hoặc nhập kỹ năng" filterOption={filterOption} value={filters.listSkills}
+                        options={skillOptions} onChange={value => change('listSkills', value.slice(0, 30))} tokenSeparators={[',']} />
+                    <small>Chọn ngành để xem gợi ý. Có thể nhập C++, C#, .NET hoặc kỹ năng khác rồi nhấn Enter.</small>
+                    {skillError && <small role="status">{skillError}</small>}</div>
+                <div className="cv-search-field"><label htmlFor="cv-skill-mode">Cách khớp kỹ năng</label>
+                    <Select id="cv-skill-mode" aria-label="Cách khớp kỹ năng" value={filters.skillMode}
+                        onChange={value => change('skillMode', value)} options={[
+                            { value: 'any', label: 'Có ít nhất một kỹ năng' }, { value: 'all', label: 'Có tất cả kỹ năng' },
+                            { value: 'rank', label: 'Chỉ xếp hạng, không loại hồ sơ' }]} /></div>
+                <div className="cv-search-field"><label htmlFor="cv-min-match">Điểm phù hợp tối thiểu</label>
+                    <Select id="cv-min-match" aria-label="Điểm phù hợp tối thiểu" disabled={!hasCriteria(filters)}
+                        value={filters.minMatch} onChange={value => change('minMatch', value)}
+                        options={[0, 50, 70, 90, 100].map(value => ({ value, label: value ? `Từ ${value}%` : 'Không giới hạn' }))} /></div>
+                <p className="cv-search-help">Ngành, địa điểm, kinh nghiệm và mức lương được lọc theo đúng lựa chọn. Chỉ hiển thị ứng viên đang tìm việc và đã có CV.</p>
+            </aside>
+            <section className="cv-search-results" aria-label="Kết quả tìm ứng viên" aria-busy={busy}>
+                <div className="cv-search-toolbar"><h2>{busy ? 'Đang tìm ứng viên…' : `${result.count} ứng viên`}</h2>
+                    <div><label htmlFor="cv-sort">Sắp xếp</label><Select id="cv-sort" aria-label="Sắp xếp"
+                        value={filters.sort} onChange={value => change('sort', value)} options={[
+                            { value: 'match', label: 'Phù hợp nhất' }, { value: 'name', label: 'Tên A–Z' }]} /></div></div>
+                <p className="cv-search-method">Điểm = số tiêu chí khớp / số tiêu chí đã chọn. Mỗi kỹ năng tính một lần, dựa trên hồ sơ khai báo. Mở hồ sơ để dùng AI phân tích nội dung PDF theo tin tuyển dụng. Điểm hỗ trợ sàng lọc, không tự quyết định tuyển dụng.</p>
+                <StableList busy={busy} resetKey={filterKey} label="Đang đối chiếu hồ sơ với bộ lọc…">
+                {!busy && error && <div className="cv-search-state" role="alert"><h3>Chưa tải được kết quả</h3><p>{error}</p>
+                    <button type="button" className="cv-search-primary" onClick={() => setRetry(value => value + 1)}>Thử lại</button></div>}
+                {!busy && !error && result.data.length === 0 && <div className="cv-search-state"><h3>Chưa có ứng viên phù hợp</h3>
+                    <p>Thử bớt tiêu chí, giảm điểm tối thiểu hoặc đổi cách khớp kỹ năng.</p>
+                    <button type="button" className="cv-search-primary" onClick={reset}>Xóa bộ lọc</button></div>}
+                {!error && result.data.map(candidate => {
+                    const name = [candidate.userSettingData?.firstName, candidate.userSettingData?.lastName].filter(Boolean).join(' ') || 'Ứng viên';
+                    const scored = candidate.matchScore !== null && candidate.matchScore !== undefined;
+                    return <article className={`cv-search-candidate${candidate.isUnlocked ? ' is-unlocked' : ''}`} key={candidate.userId}>
+                        <div className="cv-search-candidate-top"><div className="cv-search-identity"><div className="cv-search-avatar" aria-hidden="true">{name.slice(0, 1).toUpperCase()}</div>
+                            <div>
+                                <div className="cv-search-name-row">
+                                    <h3>{name}</h3>
+                                    {candidate.isBlindProfile && !candidate.isUnlocked && (
+                                        <span style={{ background: '#ede9fe', color: '#5b21b6', padding: '2px 8px', borderRadius: '999px', fontSize: '12px', fontWeight: 600 }}>
+                                            🕶️ Ẩn danh (Offer-First)
+                                        </span>
+                                    )}
+                                    {user.roleCode !== 'ADMIN' && (
+                                        candidate.isUnlocked
+                                            ? <span className="cv-search-unlock-badge is-unlocked">✓ Đã mở hồ sơ</span>
+                                            : <span className="cv-search-unlock-badge is-locked">Chưa mở • 1 lượt xem</span>
+                                    )}
+                                </div>
+                                <p>{candidate.jobTypeSettingData?.value || 'Chưa cập nhật ngành nghề'}</p>
+                            </div></div>
+                            {scored && <div className="cv-search-score"><strong>{candidate.matchScore}%</strong><span>khớp tiêu chí</span></div>}
+                        </div>
+                        <dl className="cv-search-facts"><div><dt>Địa điểm</dt><dd>{candidate.provinceSettingData?.value || 'Chưa cập nhật'}</dd></div>
+                            <div><dt>Kinh nghiệm</dt><dd>{candidate.expTypeSettingData?.value || 'Chưa cập nhật'}</dd></div>
+                            <div><dt>Lương mong muốn</dt><dd>
+                                {candidate.salaryTypeSettingData?.value || 'Chưa cập nhật'}
+                                {candidate.minExpectedSalary > 0 && ` (Sàn Offer-First: ${Number(candidate.minExpectedSalary).toLocaleString('vi-VN')} đ)`}
+                            </dd></div></dl>
+                        <div className="cv-search-skills" aria-label={`Kỹ năng của ${name}`}>
+                            {(candidate.skills || []).map(skill => (
+                                <span
+                                    key={skill.id}
+                                    style={skill.isVerified ? { background: '#dcfce7', color: '#166534', border: '1px solid #86efac', fontWeight: 600 } : undefined}
+                                    title={skill.isVerified ? `Đã xác thực qua ${skill.verificationSource || 'Portfolio/GitHub'}` : undefined}
+                                >
+                                    {skill.isVerified ? `✓ ${skill.name}` : skill.name}
+                                </span>
+                            ))}
+                            {!candidate.skills?.length && <small>Chưa khai báo kỹ năng</small>}</div>
+                        {scored && <details className="cv-search-explanation"><summary>Vì sao có điểm này?</summary>
+                            <p>Tiêu chí khớp: {(candidate.matchedCriteria || []).map(key => criterionLabels[key]).join(', ') || 'Chưa chọn tiêu chí ngoài kỹ năng'}.</p>
+                            {!!candidate.matchedSkills?.length && <p><strong>Kỹ năng khớp:</strong> {candidate.matchedSkills.join(', ')}</p>}
+                            {!!candidate.missingSkills?.length && <p><strong>Chưa thấy khai báo:</strong> {candidate.missingSkills.join(', ')}</p>}
+                        </details>}
+                        <footer>
+                            <span>
+                                {candidate.isUnlocked
+                                    ? 'Đã mở quyền xem hồ sơ — xem lại thông tin liên hệ & CV không trừ thêm lượt'
+                                    : candidate.isBlindProfile
+                                        ? 'Ứng viên bật Chế độ Ẩn danh — gửi lời mời Offer-First đạt mức lương sàn hoặc mở khóa CV'
+                                        : 'Thông tin liên hệ hiển thị sau khi mở hồ sơ (Trừ 1 lượt xem lần đầu)'}
+                            </span>
+                            <div className="cv-search-candidate-actions">
+                                <button type="button" className="cv-search-primary" onClick={() => openCandidate(candidate)}>Xem chi tiết ứng viên</button>
+                                {user.companyId && (
+                                    <button
+                                        type="button"
+                                        className="cv-search-ai-button"
+                                        style={{ background: '#059669', color: '#fff', borderColor: '#059669' }}
+                                        onClick={() => openOfferFirstModal(candidate)}
+                                    >
+                                        ⚡ Gửi Offer-First (Đấu giá lương)
+                                    </button>
+                                )}
+                                {user.companyId && <button type="button" className="cv-search-ai-button" onClick={() => openCandidate(candidate, true)}>Phân tích CV bằng AI</button>}
+                            </div></footer>
+                    </article>;
+                })}
+                </StableList>
+                {!error && result.count > PAGINATION.pagerow && <nav aria-label="Phân trang ứng viên">
+                    <ReactPaginate forcePage={page} previousLabel="Trước" nextLabel="Sau" breakLabel="…"
+                        pageCount={Math.max(page + 1, Math.ceil(result.count / PAGINATION.pagerow))} pageRangeDisplayed={3} marginPagesDisplayed={1}
+                        onPageChange={({ selected }) => setQuery({ page: selected })} containerClassName="cv-search-pagination" activeClassName="is-active" />
+                </nav>}
+            </section>
+        </div>
+
+        {/* Modal Gửi Lời mời Săn đầu người Offer-First Bidding */}
+        <Modal
+            title={`⚡ Gửi lời mời Offer-First tới Ứng viên #${biddingCandidate?.userId || ''}`}
+            open={Boolean(biddingCandidate)}
+            onCancel={() => setBiddingCandidate(null)}
+            onOk={handleSendOfferFirstBid}
+            confirmLoading={sendingBid}
+            okText="Gửi lời mời Offer-First"
+            cancelText="Hủy"
+        >
+            {biddingCandidate && (
+                <div>
+                    <p style={{ fontSize: '13px', color: '#475569' }}>
+                        Cam kết mức lương minh bạch để thuyết phục ứng viên mở khóa thông tin liên hệ 2 chiều.
+                        {biddingCandidate.minExpectedSalary > 0 && (
+                            <span style={{ display: 'block', marginTop: '4px', color: '#047857', fontWeight: 600 }}>
+                                💡 Mức lương sàn tối thiểu ứng viên cài đặt: {Number(biddingCandidate.minExpectedSalary).toLocaleString('vi-VN')} VNĐ
+                            </span>
+                        )}
+                    </p>
+                    <div className="mb-3">
+                        <label style={{ fontSize: '12px', fontWeight: 600, display: 'block', marginBottom: '4px' }}>Lương cam kết tối thiểu (VNĐ)</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            value={bidSalaryMin}
+                            onChange={e => setBidSalaryMin(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label style={{ fontSize: '12px', fontWeight: 600, display: 'block', marginBottom: '4px' }}>Lương cam kết tối đa (VNĐ)</label>
+                        <input
+                            type="number"
+                            className="form-control"
+                            value={bidSalaryMax}
+                            onChange={e => setBidSalaryMax(e.target.value)}
+                        />
+                    </div>
+                    <div className="mb-2">
+                        <label style={{ fontSize: '12px', fontWeight: 600, display: 'block', marginBottom: '4px' }}>Thông điệp gửi ứng viên</label>
+                        <textarea
+                            rows={3}
+                            className="form-control"
+                            value={bidMessage}
+                            onChange={e => setBidMessage(e.target.value)}
+                        />
+                    </div>
+                </div>
+            )}
+        </Modal>
+    </div>;
+};
+
+export default FilterCv;

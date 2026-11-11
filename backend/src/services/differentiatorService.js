@@ -12,11 +12,32 @@ let Op;
 try {
   ({ Op } = require('sequelize'));
 } catch {
-  Op = { in: Symbol.for('sequelize.in'), ne: Symbol.for('sequelize.ne') };
+  Op = { in: Symbol.for('sequelize.in'), ne: Symbol.for('sequelize.ne'), or: Symbol.for('sequelize.or') };
+}
+
+let socketHelper = null;
+try {
+  socketHelper = require('../config/socket');
+} catch {
+  socketHelper = null;
 }
 
 const setDbOverride = (mockDb) => {
   db = mockDb;
+};
+
+const emitRealtimeToUser = (io, userId, eventName, payload) => {
+  if (!userId) return;
+  try {
+    if (io && typeof io.to === 'function') {
+      io.to(`user:${userId}`).emit(eventName, payload);
+      io.to(`user_${userId}`).emit(eventName, payload);
+    } else if (socketHelper && typeof socketHelper.emitDifferentiatorEvent === 'function') {
+      socketHelper.emitDifferentiatorEvent(userId, eventName, payload);
+    }
+  } catch (err) {
+    console.error('[Socket Emit Warning]:', err.message);
+  }
 };
 
 const VALID_STAGES = [
@@ -199,12 +220,12 @@ const generateMicroTestPrompts = async ({ jobTitle = '', categoryCode = '', desc
   const template = INDUSTRY_TEMPLATES[industryKey] || INDUSTRY_TEMPLATES.IT;
 
   const data = await callAIService(
-    'Bạn là chuyên gia tuyển dụng đa ngành. Hãy sinh đúng 3 câu hỏi tình huống thực tế (Case Study ngắn 5 phút) sát với vị trí và ngành nghề để lọc ứng viên rải CV hàng loạt. Trả về JSON: { "industryKey": "...", "industryLabel": "...", "recommendedTimeLimit": 300, "prompts": [{ "id": 1, "title": "...", "question": "...", "criteria": "..." }] }',
+    'Bạn là chuyên gia tuyển dụng đa ngành. Hãy sinh đúng 3 câu hỏi tình huống thực tế (Case Study ngắn 3-5 phút) sát với vị trí và ngành nghề để lọc ứng viên rải CV hàng loạt. Trả về JSON: { "industryKey": "...", "industryLabel": "...", "recommendedTimeLimit": 180, "prompts": [{ "id": 1, "title": "...", "question": "...", "criteria": "..." }] }',
     `Vị trí: ${jobTitle || 'Chuyên viên'}. Mã ngành: ${categoryCode || industryKey}. Mô tả: ${description || ''}`,
     () => ({
       industryKey,
       industryLabel: template.label,
-      recommendedTimeLimit: 300,
+      recommendedTimeLimit: 180,
       prompts: template.prompts.map((item, idx) => ({
         id: idx + 1,
         title: `${item.title} (${jobTitle || template.label})`,
@@ -217,7 +238,7 @@ const generateMicroTestPrompts = async ({ jobTitle = '', categoryCode = '', desc
   return { errCode: 0, errMessage: 'OK', data };
 };
 
-const evaluateSituationalAnswer = async ({ cvId, userId, microTestAnswer, timeSpentSeconds = null } = {}) => {
+const evaluateSituationalAnswer = async ({ cvId, userId, microTestAnswer, timeSpentSeconds = null, io = null } = {}) => {
   if (!cvId || !microTestAnswer || !String(microTestAnswer).trim()) {
     return { errCode: 1, errMessage: 'Thiếu mã hồ sơ (cvId) hoặc nội dung câu trả lời tình huống!' };
   }
@@ -270,17 +291,34 @@ const evaluateSituationalAnswer = async ({ cvId, userId, microTestAnswer, timeSp
   );
 
   const now = new Date();
+  const nextStage = cv.applicationStage === 'SUBMITTED' || !cv.applicationStage ? 'AI_SCREENED' : cv.applicationStage;
+  const aiScore = Number(evaluation.score) || 8.0;
+  const aiSummary = {
+    ...evaluation.summary,
+    wordCount,
+    timeSpentSeconds: timeSpentSeconds ? Number(timeSpentSeconds) : null,
+    evaluatedAt: now.toISOString()
+  };
+
   await cv.update({
     microTestAnswer: answerText,
-    aiSituationalScore: Number(evaluation.score) || 8.0,
-    aiEvaluationSummary: {
-      ...evaluation.summary,
-      wordCount,
-      timeSpentSeconds: timeSpentSeconds ? Number(timeSpentSeconds) : null,
-      evaluatedAt: now.toISOString()
-    },
-    applicationStage: cv.applicationStage === 'SUBMITTED' || !cv.applicationStage ? 'AI_SCREENED' : cv.applicationStage,
+    aiSituationalScore: aiScore,
+    aiEvaluationSummary: aiSummary,
+    applicationStage: nextStage,
     stageUpdatedAt: now
+  });
+
+  emitRealtimeToUser(io, cv.userId, 'cv:stage_updated', {
+    v: 1,
+    event: 'cv:stage_updated',
+    cvId: cv.id,
+    postId: cv.postId,
+    candidateId: cv.userId,
+    applicationStage: nextStage,
+    stageLabel: STAGE_LABELS_VI[nextStage] || nextStage,
+    aiSituationalScore: aiScore,
+    aiEvaluationSummary: aiSummary,
+    stageUpdatedAt: now.toISOString()
   });
 
   return { errCode: 0, errMessage: 'Đã chấm điểm tình huống thành công', data: cv };
@@ -393,9 +431,24 @@ const submitMockInterview = async ({ sessionId, userId, answers = [] } = {}) => 
   return { errCode: 0, errMessage: 'Hoàn thành chấm điểm phỏng vấn thử', data: session };
 };
 
+const getMyMockInterviewSessions = async ({ userId, postId = null } = {}) => {
+  if (!userId || !db.MockInterviewSession || typeof db.MockInterviewSession.findAll !== 'function') {
+    return { errCode: 0, errMessage: 'OK', data: [] };
+  }
+  const whereClause = { userId: Number(userId) };
+  if (postId) whereClause.postId = Number(postId);
+  const rows = await db.MockInterviewSession.findAll({
+    where: whereClause,
+    order: [['id', 'DESC']],
+    limit: 20
+  }).catch(() => []);
+  return { errCode: 0, errMessage: 'OK', data: rows };
+};
+
 const analyzeSkillGapAndAts = async ({ userId, postId, candidateSkills = [] } = {}) => {
   let postSkills = ['Giao tiếp đàm phán', 'Phân tích dữ liệu', 'Quản lý tiến độ', 'Xử lý tình huống', 'Làm việc nhóm'];
   let jobTitle = 'Vị trí ứng tuyển';
+  let industryKey = 'IT';
 
   if (postId && db.Post && typeof db.Post.findByPk === 'function') {
     const post = await db.Post.findByPk(postId, {
@@ -403,6 +456,11 @@ const analyzeSkillGapAndAts = async ({ userId, postId, candidateSkills = [] } = 
     }).catch(() => null);
     if (post?.postDetailData) {
       jobTitle = post.postDetailData.name || jobTitle;
+      industryKey = detectIndustryKey(
+        jobTitle,
+        post.postDetailData.categoryJobCode,
+        post.postDetailData.descriptionMarkdown || post.postDetailData.descriptionHTML
+      );
       if (db.Skill && typeof db.Skill.findAll === 'function' && post.postDetailData.categoryJobCode) {
         const skillsInCategory = await db.Skill.findAll({
           where: { categoryJobCode: post.postDetailData.categoryJobCode }
@@ -448,6 +506,7 @@ const analyzeSkillGapAndAts = async ({ userId, postId, candidateSkills = [] } = 
     data: {
       postId: postId ? Number(postId) : null,
       jobTitle,
+      industryKey,
       atsScore,
       matchedSkills,
       missingSkills,
@@ -518,7 +577,7 @@ const recalculateCompanySla = async (companyId) => {
   }
 };
 
-const updateCvStageWithTracker = async ({ cvId, newStage, hrNote = '', io } = {}) => {
+const updateCvStageWithTracker = async ({ cvId, newStage, hrNote = '', io = null } = {}) => {
   if (!cvId || !newStage || !VALID_STAGES.includes(newStage)) {
     return { errCode: 1, errMessage: 'Thiếu cvId hoặc trạng thái applicationStage không hợp lệ!' };
   }
@@ -621,9 +680,7 @@ const updateCvStageWithTracker = async ({ cvId, newStage, hrNote = '', io } = {}
     message: notificationContent
   };
 
-  if (io && typeof io.to === 'function' && cv.userId) {
-    io.to(`user:${cv.userId}`).emit('cv:stage_updated', eventPayload);
-  }
+  emitRealtimeToUser(io, cv.userId, 'cv:stage_updated', eventPayload);
 
   return {
     errCode: 0,
@@ -637,27 +694,11 @@ const updateCvStageWithTracker = async ({ cvId, newStage, hrNote = '', io } = {}
   };
 };
 
-const createVerifiedReview = async ({
-  userId,
-  companyId,
-  rating,
-  star,
-  interviewExperienceRating,
-  comment,
-  content,
-  relatedCvId = null
-} = {}) => {
-  const finalStar = Number(star ?? rating ?? 5);
-  const finalContent = String(content ?? comment ?? '').trim();
-
-  if (!userId || !companyId || !finalContent) {
-    return { errCode: 1, errMessage: 'Thiếu thông tin người đánh giá, công ty hoặc nội dung nhận xét!' };
-  }
-
+const resolveReviewVerification = async (userId, companyId, relatedCvId = null) => {
   let resolvedVerificationType = 'PUBLIC';
   let resolvedCvId = relatedCvId ? Number(relatedCvId) : null;
 
-  if (db.Cv && typeof db.Cv.findAll === 'function') {
+  if (db.Cv && typeof db.Cv.findAll === 'function' && userId && companyId) {
     const candidateCvs = await db.Cv.findAll({
       where: { userId: Number(userId) },
       include: db.Post
@@ -689,6 +730,29 @@ const createVerifiedReview = async ({
     }
   }
 
+  return { verificationType: resolvedVerificationType, relatedCvId: resolvedCvId };
+};
+
+const createVerifiedReview = async ({
+  userId,
+  companyId,
+  rating,
+  star,
+  interviewExperienceRating,
+  comment,
+  content,
+  relatedCvId = null
+} = {}) => {
+  const finalStar = Number(star ?? rating ?? 5);
+  const finalContent = String(content ?? comment ?? '').trim();
+
+  if (!userId || !companyId || !finalContent) {
+    return { errCode: 1, errMessage: 'Thiếu thông tin người đánh giá, công ty hoặc nội dung nhận xét!' };
+  }
+
+  const { verificationType: resolvedVerificationType, relatedCvId: resolvedCvId } =
+    await resolveReviewVerification(userId, companyId, relatedCvId);
+
   const review = await db.CompanyReview.create({
     userId: Number(userId),
     companyId: Number(companyId),
@@ -719,7 +783,10 @@ const parseBlockedIds = (raw) => {
       const parsed = JSON.parse(raw);
       return Array.isArray(parsed) ? parsed.map((x) => Number(x)).filter(Boolean) : [];
     } catch {
-      return [];
+      return raw
+        .split(',')
+        .map((x) => Number(String(x).trim()))
+        .filter(Boolean);
     }
   }
   return [];
@@ -813,7 +880,7 @@ const sendReverseJobInvitation = async ({
   offeredSalaryMin,
   offeredSalaryMax,
   pitchMessage,
-  io
+  io = null
 } = {}) => {
   if (!recruiterId || !candidateId || !offeredSalaryMin || !offeredSalaryMax || !pitchMessage) {
     return {
@@ -885,13 +952,11 @@ const sendReverseJobInvitation = async ({
       typeCode: 'REVERSE_INVITATION',
       isChecked: 0,
       content: `Bạn nhận được lời mời phỏng vấn Offer-First với mức lương đề xuất ${offeredSalaryMin} - ${offeredSalaryMax} triệu VNĐ.`,
-      link: `/candidate/invitations`
+      link: `/candidate/differentiator`
     }).catch(() => null);
   }
 
-  if (io && typeof io.to === 'function') {
-    io.to(`user:${candidateId}`).emit('invitation:received', eventPayload);
-  }
+  emitRealtimeToUser(io, candidateId, 'invitation:received', eventPayload);
 
   return {
     errCode: 0,
@@ -900,7 +965,7 @@ const sendReverseJobInvitation = async ({
   };
 };
 
-const respondToJobInvitation = async ({ candidateId, invitationId, action, io } = {}) => {
+const respondToJobInvitation = async ({ candidateId, invitationId, action, io = null } = {}) => {
   if (!invitationId || !['ACCEPTED', 'DECLINED'].includes(action)) {
     return { errCode: 1, errMessage: 'Thiếu invitationId hoặc hành động phản hồi không hợp lệ (ACCEPTED / DECLINED)!' };
   }
@@ -964,17 +1029,15 @@ const respondToJobInvitation = async ({ candidateId, invitationId, action, io } 
       }).catch(() => null);
     }
 
-    if (io && typeof io.to === 'function' && invitation.recruiterId) {
-      io.to(`user:${invitation.recruiterId}`).emit('invitation:responded', {
-        v: 1,
-        invitationId: invitation.id,
-        status: 'ACCEPTED',
-        candidateId: invitation.candidateId,
-        unlockedCandidate,
-        quotaDeducted,
-        respondedAt: now.toISOString()
-      });
-    }
+    emitRealtimeToUser(io, invitation.recruiterId, 'invitation:responded', {
+      v: 1,
+      invitationId: invitation.id,
+      status: 'ACCEPTED',
+      candidateId: invitation.candidateId,
+      unlockedCandidate,
+      quotaDeducted,
+      respondedAt: now.toISOString()
+    });
   }
 
   return {
@@ -992,11 +1055,73 @@ const respondToJobInvitation = async ({ candidateId, invitationId, action, io } 
   };
 };
 
+const getMyJobInvitations = async ({ userId, companyId = null, roleCode = 'CANDIDATE' } = {}) => {
+  if (!db.JobInvitation || typeof db.JobInvitation.findAll !== 'function') {
+    return { errCode: 0, errMessage: 'OK', data: [] };
+  }
+  const whereClause = {};
+  if (roleCode === 'CANDIDATE') {
+    whereClause.candidateId = Number(userId);
+  } else if (companyId) {
+    whereClause.companyId = Number(companyId);
+  } else if (userId) {
+    whereClause.recruiterId = Number(userId);
+  }
+
+  const include = [];
+  if (db.Company) {
+    include.push({
+      model: db.Company,
+      as: 'invitationCompanyData',
+      attributes: ['id', 'name', 'thumbnail', 'address', 'avgResponseHours', 'responseRate'],
+      required: false
+    });
+  }
+  if (db.User) {
+    include.push({
+      model: db.User,
+      as: 'candidateInvitationData',
+      attributes: ['id', 'firstName', 'lastName', 'email', 'image', 'address'],
+      required: false
+    });
+  }
+
+  const rows = await db.JobInvitation.findAll({
+    where: whereClause,
+    include,
+    order: [['id', 'DESC']],
+    limit: 50
+  }).catch(() => []);
+
+  // Mask candidate identity for recruiter if invitation is still PENDING/DECLINED
+  const sanitized = rows.map((row) => {
+    const plain = typeof row.toJSON === 'function' ? row.toJSON() : { ...row };
+    if (roleCode !== 'CANDIDATE' && plain.status !== 'ACCEPTED' && plain.candidateInvitationData) {
+      plain.candidateInvitationData = {
+        id: plain.candidateId,
+        firstName: 'Ứng viên Ẩn danh',
+        lastName: `#${plain.candidateId}`,
+        email: '***@***.***',
+        image: null,
+        address: plain.candidateInvitationData.address || 'Việt Nam'
+      };
+    }
+    return plain;
+  });
+
+  return { errCode: 0, errMessage: 'OK', data: sanitized };
+};
+
 // ============================================================================
-// 4. PROOF-OF-SKILL QUA GITHUB API & ĐỒNG BỘ PORTFOLIO
+// 4. PROOF-OF-SKILL QUA GITHUB API & ĐỒNG BỘ PORTFOLIO ĐA NGÀNH
 // ============================================================================
 
-const syncGithubPortfolioSkills = async ({ userId, githubUsername = '' } = {}) => {
+const syncGithubPortfolioSkills = async ({
+  userId,
+  githubUsername = '',
+  portfolioUrl = '',
+  certificateLink = ''
+} = {}) => {
   if (!userId) {
     return { errCode: 1, errMessage: 'Thiếu mã người dùng (userId)!' };
   }
@@ -1011,8 +1136,12 @@ const syncGithubPortfolioSkills = async ({ userId, githubUsername = '' } = {}) =
     }
   }
 
+  const verificationSource = portfolioUrl || certificateLink ? 'PORTFOLIO' : 'GITHUB';
   let repoStats = {
     username: resolvedUsername || `candidate-${userId}`,
+    portfolioUrl: portfolioUrl || null,
+    certificateLink: certificateLink || null,
+    verificationSource,
     publicRepos: 18,
     totalStars: 46,
     commitsLastYear: 412,
@@ -1022,7 +1151,10 @@ const syncGithubPortfolioSkills = async ({ userId, githubUsername = '' } = {}) =
       { language: 'SQL', percentage: 14, reposCount: 4 },
       { language: 'Python', percentage: 8, reposCount: 2 }
     ],
-    verifiedLabel: 'Kỹ năng đã xác thực qua mã nguồn'
+    verifiedLabel:
+      verificationSource === 'PORTFOLIO'
+        ? 'Kỹ năng & Portfolio/Chứng chỉ đã xác thực'
+        : 'Kỹ năng đã xác thực qua mã nguồn'
   };
 
   if (resolvedUsername && typeof fetch === 'function') {
@@ -1051,12 +1183,12 @@ const syncGithubPortfolioSkills = async ({ userId, githubUsername = '' } = {}) =
               percentage: Math.round((count / totalLangRepos) * 100)
             }));
           repoStats = {
+            ...repoStats,
             username: resolvedUsername,
             publicRepos: repos.length,
             totalStars: stars,
             commitsLastYear: Math.max(120, repos.length * 24),
-            topLanguages,
-            verifiedLabel: 'Kỹ năng đã xác thực qua mã nguồn'
+            topLanguages
           };
         }
       }
@@ -1065,26 +1197,62 @@ const syncGithubPortfolioSkills = async ({ userId, githubUsername = '' } = {}) =
     }
   }
 
+  // Đồng bộ cờ xác thực (isVerified = 1, verificationSource, proofMetadata) vào bảng UserSkills
+  if (db.UserSkill) {
+    if (typeof db.UserSkill.update === 'function') {
+      await db.UserSkill.update(
+        {
+          isVerified: 1,
+          verificationSource,
+          proofMetadata: JSON.stringify(repoStats)
+        },
+        { where: { UserId: Number(userId) } }
+      ).catch(() => null);
+    } else if (typeof db.UserSkill.findAll === 'function') {
+      const skillRows = await db.UserSkill.findAll({ where: { UserId: Number(userId) } }).catch(() => []);
+      for (const row of skillRows) {
+        if (typeof row.update === 'function') {
+          await row.update({
+            isVerified: 1,
+            verificationSource,
+            proofMetadata: JSON.stringify(repoStats)
+          });
+        }
+      }
+    }
+  }
+
+  repoStats.verifiedSkills = (repoStats.topLanguages || []).map((item, idx) => ({
+    skillId: idx + 1,
+    skillName: item.language,
+    verificationSource,
+    proofSummary: `${item.reposCount} dự án (${item.percentage}%)`
+  }));
+
   return {
     errCode: 0,
-    errMessage: 'Đã đồng bộ và xác thực kỹ năng qua GitHub API thành công!',
+    errMessage: 'Đã đồng bộ và xác thực kỹ năng thành công!',
     data: repoStats
   };
 };
 
 module.exports = {
   setDbOverride,
+  parseBlockedIds,
   detectIndustryKey,
   generateMicroTestPrompts,
   evaluateSituationalAnswer,
   startMockInterview,
   submitMockInterview,
+  getMyMockInterviewSessions,
   analyzeSkillGapAndAts,
   recalculateCompanySla,
   updateCvStageWithTracker,
+  resolveReviewVerification,
   createVerifiedReview,
   searchCandidatesWithBlindProtection,
   sendReverseJobInvitation,
   respondToJobInvitation,
+  getMyJobInvitations,
   syncGithubPortfolioSkills
 };

@@ -90,6 +90,19 @@ async function runTests() {
         }
       }
     ],
+    userSkills: [
+      {
+        UserId: 10,
+        SkillId: 1,
+        isVerified: 0,
+        verificationSource: null,
+        proofMetadata: null,
+        async update(patch) {
+          Object.assign(this, patch);
+          return this;
+        }
+      }
+    ],
     sessions: [],
     reviews: [],
     invitations: [],
@@ -142,6 +155,9 @@ async function runTests() {
       findAll: async () => store.userSettings,
       findOne: async ({ where }) => store.userSettings.find((s) => s.userId === Number(where.userId)) || null
     },
+    UserSkill: {
+      findAll: async ({ where }) => store.userSkills.filter((s) => s.UserId === Number(where.UserId))
+    },
     MockInterviewSession: {
       create: async (payload) => {
         const record = {
@@ -155,7 +171,8 @@ async function runTests() {
         store.sessions.push(record);
         return record;
       },
-      findOne: async ({ where }) => store.sessions.find((s) => s.id === Number(where.id)) || null
+      findOne: async ({ where }) => store.sessions.find((s) => s.id === Number(where.id)) || null,
+      findAll: async ({ where }) => store.sessions.filter((s) => !where?.userId || s.userId === Number(where.userId))
     },
     JobInvitation: {
       create: async (payload) => {
@@ -170,7 +187,13 @@ async function runTests() {
         store.invitations.push(record);
         return record;
       },
-      findOne: async ({ where }) => store.invitations.find((inv) => inv.id === Number(where.id)) || null
+      findOne: async ({ where }) => store.invitations.find((inv) => inv.id === Number(where.id)) || null,
+      findAll: async ({ where }) =>
+        store.invitations.filter(
+          (inv) =>
+            (!where?.candidateId || inv.candidateId === Number(where.candidateId)) &&
+            (!where?.companyId || inv.companyId === Number(where.companyId))
+        )
     },
     Notification: {
       create: async (payload) => {
@@ -220,7 +243,7 @@ async function runTests() {
   assert.ok(evalRes.data.aiSituationalScore >= 8.0);
   assert.ok(evalRes.data.aiEvaluationSummary.understanding);
 
-  // Test 3: AI Mock Interview (startMockInterview & submitMockInterview)
+  // Test 3: AI Mock Interview (startMockInterview & submitMockInterview & getMyMockInterviewSessions)
   const startMockRes = await differentiatorService.startMockInterview({ userId: 10, postId: 201 });
   assert.strictEqual(startMockRes.errCode, 0);
   assert.strictEqual(startMockRes.data.questions.length, 5, 'Phải tạo đủ 5 câu hỏi phỏng vấn thử theo JD');
@@ -237,6 +260,10 @@ async function runTests() {
   assert.strictEqual(submitMockRes.data.status, 'COMPLETED');
   assert.ok(submitMockRes.data.overallScore >= 8.0);
   assert.ok(Array.isArray(submitMockRes.data.feedback.cvImprovementTips));
+
+  const myMockSessionsRes = await differentiatorService.getMyMockInterviewSessions({ userId: 10 });
+  assert.strictEqual(myMockSessionsRes.errCode, 0);
+  assert.strictEqual(myMockSessionsRes.data.length, 1);
 
   // Test 4: Pizza-Tracker & SLA Phản hồi (HR_VIEWED -> INTERVIEW_SCHEDULED -> Verified Review)
   const stageViewRes = await differentiatorService.updateCvStageWithTracker({
@@ -285,7 +312,7 @@ async function runTests() {
   assert.strictEqual(blindSearchRes.data[0].userId, 10);
   assert.strictEqual(blindSearchRes.data[0].candidatePreview.email, '***@***.***');
 
-  // Test 7: Salary Bidding (Offer-First) & Mở khóa 2 chiều khi ACCEPTED
+  // Test 7: Salary Bidding (Offer-First) & Mở khóa 2 chiều khi ACCEPTED + getMyJobInvitations
   const lowBidRes = await differentiatorService.sendReverseJobInvitation({
     recruiterId: 99,
     companyId: 500,
@@ -312,6 +339,10 @@ async function runTests() {
   assert.strictEqual(store.companies[0].allowCvFree, 1, 'Chưa trừ lượt xem CV khi lời mời mới ở trạng thái PENDING');
   assert.ok(emittedEvents.some((e) => e.event === 'invitation:received' && e.room === 'user:10'));
 
+  const myInvRes = await differentiatorService.getMyJobInvitations({ userId: 10, roleCode: 'CANDIDATE' });
+  assert.strictEqual(myInvRes.errCode, 0);
+  assert.strictEqual(myInvRes.data.length, 1);
+
   const acceptBidRes = await differentiatorService.respondToJobInvitation({
     candidateId: 10,
     invitationId: validBidRes.data.id,
@@ -324,7 +355,26 @@ async function runTests() {
   assert.strictEqual(store.chatMessages.length, 1, 'Phải tự động tạo tin nhắn mở phòng chat giữa HR và ứng viên');
   assert.strictEqual(acceptBidRes.data.unlockedCandidate.email, 'binh@example.com');
 
-  console.log('ALL MULTI-INDUSTRY DIFFERENTIATOR TESTS PASSED:', {
+  // Test 8: Proof-of-Skill Multi-Industry Portfolio Sync -> updates UserSkill.isVerified = 1
+  const proofRes = await differentiatorService.syncGithubPortfolioSkills({
+    userId: 10,
+    portfolioUrl: 'https://www.behance.net/gallery/sales-b2b-case-study'
+  });
+  assert.strictEqual(proofRes.errCode, 0);
+  assert.strictEqual(store.userSkills[0].isVerified, 1, 'UserSkill phải được đánh dấu isVerified = 1 sau khi đồng bộ Portfolio');
+
+  // Test 9: Skill Gap & ATS Simulator
+  const atsRes = await differentiatorService.analyzeSkillGapAndAts({
+    userId: 10,
+    postId: 201,
+    cvText: '5 năm kinh nghiệm Sales B2B, đàm phán hợp đồng, quản lý CRM HubSpot, đạt 130% KPI doanh số.',
+    candidateSkills: ['Sales B2B', 'CRM', 'Đàm phán']
+  });
+  assert.strictEqual(atsRes.errCode, 0);
+  assert.ok(atsRes.data.atsScore > 0);
+  assert.ok(Array.isArray(atsRes.data.keywordSuggestions));
+
+  console.log('ALL MULTI-INDUSTRY DIFFERENTIATOR & SYNCHRONIZATION TESTS PASSED:', {
     industriesTested: ['SALES', 'MARKETING', 'ACCOUNTING_HR', 'IT'],
     situationalScore: evalRes.data.aiSituationalScore,
     mockInterviewQuestions: startMockRes.data.questions.length,
@@ -334,6 +384,8 @@ async function runTests() {
     constructiveRejectionSuggestions: rejectRes.data.suggestedPosts.length,
     blindCandidatesVisibleToCompany500: blindSearchRes.data.length,
     offerFirstChatCreated: store.chatMessages.length === 1,
+    userSkillVerified: store.userSkills[0].isVerified === 1,
+    atsSimulatorScore: atsRes.data.atsScore,
     realtimeEventsEmitted: emittedEvents.map((e) => e.event)
   });
 }

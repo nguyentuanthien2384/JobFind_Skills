@@ -3676,8 +3676,8 @@
     },
     {
       "path": ".docs/CONTEXT.md",
-      "bytes": 4328,
-      "sha256": "e1294a8d07a06ab71d54cc41cc8f1575233ddbd34132e78f83b63887c48e6abe"
+      "bytes": 5677,
+      "sha256": "2ba8a933e2eb1d737fbfee9ba9c27b14e3c984e1e696d9861b6785a9870b7c1e"
     },
     {
       "path": ".docs/DESIGN_GAPS.md",
@@ -3686,8 +3686,8 @@
     },
     {
       "path": ".docs/FEATURES_DONE.md",
-      "bytes": 5379,
-      "sha256": "623391041767df615d5318e276163e6ab11b130e3ca3edf8ff452ed15e1d482c"
+      "bytes": 5805,
+      "sha256": "ab81c229e736873d5726c2936f77e017ec0c68b4db95df5a91808a06c39e03a4"
     },
     {
       "path": ".docs/INDEX.md",
@@ -5635,24 +5635,29 @@
       "sha256": "eb10868f609dfbb88d76fa8ab10a70b9a7ea6ae6b3c94b64ea263a5e534a2965"
     },
     {
+      "path": "backend/src/config/socket.js",
+      "bytes": 8543,
+      "sha256": "348c5a57a1e0eb25a7ad072038c3d4a7badbe3092b30b165968bf93c06deec73"
+    },
+    {
       "path": "backend/src/contracts/differentiator.events.v1.json",
       "bytes": 3221,
       "sha256": "493dca37710f94298dc726dfb9407f151d45c4daa498bab62bac951269cd04bf"
     },
     {
       "path": "backend/src/controllers/differentiatorController.js",
-      "bytes": 5120,
-      "sha256": "1526f267af4deefdbefddf3995282e84281ea889148547dfd52b7db498273c8b"
+      "bytes": 6355,
+      "sha256": "6d73170579d7ee2bc9fe3d0830d081e0b19522cc241c4111c7520073d37b60ce"
     },
     {
       "path": "backend/src/controllers/invitationController.js",
-      "bytes": 336,
-      "sha256": "749b2ba5c300ddcb479b623d66d42cba32534a0c15e66bd2b5a977e46cf0a6b8"
+      "bytes": 411,
+      "sha256": "ca5cb706b8e2796ea629adf1c77a1a9214d0983d5892618ca9386025762b94f4"
     },
     {
       "path": "backend/src/controllers/mockInterviewController.js",
-      "bytes": 494,
-      "sha256": "a5fbcb951b6a7ecd7e2e2c3769a61ca920106d1207eeca62523e8be63bb5d4df"
+      "bytes": 569,
+      "sha256": "4ae64ff887e0ba3d718f6cd56cd86e57d08e375c8c79a3693dd5f3e51e53c13a"
     },
     {
       "path": "backend/src/migrations/migrationzzzzzzzzzzzz-multi-industry-features.js",
@@ -5701,28 +5706,143 @@
     },
     {
       "path": "backend/src/routes/differentiatorRoutes.js",
-      "bytes": 2886,
-      "sha256": "ce4c1863d84d4abfbc76294b7911baac4f141c343de33fc4903831662ddf3f98"
+      "bytes": 3258,
+      "sha256": "29a8794c28419dfc857e06bc2fb30f9be5ebf367f77724ed13712c928974b6b2"
+    },
+    {
+      "path": "backend/src/routes/web.js",
+      "bytes": 17805,
+      "sha256": "43e3f58202f4741a89f23d2aed450bf3f2cf344759716b6650acf96c7396a8d7"
+    },
+    {
+      "path": "backend/src/server.js",
+      "bytes": 3809,
+      "sha256": "d1ec5ee847389f0d4edfeccf4495d1f3858e072d6f4d7124639033b23235b3b9"
+    },
+    {
+      "path": "backend/src/services/companyReviewService.js",
+      "bytes": 7045,
+      "sha256": "e8f3cc7eab09703304f85e662956212254808565fa89684a8fbaaf0a59a48996"
+    },
+    {
+      "path": "backend/src/services/companyService.js",
+      "bytes": 30785,
+      "sha256": "947b367108a1e3a1bf7af2f3a303d28b5d007c92fbffddf8a342b144576f89f2"
+    },
+    {
+      "path": "backend/src/services/cvService.js",
+      "bytes": 33047,
+      "sha256": "85858420d78812a9b11ee4c295aa0df71f6f9fb5cc0338d784db70c2bd853c53"
     },
     {
       "path": "backend/src/services/differentiatorService.js",
-      "bytes": 51705,
-      "sha256": "fabf107a88dbe18b08eeae207ccc2732a54fc273f856a17c1d24b0e51f9bb4f3"
+      "bytes": 57163,
+      "sha256": "00b10db5b8c69186c1a84b2841cd6a4dfdcabd01dc36b15c0af6e7524878ed37"
+    },
+    {
+      "path": "backend/src/services/postService.js",
+      "bytes": 36790,
+      "sha256": "8a68504a19a1cacadf47b6001701edeb965b8bb6a3e32f41b347462fe6a309e0"
+    },
+    {
+      "path": "backend/src/services/userService.js",
+      "bytes": 34356,
+      "sha256": "2ca48aac4184f5c16a0ca8c06b6ff7ce1548b15fca6bc1c646a6529cb50a2356"
+    },
+    {
+      "path": "backend/src/utils/jobEdit.js",
+      "bytes": 6066,
+      "sha256": "607f26b45c4634831b9506fbaac7cc575dae1465e12641956b42cb6a9abaf7de"
+    },
+    {
+      "path": "backend/src/utils/legacyApplication.js",
+      "bytes": 7417,
+      "sha256": "63380dd6e0dc3d48b1e037b97c4b3f4c75c6f8e30cc87dc8d55aad88c8968ccd"
     },
     {
       "path": "backend/tests/test-multi-industry-differentiator.cjs",
-      "bytes": 13839,
-      "sha256": "220c54960e71a20d19cf374676b68fdc2c297c3ded2dc43dc676309f9b2dd45f"
+      "bytes": 16121,
+      "sha256": "1f448d8ba0b2837d8c770abd7708c68e334a8b4ae19ee856d70148ad2f21e41a"
+    },
+    {
+      "path": "frontend/src/App.js",
+      "bytes": 4127,
+      "sha256": "1901c4f8cad257e19a1e09fcbab86eba985dd577fe5300085c7c84bb77e3e95a"
+    },
+    {
+      "path": "frontend/src/components/modal/SendCvModal.js",
+      "bytes": 12301,
+      "sha256": "a31b5999cc375e03e3fd7af4c00a035e901f16165e8b97e660452206a12887c3"
+    },
+    {
+      "path": "frontend/src/container/Candidate/CandidateInfo.js",
+      "bytes": 26113,
+      "sha256": "fa39bc827d0458bfb36f7f3aab745ac73c4c2bd6a013cad47a3726f19c43b1f4"
+    },
+    {
+      "path": "frontend/src/container/Candidate/HomeCandidate.js",
+      "bytes": 13383,
+      "sha256": "5f7a4cdba8e86e662414af43c98222a652bd400be50f154ed33ea8a8f36e3676"
+    },
+    {
+      "path": "frontend/src/container/Candidate/ManageCvCandidate.js",
+      "bytes": 20352,
+      "sha256": "e0741d96cca4f2629f48f19492724cfeee322c97d44638823d299b15cefdf1b5"
     },
     {
       "path": "frontend/src/container/Candidate/MultiIndustryDifferentiatorHub.js",
-      "bytes": 15625,
-      "sha256": "485526d8ca86d076a8b408d3ec7f9b6c51402a8dffe929b77729e98f9ff56a41"
+      "bytes": 21555,
+      "sha256": "7e79d73e70d81c0a467d09e7adcb8877b8ca6e3208d3f749d0dac0296b4fc2ed"
+    },
+    {
+      "path": "frontend/src/container/Candidate/SettingUser.js",
+      "bytes": 22367,
+      "sha256": "926d2e2a0cdfb45d533be560f09efffe3022222ad2c38d3b54b0b09662af35d8"
+    },
+    {
+      "path": "frontend/src/container/Company/CompanyReview.js",
+      "bytes": 14610,
+      "sha256": "ece0b86d1cd47cf61fc8fc421002a353859a61c2b13c4d29ccb731a25a0f185c"
+    },
+    {
+      "path": "frontend/src/container/Company/DetailCompany.js",
+      "bytes": 19004,
+      "sha256": "8aa8a6af76fd75adafa261195e1b7478de7a3d98028e68e6a31727db9523e7c2"
+    },
+    {
+      "path": "frontend/src/container/JobDetail/JobDetail.js",
+      "bytes": 32955,
+      "sha256": "2804fb4324c0ff1efa9ed0d5091aa051bb5a0c43aa05f38f1a740342f582dd58"
+    },
+    {
+      "path": "frontend/src/container/system/Cv/FilterCv.js",
+      "bytes": 33846,
+      "sha256": "e8418a5fa11aa07851a8d95fe8fc4dbef3d11033b043a16c0d2818644ed79b87"
+    },
+    {
+      "path": "frontend/src/container/system/Cv/UserCv.js",
+      "bytes": 15174,
+      "sha256": "4981e67f3e0822185d1f82c4e6f7b399199ae80c5cbff74b799cc23bf966098a"
+    },
+    {
+      "path": "frontend/src/container/system/HomeAdmin.js",
+      "bytes": 27181,
+      "sha256": "daa765eb45062c93d580c710bb29cd1719f0e0678ae29b0b275683f907620538"
+    },
+    {
+      "path": "frontend/src/container/system/Post/AddPost.js",
+      "bytes": 69869,
+      "sha256": "46f5cc2599119f7e443fe2dca69b163ba81b1b34bf3737ab08c1bf066b0fbf1d"
     },
     {
       "path": "frontend/src/service/differentiatorService.js",
-      "bytes": 1748,
-      "sha256": "57154c1249e926e8df72edbd93df2022cb8d2d55e45e39cc762a9fb9407c8aa4"
+      "bytes": 4005,
+      "sha256": "5a60c945a8b718bf1df764b2cbd5f2dd5a1af2421d7a4673beb2a196099c713a"
+    },
+    {
+      "path": "frontend/src/service/jobFormAdapter.js",
+      "bytes": 7075,
+      "sha256": "ef2070735e531beb7b962fed302a01d93ad933babbf758e117ab5d6373f8bf2f"
     },
     {
       "path": "jobfind-kit.json",

@@ -39,6 +39,11 @@ const registerDifferentiatorRoutes = (router, protectedBy, PERMISSIONS) => {
     ...guard(PERMISSIONS?.ACCOUNT_SELF),
     differentiatorController.handleSubmitMockInterview
   );
+  router.get(
+    '/api/mock-interview/my',
+    ...guard(PERMISSIONS?.ACCOUNT_SELF),
+    differentiatorController.handleGetMyMockInterviews
+  );
 
   // 2. Anti-Ghosting Pizza-Tracker, SLA Phản hồi & Verified Candidate Reviews
   router.put(
@@ -68,13 +73,18 @@ const registerDifferentiatorRoutes = (router, protectedBy, PERMISSIONS) => {
     ...guard(PERMISSIONS?.CANDIDATE_SEARCH),
     differentiatorController.handleSendJobInvitation
   );
+  router.get(
+    '/api/job-invitations/my',
+    ...guard(PERMISSIONS?.ACCOUNT_SELF),
+    differentiatorController.handleGetMyJobInvitations
+  );
   router.post(
     '/api/job-invitations/:invitationId/respond',
     ...guard(PERMISSIONS?.ACCOUNT_SELF),
     differentiatorController.handleRespondJobInvitation
   );
 
-  // 4. Proof-of-Skill qua GitHub API
+  // 4. Proof-of-Skill qua GitHub API & Portfolio Đa ngành
   router.post(
     '/api/profile/proof-of-skill/sync-github',
     ...guard(PERMISSIONS?.ACCOUNT_SELF),
@@ -85,5 +95,6 @@ const registerDifferentiatorRoutes = (router, protectedBy, PERMISSIONS) => {
 };
 
 module.exports = {
-  registerDifferentiatorRoutes
+  registerDifferentiatorRoutes,
+  initDifferentiatorRoutes: registerDifferentiatorRoutes
 };

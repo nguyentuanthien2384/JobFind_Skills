@@ -1,0 +1,93 @@
+import { randomUUID } from 'crypto';
+import db from '../models/index';
+import { serializeEventPayload } from './eventContract';
+import { isPostOpenForApplications } from './publicResources';
+
+const id = value => ['string', 'number'].includes(typeof value) && /^[1-9][0-9]*$/.test(String(value)) && Number.isSafeInteger(Number(value));
+const failure = (errCode, errMessage, httpStatus = 400) => ({ errCode, errMessage, httpStatus });
+const unavailable = () => Object.assign(new Error('Chưa thể nộp hồ sơ: cấu hình giao dịch và đồng bộ chưa sẵn sàng'), { applicationUnavailable: true });
+
+export const assertApplicationStorage = async transaction => {
+    const required = ['cvs', 'users', 'accounts', 'companies', 'posts', 'detailposts', 'outbox_events'];
+    const [tables] = await db.sequelize.query(`SELECT LOWER(TABLE_NAME) AS name, ENGINE AS engine
+        FROM information_schema.TABLES WHERE TABLE_SCHEMA = DATABASE() AND LOWER(TABLE_NAME) IN (:tables)`,
+    { replacements: { tables: required }, transaction });
+    if (required.some(name => !tables.some(table => table.name === name && table.engine?.toUpperCase() === 'INNODB'))) throw unavailable();
+    const [indexes] = await db.sequelize.query(`SELECT INDEX_NAME AS name, COLUMN_NAME AS col, SEQ_IN_INDEX AS position, SUB_PART AS prefixLength
+        FROM information_schema.STATISTICS WHERE TABLE_SCHEMA = DATABASE() AND LOWER(TABLE_NAME) = 'cvs'
+        AND NON_UNIQUE = 0 ORDER BY INDEX_NAME, SEQ_IN_INDEX`, { transaction });
+    const groups = new Map();
+    for (const row of indexes) groups.set(row.name, [...(groups.get(row.name) || []), row]);
+    if (![...groups.values()].some(columns => columns.length === 2
+        && columns.every(column => column.prefixLength == null && typeof column.col === 'string')
+        && columns.some(column => column.col.toLowerCase() === 'userid')
+        && columns.some(column => column.col.toLowerCase() === 'postid'))) throw unavailable();
+};
+
+export const submitLegacyApplication = async data => {
+    const { userId, postId, file, description, microTestAnswer } = data;
+    if (!id(userId) || !id(postId) || typeof file !== 'string' || !file.trim()
+        || typeof description !== 'string' || !description.trim() || Array.from(description).length > 255) {
+        return failure(1, 'Cần CV và lời giới thiệu từ 1 đến 255 ký tự cho công việc hợp lệ');
+    }
+    const candidateId = Number(userId);
+    const jobId = Number(postId);
+    const initial = await db.Post.findOne({ where: { id: postId }, attributes: ['id', 'userId'], raw: true });
+    if (!initial) return failure(3, 'Không tìm thấy tin tuyển dụng đang công khai', 404);
+    try {
+        return await db.sequelize.transaction(async transaction => {
+            await assertApplicationStorage(transaction);
+            const ids = [...new Set([candidateId, Number(initial.userId)])].sort((a,b) => a-b);
+            const users = await db.User.findAll({ where: { id: ids }, attributes: ['id','companyId','firstName','lastName','email'],
+                order: [['id','ASC']], transaction, lock: transaction.LOCK.UPDATE, raw: true });
+            const candidate = users.find(user => user.id === candidateId);
+            const owner = users.find(user => user.id === initial.userId);
+            if (!candidate || !owner?.companyId) return failure(3, 'Không tìm thấy tin tuyển dụng đang công khai', 404);
+            const company = await db.Company.findOne({ where: { id: owner.companyId }, attributes: ['id','statusCode','censorCode'],
+                transaction, lock: transaction.LOCK.UPDATE, raw: true });
+            const accounts = await db.Account.findAll({ where: { userId: ids }, attributes: ['id','userId','roleCode','statusCode','phonenumber'],
+                order: [['userId','ASC'],['id','ASC']], transaction, lock: transaction.LOCK.UPDATE, raw: true });
+            const candidateAccount = accounts.find(account => account.userId === candidate.id);
+            if (!candidateAccount || candidateAccount.statusCode !== 'S1' || candidateAccount.roleCode !== 'CANDIDATE') return failure(3, 'Chỉ ứng viên đang hoạt động được nộp CV', 403);
+            const existing = await db.Cv.findOne({ where: { userId: candidate.id, postId: jobId }, attributes: ['id'], transaction, lock: transaction.LOCK.UPDATE, raw: true });
+            if (existing) return { ...failure(5, 'Bạn đã ứng tuyển tin này', 409), cvId: existing.id };
+            const post = await db.Post.findOne({ where: { id: postId }, attributes: ['id','userId','detailPostId','statusCode','timeEnd'],
+                transaction, lock: transaction.LOCK.UPDATE, raw: true });
+            if (!post || post.userId !== initial.userId || post.statusCode !== 'PS1' || company?.statusCode !== 'S1'
+                || company?.censorCode !== 'CS1' || !accounts.some(account => account.userId === owner.id && account.statusCode === 'S1')) {
+                return failure(3, 'Không tìm thấy tin tuyển dụng đang công khai', 404);
+            }
+            const detail = await db.DetailPost.findOne({ where: { id: post.detailPostId }, attributes: ['id','name','hasMicroTest','microTestPrompt'], transaction, lock: transaction.LOCK.UPDATE, raw: true });
+            if (!detail) return failure(3, 'Không tìm thấy nội dung tin tuyển dụng', 404);
+            if (!isPostOpenForApplications(post)) return failure(4, 'Tin tuyển dụng đã hết hạn ứng tuyển', 409);
+            const appliedAt = new Date();
+            const normalizedAnswer = typeof microTestAnswer === 'string' && microTestAnswer.trim() ? microTestAnswer.trim() : null;
+            const cv = await db.Cv.create({
+                userId: candidate.id,
+                file,
+                postId: post.id,
+                isChecked: 0,
+                description,
+                applicationStage: normalizedAnswer ? 'AI_SCREENED' : 'SUBMITTED',
+                stageUpdatedAt: appliedAt,
+                microTestAnswer: normalizedAnswer,
+                createdAt: appliedAt,
+                updatedAt: appliedAt
+            }, { transaction });
+            if (!cv?.id) throw unavailable();
+            const { json, aggregateId } = serializeEventPayload('application.submitted', {
+                cvId: cv.id, jobId: post.id, jobTitle: detail.name, candidateId: candidate.id,
+                candidateName: [candidate.firstName, candidate.lastName].filter(Boolean).join(' ') || null,
+                candidateEmail: candidate.email ?? null, candidatePhone: candidateAccount.phonenumber ?? null,
+                companyId: company.id, posterId: owner.id, coverLetter: description, appliedAt: appliedAt.toISOString()
+            });
+            await db.sequelize.query(`INSERT INTO outbox_events (id, aggregateType, aggregateId, eventType, payload, createdAt)
+                VALUES (?, ?, ?, ?, ?, ?)`, { replacements: [randomUUID(), 'legacy-application', aggregateId, 'application.submitted', json, appliedAt], transaction });
+            return { errCode: 0, cvId: cv.id, errMessage: 'Đã gửi CV thành công' };
+        });
+    } catch (error) {
+        if (error?.name === 'SequelizeUniqueConstraintError') return failure(5, 'Bạn đã ứng tuyển tin này', 409);
+        if (error.applicationUnavailable) return failure(2, error.message, 503);
+        throw error;
+    }
+};
